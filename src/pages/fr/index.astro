@@ -1,0 +1,85 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import HeroSlider from '../../components/HeroSlider.astro';
+import AboutSection from '../../components/AboutSection.astro';
+import Services from '../../components/Services.astro';
+import VisitSection from '../../components/VisitSection.astro';
+import MapSection from '../../components/MapSection.astro';
+import Gallery from '../../components/Gallery.astro';
+import BrandLogos from '../../components/BrandLogos.astro';
+import ReviewsBadge from '../../components/ReviewsBadge.astro';
+
+const seoTitle = "Salon de coiffure Saint-Josse-ten-Noode Bruxelles — Tony&Son ✂ Coiffeur & Barbier";
+const seoDesc = "Tony&Son, salon de coiffure et barbier à Saint-Josse-ten-Noode (Bruxelles) depuis 1970. Coupes homme & femme, colorations, balayage, rasage, taille de barbe. Près du quartier Schuman. ☎ 02 230 55 37";
+---
+
+<Layout title={seoTitle} locale="fr" page="home" transparentHeader={true} description={seoDesc}>
+  <HeroSlider locale="fr" />
+  <AboutSection locale="fr" />
+  <Services locale="fr" />
+
+  <!-- SEO Editorial Section — Category Links -->
+  <section class="seo-categories">
+    <div class="container">
+      <div class="seo-grid">
+        <div class="seo-block">
+          <h2>Coiffure à Bruxelles</h2>
+          <p>Notre <a href="/fr/coiffure/">salon de coiffure à Saint-Josse-ten-Noode</a> propose une gamme complète de services pour femmes, hommes et enfants. Colorations, balayage, brushing, lissage à la kératine, extensions ou permanentes : la famille Campisi met son savoir-faire au service de votre beauté depuis 1970. Facilement accessible depuis Schaerbeek, Etterbeek, le quartier Schuman et le centre de Bruxelles, Tony&Son est la référence coiffure près de la gare de Maelbeek.</p>
+          <a href="/fr/coiffure/" class="seo-link">Découvrir nos services coiffure &rarr;</a>
+        </div>
+        <div class="seo-block">
+          <h2>Barbier à Bruxelles</h2>
+          <p>Tony&Son est aussi votre <a href="/fr/barbier/">barbier de confiance à Saint-Josse-ten-Noode</a>, près du quartier européen. Taille de barbe, rasage traditionnel au coupe-chou, soins masculins : nos barbiers expérimentés maîtrisent l'art du grooming depuis plus de 50 ans. Que vous veniez de Schaerbeek, Ixelles, Woluwe-Saint-Lambert ou Bruxelles-centre, profitez d'un service barbier professionnel dans une ambiance chaleureuse.</p>
+          <a href="/fr/barbier/" class="seo-link">Découvrir nos services barbier &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ReviewsBadge locale="fr" />
+  <VisitSection locale="fr" />
+  <MapSection locale="fr" />
+  <Gallery locale="fr" />
+  <BrandLogos locale="fr" />
+</Layout>
+
+<style>
+  .seo-categories {
+    padding: 80px 0;
+    background: var(--color-cream);
+  }
+  .seo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  .seo-block h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .seo-block p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 20px;
+  }
+  .seo-block p a {
+    color: var(--color-gold);
+    font-weight: 600;
+  }
+  .seo-link {
+    font-family: var(--font-accent);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-gold);
+    transition: var(--transition);
+  }
+  .seo-link:hover {
+    color: var(--color-heading);
+  }
+  @media (max-width: 768px) {
+    .seo-grid { grid-template-columns: 1fr; gap: 40px; }
+  }
+</style>

@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact",
+    "bookNow": "BOOK NOW"
+  },
+  "hero": {
+    "title": "Your Style Destination",
+    "subtitle": "Enhance your look",
+    "cta": "Book now"
+  },
+  "about": {
+    "sectionTitle": "About Us",
+    "description": "Tony&Son is a hair salon founded in 1970 by Tony Campisi and taken over by his son Salvatore, trained at the Toni&Guy school. At Tony&Son, we believe confidence starts with a hairstyle that looks like you.",
+    "welcomeTitle": "Welcome to Tony&Son",
+    "welcomeText": "At Tony&Son, we believe confidence starts with a hairstyle that looks like you. Our passionate team puts its expertise at your service for cuts, transformations and personalized advice.",
+    "historyTitle": "The Story of Tony&Son",
+    "historyText": "Tony&Son is a hair salon founded in 1970 by Tony Campisi and taken over by his son Salvatore, trained at the prestigious Toni&Guy school. We combine family tradition and modern creativity to offer you a unique experience."
+  },
+  "services": {
+    "sectionTitle": "The Art of Enhancing Your Style",
+    "description": "We put our expertise at your service for cuts, precision shaving, or personalized hair care.",
+    "cut": "Haircut",
+    "cutDesc": "Custom cuts that reflect your personality and enhance your style.",
+    "color": "Coloring",
+    "colorDesc": "Vibrant and long-lasting colors created with the best professional products.",
+    "styling": "Styling",
+    "stylingDesc": "Expert styling for every occasion, from everyday to special events."
+  },
+  "team": {
+    "sectionTitle": "Our Team",
+    "description": "Passionate and experienced hairdressers at your service."
+  },
+  "gallery": {
+    "sectionTitle": "Our Gallery"
+  },
+  "testimonials": {
+    "sectionTitle": "What Our Clients Say",
+    "rating": "4.5/5 on Google",
+    "reviewCount": "253 reviews"
+  },
+  "brands": {
+    "sectionTitle": "Our Partner Brands"
+  },
+  "contact": {
+    "sectionTitle": "Contact Us",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "hours": "Opening Hours",
+    "tueFri": "Tuesday - Friday",
+    "sat": "Saturday",
+    "sunMon": "Sunday - Monday",
+    "closed": "Closed",
+    "formName": "Name",
+    "formEmail": "Email",
+    "formMessage": "Message",
+    "formSend": "Send",
+    "bookCta": "Book your visit"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "followUs": "Follow us"
+  }
+}

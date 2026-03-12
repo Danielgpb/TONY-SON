@@ -1,0 +1,101 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { getServicesByCategory } from '../../../data/services';
+
+const coiffureServices = getServicesByCategory('coiffure');
+const seoTitle = "Coiffure Bruxelles — Tony&Son ✂ Salon de coiffure Saint-Josse-ten-Noode";
+const seoDesc = "Tous nos services de coiffure à Bruxelles : colorations, balayage, brushing, lissage, extensions, mèches, permanentes. Tony&Son salon près du quartier Schuman depuis 1970.";
+---
+
+<Layout title={seoTitle} locale="fr" page="coiffure" description={seoDesc}>
+  <section class="titlebar" style="background-image: url('/images/titlebar-bg.jpg')">
+    <div class="titlebar-overlay"></div>
+    <div class="container">
+      <h1>Coiffure Bruxelles</h1>
+      <p class="titlebar-sub">Tony&Son — Salon de coiffure à Saint-Josse-ten-Noode depuis 1970</p>
+    </div>
+  </section>
+
+  <section class="category-intro">
+    <div class="container">
+      <p class="intro-text">Chez <a href="/fr/">Tony&Son</a>, salon de coiffure à Saint-Josse-ten-Noode près du quartier Schuman à Bruxelles, nous proposons une gamme complète de services de coiffure pour femmes, hommes et enfants. Depuis 1970, la famille Campisi met son savoir-faire au service de votre beauté, dans une ambiance chaleureuse et professionnelle. Que vous habitiez à Schaerbeek, Etterbeek, Ixelles ou dans le centre de Bruxelles, notre salon est facilement accessible près de la gare de Maelbeek.</p>
+    </div>
+  </section>
+
+  <section class="services-list">
+    <div class="container">
+      {coiffureServices.map(service => (
+        <div class="service-block">
+          <div class="service-block-content">
+            <h2>{service.name} à Bruxelles</h2>
+            <p set:html={service.description} />
+            <p set:html={service.longDescription.split('\n\n')[0]} />
+            {service.price && <p class="service-block-price">{service.price}</p>}
+            <p>Découvrez notre service de <a href={`/fr/services/${service.slug}/`}>{service.name.toLowerCase()} à Bruxelles</a> chez Tony&Son.</p>
+          </div>
+          <div class="service-block-photo">
+            <div class="photo-placeholder"><span>📷 {service.name}</span></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="category-cta">
+    <div class="container" style="text-align: center;">
+      <h2>Prenez rendez-vous chez Tony&Son</h2>
+      <p>Salon de coiffure à Saint-Josse-ten-Noode, Bruxelles — Ouvert du mardi au samedi</p>
+      <div class="cta-buttons">
+        <a href="tel:+3222305537" class="btn">📞 02 230 55 37</a>
+        <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="btn btn-dark">Réserver en ligne</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <section class="category-map">
+    <div class="container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.5!2d4.3779093!3d50.8489674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c3618601861f%3A0x573e8530643fa9d3!2sTony%26Son+%E2%9C%82!5e0!3m2!1sfr!2sbe!4v1710000000000"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="Tony&Son Coiffure Bruxelles"></iframe>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .titlebar { position: relative; background-size: cover; background-position: center; padding: 160px 0 60px; text-align: center; }
+  .titlebar-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.55); }
+  .titlebar h1 { position: relative; z-index: 2; font-size: 42px; color: var(--color-white); }
+  .titlebar-sub { position: relative; z-index: 2; color: var(--color-gold); font-family: var(--font-display); font-style: italic; font-size: 18px; margin-top: 10px; text-transform: none; }
+
+  .category-intro { padding: 60px 0 40px; }
+  .intro-text { max-width: 900px; margin: 0 auto; font-size: 18px; line-height: 1.8; color: var(--color-text); text-align: center; }
+  .intro-text a { color: var(--color-gold); font-weight: 600; }
+
+  .services-list { padding: 40px 0 80px; }
+  .service-block { display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start; padding: 50px 0; border-bottom: 1px solid var(--color-border); }
+  .service-block:last-child { border-bottom: none; }
+  .service-block h2 { font-size: 26px; margin-bottom: 15px; }
+  .service-block p { font-size: 16px; line-height: 1.8; color: var(--color-text); margin-bottom: 10px; }
+  .service-block p a { color: var(--color-gold); font-weight: 500; }
+  .service-block-price { color: var(--color-gold); font-weight: 600; font-size: 18px !important; }
+
+  .photo-placeholder { background: var(--color-cream); border: 2px dashed var(--color-border); display: flex; align-items: center; justify-content: center; min-height: 220px; font-size: 15px; color: var(--color-text-light); }
+
+  .category-cta { padding: 80px 0; background: var(--color-black); }
+  .category-cta h2 { color: var(--color-white); margin-bottom: 10px; }
+  .category-cta p { color: var(--color-text-light); font-size: 16px; margin-bottom: 30px; text-transform: none; }
+  .cta-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+
+  .category-map { padding: 0 0 0; }
+  .category-map iframe { display: block; }
+
+  @media (max-width: 768px) {
+    .titlebar { padding: 120px 0 40px; }
+    .titlebar h1 { font-size: 28px; }
+    .service-block { grid-template-columns: 1fr; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+  }
+</style>

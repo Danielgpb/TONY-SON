@@ -1,0 +1,100 @@
+---
+import { t, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+
+const hoursTitle = locale === 'nl' ? 'Openingstijden' : locale === 'en' ? 'Opening Hours' : 'Heures d\'ouverture';
+const weAreOpen = locale === 'nl' ? 'Wij zijn open' : locale === 'en' ? 'We are open' : 'Nous sommes ouverts';
+---
+
+<section class="section hours-section">
+  <div class="container">
+    <div class="hours-inner">
+      <p class="hours-label">{weAreOpen}</p>
+      <h2>{hoursTitle}</h2>
+      <div class="hours-list">
+        <div class="hours-row">
+          <span>{i.contact.tueFri}</span>
+          <span class="hours-line"></span>
+          <span>9:00 - 19:00</span>
+        </div>
+        <div class="hours-row">
+          <span>{i.contact.sat}</span>
+          <span class="hours-line"></span>
+          <span>9:00 - 18:00</span>
+        </div>
+        <div class="hours-row closed">
+          <span>{i.contact.sunMon}</span>
+          <span class="hours-line"></span>
+          <span>{i.contact.closed}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hours-section {
+    background: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+  }
+
+  .hours-inner {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .hours-label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-brown);
+    margin-bottom: 1rem;
+  }
+
+  .hours-section h2 {
+    font-family: var(--font-heading);
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 3rem;
+  }
+
+  .hours-list {
+    text-align: left;
+  }
+
+  .hours-row {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .hours-row span:first-child {
+    min-width: 180px;
+  }
+
+  .hours-line {
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.15);
+    margin: 0 1.5rem;
+  }
+
+  .hours-row.closed {
+    color: var(--color-text-light);
+  }
+
+  @media (max-width: 768px) {
+    .hours-section h2 { font-size: 28px; }
+    .hours-row span:first-child { min-width: 140px; }
+  }
+</style>

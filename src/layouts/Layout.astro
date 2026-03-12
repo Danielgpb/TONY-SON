@@ -1,0 +1,175 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import type { Locale } from '../i18n';
+
+interface Props {
+  title: string;
+  locale: Locale;
+  page?: string;
+  transparentHeader?: boolean;
+  description?: string;
+  canonical?: string;
+}
+
+const { title, locale, page = '', transparentHeader = false, description, canonical } = Astro.props;
+
+const siteUrl = 'https://tonyandson.be';
+const defaultDescriptions: Record<string, string> = {
+  fr: "Tony&Son — Salon de coiffure à Saint-Josse-ten-Noode, Bruxelles depuis 1970. Coupes homme & femme, rasage de précision, soins capillaires. Proche gare de Maelbeek, Schaerbeek, Bruxelles-centre.",
+  en: "Tony&Son — Hair salon in Saint-Josse-ten-Noode, Brussels since 1970. Men's & women's cuts, precision shaving, hair care. Near Maelbeek station, Schaerbeek, Brussels center.",
+  nl: "Tony&Son — Kapsalon in Sint-Joost-ten-Node, Brussel sinds 1970. Heren- & dameskapsels, precisiescheren, haarverzorging. Nabij station Maalbeek, Schaarbeek, Brussel-centrum."
+};
+const metaDesc = description || defaultDescriptions[locale];
+
+const canonicalUrl = canonical || `${siteUrl}${Astro.url.pathname}`;
+const pathAfterLocale = Astro.url.pathname.replace(/^\/(fr|en|nl)\//, '');
+
+// JSON-LD LocalBusiness Schema
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HairSalon",
+      "@id": `${siteUrl}/#business`,
+      "name": "Tony&Son",
+      "alternateName": "Tony & Son Coiffure",
+      "url": siteUrl,
+      "telephone": "+32 2 230 55 37",
+      "email": "infotonyson@gmail.com",
+      "foundingDate": "1970",
+      "description": defaultDescriptions.fr,
+      "image": `${siteUrl}/images/hero-bg.jpg`,
+      "logo": `${siteUrl}/images/logo.png`,
+      "priceRange": "€€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Credit Card, Debit Card",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rue Bonneels 27",
+        "addressLocality": "Saint-Josse-ten-Noode",
+        "postalCode": "1210",
+        "addressRegion": "Bruxelles-Capitale",
+        "addressCountry": "BE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.8489674,
+        "longitude": 4.3779093
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "reviewCount": "342",
+        "bestRating": "5"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "19:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "18:00"
+        }
+      ],
+      "hasMap": "https://maps.google.com/?q=Rue+Bonneels+27+1210+Saint-Josse-ten-Noode",
+      "sameAs": [
+        "https://www.facebook.com/tonysoncoiffure/",
+        "https://www.instagram.com/tonysonhairstylist/",
+        "https://www.tiktok.com/@tonysonhairdresser",
+        "https://widget.treatwell.be/fr/salon/tony-and-son/"
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "Saint-Josse-ten-Noode" },
+        { "@type": "City", "name": "Schaerbeek" },
+        { "@type": "City", "name": "Bruxelles" },
+        { "@type": "City", "name": "Etterbeek" },
+        { "@type": "City", "name": "Woluwe-Saint-Lambert" },
+        { "@type": "City", "name": "Ixelles" }
+      ],
+      "makesOffer": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Colorations capillaires" }, "priceSpecification": { "@type": "PriceSpecification", "price": "40", "priceCurrency": "EUR", "minPrice": "40" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Balayage" }, "priceSpecification": { "@type": "PriceSpecification", "price": "35", "priceCurrency": "EUR", "minPrice": "35" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brushing" }, "priceSpecification": { "@type": "PriceSpecification", "price": "30", "priceCurrency": "EUR", "minPrice": "30" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Épilation à la cire" }, "priceSpecification": { "@type": "PriceSpecification", "price": "10", "priceCurrency": "EUR" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Extensions de cheveux" }, "priceSpecification": { "@type": "PriceSpecification", "price": "500", "priceCurrency": "EUR", "minPrice": "500" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mèches" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Traitements à la kératine" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coupes enfants" }, "priceSpecification": { "@type": "PriceSpecification", "price": "25", "priceCurrency": "EUR", "minPrice": "25" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coloration en dégradé" }, "priceSpecification": { "@type": "PriceSpecification", "price": "40", "priceCurrency": "EUR", "minPrice": "40" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Permanentes" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lissage de cheveux" }, "priceSpecification": { "@type": "PriceSpecification", "price": "150", "priceCurrency": "EUR", "minPrice": "150" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Taille de barbe" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Repousse capillaire" } }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      "url": siteUrl,
+      "name": "Tony&Son",
+      "publisher": { "@id": `${siteUrl}/#business` },
+      "inLanguage": ["fr-BE", "en", "nl-BE"]
+    }
+  ]
+};
+---
+
+<!doctype html>
+<html lang={locale === 'fr' ? 'fr-BE' : locale === 'nl' ? 'nl-BE' : 'en'}>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Title & Description -->
+  <title>{title}</title>
+  <meta name="description" content={metaDesc} />
+
+  <!-- Canonical & hreflang -->
+  <link rel="canonical" href={canonicalUrl} />
+  <link rel="alternate" hreflang="fr" href={`${siteUrl}/fr/${pathAfterLocale}`} />
+  <link rel="alternate" hreflang="en" href={`${siteUrl}/en/${pathAfterLocale}`} />
+  <link rel="alternate" hreflang="nl" href={`${siteUrl}/nl/${pathAfterLocale}`} />
+  <link rel="alternate" hreflang="x-default" href={`${siteUrl}/fr/${pathAfterLocale}`} />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={metaDesc} />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={canonicalUrl} />
+  <meta property="og:image" content={`${siteUrl}/images/hero-bg.jpg`} />
+  <meta property="og:locale" content={locale === 'fr' ? 'fr_BE' : locale === 'nl' ? 'nl_BE' : 'en_GB'} />
+  <meta property="og:site_name" content="Tony&Son" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={metaDesc} />
+  <meta name="twitter:image" content={`${siteUrl}/images/hero-bg.jpg`} />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+  <!-- Geo Tags -->
+  <meta name="geo.region" content="BE-BRU" />
+  <meta name="geo.placename" content="Saint-Josse-ten-Noode" />
+  <meta name="geo.position" content="50.8489674;4.3779093" />
+  <meta name="ICBM" content="50.8489674, 4.3779093" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+</head>
+<body>
+  <Header locale={locale} currentPage={page} transparent={transparentHeader} />
+  <main>
+    <slot />
+  </main>
+  <Footer locale={locale} />
+</body>
+</html>

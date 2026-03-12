@@ -1,0 +1,164 @@
+---
+import { t, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+---
+
+<section class="section contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>{i.contact.sectionTitle}</h2>
+
+        <div class="info-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          <div>
+            <h4>{i.contact.phone}</h4>
+            <a href="tel:+3222305537">+32 2 230 55 37</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <div>
+            <h4>{i.contact.email}</h4>
+            <a href="mailto:infotonyson@gmail.com">infotonyson@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <div>
+            <h4>{i.contact.address}</h4>
+            <p>27 Rue Bonneels, 1210 Saint-Josse-ten-Noode, Belgique</p>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div>
+            <h4>{i.contact.hours}</h4>
+            <p>{i.contact.tueFri}: 9:00 - 19:00</p>
+            <p>{i.contact.sat}: 9:00 - 18:00</p>
+            <p>{i.contact.sunMon}: {i.contact.closed}</p>
+          </div>
+        </div>
+
+        <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top: 1.5rem;">{i.contact.bookCta}</a>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden" style="display:none"><label>Ne pas remplir : <input name="bot-field" /></label></p>
+          <div class="form-group">
+            <label for="name">{i.contact.formName}</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">{i.contact.formEmail}</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">{i.contact.formMessage}</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">{i.contact.formSend}</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .contact-info h2 {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .info-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .info-item svg {
+    flex-shrink: 0;
+    color: var(--color-brown);
+    margin-top: 2px;
+  }
+
+  .info-item h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.3rem;
+    color: var(--color-brown);
+  }
+
+  .info-item a, .info-item p {
+    color: var(--color-gray);
+    font-size: 0.95rem;
+  }
+
+  .info-item a:hover {
+    color: var(--color-brown);
+  }
+
+  .contact-form-wrap {
+    background: var(--color-cream);
+    padding: 2.5rem;
+    border-radius: 4px;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    color: var(--color-black);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--color-cream-dark);
+    background: var(--color-white);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    border-radius: 4px;
+    transition: var(--transition);
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-brown);
+  }
+
+  @media (max-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

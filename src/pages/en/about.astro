@@ -1,0 +1,170 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="About Us" locale="en" page="about">
+  <!-- Title Bar -->
+  <section class="titlebar" style="background-image: url('/images/titlebar-bg.jpg')">
+    <div class="titlebar-overlay"></div>
+    <div class="container">
+      <h1>about us</h1>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="welcome-section">
+    <div class="container">
+      <div class="welcome-grid">
+        <div class="welcome-content">
+          <h5 class="tagline">Welcome to Tony&Son</h5>
+          <h2 class="section-title" style="color:var(--color-heading);">Welcome to Tony&Son Hair Salon</h2>
+          <p>At Tony&Son, we believe that confidence starts with a hairstyle that reflects who you are. Every cut is made with care and precision, to highlight your personality and enhance your beauty. Our expert team is committed to offering you a unique experience, where every detail counts, for a perfect result that matches your desires and lifestyle.</p>
+          <p>Whether you're looking for a classic cut, a bold transformation, or personalized advice, we're here to elevate your style. Come in, relax, and let us reveal the best version of yourself.</p>
+          <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="btn">Book now</a>
+        </div>
+        <div class="welcome-images">
+          <img src="/images/about-1.jpg" alt="Tony&Son Salon" class="welcome-img-1" loading="lazy" />
+          <img src="/images/about-2.jpg" alt="Tony&Son Hairstyling" class="welcome-img-2" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- History Section -->
+  <section class="history-section">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;color:var(--color-heading);margin-bottom:50px;">The Story of Tony&Son</h2>
+      <div class="history-content">
+        <p>In <em>1970</em>, <strong>Tony Campisi</strong>, a young passionate hairdresser from Italy, settled in Brussels with a simple but powerful dream: <em>to offer every client a hairstyle that reflects their personality and unique beauty</em>. Trained at the best hairdressing schools, including the prestigious <em>Toni&Guy</em> school, Tony opened his own salon with a philosophy based on excellence and attention to detail.</p>
+        <p>Over the years, the salon became a landmark in the Saint-Josse-ten-Noode neighborhood, attracting loyal clients through artisanal craftsmanship and warm hospitality. The quality of every cut, the precision of every gesture, and the passion for the craft made <strong>Tony&Son</strong> an unmissable destination.</p>
+        <p>Today, <strong>Salvatore Campisi</strong>, Tony's son, has taken over the salon. Trained from a young age by his father, Salvatore carries on the family legacy with the same passion and commitment. He has combined tradition and modernity, adopting the latest trends while preserving the founding values: <em>listening, quality, and attention to detail</em>.</p>
+        <p>At <strong>Tony&Son</strong>, every client is unique. We pride ourselves on offering a personalized service, where every visit is an experience in itself. Whether it's a classic cut, precision shaving, or hair care, our team is here to elevate your style.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opening Hours CTA -->
+  <section class="hours-cta-section">
+    <div class="hours-cta-grid">
+      <div class="hours-cta-left">
+        <div class="hours-cta-content">
+          <h5 class="tagline" style="color:var(--color-gold);">We are open</h5>
+          <h2 class="hours-cta-title">Opening Hours</h2>
+          <div class="hours-list">
+            <p>Tuesday - Friday — 9:00 - 19:00</p>
+            <p>Saturday — 9:00 - 18:00</p>
+            <p>Sunday - Monday — Closed</p>
+          </div>
+          <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="btn" style="background:#fff;color:#000;margin-top:40px;">Book your visit</a>
+        </div>
+      </div>
+      <div class="hours-cta-right" style="background-image: url('/images/photo-11.jpeg')"></div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .titlebar {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 160px 0 80px;
+    text-align: center;
+  }
+  .titlebar-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+  }
+  .titlebar h1 {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-heading);
+    font-size: 42px;
+    font-weight: 400;
+    color: var(--color-white);
+    text-transform: capitalize;
+  }
+
+  .welcome-section { padding: 100px 0; }
+  .welcome-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .welcome-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+  }
+  .welcome-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .welcome-img-1, .welcome-img-2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .history-section {
+    padding: 80px 0;
+    background: var(--color-cream);
+  }
+  .history-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .history-content p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+  }
+  .history-content em { color: var(--color-gold); font-style: italic; }
+  .history-content strong { color: var(--color-heading); }
+
+  .hours-cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+  }
+  .hours-cta-left {
+    background: var(--color-black);
+    padding: 80px;
+    display: flex;
+    align-items: center;
+  }
+  .hours-cta-title {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--color-white);
+    margin-bottom: 30px;
+  }
+  .hours-list p {
+    color: var(--color-white);
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .hours-cta-right {
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (max-width: 768px) {
+    .titlebar { padding: 120px 0 60px; }
+    .titlebar h1 { font-size: 28px; }
+    .welcome-grid { grid-template-columns: 1fr; gap: 30px; }
+    .welcome-images { grid-template-columns: 1fr; }
+    .hours-cta-grid { grid-template-columns: 1fr; }
+    .hours-cta-left { padding: 40px; }
+    .hours-cta-right { min-height: 300px; }
+  }
+</style>

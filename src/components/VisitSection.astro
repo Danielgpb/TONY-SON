@@ -1,0 +1,134 @@
+---
+import type { Locale } from '../i18n';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+
+const leftTagline = locale === 'nl' ? 'Ons bezoeken' : locale === 'en' ? 'Visit us' : 'Nous rendre visite';
+const leftTitle = locale === 'nl' ? 'Boek uw bezoek' : locale === 'en' ? 'Book your visit' : 'réservez votre visite';
+const leftDesc = locale === 'nl' ? "Wij stellen onze expertise te uwer beschikking voor knippen, precisiescheren of persoonlijke haarverzorging. Profiteer van een unieke ervaring in een warme en professionele sfeer." : locale === 'en' ? "We put our expertise at your service for cuts, precision shaving, or personalized hair care. Enjoy a unique experience in a warm and professional atmosphere." : "Nous mettons notre expertise à votre service pour des coupes, un rasage de précision ou des soins capillaires personnalisés. Profitez d'une expérience unique dans une ambiance chaleureuse et professionnelle.";
+const cta = locale === 'nl' ? 'Contacteer ons' : locale === 'en' ? 'Contact us' : 'Contactez-nous';
+
+const rightTagline = locale === 'nl' ? 'Wij zijn open' : locale === 'en' ? 'We are open' : 'Nous sommes ouverts';
+const rightTitle = locale === 'nl' ? 'Openingstijden' : locale === 'en' ? 'Opening Hours' : "heures d'ouverture";
+const address = "27 rue Bonneels, Saint-josse-ten-Noode, 1210";
+const tueFri = locale === 'nl' ? 'Dinsdag - Vrijdag' : locale === 'en' ? 'Tuesday - Friday' : 'Mardi - Vendredi';
+const sat = locale === 'nl' ? 'Zaterdag' : locale === 'en' ? 'Saturday' : 'Samedi';
+const sunMon = locale === 'nl' ? 'Zondag - Maandag' : locale === 'en' ? 'Sunday - Monday' : 'Dimanche - Lundi';
+const closed = locale === 'nl' ? 'Gesloten' : locale === 'en' ? 'Closed' : 'Fermé';
+const bookCta = locale === 'nl' ? 'Boek uw bezoek' : locale === 'en' ? 'Book your visit' : 'Réservez votre visite';
+---
+
+<section class="visit-section">
+  <div class="visit-grid">
+    <!-- Left: Book Visit -->
+    <div class="visit-left" style="background-image: url('/images/photo-15.jpeg')">
+      <div class="visit-left-overlay"></div>
+      <div class="visit-left-content">
+        <h5 class="tagline" style="color: var(--color-heading);">{leftTagline}</h5>
+        <h2 class="visit-left-title">{leftTitle}</h2>
+        <p class="visit-left-address">{address}</p>
+        <p class="visit-left-phone">+32 2 230 55 37</p>
+        <p class="visit-left-email"><a href="mailto:infotonyson@gmail.com">infotonyson@gmail.com</a></p>
+        <a href={`/${locale}/contact/`} class="btn btn-dark" style="margin-top:40px;">{cta}</a>
+      </div>
+    </div>
+
+    <!-- Right: Opening Hours -->
+    <div class="visit-right">
+      <div class="visit-right-content">
+        <h5 class="tagline" style="color: var(--color-gold);">{rightTagline}</h5>
+        <h2 class="visit-right-title">{rightTitle}</h2>
+        <div class="visit-hours">
+          <p class="hours-line">{tueFri} — 09:00 - 19:00</p>
+          <p class="hours-line">{sat} — 09:00 - 18:00</p>
+          <p class="hours-line">{sunMon} — {closed}</p>
+        </div>
+        <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="btn btn-white" style="margin-top:50px;">{bookCta}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .visit-section {
+    margin-top: 150px;
+  }
+  .visit-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+  }
+
+  /* Left Column */
+  .visit-left {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 80px;
+    display: flex;
+    align-items: center;
+  }
+  .visit-left-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(209, 176, 150, 0.88);
+  }
+  .visit-left-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+  }
+  .visit-left-title {
+    font-size: 36px;
+    color: var(--color-heading);
+    margin-bottom: 30px;
+  }
+  .visit-left-address,
+  .visit-left-phone,
+  .visit-left-email {
+    color: rgba(255,255,255,0.95);
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .visit-left-phone {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 5px 0;
+  }
+  .visit-left-email a {
+    color: rgba(255,255,255,0.95);
+    text-decoration: underline;
+  }
+
+  /* Right Column */
+  .visit-right {
+    background: var(--color-black);
+    padding: 80px;
+    display: flex;
+    align-items: center;
+  }
+  .visit-right-content {
+    width: 100%;
+  }
+  .visit-right-title {
+    font-size: 36px;
+    color: var(--color-white);
+    margin-bottom: 35px;
+  }
+  .hours-line {
+    color: var(--color-white);
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 0.7rem;
+  }
+
+  @media (max-width: 768px) {
+    .visit-section { margin-top: 80px; }
+    .visit-grid { grid-template-columns: 1fr; }
+    .visit-left, .visit-right { padding: 50px 30px; }
+    .visit-left-title, .visit-right-title { font-size: 28px; }
+  }
+</style>

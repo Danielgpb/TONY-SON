@@ -1,0 +1,170 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Over ons" locale="nl" page="about">
+  <!-- Title Bar -->
+  <section class="titlebar" style="background-image: url('/images/titlebar-bg.jpg')">
+    <div class="titlebar-overlay"></div>
+    <div class="container">
+      <h1>over ons</h1>
+    </div>
+  </section>
+
+  <!-- Welcome Section -->
+  <section class="welcome-section">
+    <div class="container">
+      <div class="welcome-grid">
+        <div class="welcome-content">
+          <h5 class="tagline">Welkom bij Tony&Son</h5>
+          <h2 class="section-title" style="color:var(--color-heading);">Welkom bij kapsalon Tony&Son</h2>
+          <p>Bij Tony&Son geloven we dat zelfvertrouwen begint met een kapsel dat bij u past. Elk kapsel wordt met zorg en precisie uitgevoerd, om uw persoonlijkheid te benadrukken en uw schoonheid te versterken. Ons deskundig team zet zich in om u een unieke ervaring te bieden, waarbij elk detail telt, voor een perfect resultaat dat past bij uw wensen en levensstijl.</p>
+          <p>Of u nu op zoek bent naar een klassiek kapsel, een gedurfde transformatie of persoonlijk advies, wij zijn er om uw stijl te verfijnen. Kom binnen, ontspan en laat ons de beste versie van uzelf onthullen.</p>
+          <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="btn">Nu boeken</a>
+        </div>
+        <div class="welcome-images">
+          <img src="/images/about-1.jpg" alt="Tony&Son Salon" class="welcome-img-1" loading="lazy" />
+          <img src="/images/about-2.jpg" alt="Tony&Son Kapsalon" class="welcome-img-2" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- History Section -->
+  <section class="history-section">
+    <div class="container">
+      <h2 class="section-title" style="text-align:center;color:var(--color-heading);margin-bottom:50px;">Het verhaal van Tony&Son</h2>
+      <div class="history-content">
+        <p>In <em>1970</em> vestigde <strong>Tony Campisi</strong>, een jonge gepassioneerde kapper uit Italië, zich in Brussel met een eenvoudige maar krachtige droom: <em>elke klant een kapsel bieden dat zijn persoonlijkheid en unieke schoonheid weerspiegelt</em>. Opgeleid aan de beste kapperssscholen, waaronder de prestigieuze <em>Toni&Guy</em> school, opende Tony zijn eigen salon met een filosofie gebaseerd op uitmuntendheid en aandacht voor detail.</p>
+        <p>Door de jaren heen werd de salon een referentie in de wijk Sint-Joost-ten-Node, met een trouw klantenbestand dankzij ambachtelijk vakmanschap en een warm onthaal. De kwaliteit van elk kapsel, de precisie van elk gebaar en de passie voor het vak maakten van <strong>Tony&Son</strong> een onmisbare bestemming.</p>
+        <p>Vandaag heeft <strong>Salvatore Campisi</strong>, Tony's zoon, de leiding van de salon overgenomen. Vanaf jonge leeftijd opgeleid door zijn vader, zet Salvatore het familiale erfgoed voort met dezelfde passie en toewijding. Hij weet traditie en moderniteit te combineren, door de nieuwste trends over te nemen terwijl hij de kernwaarden bewaart: <em>luisteren, kwaliteit en aandacht voor detail</em>.</p>
+        <p>Bij <strong>Tony&Son</strong> is elke klant uniek. We zijn er trots op een persoonlijke service te bieden, waarbij elk bezoek een ervaring op zich is. Of het nu gaat om een klassiek kapsel, precisiescheren of haarverzorging, ons team staat klaar om uw stijl te verfijnen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opening Hours CTA -->
+  <section class="hours-cta-section">
+    <div class="hours-cta-grid">
+      <div class="hours-cta-left">
+        <div class="hours-cta-content">
+          <h5 class="tagline" style="color:var(--color-gold);">Wij zijn open</h5>
+          <h2 class="hours-cta-title">Openingstijden</h2>
+          <div class="hours-list">
+            <p>Dinsdag - Vrijdag — 9:00 - 19:00</p>
+            <p>Zaterdag — 9:00 - 18:00</p>
+            <p>Zondag - Maandag — Gesloten</p>
+          </div>
+          <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="btn" style="background:#fff;color:#000;margin-top:40px;">Boek uw bezoek</a>
+        </div>
+      </div>
+      <div class="hours-cta-right" style="background-image: url('/images/photo-11.jpeg')"></div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .titlebar {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    padding: 160px 0 80px;
+    text-align: center;
+  }
+  .titlebar-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+  }
+  .titlebar h1 {
+    position: relative;
+    z-index: 2;
+    font-family: var(--font-heading);
+    font-size: 42px;
+    font-weight: 400;
+    color: var(--color-white);
+    text-transform: capitalize;
+  }
+
+  .welcome-section { padding: 100px 0; }
+  .welcome-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .welcome-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+  }
+  .welcome-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .welcome-img-1, .welcome-img-2 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .history-section {
+    padding: 80px 0;
+    background: var(--color-cream);
+  }
+  .history-content {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .history-content p {
+    font-size: 16px;
+    line-height: 1.9;
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+  }
+  .history-content em { color: var(--color-gold); font-style: italic; }
+  .history-content strong { color: var(--color-heading); }
+
+  .hours-cta-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+  }
+  .hours-cta-left {
+    background: var(--color-black);
+    padding: 80px;
+    display: flex;
+    align-items: center;
+  }
+  .hours-cta-title {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--color-white);
+    margin-bottom: 30px;
+  }
+  .hours-list p {
+    color: var(--color-white);
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+  .hours-cta-right {
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (max-width: 768px) {
+    .titlebar { padding: 120px 0 60px; }
+    .titlebar h1 { font-size: 28px; }
+    .welcome-grid { grid-template-columns: 1fr; gap: 30px; }
+    .welcome-images { grid-template-columns: 1fr; }
+    .hours-cta-grid { grid-template-columns: 1fr; }
+    .hours-cta-left { padding: 40px; }
+    .hours-cta-right { min-height: 300px; }
+  }
+</style>

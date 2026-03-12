@@ -1,0 +1,67 @@
+---
+import type { Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+  currentPage?: string;
+}
+
+const { locale, currentPage = '' } = Astro.props;
+
+const pageMap: Record<string, string> = {
+  home: '',
+  about: 'about/',
+  contact: 'contact/',
+};
+
+const pagePath = pageMap[currentPage] || '';
+
+const languages = [
+  { code: 'fr' as Locale, label: 'FR' },
+  { code: 'en' as Locale, label: 'EN' },
+  { code: 'nl' as Locale, label: 'NL' },
+];
+---
+
+<div class="lang-switcher">
+  {languages.map((lang, i) => (
+    <>
+      {i > 0 && <span class="lang-sep">|</span>}
+      <a
+        href={`/${lang.code}/${pagePath}`}
+        class:list={['lang-link', { active: locale === lang.code }]}
+      >
+        {lang.label}
+      </a>
+    </>
+  ))}
+</div>
+
+<style>
+  .lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+  }
+  .lang-sep {
+    color: var(--color-text-light);
+    font-size: 0.7rem;
+    opacity: 0.5;
+  }
+  .lang-link {
+    font-family: var(--font-accent);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 2px 6px;
+    color: var(--color-text);
+    transition: var(--transition);
+    text-transform: uppercase;
+  }
+  .lang-link:hover {
+    color: var(--color-heading);
+  }
+  .lang-link.active {
+    color: var(--color-gold);
+    font-weight: 700;
+  }
+</style>

@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Startpagina",
+    "about": "Over ons",
+    "contact": "Contact",
+    "bookNow": "BOEK NU"
+  },
+  "hero": {
+    "title": "Your Style Destination",
+    "subtitle": "Verfraai uw look",
+    "cta": "Boek nu"
+  },
+  "about": {
+    "sectionTitle": "Over ons",
+    "description": "Tony&Son is een kapsalon opgericht in 1970 door Tony Campisi en overgenomen door zijn zoon Salvatore, opgeleid aan de Toni&Guy school. Bij Tony&Son geloven we dat vertrouwen begint met een kapsel dat bij je past.",
+    "welcomeTitle": "Welkom bij Tony&Son",
+    "welcomeText": "Bij Tony&Son geloven we dat vertrouwen begint met een kapsel dat bij je past. Ons gepassioneerd team stelt zijn expertise te uwer beschikking voor knippen, transformaties en persoonlijk advies.",
+    "historyTitle": "Het verhaal van Tony&Son",
+    "historyText": "Tony&Son is een kapsalon opgericht in 1970 door Tony Campisi en overgenomen door zijn zoon Salvatore, opgeleid aan de prestigieuze Toni&Guy school. Wij combineren familietraditie en moderne creativiteit om u een unieke ervaring te bieden."
+  },
+  "services": {
+    "sectionTitle": "De Kunst van het Verfraaien van Uw Stijl",
+    "description": "Wij stellen onze expertise te uwer beschikking voor knippen, precisiescheren of persoonlijke haarverzorging.",
+    "cut": "Knipbeurt",
+    "cutDesc": "Op maat gemaakte knippen die uw persoonlijkheid weerspiegelen en uw stijl verfraaien.",
+    "color": "Kleuring",
+    "colorDesc": "Levendige en langdurige kleuren gemaakt met de beste professionele producten.",
+    "styling": "Styling",
+    "stylingDesc": "Deskundige styling voor elke gelegenheid, van dagelijks tot speciale evenementen."
+  },
+  "team": {
+    "sectionTitle": "Ons Team",
+    "description": "Gepassioneerde en ervaren kappers tot uw dienst."
+  },
+  "gallery": {
+    "sectionTitle": "Onze Galerij"
+  },
+  "testimonials": {
+    "sectionTitle": "Wat onze klanten zeggen",
+    "rating": "4.5/5 op Google",
+    "reviewCount": "253 beoordelingen"
+  },
+  "brands": {
+    "sectionTitle": "Onze Partnermerken"
+  },
+  "contact": {
+    "sectionTitle": "Contacteer ons",
+    "phone": "Telefoon",
+    "email": "E-mail",
+    "address": "Adres",
+    "hours": "Openingstijden",
+    "tueFri": "Dinsdag - Vrijdag",
+    "sat": "Zaterdag",
+    "sunMon": "Zondag - Maandag",
+    "closed": "Gesloten",
+    "formName": "Naam",
+    "formEmail": "E-mail",
+    "formMessage": "Bericht",
+    "formSend": "Versturen",
+    "bookCta": "Boek uw bezoek"
+  },
+  "footer": {
+    "rights": "Alle rechten voorbehouden",
+    "followUs": "Volg ons"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "contact": "Contact",
+    "bookNow": "RÉSERVER"
+  },
+  "hero": {
+    "title": "Votre Destination de Style",
+    "subtitle": "Sublimez votre look",
+    "cta": "Réserver maintenant"
+  },
+  "about": {
+    "sectionTitle": "À propos de nous",
+    "description": "Tony&Son est un salon de coiffure fondé en 1970 par Tony Campisi et repris par son fils Salvatore, formé à l'école Toni&Guy. Chez Tony&Son, nous croyons que la confiance commence par une coiffure qui vous ressemble.",
+    "welcomeTitle": "Bienvenue chez Tony&Son",
+    "welcomeText": "Chez Tony&Son, nous croyons que la confiance commence par une coiffure qui vous ressemble. Notre équipe passionnée met son expertise à votre service pour des coupes, des transformations et des conseils personnalisés.",
+    "historyTitle": "L'histoire de Tony&Son",
+    "historyText": "Tony&Son est un salon de coiffure fondé en 1970 par Tony Campisi et repris par son fils Salvatore, formé à la prestigieuse école Toni&Guy. Nous combinons tradition familiale et créativité moderne pour vous offrir une expérience unique."
+  },
+  "services": {
+    "sectionTitle": "L'Art de Sublimer Votre Style",
+    "description": "Nous mettons notre expertise à votre service pour des coupes, un rasage de précision ou des soins capillaires personnalisés.",
+    "cut": "Coupe",
+    "cutDesc": "Des coupes sur mesure qui reflètent votre personnalité et subliment votre style.",
+    "color": "Coloration",
+    "colorDesc": "Des colorations vibrantes et durables réalisées avec les meilleurs produits professionnels.",
+    "styling": "Coiffage",
+    "stylingDesc": "Un coiffage expert pour toutes les occasions, du quotidien aux événements spéciaux."
+  },
+  "team": {
+    "sectionTitle": "Notre Équipe",
+    "description": "Des coiffeurs passionnés et expérimentés à votre service."
+  },
+  "gallery": {
+    "sectionTitle": "Notre Galerie"
+  },
+  "testimonials": {
+    "sectionTitle": "Ce que disent nos clients",
+    "rating": "4.5/5 sur Google",
+    "reviewCount": "253 avis"
+  },
+  "brands": {
+    "sectionTitle": "Nos Marques Partenaires"
+  },
+  "contact": {
+    "sectionTitle": "Contactez-nous",
+    "phone": "Téléphone",
+    "email": "Email",
+    "address": "Adresse",
+    "hours": "Horaires d'ouverture",
+    "tueFri": "Mardi - Vendredi",
+    "sat": "Samedi",
+    "sunMon": "Dimanche - Lundi",
+    "closed": "Fermé",
+    "formName": "Nom",
+    "formEmail": "Email",
+    "formMessage": "Message",
+    "formSend": "Envoyer",
+    "bookCta": "Réservez votre visite"
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "followUs": "Suivez-nous"
+  }
+}

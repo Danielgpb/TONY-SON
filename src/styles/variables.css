@@ -1,0 +1,26 @@
+:root {
+  /* Colors - from Luxcut theme */
+  --color-cream: #F4F2F1;
+  --color-gold: #D1B096;
+  --color-gold-alt: #CBB19A;
+  --color-black: #000000;
+  --color-black-alt: #000001;
+  --color-white: #FFFFFF;
+  --color-text: #404040;
+  --color-text-dark: #020202;
+  --color-text-light: #969696;
+  --color-heading: #020202;
+  --color-border: #D2D6DA;
+  --color-border-dark: #272727;
+
+  /* Typography - Luxcut theme uses Jost as primary */
+  --font-body: 'Jost', sans-serif;
+  --font-heading: 'Jost', sans-serif;
+  --font-display: 'Playfair Display', serif;
+  --font-accent: 'Jost', sans-serif;
+
+  /* Layout */
+  --max-width: 1140px;
+  --header-height: 80px;
+  --transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,87 @@
+---
+import type { Locale } from '../i18n';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+
+const title = locale === 'nl' ? 'Onze klanten spreken voor ons' : locale === 'en' ? 'Our clients speak for us' : 'Nos clients parlent pour nous';
+const subtitle = locale === 'nl' ? 'op Google Reviews' : locale === 'en' ? 'on Google Reviews' : 'sur Google Reviews';
+const cta = locale === 'nl' ? 'Lees onze beoordelingen' : locale === 'en' ? 'Read our reviews' : 'Lire nos avis';
+---
+
+<section class="reviews-badge">
+  <div class="container">
+    <div class="reviews-inner">
+      <div class="reviews-stars">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star half">★</span>
+      </div>
+      <h2 class="reviews-score">4,5<span class="reviews-max">/5</span></h2>
+      <p class="reviews-count">342 avis {subtitle}</p>
+      <p class="reviews-title">{title}</p>
+      <a href="https://maps.google.com/?q=Tony+and+Son+Saint-Josse-ten-Noode" target="_blank" rel="noopener" class="reviews-link">{cta} &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .reviews-badge {
+    padding: 60px 0;
+    background: var(--color-black);
+  }
+  .reviews-inner {
+    text-align: center;
+  }
+  .reviews-stars {
+    font-size: 32px;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+  }
+  .star {
+    color: var(--color-gold);
+  }
+  .star.half {
+    background: linear-gradient(90deg, var(--color-gold) 50%, var(--color-text-light) 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .reviews-score {
+    font-size: 52px;
+    font-weight: 700;
+    color: var(--color-white);
+    text-transform: none;
+    margin-bottom: 5px;
+  }
+  .reviews-max {
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--color-text-light);
+  }
+  .reviews-count {
+    font-size: 16px;
+    color: var(--color-text-light);
+    margin-bottom: 10px;
+    text-transform: none;
+  }
+  .reviews-title {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 20px;
+    color: var(--color-gold);
+    margin-bottom: 20px;
+    text-transform: none;
+  }
+  .reviews-link {
+    font-family: var(--font-accent);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-white);
+    border-bottom: 1px solid var(--color-gold);
+    padding-bottom: 3px;
+    transition: var(--transition);
+  }
+  .reviews-link:hover {
+    color: var(--color-gold);
+  }
+</style>

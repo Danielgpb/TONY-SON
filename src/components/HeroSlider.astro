@@ -1,0 +1,124 @@
+---
+import type { Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const tagline = locale === 'nl' ? 'Uw Stijlbestemming' : locale === 'en' ? 'Your Style Destination' : 'Salon de coiffure & Barbier depuis 1970';
+const heading = locale === 'nl' ? 'Verfraai uw look.' : locale === 'en' ? 'Enhance your look.' : 'Tony&Son Saint-Josse-ten-Noode';
+const cta = locale === 'nl' ? 'Boek nu' : locale === 'en' ? 'Book now' : 'Réserver maintenant';
+---
+
+<section class="hero">
+  <div class="hero-bg" style="background-image: url('/images/hero-bg.jpg')"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-box">
+    <p class="hero-tagline">{tagline}</p>
+    <h1 class="hero-title">{heading}</h1>
+    <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="hero-cta">{cta}</a>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    overflow: hidden;
+    margin-top: calc(var(--header-height) * -1);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    animation: heroZoom 20s ease-in-out infinite alternate;
+  }
+  @keyframes heroZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.08); }
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 1;
+  }
+  .hero-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--color-black);
+    padding: 65px 65px 65px 110px;
+    max-width: 600px;
+    z-index: 2;
+  }
+  .hero-tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--color-gold-alt, #CBB19A);
+    letter-spacing: -1px;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 30px;
+  }
+  .hero-title {
+    font-family: 'Jost', sans-serif;
+    font-size: 55px;
+    font-weight: 600;
+    color: var(--color-white);
+    text-transform: uppercase;
+    line-height: 70px;
+    margin-bottom: 30px;
+    letter-spacing: 0;
+  }
+  .hero-cta {
+    display: inline-block;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    background: var(--color-gold-alt, #CBB19A);
+    color: var(--color-white);
+    padding: 22px 45px;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    line-height: 16px;
+    cursor: pointer;
+  }
+  .hero-cta:hover {
+    background: #181818;
+    color: var(--color-white);
+  }
+
+  @media (max-width: 1024px) {
+    .hero-box {
+      padding: 55px;
+      max-width: 500px;
+    }
+    .hero-title { font-size: 45px; line-height: 60px; }
+  }
+  @media (max-width: 768px) {
+    .hero { min-height: 600px; }
+    .hero-box {
+      padding: 50px 50px;
+      max-width: 100%;
+      right: 0;
+    }
+    .hero-title { font-size: 45px; line-height: 55px; }
+    .hero-tagline { font-size: 20px; }
+    .hero-cta { padding: 18px 36px; }
+  }
+  @media (max-width: 480px) {
+    .hero-box { padding: 40px 30px; }
+    .hero-title { font-size: 36px; line-height: 45px; }
+    .hero-tagline { font-size: 16px; }
+  }
+</style>

@@ -1,0 +1,289 @@
+---
+import type { Locale } from '../i18n';
+import LanguageSwitcher from './LanguageSwitcher.astro';
+
+interface Props {
+  locale: Locale;
+  currentPage?: string;
+  transparent?: boolean;
+}
+
+const { locale, currentPage = '', transparent = false } = Astro.props;
+---
+
+<header class:list={['header', { transparent }]} id="site-header">
+  <div class="header-inner container">
+    <a href={`/${locale}/`} class="logo">
+      <img src="/images/logo.png" alt="Tony&Son" />
+    </a>
+
+    <nav class="nav" id="main-nav">
+      <a href={`/${locale}/`} class:list={['nav-link', { active: currentPage === 'home' }]}>
+        {locale === 'nl' ? 'Startpagina' : locale === 'en' ? 'Home' : "Page d'accueil"}
+      </a>
+      <a href={`/${locale}/coiffure/`} class:list={['nav-link', { active: currentPage === 'coiffure' }]}>
+        {locale === 'nl' ? 'Kapsalon' : locale === 'en' ? 'Hairdressing' : 'Coiffure'}
+      </a>
+      <a href={`/${locale}/barbier/`} class:list={['nav-link', { active: currentPage === 'barbier' }]}>
+        {locale === 'nl' ? 'Barbier' : locale === 'en' ? 'Barber' : 'Barbier'}
+      </a>
+      <a href={`/${locale}/about/`} class:list={['nav-link', { active: currentPage === 'about' }]}>
+        {locale === 'nl' ? 'Over ons' : locale === 'en' ? 'About Us' : 'A propos de nous'}
+      </a>
+      <a href={`/${locale}/contact/`} class:list={['nav-link', { active: currentPage === 'contact' }]}>
+        Contact
+      </a>
+    </nav>
+
+    <div class="header-right">
+      <LanguageSwitcher locale={locale} currentPage={currentPage} />
+      <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="header-cta">
+        {locale === 'nl' ? 'BOEK NU' : locale === 'en' ? 'BOOK NOW' : 'RÉSERVEZ MAINTENANT'}
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Side Panel -->
+<div class="side-panel" id="side-panel">
+  <button class="side-close" id="side-close">&times;</button>
+  <div class="side-content">
+    <h4 style="color: black;">{locale === 'nl' ? 'Afspraak maken' : locale === 'en' ? 'Book an appointment' : 'Prendre rendez-vous'}</h4>
+    <p class="side-address">Rue Bonneels 27, 1210 Saint-Josse-ten-Noode, Belgique</p>
+    <h3 style="color: var(--color-gold); text-transform: none;">+32 2 230 55 37</h3>
+    <p><a href="mailto:infotonyson@gmail.com" style="color: var(--color-gold);">infotonyson@gmail.com</a></p>
+    <div class="side-social">
+      <a href="https://www.facebook.com/tonysoncoiffure/?locale=fr_FR" target="_blank" rel="noopener" aria-label="Facebook">
+        <span style="color: #D1B096; font-size: 24px; margin-right: 15px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+        </span>
+      </a>
+      <a href="https://www.instagram.com/tonysonhairstylist" target="_blank" rel="noopener" aria-label="Instagram">
+        <span style="color: #D1B096; font-size: 24px; margin-right: 15px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </span>
+      </a>
+      <a href="https://www.tiktok.com/@tonysonhairdresser" target="_blank" rel="noopener" aria-label="TikTok">
+        <span style="color: #D1B096; font-size: 24px; margin-right: 15px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 00-.79-.05A6.34 6.34 0 003.15 15.2a6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.34-6.34V8.73a8.19 8.19 0 004.76 1.52v-3.4a4.85 4.85 0 01-1-.16z"/></svg>
+        </span>
+      </a>
+    </div>
+    <div style="margin-top:30px"></div>
+    <h4 style="color: black;">{locale === 'nl' ? 'Openingstijden' : locale === 'en' ? 'Opening hours' : "Horaire d'ouverture"}</h4>
+    <p>{locale === 'nl' ? 'Dinsdag - Vrijdag' : locale === 'en' ? 'Tuesday - Friday' : 'Mardi - Vendredi'} / 09:00 - 19:00</p>
+    <p>{locale === 'nl' ? 'Zaterdag' : locale === 'en' ? 'Saturday' : 'Samedi'} / 09:00 - 18:00</p>
+    <p>{locale === 'nl' ? 'Zondag - Maandag' : locale === 'en' ? 'Sunday - Monday' : 'Dimanche - Lundi'} / {locale === 'nl' ? 'Gesloten' : locale === 'en' ? 'Closed' : 'Fermé'}</p>
+    <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="side-cta-btn">
+      {locale === 'nl' ? 'BOEK UW BEZOEK' : locale === 'en' ? 'BOOK YOUR VISIT' : 'RÉSERVEZ VOTRE VISITE'}
+    </a>
+  </div>
+</div>
+<div class="side-overlay" id="side-overlay"></div>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: var(--color-white);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    transition: background 0.25s ease-out, box-shadow 0.25s ease-out;
+  }
+  .header.transparent {
+    background: transparent;
+  }
+  .header.scrolled {
+    background: var(--color-white) !important;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 45px;
+  }
+  .logo img {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+  }
+  .header.transparent:not(.scrolled) .logo img {
+    filter: brightness(0) invert(1);
+  }
+
+  .nav {
+    display: flex;
+    gap: 2.5rem;
+  }
+  .nav-link {
+    font-family: var(--font-accent);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--color-heading);
+    transition: var(--transition);
+  }
+  .header.transparent:not(.scrolled) .nav-link {
+    color: var(--color-white);
+  }
+  .nav-link:hover,
+  .nav-link.active {
+    color: var(--color-gold);
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .header-cta {
+    font-family: var(--font-accent);
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: var(--color-heading);
+    transition: var(--transition);
+  }
+  .header.transparent:not(.scrolled) .header-cta {
+    color: var(--color-white);
+  }
+  .header-cta:hover {
+    color: var(--color-gold);
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+  }
+  .hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--color-heading);
+    transition: var(--transition);
+  }
+  .header.transparent:not(.scrolled) .hamburger span {
+    background: var(--color-white);
+  }
+
+  /* Side Panel */
+  .side-panel {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 400px;
+    height: 100vh;
+    background: var(--color-white);
+    z-index: 2000;
+    transition: right 0.4s cubic-bezier(0.25, 0.05, 0.1, 0.94);
+    padding: 50px 35px;
+    overflow-y: auto;
+  }
+  .side-panel.open { right: 0; }
+  .side-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    cursor: pointer;
+    color: var(--color-heading);
+    line-height: 1;
+  }
+  .side-content h4 {
+    font-family: var(--font-accent);
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .side-content p {
+    font-size: 15px;
+    color: var(--color-text);
+    line-height: 1.6;
+    margin-bottom: 0.4rem;
+  }
+  .side-address {
+    margin-bottom: 1rem !important;
+  }
+  .side-social {
+    display: flex;
+    gap: 0;
+    margin: 1.5rem 0;
+  }
+  .side-social a {
+    color: var(--color-gold);
+  }
+  .side-cta-btn {
+    display: inline-block;
+    margin-top: 2rem;
+    background: var(--color-gold-alt, #CBB19A);
+    color: var(--color-white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: var(--font-accent);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: var(--transition);
+  }
+  .side-cta-btn:hover {
+    background: var(--color-black-alt);
+  }
+  .side-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+  .side-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  @media (max-width: 992px) {
+    .nav, .header-cta { display: none; }
+    .header-inner { padding-left: 15px; }
+  }
+  @media (min-width: 993px) {
+    .nav { display: flex; }
+  }
+</style>
+
+<script>
+  const header = document.getElementById('site-header');
+  const hamburger = document.getElementById('hamburger');
+  const panel = document.getElementById('side-panel');
+  const overlay = document.getElementById('side-overlay');
+  const closeBtn = document.getElementById('side-close');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) header?.classList.add('scrolled');
+    else header?.classList.remove('scrolled');
+  });
+
+  function openPanel() { panel?.classList.add('open'); overlay?.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closePanel() { panel?.classList.remove('open'); overlay?.classList.remove('open'); document.body.style.overflow = ''; }
+
+  hamburger?.addEventListener('click', openPanel);
+  closeBtn?.addEventListener('click', closePanel);
+  overlay?.addEventListener('click', closePanel);
+</script>

@@ -1,0 +1,127 @@
+---
+import { t, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const i = t(locale);
+
+const team = [
+  { name: 'Salvatore', role: locale === 'nl' ? 'Eigenaar & Stylist' : locale === 'en' ? 'Owner & Stylist' : 'Propriétaire & Styliste', img: '/images/team-1.jpg' },
+  { name: 'Dita', role: locale === 'nl' ? 'Coloriste' : locale === 'en' ? 'Colorist' : 'Coloriste', img: '/images/team-2.jpg' },
+  { name: 'Grazi', role: locale === 'nl' ? 'Stylist' : locale === 'en' ? 'Stylist' : 'Styliste', img: '/images/team-3.jpg' },
+  { name: 'Oliver', role: locale === 'nl' ? 'Stylist' : locale === 'en' ? 'Stylist' : 'Styliste', img: '/images/photo-2.jpeg' },
+];
+---
+
+<section class="section team-section">
+  <div class="container">
+    <h2 class="section-title">{i.team.sectionTitle}</h2>
+    <p class="section-subtitle">{i.team.description}</p>
+    <div class="team-grid">
+      {team.map((member) => (
+        <div class="team-card">
+          <div class="team-card-inner">
+            <div class="team-card-front">
+              <img src={member.img} alt={member.name} loading="lazy" />
+              <div class="team-info">
+                <h3>{member.name}</h3>
+              </div>
+            </div>
+            <div class="team-card-back">
+              <h3>{member.name}</h3>
+              <p>{member.role}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .team-card {
+    perspective: 1000px;
+    height: 350px;
+  }
+
+  .team-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+
+  .team-card:hover .team-card-inner {
+    transform: rotateY(180deg);
+  }
+
+  .team-card-front,
+  .team-card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .team-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .team-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: var(--color-white);
+  }
+
+  .team-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .team-card-back {
+    background: var(--color-brown);
+    color: var(--color-white);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .team-card-back h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .team-card-back p {
+    font-size: 1rem;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 768px) {
+    .team-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .team-card {
+      height: 280px;
+    }
+  }
+</style>

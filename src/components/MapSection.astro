@@ -1,0 +1,64 @@
+---
+import type { Locale } from '../i18n';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+
+const mapTitle = locale === 'nl' ? 'Uw schoonheidsbestemming in het hart van de stad.' : locale === 'en' ? 'Your beauty destination in the heart of the city.' : 'Votre destination beauté au coeur de la ville.';
+const mapDesc = locale === 'nl' ? "Ontdek onze salon Tony&Son, een plek waar elk kapsel uw stijl weerspiegelt en waar elk detail telt. Onze experts staan klaar om uw look te verfijnen. De salon is gemakkelijk bereikbaar, gelegen op een steenworp van het station van Maalbeek en bediend door de STIB-buslijnen 59, 29, 63 evenals De Lijn N05, R81 en R90." : locale === 'en' ? "Discover our Tony&Son salon, a place where every cut reflects your style and every detail counts. Our experts are ready to enhance your look. The salon is easily accessible, located a stone's throw from Maalbeek station and served by STIB bus lines 59, 29, 63 as well as De Lijn N05, R81 and R90." : "Découvrez notre salon Tony&Son, un lieu où chaque coupe reflète votre style et où chaque détail compte. Nos experts vous attendent pour sublimer votre look. Le salon est facilement accessible, situé à deux pas de la gare de Maalbeek et desservi par les lignes de bus STIB 59, 29, 63 ainsi que De Lijn N05, R81 et R90.";
+---
+
+<section class="map-section">
+  <div class="container">
+    <div class="map-grid">
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.5!2d4.3779093!3d50.8489674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c3618601861f%3A0x573e8530643fa9d3!2sTony%26Son+%E2%9C%82!5e0!3m2!1sfr!2sbe!4v1710000000000"
+          width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Tony&Son Location"></iframe>
+      </div>
+      <div class="map-info">
+        <img src="/images/photo-12.jpeg" alt="Tony&Son" class="map-image" loading="lazy" />
+        <h3 class="map-title">{mapTitle}</h3>
+        <p class="map-desc">{mapDesc}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .map-section {
+    margin-top: 150px;
+  }
+  .map-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .map-embed iframe {
+    border-radius: 0;
+    display: block;
+  }
+  .map-image {
+    width: 55%;
+    margin-bottom: 25px;
+  }
+  .map-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: var(--color-heading);
+    text-transform: none;
+    font-weight: 600;
+  }
+  .map-desc {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--color-text);
+  }
+
+  @media (max-width: 768px) {
+    .map-section { margin-top: 80px; }
+    .map-grid { grid-template-columns: 1fr; }
+    .map-image { width: 100%; }
+  }
+</style>

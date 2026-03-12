@@ -1,0 +1,197 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BrandLogos from '../../components/BrandLogos.astro';
+---
+
+<Layout title="Contact" locale="nl" page="contact">
+  <!-- Contact Info Bar -->
+  <section class="contact-bar">
+    <div class="contact-bar-grid">
+      <div class="contact-bar-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        <div>
+          <h4>Telefoon</h4>
+          <a href="tel:+3222305537">+32 2 230 55 37</a>
+        </div>
+      </div>
+      <div class="contact-bar-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <div>
+          <h4>Email</h4>
+          <a href="mailto:infotonyson@gmail.com">infotonyson@gmail.com</a>
+        </div>
+      </div>
+      <div class="contact-bar-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div>
+          <h4>Openingstijden</h4>
+          <p>Din - Vrij: 9:00 - 19:00</p>
+          <p>Zat: 9:00 - 18:00</p>
+          <p>Zon - Maa: Gesloten</p>
+        </div>
+      </div>
+      <div class="contact-bar-item">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div>
+          <h4>Adres</h4>
+          <a href="https://maps.google.com/?q=Rue+Bonneels+27+1210+Saint-Josse-ten-Noode" target="_blank" rel="noopener">Rue Bonneels 27, 1210 Sint-Joost-ten-Node, België</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Image Section -->
+  <section class="contact-hero">
+    <div class="contact-hero-image">
+      <img src="/images/contact-hero.jpg" alt="Tony&Son Salon" loading="lazy" />
+      <div class="contact-hero-overlay">
+        <h2>Herdefinieer Uw Stijl Bij Tony & Son!</h2>
+        <p>Bij Tony & Son stellen wij onze expertise te uwer beschikking voor knippen, precisiescheren of persoonlijke haarverzorging. Geniet van een unieke ervaring in een warme en professionele sfeer.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Button -->
+  <section class="contact-cta">
+    <div class="container" style="text-align:center;">
+      <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="btn">Nu boeken</a>
+    </div>
+  </section>
+
+  <!-- Map + Text Section -->
+  <section class="contact-map-section">
+    <div class="container">
+      <div class="contact-map-grid">
+        <div class="contact-map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.5!2d4.3725!3d50.855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c38f5e99a0a3%3A0x1d2f89b7d9a2e0e0!2sRue%20Bonneels%2027%2C%201210%20Saint-Josse-ten-Noode!5e0!3m2!1sfr!2sbe!4v1710000000000"
+            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Tony&Son Locatie"></iframe>
+        </div>
+        <div class="contact-map-text">
+          <h3>U Bent Slechts Een Stap Verwijderd Van Een Perfecte Look!</h3>
+          <p>Vind ons gemakkelijk op de kaart en laat u begeleiden naar Tony & Son, uw bestemming voor onberispelijke stijl en kwaliteitsservice.</p>
+          <p>Of het nu gaat om een kapsel, een scheerbeurt of persoonlijke verzorging, ons team staat klaar om u een unieke ervaring te bieden in een warme sfeer.</p>
+          <p class="cta-text">Verlies geen tijd – boek uw bezoek in één klik!</p>
+          <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="btn">Nu Boeken</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <BrandLogos locale="nl" />
+</Layout>
+
+<style>
+  .contact-bar {
+    background: var(--color-black);
+    padding: 80px 0 60px;
+    margin-top: var(--header-height);
+  }
+  .contact-bar-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  .contact-bar-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  .contact-bar-item svg {
+    flex-shrink: 0;
+    color: var(--color-gold);
+    margin-top: 2px;
+  }
+  .contact-bar-item h4 {
+    font-family: var(--font-accent);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-gold);
+    margin-bottom: 8px;
+  }
+  .contact-bar-item a,
+  .contact-bar-item p {
+    color: var(--color-text-light);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .contact-bar-item a:hover { color: var(--color-gold); }
+
+  .contact-hero { position: relative; }
+  .contact-hero-image {
+    position: relative;
+    width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+  }
+  .contact-hero-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+  }
+  .contact-hero-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(0,0,0,0.6);
+    padding: 60px;
+    text-align: center;
+  }
+  .contact-hero-overlay h2 {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--color-white);
+    margin-bottom: 15px;
+  }
+  .contact-hero-overlay p {
+    color: var(--color-text-light);
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .contact-cta { padding: 60px 0; }
+
+  .contact-map-section { padding: 0 0 80px; }
+  .contact-map-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  .contact-map-text h3 {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    color: var(--color-heading);
+    margin-bottom: 20px;
+  }
+  .contact-map-text p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+  }
+  .contact-map-text .cta-text {
+    color: var(--color-gold);
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  @media (max-width: 768px) {
+    .contact-bar-grid { grid-template-columns: 1fr 1fr; }
+    .contact-hero-image img { height: 400px; }
+    .contact-hero-overlay { padding: 30px; }
+    .contact-hero-overlay h2 { font-size: 22px; }
+    .contact-map-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .contact-bar-grid { grid-template-columns: 1fr; }
+  }
+</style>
