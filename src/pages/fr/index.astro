@@ -9,8 +9,8 @@ import Gallery from '../../components/Gallery.astro';
 import BrandLogos from '../../components/BrandLogos.astro';
 import ReviewsBadge from '../../components/ReviewsBadge.astro';
 
-const seoTitle = "Salon de coiffure Saint-Josse-ten-Noode Bruxelles — Tony&Son ✂ Coiffeur & Barbier";
-const seoDesc = "Tony&Son, salon de coiffure et barbier à Saint-Josse-ten-Noode (Bruxelles) depuis 1970. Coupes homme & femme, colorations, balayage, rasage, taille de barbe. Près du quartier Schuman. ☎ 02 230 55 37";
+const seoTitle = "Salon de Coiffure Bruxelles – Coupe, Couleur & Barbier | Tony&Son";
+const seoDesc = "Salon de coiffure à Bruxelles depuis 1970. Coupes, colorations, balayage, lissage et barbier près du quartier Schuman. Réservez chez Tony&Son.";
 ---
 
 <Layout title={seoTitle} locale="fr" page="home" transparentHeader={true} description={seoDesc}>
@@ -18,20 +18,30 @@ const seoDesc = "Tony&Son, salon de coiffure et barbier à Saint-Josse-ten-Noode
   <AboutSection locale="fr" />
   <Services locale="fr" />
 
-  <!-- SEO Editorial Section — Category Links -->
-  <section class="seo-categories">
+  <!-- SEO Editorial Section — Core 30 Content -->
+  <section class="seo-content">
     <div class="container">
+      <div class="seo-intro">
+        <p><strong>Salon de coiffure à Bruxelles, Saint-Josse-ten-Noode.</strong> Famille, femmes, hommes et enfants — réservez en ligne chez Tony&Son.</p>
+        <p>Depuis le quartier Schuman jusqu'à Schaerbeek, les clients de Tony&Son reviennent pour une raison simple : un salon qui écoute, qui conseille honnêtement, et qui livre le résultat promis. La famille Campisi a ouvert ce salon en 1970. Tony d'abord, puis son fils Salvatore, formé chez Toni&Guy à Londres. Trois générations de savoir-faire au service de la diversité bruxelloise — parce que dans ce quartier, chaque texture de cheveu est représentée.</p>
+        <p>Rue Bonneels 27, à deux minutes de la gare de Maelbeek et du quartier européen, Tony&Son est le salon de coiffure de référence pour les habitants de Saint-Josse-ten-Noode, Schaerbeek, Etterbeek, Ixelles et Woluwe-Saint-Lambert. Ouvert du mardi au vendredi de 9h à 19h, le samedi de 9h à 18h.</p>
+      </div>
+
       <div class="seo-grid">
         <div class="seo-block">
-          <h2>Coiffure à Bruxelles</h2>
-          <p>Notre <a href="/fr/coiffure/">salon de coiffure à Saint-Josse-ten-Noode</a> propose une gamme complète de services pour femmes, hommes et enfants. Colorations, balayage, brushing, lissage à la kératine, extensions ou permanentes : la famille Campisi met son savoir-faire au service de votre beauté depuis 1970. Facilement accessible depuis Schaerbeek, Etterbeek, le quartier Schuman et le centre de Bruxelles, Tony&Son est la référence coiffure près de la gare de Maelbeek.</p>
-          <a href="/fr/coiffure/" class="seo-link">Découvrir nos services coiffure &rarr;</a>
+          <h2>Coiffure femme et homme à Bruxelles</h2>
+          <p>Colorations sur mesure, balayage lumineux, mèches structurées, brushing volume, lissage brésilien ou kératine, extensions de cheveux, permanentes modernes et coupes enfants — notre <a href="/fr/coiffure/">salon de coiffure à Saint-Josse-ten-Noode</a> couvre l'intégralité des services capillaires. Chaque prestation commence par un diagnostic honnête : on vous dit ce qui est faisable et ce qui ne l'est pas, avant de toucher un seul cheveu. C'est cette transparence qui fidélise nos clients depuis plus de 50 ans.</p>
+          <a href="/fr/coiffure/" class="seo-link">Tous nos services coiffure &rarr;</a>
         </div>
         <div class="seo-block">
           <h2>Barbier à Bruxelles</h2>
-          <p>Tony&Son est aussi votre <a href="/fr/barbier/">barbier de confiance à Saint-Josse-ten-Noode</a>, près du quartier européen. Taille de barbe, rasage traditionnel au coupe-chou, soins masculins : nos barbiers expérimentés maîtrisent l'art du grooming depuis plus de 50 ans. Que vous veniez de Schaerbeek, Ixelles, Woluwe-Saint-Lambert ou Bruxelles-centre, profitez d'un service barbier professionnel dans une ambiance chaleureuse.</p>
-          <a href="/fr/barbier/" class="seo-link">Découvrir nos services barbier &rarr;</a>
+          <p>Taille de barbe précise, rasage traditionnel au coupe-chou avec serviette chaude, dégradé américain (skin fade, mid fade, taper) — notre <a href="/fr/barbier/">barber shop à Saint-Josse-ten-Noode</a> accueille toutes les textures de pilosité. Les clients du quartier Schuman et de Schaerbeek viennent pour le geste expert de nos barbiers et l'ambiance d'un salon de quartier à taille humaine. Épilation à la cire du visage et coupes enfants complètent notre offre homme.</p>
+          <a href="/fr/barbier/" class="seo-link">Tous nos services barbier &rarr;</a>
         </div>
+      </div>
+
+      <div class="seo-cta">
+        <p>Prenez rendez-vous au <a href="tel:+3222305537"><strong>02 230 55 37</strong></a> ou <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener"><strong>réservez en ligne via Treatwell</strong></a>.</p>
       </div>
     </div>
   </section>
@@ -44,9 +54,24 @@ const seoDesc = "Tony&Son, salon de coiffure et barbier à Saint-Josse-ten-Noode
 </Layout>
 
 <style>
-  .seo-categories {
+  .seo-content {
     padding: 80px 0;
     background: var(--color-cream);
+  }
+  .seo-intro {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+  .seo-intro p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 20px;
+  }
+  .seo-intro p:first-child {
+    font-size: 20px;
+    line-height: 1.6;
   }
   .seo-grid {
     display: grid;
@@ -78,6 +103,19 @@ const seoDesc = "Tony&Son, salon de coiffure et barbier à Saint-Josse-ten-Noode
   }
   .seo-link:hover {
     color: var(--color-heading);
+  }
+  .seo-cta {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid var(--color-border);
+  }
+  .seo-cta p {
+    font-size: 18px;
+    color: var(--color-text);
+  }
+  .seo-cta a {
+    color: var(--color-gold);
   }
   @media (max-width: 768px) {
     .seo-grid { grid-template-columns: 1fr; gap: 40px; }

@@ -1,43 +1,103 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import { getServicesByCategory } from '../../../data/services';
 
-const coiffureServices = getServicesByCategory('coiffure');
-const seoTitle = "Coiffure Bruxelles — Tony&Son ✂ Salon de coiffure Saint-Josse-ten-Noode";
-const seoDesc = "Tous nos services de coiffure à Bruxelles : colorations, balayage, brushing, lissage, extensions, mèches, permanentes. Tony&Son salon près du quartier Schuman depuis 1970.";
+const seoTitle = "Coiffure Bruxelles – Salon Tony&Son | Colorations, Soins & Coupes";
+const seoDesc = "Salon de coiffure à Bruxelles : colorations, balayage, mèches, brushing, lissage, kératine, extensions, permanentes, coupes enfants. Tony&Son depuis 1970.";
+
+const categorySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Coiffure",
+  "provider": {
+    "@type": "HairSalon",
+    "name": "Tony&Son",
+    "@id": "https://tonyandson.be/#business",
+    "telephone": "02 230 55 37",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rue Bonneels 27",
+      "addressLocality": "Saint-Josse-ten-Noode",
+      "postalCode": "1210",
+      "addressCountry": "BE"
+    }
+  },
+  "areaServed": "Bruxelles"
+};
 ---
 
 <Layout title={seoTitle} locale="fr" page="coiffure" description={seoDesc}>
   <section class="titlebar" style="background-image: url('/images/titlebar-bg.jpg')">
     <div class="titlebar-overlay"></div>
     <div class="container">
-      <h1>Coiffure Bruxelles</h1>
-      <p class="titlebar-sub">Tony&Son — Salon de coiffure à Saint-Josse-ten-Noode depuis 1970</p>
+      <h1>Coiffure à Bruxelles — Femmes, Hommes & Enfants chez Tony&Son</h1>
+      <p class="titlebar-sub">Salon de coiffure à Saint-Josse-ten-Noode depuis 1970</p>
     </div>
   </section>
 
   <section class="category-intro">
     <div class="container">
-      <p class="intro-text">Chez <a href="/fr/">Tony&Son</a>, salon de coiffure à Saint-Josse-ten-Noode près du quartier Schuman à Bruxelles, nous proposons une gamme complète de services de coiffure pour femmes, hommes et enfants. Depuis 1970, la famille Campisi met son savoir-faire au service de votre beauté, dans une ambiance chaleureuse et professionnelle. Que vous habitiez à Schaerbeek, Etterbeek, Ixelles ou dans le centre de Bruxelles, notre salon est facilement accessible près de la gare de Maelbeek.</p>
+      <p class="intro-text">Chez <a href="/fr/">Tony&Son</a>, salon de coiffure à Saint-Josse-ten-Noode près du quartier Schuman, la famille Campisi propose une gamme complète de services capillaires depuis 1970. Colorations, soins, coupes et techniques de pointe — pour femmes, hommes et enfants. Accessible depuis Schaerbeek, Etterbeek, le quartier européen et tout Bruxelles.</p>
     </div>
   </section>
 
-  <section class="services-list">
+  <section class="services-editorial">
     <div class="container">
-      {coiffureServices.map(service => (
-        <div class="service-block">
-          <div class="service-block-content">
-            <h2>{service.name} à Bruxelles</h2>
-            <p set:html={service.description} />
-            <p set:html={service.longDescription.split('\n\n')[0]} />
-            {service.price && <p class="service-block-price">{service.price}</p>}
-            <p>Découvrez notre service de <a href={`/fr/services/${service.slug}/`}>{service.name.toLowerCase()} à Bruxelles</a> chez Tony&Son.</p>
-          </div>
-          <div class="service-block-photo">
-            <div class="photo-placeholder"><span>📷 {service.name}</span></div>
-          </div>
-        </div>
-      ))}
+
+      <div class="service-editorial-block">
+        <h2>Colorations sur mesure</h2>
+        <p>Coloration complète, retouche racines, ton sur ton ou végétale — nos coloristes adaptent la technique à votre base naturelle et au résultat souhaité. On commence toujours par un diagnostic honnête. La correction de couleur ratée ailleurs est l'une de nos spécialités. À partir de 40 €. Découvrez nos <a href="/fr/services/colorations-capillaires-bruxelles/">colorations capillaires</a>.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Balayage et reflets naturels</h2>
+        <p>Reflets peints à main levée pour un effet « baigné de soleil ». French balayage, babylights, miel ou cendré — nos coloristes maîtrisent toutes les variantes. L'avantage : une repousse discrète qui tient 3-4 mois. À partir de 35 €. En savoir plus sur le <a href="/fr/services/balayage-bruxelles/">balayage</a> chez Tony&Son.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Mèches structurées</h2>
+        <p>Plus précises que le balayage, les mèches offrent des contrastes francs. Aluminium pour un résultat régulier, bonnet pour des reflets fins, ou main levée pour un rendu libre. Entretien toutes les 6-8 semaines. Nos coloristes vous guident vers la bonne technique. Tout sur les <a href="/fr/services/meches-bruxelles/">mèches</a>.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Coloration en dégradé</h2>
+        <p>Ombré, sombré ou dip-dye : trois techniques, trois intensités différentes. Le point commun ? La repousse fait partie du style — entretien tous les 3-4 mois seulement. La technique la plus économique pour un changement visible. À partir de 40 €. Découvrez la <a href="/fr/services/coloration-degrade-bruxelles/">coloration en dégradé</a>.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Brushing express ou événement</h2>
+        <p>Lisse, volume ou wavy — shampooing et soin protecteur thermique inclus. Comptez 30-45 minutes pour un résultat qui tient 2-4 jours. Nos coiffeurs vous donnent les astuces pour prolonger la tenue. À partir de 30 €. Réservez votre <a href="/fr/services/brushing-bruxelles/">brushing</a> chez Tony&Son.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Lissage brésilien, tanin et botox</h2>
+        <p>Trois options pour trois besoins différents. Produits conformes aux normes européennes, transparence totale sur les formulations. On vous montre la fiche technique avant de toucher vos cheveux. À partir de 150 €. Tout savoir sur le <a href="/fr/services/lissage-cheveux-bruxelles/">lissage de cheveux</a>.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Traitement kératine — soin, pas lissage</h2>
+        <p>Un soin de réparation profonde. La kératine reconstitue la protéine naturelle du cheveu, réduit les frisottis et redonne brillance. Idéal après une coloration ou un balayage. Effet 3-4 mois. En savoir plus sur le <a href="/fr/services/traitement-keratine-bruxelles/">traitement kératine</a>.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Extensions de cheveux naturels</h2>
+        <p>Kératine, micro-anneaux, tape-in ou clips — quatre techniques pour quatre situations. Exclusivement des cheveux Remy. La consultation est indispensable : on évalue la densité et la santé de vos cheveux avant toute pose. À partir de 500 €. Découvrez nos <a href="/fr/services/extensions-cheveux-bruxelles/">extensions</a>.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Permanentes modernes</h2>
+        <p>Spirale, bodywave ou partielle — rien à voir avec les années 80. Formulations douces, résultats contrôlés. Le bodywave pour des vagues souples est notre variante la plus demandée. Résultat 3-6 mois. Tout sur les <a href="/fr/services/permanentes-bruxelles/">permanentes</a>.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Soins repousse capillaire</h2>
+        <p>Anti-chute, stimulation du cuir chevelu, protocoles de renforcement. Chaque traitement commence par un diagnostic complet pour identifier la cause de la perte de cheveux. Des solutions réalistes, sans fausses promesses. Découvrez nos <a href="/fr/services/repousse-capillaire-bruxelles/">soins repousse</a>.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Coupes enfants — patience garantie</h2>
+        <p>Un moment en douceur pour les plus jeunes. Nos coiffeurs s'adaptent au rythme de l'enfant — pause si besoin, genoux d'un parent, pas de pression. Garçons et filles, même tarif. À partir de 25 €. Réservez une <a href="/fr/services/coupes-enfants-bruxelles/">coupe enfant</a> chez Tony&Son.</p>
+      </div>
+
     </div>
   </section>
 
@@ -47,7 +107,7 @@ const seoDesc = "Tous nos services de coiffure à Bruxelles : colorations, balay
       <h2>Prenez rendez-vous chez Tony&Son</h2>
       <p>Salon de coiffure à Saint-Josse-ten-Noode, Bruxelles — Ouvert du mardi au samedi</p>
       <div class="cta-buttons">
-        <a href="tel:+3222305537" class="btn">📞 02 230 55 37</a>
+        <a href="tel:+3222305537" class="btn">02 230 55 37</a>
         <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="btn btn-dark">Réserver en ligne</a>
       </div>
     </div>
@@ -62,40 +122,38 @@ const seoDesc = "Tous nos services de coiffure à Bruxelles : colorations, balay
         referrerpolicy="no-referrer-when-downgrade" title="Tony&Son Coiffure Bruxelles"></iframe>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(categorySchema)} />
 </Layout>
 
 <style>
   .titlebar { position: relative; background-size: cover; background-position: center; padding: 160px 0 60px; text-align: center; }
   .titlebar-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.55); }
-  .titlebar h1 { position: relative; z-index: 2; font-size: 42px; color: var(--color-white); }
+  .titlebar h1 { position: relative; z-index: 2; font-size: 36px; color: var(--color-white); }
   .titlebar-sub { position: relative; z-index: 2; color: var(--color-gold); font-family: var(--font-display); font-style: italic; font-size: 18px; margin-top: 10px; text-transform: none; }
 
   .category-intro { padding: 60px 0 40px; }
   .intro-text { max-width: 900px; margin: 0 auto; font-size: 18px; line-height: 1.8; color: var(--color-text); text-align: center; }
   .intro-text a { color: var(--color-gold); font-weight: 600; }
 
-  .services-list { padding: 40px 0 80px; }
-  .service-block { display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start; padding: 50px 0; border-bottom: 1px solid var(--color-border); }
-  .service-block:last-child { border-bottom: none; }
-  .service-block h2 { font-size: 26px; margin-bottom: 15px; }
-  .service-block p { font-size: 16px; line-height: 1.8; color: var(--color-text); margin-bottom: 10px; }
-  .service-block p a { color: var(--color-gold); font-weight: 500; }
-  .service-block-price { color: var(--color-gold); font-weight: 600; font-size: 18px !important; }
-
-  .photo-placeholder { background: var(--color-cream); border: 2px dashed var(--color-border); display: flex; align-items: center; justify-content: center; min-height: 220px; font-size: 15px; color: var(--color-text-light); }
+  .services-editorial { padding: 40px 0 80px; }
+  .service-editorial-block { padding: 35px 0; border-bottom: 1px solid var(--color-border); }
+  .service-editorial-block:last-child { border-bottom: none; }
+  .service-editorial-block h2 { font-size: 24px; margin-bottom: 15px; }
+  .service-editorial-block p { font-size: 16px; line-height: 1.8; color: var(--color-text); }
+  .service-editorial-block p a { color: var(--color-gold); font-weight: 500; }
 
   .category-cta { padding: 80px 0; background: var(--color-black); }
   .category-cta h2 { color: var(--color-white); margin-bottom: 10px; }
   .category-cta p { color: var(--color-text-light); font-size: 16px; margin-bottom: 30px; text-transform: none; }
   .cta-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
 
-  .category-map { padding: 0 0 0; }
+  .category-map { padding: 0; }
   .category-map iframe { display: block; }
 
   @media (max-width: 768px) {
     .titlebar { padding: 120px 0 40px; }
-    .titlebar h1 { font-size: 28px; }
-    .service-block { grid-template-columns: 1fr; }
+    .titlebar h1 { font-size: 24px; }
     .cta-buttons { flex-direction: column; align-items: center; }
   }
 </style>

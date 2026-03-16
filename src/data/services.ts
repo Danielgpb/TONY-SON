@@ -2,9 +2,14 @@ export interface Service {
   slug: string;
   name: string;
   category: 'coiffure' | 'barbier';
+  categoryParents?: ('coiffure' | 'barbier')[];
   price?: string;
+  titleTag: string;
+  metaDescription: string;
+  h1: string;
   description: string;
   longDescription: string;
+  crossLinks: { slug: string; label: string }[];
   faq: { question: string; answer: string }[];
 }
 
@@ -31,28 +36,32 @@ export const services: Service[] = [
   // Volume : LONG (6 paragraphes, 5 FAQ)
   // ─────────────────────────────────────────────
   {
-    slug: 'coloration-bruxelles',
+    slug: 'colorations-capillaires-bruxelles',
     name: 'Colorations capillaires',
     category: 'coiffure',
+    categoryParents: ['coiffure', 'barbier'],
     price: 'À partir de 40 €',
+    titleTag: 'Colorations capillaires Bruxelles – Couleur sur mesure | Tony&Son',
+    metaDescription: 'Colorations capillaires à Bruxelles chez Tony&Son, salon à Saint-Josse-ten-Noode depuis 1970. Coloration, retouche racines, végétale. Dès 40 €. ☎ 02 230 55 37',
+    h1: 'Colorations capillaires à Bruxelles — Tony&Son',
     description: "Colorations sur mesure pour révéler votre style. Chez Tony&Son, coiffeur à Bruxelles, nos coloristes experts subliment vos cheveux avec des teintes éclatantes tout en préservant leur brillance.",
-    longDescription: `Sur les forums belges comme <a href="https://www.qcunbon.be" target="_blank" rel="noopener">qcunbon.be</a>, la question revient sans cesse : « Qui connaît un bon coloriste à Bruxelles ? » — souvent posée par des clientes qui arrivent avec une couleur ratée ailleurs. Chez Tony&Son, à Saint-Josse-ten-Noode, on connaît cette situation par cœur.
+    crossLinks: [{ slug: 'balayage-bruxelles', label: 'balayage à Bruxelles' }, { slug: 'meches-bruxelles', label: 'mèches à Bruxelles' }, { slug: 'coloration-degrade-bruxelles', label: 'coloration en dégradé' }],
+    longDescription: `Coloration capillaire à Bruxelles, Saint-Josse-ten-Noode — c'est le service pour lequel on nous appelle le plus souvent au 02 230 55 37. Pas toujours pour une première couleur. Sur <a href="https://www.qcunbon.be" target="_blank" rel="noopener">qcunbon.be</a>, la phrase revient en boucle : « Mes cheveux ont viré à l'orange. » Entre le rond-point Schuman et l'avenue de Cortenbergh, on connaît cette situation par cœur.
 
-Depuis 1970, notre salon reçoit des clientes de Schaerbeek, Etterbeek, du quartier Schuman et de tout Bruxelles. Et une bonne partie viennent justement pour qu'on corrige ce qui a été mal fait ailleurs. Couleur qui a viré au cuivré, racines mal fondues, teinte trop foncée — nos coloristes ont vu tous les cas de figure. La correction de couleur, c'est un vrai métier, et c'est l'une de nos spécialités.
+La correction de couleur, c'est un métier à part entière. Nos coloristes — certains travaillent ici depuis plus de huit ans — ont rattrapé des dizaines de cas : cuivré non voulu, racines mal fondues, teinte trop foncée qu'un autre salon n'a pas su doser. Sur les forums, une cliente bruxelloise raconte avoir payé 220 € pour une correction ailleurs. Chez nous, le diagnostic est gratuit et le prix annoncé avant qu'on touche un seul cheveu.
 
-Mais la plupart du temps, nos clientes viennent pour une coloration classique, bien faite. On commence toujours par un diagnostic : on regarde vos cheveux, on discute de ce que vous voulez, on vous dit honnêtement ce qui est réalisable et ce qui ne l'est pas. Si une nuance risque de ne pas bien vieillir sur votre base naturelle, on vous le dit avant — pas après.
+On commence toujours par regarder. La base naturelle, la texture, les anciens traitements. On vous demande ce que vous voulez, on vous dit ce qui est réaliste — et ce qui ne l'est pas. C'est cette honnêteté qui fait revenir nos clientes d'Etterbeek, du quartier européen et de Schaerbeek depuis trois générations.
 
-Côté tarifs, c'est simple. Les colorations commencent à 40 €. Le prix exact dépend de la technique (ton sur ton, permanente, végétale, retouche racines), de la longueur de vos cheveux et du résultat souhaité. Conformément aux <a href="https://economie.fgov.be/fr/themes/ventes/pratiques-du-marche-et/indication-des-prix" target="_blank" rel="noopener">directives du SPF Économie</a>, nos prix sont affichés et comprennent le shampooing et le brushing. Pas de supplément caché.
+Les tarifs. Coloration complète : à partir de 40 €. Retouche racines, ton sur ton, végétale — le prix dépend de la technique et de la longueur. Conformément aux <a href="https://economie.fgov.be/fr/themes/ventes/pratiques-du-marche-et/indication-des-prix" target="_blank" rel="noopener">directives du SPF Économie</a>, tout est compris : shampooing, soin, brushing de finition. Zéro supplément.
 
-On propose aussi des <a href="/fr/services/balayage-bruxelles/">colorations partielles comme le balayage</a> pour un effet plus naturel, ou des <a href="/fr/services/meches-bruxelles/">mèches</a> pour des contrastes plus marqués. Et pour les clientes qui veulent éviter les produits chimiques, nous travaillons avec des colorations végétales — moins de couverture sur les cheveux blancs, mais zéro agression.
+Pour un résultat plus naturel, on propose aussi le <a href="/fr/services/balayage-bruxelles/">balayage</a> — des reflets peints à main levée qui tiennent 3-4 mois. Les <a href="/fr/services/meches-bruxelles/">mèches</a> donnent des contrastes plus francs. Et pour celles qui veulent zéro chimie, on travaille avec des colorations végétales. Moins de couverture sur les cheveux blancs, mais aucune agression.
 
-Le salon est rue Bonneels 27, à deux minutes à pied de la gare de Maelbeek. Bus STIB 59, 29, 63. Ouvert du mardi au vendredi 9h-19h, samedi 9h-18h.`,
+Rue Bonneels 27, à deux minutes du métro Schuman (lignes 1 et 5). Réservez votre créneau en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> — les créneaux du mercredi midi partent vite, pause déjeuner des institutions oblige.`,
     faq: [
-      { question: "Pouvez-vous rattraper une coloration ratée dans un autre salon ?", answer: "Oui, c'est l'une de nos spécialités. Nos coloristes chez Tony&Son réalisent d'abord un diagnostic complet, puis proposent un protocole de rattrapage adapté. Appelez au 02 230 55 37 pour en discuter." },
-      { question: "Proposez-vous des colorations végétales ?", answer: "Oui. C'est une alternative plus douce, idéale pour les cuirs chevelus sensibles. La couverture des cheveux blancs est moins complète qu'avec une coloration chimique — nos coloristes vous expliquent la différence en toute transparence." },
-      { question: "Y a-t-il des frais cachés ? Le shampooing est-il inclus ?", answer: "Nos tarifs sont tout compris : shampooing, soin et brushing de finition inclus. Conformément aux directives du SPF Économie, les prix affichés sont les prix finaux. On vous confirme toujours le montant avant de commencer." },
-      { question: "Quelle est la différence entre coloration et <a href='/fr/services/balayage-bruxelles/'>balayage</a> ?", answer: "La coloration couvre l'ensemble de la chevelure (ou les racines). Le balayage est une technique partielle qui crée des reflets naturels sans toucher les racines. Si vous hésitez, nos coloristes vous montrent la différence sur des exemples concrets." },
-      { question: "À quelle fréquence faut-il refaire sa coloration ?", answer: "Coloration permanente : retouche racines toutes les 4-6 semaines. Ton sur ton : s'estompe en 6-8 semaines. Le <a href='/fr/services/balayage-bruxelles/'>balayage</a> peut attendre 3-4 mois — c'est l'option la plus économique à long terme." }
+      { question: "Pouvez-vous rattraper une coloration ratée dans un autre salon ?", answer: "C'est l'une de nos spécialités. Nos coloristes réalisent un diagnostic gratuit, identifient le problème et proposent un protocole de correction. Appelez au 02 230 55 37 pour en discuter avant de prendre rendez-vous." },
+      { question: "Quel est le tarif total d'une coloration, brushing compris ?", answer: "À partir de 40 €, tout inclus : shampooing, soin et brushing de finition. Le prix exact dépend de la technique et de la longueur. On vous confirme le montant avant de commencer — jamais de surprise sur la facture." },
+      { question: "Coloration complète ou <a href='/fr/services/balayage-bruxelles/'>balayage</a> : quelle technique choisir ?", answer: "La coloration couvre l'ensemble de la chevelure ou les racines. Le balayage crée des reflets naturels sans toucher la racine — repousse discrète, entretien tous les 3-4 mois. Si vous hésitez, nos coloristes vous montrent la différence sur des exemples concrets." },
+      { question: "Tous les combien faut-il refaire sa couleur ?", answer: "Coloration permanente : retouche racines toutes les 4-6 semaines. Ton sur ton : s'estompe en 6-8 semaines. Le balayage tient 3-4 mois — l'option la moins contraignante si votre agenda entre Schuman et la rue de la Loi ne laisse pas beaucoup de marge." }
     ]
   },
 
@@ -65,19 +74,23 @@ Le salon est rue Bonneels 27, à deux minutes à pied de la gare de Maelbeek. Bu
     name: 'Balayage',
     category: 'coiffure',
     price: 'À partir de 35 €',
+    titleTag: 'Balayage Bruxelles – Reflets naturels & lumineux | Tony&Son',
+    metaDescription: 'Balayage à Bruxelles chez Tony&Son, salon à Saint-Josse-ten-Noode. Reflets naturels à main levée, babylights, balayage miel ou cendré. Dès 35 €. ☎ 02 230 55 37',
+    h1: 'Balayage à Bruxelles — Tony&Son',
     description: "Balayage naturel et lumineux réalisé par nos coloristes experts chez Tony&Son, coiffeur à Bruxelles. Des reflets sur mesure pour illuminer vos cheveux.",
-    longDescription: `L'effet « baigné de soleil ». C'est ce que la plupart de nos clientes demandent quand elles s'assoient dans notre fauteuil à Saint-Josse-ten-Noode. Un balayage réussi, c'est exactement ça : des reflets qui ont l'air d'être venus naturellement, pas d'un salon. Et la clé, c'est la technique à main levée — chaque mèche est peinte individuellement, pas au papier alu comme pour des <a href="/fr/services/meches-bruxelles/">mèches classiques</a>.
+    crossLinks: [{ slug: 'colorations-capillaires-bruxelles', label: 'colorations capillaires à Bruxelles' }, { slug: 'meches-bruxelles', label: 'mèches à Bruxelles' }],
+    longDescription: `Balayage à Bruxelles, Saint-Josse-ten-Noode. L'effet « baigné de soleil » — sans passer par la case plage. C'est le service le plus demandé entre midi et deux par les clientes du quartier Schuman qui veulent un changement visible mais pas de contrainte d'entretien.
 
-Le truc que nos clientes apprécient le plus ? L'entretien. Contrairement aux mèches qui montrent une repousse nette au bout de 6 semaines, le balayage vieillit bien. La transition reste douce pendant 3-4 mois. C'est aussi pour ça que c'est le service le plus populaire sur <a href="https://www.instagram.com/tonysonhairstylist" target="_blank" rel="noopener">notre Instagram</a> — les résultats parlent d'eux-mêmes.
+La technique : chaque mèche est peinte à main levée, pas au papier aluminium comme pour des <a href="/fr/services/meches-bruxelles/">mèches classiques</a>. Le résultat ? Des reflets qui ont l'air naturels, une repousse qui se fond au lieu de marquer. Trois mois sans retouche. Quatre, si votre coloriste a bien dosé. C'est le service le plus photographié sur <a href="https://www.instagram.com/tonysonhairstylist" target="_blank" rel="noopener">notre Instagram</a> — et ce n'est pas un hasard.
 
-On ne va pas vous mentir : tout le monde ne peut pas obtenir le même résultat. Un balayage blond polaire sur une base noire, par exemple, demande plusieurs séances et peut fragiliser le cheveu. Nos coloristes vous disent toujours ce qui est réaliste en une séance et ce qui demandera plus de travail. Et on vous donne le prix total — balayage + toner + brushing — avant de toucher un seul cheveu.
+Soyons honnêtes : un balayage blond polaire sur base noire, ça ne se fait pas en une séance. Nos coloristes vous le disent avant, pas après. Et on vous annonce le prix total — balayage + toner + brushing — avant de toucher un seul cheveu. French balayage, babylights, balayage miel ou cendré : on maîtrise les variantes. À partir de 35 €, tout compris.
 
-French balayage, babylights, balayage miel ou cendré : on maîtrise toutes les variantes. À partir de 35 €. Salon accessible depuis la gare de Maelbeek, Schaerbeek et le quartier européen.`,
+Rue Bonneels 27, entre le Parc du Cinquantenaire et le métro Schuman (lignes 1/5). Réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou au 02 230 55 37. Nos clientes viennent d'Etterbeek, Ixelles, Schaerbeek et de tout le quartier européen.`,
     faq: [
-      { question: "Balayage ou mèches : quelle différence concrète ?", answer: "Le balayage est peint à main levée pour un résultat fondu et naturel. Les <a href='/fr/services/meches-bruxelles/'>mèches</a> utilisent du papier alu pour des contrastes plus nets. Le balayage vieillit mieux (repousse discrète), les mèches demandent un entretien plus fréquent." },
-      { question: "Le balayage abîme-t-il les cheveux ?", answer: "Moins qu'une coloration complète, puisqu'on ne touche pas toute la chevelure. On applique un soin restructurant après chaque balayage. Si vos cheveux sont déjà fragilisés, nos coloristes vous le diront et proposeront un <a href='/fr/services/keratine-bruxelles/'>traitement à la kératine</a> en complément." },
-      { question: "Quel est le prix total, brushing inclus ?", answer: "À partir de 35 €, brushing inclus. Le tarif final dépend de la longueur et de la technique. On vous donne toujours le prix exact avant de commencer — jamais de surprise." },
-      { question: "Tous les combien faut-il y retourner ?", answer: "Tous les 3-4 mois en moyenne. C'est plus espacé que les mèches (6-8 semaines) ou la coloration (4-6 semaines). Un bon balayage est un investissement malin." }
+      { question: "Balayage ou mèches : quelle est la vraie différence ?", answer: "Le balayage est peint à main levée — résultat fondu, repousse discrète, retouche tous les 3-4 mois. Les <a href='/fr/services/meches-bruxelles/'>mèches</a> utilisent du papier alu pour des contrastes plus francs, mais la repousse se voit au bout de 6 semaines. Pour un agenda chargé côté Schuman, le balayage est l'option la plus tranquille." },
+      { question: "Combien coûte un balayage, brushing compris ?", answer: "À partir de 35 €, brushing inclus. Le tarif final dépend de la longueur et de la technique. On vous annonce le prix exact avant de commencer — pas de surprise." },
+      { question: "Le balayage abîme-t-il les cheveux fins ?", answer: "Moins qu'une coloration complète : on ne touche pas toute la chevelure. Un soin restructurant est appliqué après chaque séance. Si vos cheveux sont fragilisés, nos coloristes proposeront un <a href='/fr/services/traitement-keratine-bruxelles/'>traitement kératine</a> en complément." },
+      { question: "Tous les combien faut-il revenir pour un balayage ?", answer: "Tous les 3-4 mois en moyenne. C'est deux fois moins souvent que les mèches (6-8 semaines). Pour les clientes pressées entre la rue de la Loi et le rond-point Schuman, c'est un gain de temps concret." }
     ]
   },
 
@@ -90,13 +103,19 @@ French balayage, babylights, balayage miel ou cendré : on maîtrise toutes les 
     name: 'Brushing',
     category: 'coiffure',
     price: 'À partir de 30 €',
+    titleTag: 'Brushing Bruxelles – Lisse, volume ou wavy | Tony&Son',
+    metaDescription: 'Brushing professionnel à Bruxelles chez Tony&Son, Saint-Josse-ten-Noode. Lisse, volume ou wavy. Shampooing inclus. Dès 30 €. ☎ 02 230 55 37',
+    h1: 'Brushing à Bruxelles — Tony&Son',
     description: "Brushing professionnel chez Tony&Son à Bruxelles. Résultat lisse, volume ou wavy — au choix.",
-    longDescription: `Brushing lisse, volume ou wavy. À partir de 30 €. Shampooing et soin protecteur thermique inclus. Comptez 30-45 minutes, un peu plus sur cheveux très longs.
+    crossLinks: [{ slug: 'lissage-cheveux-bruxelles', label: 'lissage de cheveux à Bruxelles' }, { slug: 'colorations-capillaires-bruxelles', label: 'coloration à Bruxelles' }],
+    longDescription: `Brushing à Bruxelles, Saint-Josse-ten-Noode. Entre votre réunion de 12h à la Commission et le déjeuner au Square Ambiorix, il reste 45 minutes. C'est pile ce qu'il faut.
 
-Tenue : 2-4 jours selon votre type de cheveux et la météo bruxelloise. Nos coiffeurs vous donneront deux-trois astuces concrètes pour le faire tenir — taie en satin, spray fixant, pas de queue de cheval le premier soir. Tony&Son, rue Bonneels 27, Saint-Josse-ten-Noode. Mardi-vendredi 9h-19h, samedi 9h-18h.`,
+Lisse, volume ou wavy — shampooing et soin protecteur thermique inclus, à partir de 30 €. Tenue : 2-4 jours selon la texture et la météo bruxelloise. Nos coiffeurs vous filent deux-trois astuces concrètes — taie en satin, spray fixant, pas d'attache le premier soir — pour que ça tienne jusqu'au vendredi. Combinable avec une <a href="/fr/services/colorations-capillaires-bruxelles/">coloration</a> ou un <a href="/fr/services/lissage-cheveux-bruxelles/">lissage</a> dans la même séance. Réservez en ligne sur <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou au 02 230 55 37. Rue Bonneels 27, à deux pas du métro Schuman.`,
     faq: [
-      { question: "Le shampooing est-il inclus ?", answer: "Oui. Shampooing, soin et brushing compris dans le tarif affiché." },
-      { question: "Combien de temps ça tient ?", answer: "Entre 2 et 4 jours. Si vous avez un événement, venez le matin même ou la veille pour un résultat optimal. On peut aussi combiner avec une <a href='/fr/services/coloration-bruxelles/'>coloration</a> ou des <a href='/fr/services/meches-bruxelles/'>mèches</a> dans la même séance." }
+      { question: "Le shampooing est-il compris dans le tarif du brushing ?", answer: "Oui. Shampooing, soin et brushing — tout est compris dans le prix affiché. Pas de supplément." },
+      { question: "Combien de temps tient un brushing professionnel ?", answer: "Entre 2 et 4 jours. Pour un événement, venez le matin même ou la veille. On vous donne les astuces pour prolonger la tenue." },
+      { question: "Peut-on combiner brushing et coloration dans la même séance ?", answer: "Oui, c'est courant. On peut enchaîner une <a href='/fr/services/colorations-capillaires-bruxelles/'>coloration</a>, des <a href='/fr/services/meches-bruxelles/'>mèches</a> ou un soin kératine avec le brushing de finition." },
+      { question: "Combien de temps dure le rendez-vous pour un brushing ?", answer: "30-45 minutes, un peu plus sur cheveux très longs. Parfait pour un créneau entre deux réunions côté quartier européen." }
     ]
   },
 
@@ -105,33 +124,62 @@ Tenue : 2-4 jours selon votre type de cheveux et la météo bruxelloise. Nos coi
   // Volume : TRÈS LONG (8 paragraphes, 6 FAQ)
   // ─────────────────────────────────────────────
   {
-    slug: 'lissage-bruxelles',
+    slug: 'lissage-cheveux-bruxelles',
     name: 'Lissage de cheveux',
     category: 'coiffure',
     price: 'À partir de 150 €',
+    titleTag: 'Lissage cheveux Bruxelles – Brésilien, tanin & botox | Tony&Son',
+    metaDescription: 'Lissage de cheveux à Bruxelles chez Tony&Son. Lissage brésilien, tanin, botox capillaire. Produits conformes normes EU. Dès 150 €. ☎ 02 230 55 37',
+    h1: 'Lissage de cheveux à Bruxelles — Tony&Son',
     description: "Lissage brésilien, lissage au tanin et botox capillaire chez Tony&Son à Bruxelles. Produits conformes aux normes européennes.",
-    longDescription: `Parlons franchement. Le lissage brésilien est le service qui génère le plus de questions — et de peur — sur les forums. « Vos produits contiennent-ils du formaldéhyde ? », « Est-ce dangereux ? », « Mon coiffeur ne veut pas me dire ce qu'il utilise. » On a lu ces discussions sur <a href="https://www.yabiladi.com/forum/" target="_blank" rel="noopener">yabiladi.com</a> et d'autres forums francophones. Et on comprend l'inquiétude.
+    crossLinks: [{ slug: 'traitement-keratine-bruxelles', label: 'traitement kératine à Bruxelles' }, { slug: 'brushing-bruxelles', label: 'brushing à Bruxelles' }],
+    longDescription: `Lissage de cheveux à Bruxelles, Saint-Josse-ten-Noode. C'est le service qui génère le plus de questions — et le plus de peur. Sur les forums, la même inquiétude revient : « Vos produits contiennent-ils du formaldéhyde ? » On a lu ces discussions sur <a href="https://www.yabiladi.com/forum/" target="_blank" rel="noopener">yabiladi.com</a> et ailleurs. On comprend. Voici notre position.
 
-Alors voici notre position, clairement. Chez Tony&Son, on utilise exclusivement des produits conformes à la <a href="https://health.ec.europa.eu/scientific-committees/former-scientific-committees/scientific-committee-consumer-safety-sccs_en" target="_blank" rel="noopener">réglementation européenne sur les cosmétiques</a>, qui fixe un maximum de 0,2 % de formaldéhyde comme conservateur. Nos produits viennent de distributeurs officiels, pas d'importations parallèles sur Internet. Si vous voulez voir la fiche technique du produit qu'on va utiliser sur vos cheveux, vous pouvez. On n'a rien à cacher.
+Chez Tony&Son, on utilise exclusivement des produits conformes à la <a href="https://health.ec.europa.eu/scientific-committees/former-scientific-committees/scientific-committee-consumer-safety-sccs_en" target="_blank" rel="noopener">réglementation européenne</a> : maximum 0,2 % de formaldéhyde comme conservateur. Nos produits viennent de distributeurs officiels, pas d'importations parallèles. Vous voulez voir la fiche technique ? On vous la montre. Ce n'est pas négociable.
 
-Maintenant, les options. Il y en a trois et elles ne font pas du tout la même chose :
+Trois options, trois résultats différents. <strong>Le lissage brésilien à la kératine</strong> : le plus efficace. Il lisse réellement, réduit le volume de 60-80 %, supprime les frisottis. Résultat : 3-6 mois. À partir de 150 €. C'est le bon choix si vous en avez marre du fer à lisser chaque matin avant de filer vers la rue de la Loi. <strong>Le lissage au tanin</strong> : plus doux. Idéal pour cheveux fins ou fragilisés par des <a href="/fr/services/colorations-capillaires-bruxelles/">colorations</a> répétées. Durée : 2-4 mois. <strong>Le botox capillaire</strong> : ce n'est pas un lissage. C'est un soin profond qui redonne brillance sans modifier la structure. Si vous confondez avec le <a href="/fr/services/traitement-keratine-bruxelles/">traitement à la kératine</a>, c'est normal — on vous explique la différence sur place.
 
-<strong>Le lissage brésilien à la kératine</strong> est le plus efficace. Il lisse vraiment, réduit le volume de 60-80 %, supprime les frisottis. Résultat : 3-6 mois selon votre type de cheveux et l'entretien. C'est le bon choix si vous en avez marre de passer 30 minutes au fer chaque matin. Prix : à partir de 150 €.
+Sur les cheveux très frisés ou crépus, soyons clairs : le brésilien réduit énormément le volume et facilite le coiffage, mais le résultat n'est pas toujours « raide comme un fil ». Nos coiffeurs vous montrent des avant/après sur des textures similaires. Pas de fausses promesses.
 
-<strong>Le lissage au tanin</strong> est plus doux. Moins de chimie, résultat moins radical mais plus respectueux de la fibre. Idéal si vos cheveux sont fins, fragilisés par des <a href="/fr/services/coloration-bruxelles/">colorations</a> répétées, ou si vous voulez juste calmer les frisottis sans tout lisser. Durée : 2-4 mois.
-
-<strong>Le botox capillaire</strong> n'est pas un lissage. C'est un soin de réparation profonde qui redonne brillance et discipline, mais qui ne modifie pas la structure du cheveu. Si vous confondez avec le <a href="/fr/services/keratine-bruxelles/">traitement à la kératine</a>, vous n'êtes pas seule — la différence est expliquée sur cette page.
-
-Sur les cheveux très frisés ou crépus, soyons honnêtes : le lissage brésilien réduit énormément le volume et facilite le coiffage, mais le résultat n'est pas toujours « raide comme un fil ». Nos coiffeurs vous montrent des avant/après sur des textures similaires à la vôtre pour que vous sachiez exactement à quoi vous attendre.
-
-Après le traitement : shampooing sans sulfate obligatoire. Pas de queue de cheval ni de lavage pendant 48-72h. On vous donne toutes les instructions par écrit. Rue Bonneels 27, Saint-Josse-ten-Noode, à côté de la gare de Maelbeek. Accessible depuis Schaerbeek, Etterbeek, Woluwe-Saint-Lambert et tout Bruxelles.`,
+Après le traitement : shampooing sans sulfate obligatoire, pas d'attache ni de lavage pendant 48-72h. On vous remet les instructions par écrit. Rue Bonneels 27, à côté du métro Schuman (lignes 1/5). Accessible depuis Etterbeek, Ixelles, Schaerbeek et le quartier européen. Appelez au 02 230 55 37 ou réservez via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
-      { question: "Vos produits de lissage contiennent-ils du formaldéhyde ?", answer: "Nos produits respectent la réglementation européenne (max 0,2 % comme conservateur). Ils proviennent de distributeurs officiels. On peut vous montrer la fiche technique — la transparence n'est pas négociable chez Tony&Son." },
-      { question: "Lissage brésilien, tanin ou botox : lequel choisir ?", answer: "Le brésilien lisse vraiment (3-6 mois). Le tanin est plus doux, idéal pour cheveux fragiles (2-4 mois). Le botox est un soin, pas un lissage — il nourrit sans modifier la structure. Nos coiffeurs vous orientent après un diagnostic." },
-      { question: "Peut-on colorer ses cheveux après un lissage ?", answer: "Attendez 2-3 semaines. L'idéal : faire la <a href='/fr/services/coloration-bruxelles/'>coloration</a> AVANT le lissage. Nos coiffeurs planifient l'ordre des soins avec vous." },
-      { question: "Ça fonctionne sur les cheveux crépus ?", answer: "Oui, mais le résultat varie. Sur cheveux très crépus, le lissage réduit le volume et facilite le coiffage, mais ne donne pas toujours un résultat totalement raide. On vous montre des avant/après réalistes avant de commencer." },
-      { question: "Combien de temps dure le résultat ?", answer: "Brésilien : 3-6 mois. Tanin : 2-4 mois. Botox : 1-3 mois. La durée dépend de votre type de cheveux et de l'entretien (shampooing sans sulfate indispensable)." },
-      { question: "Quels soins après un lissage ?", answer: "Shampooing sans sulfate, masque nourrissant hebdomadaire, pas de chlore ni eau de mer sans protection. Les premiers jours : pas d'attache, pas de lavage (48-72h). On vous remet les instructions par écrit." }
+      { question: "Vos produits de lissage contiennent-ils du formol ?", answer: "Nos produits respectent la réglementation européenne (max 0,2 % comme conservateur). Distributeurs officiels uniquement. On vous montre la fiche technique du produit avant de l'appliquer — la transparence n'est pas négociable chez Tony&Son." },
+      { question: "Quel budget prévoir pour un lissage brésilien ?", answer: "À partir de 150 € pour le lissage brésilien, tout compris. Le tarif exact dépend de la longueur et de l'épaisseur. On vous donne le prix avant de commencer." },
+      { question: "Brésilien, tanin ou botox capillaire : comment choisir ?", answer: "Le brésilien lisse réellement (3-6 mois). Le tanin est plus doux, pour cheveux fragiles (2-4 mois). Le botox est un soin — il nourrit sans lisser (1-3 mois). Nos coiffeurs vous orientent après un diagnostic honnête de votre situation." },
+      { question: "Peut-on faire une coloration après un lissage brésilien ?", answer: "Attendez 2-3 semaines minimum. L'idéal : faire la <a href='/fr/services/colorations-capillaires-bruxelles/'>coloration</a> AVANT le lissage. Nos coiffeurs planifient l'ordre des soins ensemble pour ne pas fragiliser la fibre." }
+    ]
+  },
+
+  // ─────────────────────────────────────────────
+  // REPOUSSE CAPILLAIRE — Ton : empathique, honnête
+  // Volume : MOYEN (5 paragraphes, 4 FAQ)
+  // ─────────────────────────────────────────────
+  {
+    slug: 'repousse-capillaire-bruxelles',
+    name: 'Repousse capillaire',
+    category: 'coiffure',
+    titleTag: 'Repousse capillaire Bruxelles – Soins anti-chute & stimulation | Tony&Son',
+    metaDescription: 'Soins repousse capillaire à Bruxelles chez Tony&Son. Traitements anti-chute, stimulation de la pousse. Saint-Josse-ten-Noode depuis 1970. ☎ 02 230 55 37',
+    h1: 'Repousse capillaire à Bruxelles — Tony&Son',
+    description: "Soins repousse capillaire chez Tony&Son à Bruxelles. Traitements anti-chute et stimulation de la pousse des cheveux à Saint-Josse-ten-Noode.",
+    crossLinks: [
+      { slug: 'traitement-keratine-bruxelles', label: 'traitement kératine à Bruxelles' },
+      { slug: 'extensions-cheveux-bruxelles', label: 'extensions de cheveux à Bruxelles' }
+    ],
+    longDescription: `Repousse capillaire à Bruxelles, Saint-Josse-ten-Noode. La chute de cheveux, on n'en parle pas facilement. Stress des négociations rue de la Loi, changements hormonaux, carences, traitements médicaux — les causes sont multiples. Chez Tony&Son, on ne promet pas de miracles. On propose des soins qui fonctionnent, dans un cadre discret.
+
+Depuis 1970, notre salon voit passer toutes les situations. Chute diffuse après une grossesse, alopécie androgénétique, cheveux fragilisés par des <a href="/fr/services/colorations-capillaires-bruxelles/">colorations</a> répétées ou un <a href="/fr/services/lissage-cheveux-bruxelles/">lissage</a>. Nos coiffeurs commencent toujours par un diagnostic capillaire complet — on regarde, on écoute, on vous dit ce qui est réaliste.
+
+Nos traitements : soins topiques professionnels, massages du cuir chevelu pour stimuler la microcirculation, protocoles de renforcement. On travaille aussi en complément avec des <a href="/fr/services/traitement-keratine-bruxelles/">traitements kératine</a> pour renforcer la fibre existante. Pour les cas où la repousse seule ne suffit pas, nos <a href="/fr/services/extensions-cheveux-bruxelles/">extensions de cheveux</a> offrent du volume immédiat.
+
+Le premier rendez-vous est un diagnostic. Pas de vente, pas de pression. Si votre situation nécessite un suivi médical, on vous le dit — on préfère vous orienter que vous vendre un soin inadapté. Nos clients viennent du quartier Schuman, de Schaerbeek, d'Etterbeek et du Parc du Cinquantenaire pour ce suivi honnête.
+
+Rue Bonneels 27, métro Schuman (lignes 1/5). Appelez au 02 230 55 37 ou réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+    faq: [
+      { question: "Quels soins anti-chute proposez-vous au salon ?", answer: "Soins topiques professionnels, massages stimulants du cuir chevelu et protocoles de renforcement capillaire. Chaque traitement est adapté après un diagnostic complet de votre situation." },
+      { question: "Combien de séances pour voir des résultats concrets ?", answer: "Les premiers résultats sont visibles après 4-6 séances, espacées de 2-3 semaines. Le protocole complet dure 3-6 mois selon la cause. On vous donne un calendrier réaliste dès le premier rendez-vous." },
+      { question: "Les soins en salon fonctionnent-ils sur l'alopécie androgénétique ?", answer: "Ils peuvent ralentir la progression et améliorer la densité perçue. On est honnêtes : l'alopécie androgénétique nécessite souvent un suivi médical complémentaire. On vous oriente si besoin." },
+      { question: "Peut-on combiner repousse capillaire et coloration ?", answer: "Oui, avec un protocole adapté. On espace les traitements et on utilise des <a href='/fr/services/colorations-capillaires-bruxelles/'>colorations</a> douces pour ne pas fragiliser davantage. Nos coiffeurs planifient l'ordre des soins avec vous." }
     ]
   },
 
@@ -140,20 +188,26 @@ Après le traitement : shampooing sans sulfate obligatoire. Pas de queue de chev
   // Volume : MOYEN-COURT (3 paragraphes, 3 FAQ)
   // ─────────────────────────────────────────────
   {
-    slug: 'coupe-enfant-bruxelles',
+    slug: 'coupes-enfants-bruxelles',
     name: 'Coupes enfants',
     category: 'coiffure',
+    categoryParents: ['coiffure', 'barbier'],
     price: 'À partir de 25 €',
+    titleTag: 'Coupes enfants Bruxelles – Ambiance familiale | Tony&Son',
+    metaDescription: 'Coupes enfants à Bruxelles chez Tony&Son, salon familial à Saint-Josse-ten-Noode depuis 1970. Garçons et filles. Dès 25 €. ☎ 02 230 55 37',
+    h1: 'Coupes enfants à Bruxelles — Tony&Son',
     description: "Coupes enfants dans une ambiance rassurante chez Tony&Son à Bruxelles. Patience, douceur et résultat soigné pour les plus jeunes.",
-    longDescription: `La première coupe. Pour beaucoup de parents, c'est un petit événement. Chez Tony&Son, on comprend ça. Notre salon à Saint-Josse-ten-Noode accueille les enfants depuis trois générations — Tony, puis Salvatore, et maintenant toute l'équipe perpétue cette tradition familiale. On sait qu'un enfant qui a eu une mauvaise expérience chez le coiffeur à 3 ans peut en garder la peur jusqu'à l'adolescence.
+    crossLinks: [{ slug: 'taille-barbe-bruxelles', label: 'taille de barbe à Bruxelles' }],
+    longDescription: `Coupe enfant à Bruxelles, Saint-Josse-ten-Noode. Sur <a href="https://www.qcunbon.be/bruxelles/55511491" target="_blank" rel="noopener">qcunbon.be</a>, des parents cherchent « un coiffeur VRAIMENT doué avec les enfants ». Chez Tony&Son, trois générations de la famille Campisi accueillent les plus jeunes — on sait qu'une mauvaise expérience à 3 ans peut marquer jusqu'à l'adolescence.
 
-Alors on prend le temps. Si le petit pleure, on attend. S'il veut s'asseoir sur les genoux de maman ou papa, pas de problème. S'il faut faire la coupe en deux fois parce qu'il n'en peut plus au bout de 5 minutes, on s'adapte. Le résultat compte, mais le moment aussi. Et à la fin, tout le monde repart content — l'enfant avec sa nouvelle coupe, les parents avec la vidéo qu'ils ont prise en douce.
+Si le petit pleure, on attend. Genoux de maman ? Pas de problème. Coupe en deux fois parce qu'il craque au bout de 5 minutes ? On s'adapte. Le résultat compte, mais le moment aussi. Les familles du quartier Schuman, d'Etterbeek et de Schaerbeek reviennent pour ça : un salon où l'enfant repart content, et les parents avec la vidéo prise en douce.
 
-Coupes garçons et filles, à partir de 25 € — même tarif quel que soit le sexe. Dégradé, carré, frange, brosse : nos coiffeurs maîtrisent toutes les coupes enfants. Rendez-vous conseillé le mercredi et samedi (forte affluence). Réservez via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou au 02 230 55 37.`,
+Garçons et filles, même tarif : à partir de 25 €. Dégradé, carré, frange, brosse — nos coiffeurs maîtrisent tout. Le mercredi et samedi, c'est chargé (pause des écoles + week-end). Réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou au 02 230 55 37. Rue Bonneels 27, à côté du Parc du Cinquantenaire.`,
     faq: [
-      { question: "Mon enfant a peur du coiffeur. Comment ça se passe ?", answer: "On y est habitués. Nos coiffeurs s'adaptent au rythme de l'enfant : pause si besoin, genoux d'un parent, jouets. L'objectif est qu'il reparte avec un bon souvenir, pas un traumatisme." },
-      { question: "À partir de quel âge ?", answer: "Dès le plus jeune âge, y compris pour une première coupe. Certains de nos plus petits clients ont moins d'un an." },
-      { question: "Le tarif est le même pour filles et garçons ?", answer: "Oui, 25 € quel que soit le sexe. Le prix varie uniquement si la coupe est plus complexe (dégradé élaboré, coiffure pour occasion spéciale)." }
+      { question: "Comment gérez-vous un enfant qui a peur du coiffeur ?", answer: "On y est habitués depuis 1970. Nos coiffeurs s'adaptent au rythme de l'enfant : pause si besoin, genoux d'un parent, pas de pression. L'objectif : qu'il reparte avec un bon souvenir, pas un traumatisme." },
+      { question: "Quel est le prix d'une coupe enfant, filles et garçons confondus ?", answer: "25 € quel que soit le sexe. Le tarif augmente uniquement pour une coupe complexe (dégradé élaboré, occasion spéciale). Pas de surprise." },
+      { question: "À partir de quel âge acceptez-vous les enfants ?", answer: "Dès le plus jeune âge, y compris pour une toute première coupe. Certains de nos plus petits clients ont moins d'un an." },
+      { question: "Quel jour est le moins chargé pour emmener son enfant ?", answer: "Le mardi et le jeudi après-midi sont les créneaux les plus calmes. Mercredi et samedi sont pris d'assaut — réservez en avance sur Treatwell si vous visez ces jours-là." }
     ]
   },
 
@@ -165,19 +219,23 @@ Coupes garçons et filles, à partir de 25 € — même tarif quel que soit le 
     slug: 'meches-bruxelles',
     name: 'Mèches',
     category: 'coiffure',
+    titleTag: 'Mèches Bruxelles – Reflets structurés & précis | Tony&Son',
+    metaDescription: 'Mèches à Bruxelles chez Tony&Son, salon à Saint-Josse-ten-Noode. Mèches aluminium, bonnet ou main levée. Coloristes experts depuis 1970. ☎ 02 230 55 37',
+    h1: 'Mèches à Bruxelles — Tony&Son',
     description: "Mèches sur mesure chez Tony&Son, coiffeur à Bruxelles. Reflets lumineux et structurés réalisés par nos coloristes experts.",
-    longDescription: `Si le <a href="/fr/services/balayage-bruxelles/">balayage</a> est le pinceau, les mèches sont le crayon. Plus précises, plus structurées, avec des contrastes plus francs. C'est la technique qu'on recommande aux clientes qui veulent un changement visible — pas juste un « petit quelque chose ».
+    crossLinks: [{ slug: 'balayage-bruxelles', label: 'balayage à Bruxelles' }, { slug: 'colorations-capillaires-bruxelles', label: 'colorations capillaires' }],
+    longDescription: `Mèches à Bruxelles, Saint-Josse-ten-Noode. Si le <a href="/fr/services/balayage-bruxelles/">balayage</a> est un pinceau, les mèches sont un crayon. Plus précises. Plus structurées. Des contrastes francs que les clientes du quartier Schuman demandent quand elles veulent un changement visible — pas juste « un petit quelque chose ».
 
-Trois techniques, trois résultats différents. Les mèches au papier aluminium donnent un résultat régulier et précis — c'est le classique, celui qu'on maîtrise depuis 1970. Les mèches au bonnet créent des reflets fins et homogènes, idéales pour un premier essai. Et les mèches à main levée offrent un résultat plus libre, à mi-chemin entre les mèches classiques et le balayage.
+Trois techniques, trois rendus. L'aluminium donne un résultat régulier et net — le classique, maîtrisé ici depuis 1970. Le bonnet crée des reflets fins, idéal pour un premier essai. La main levée offre un résultat libre, entre mèches classiques et balayage. Nos coloristes vous orientent en fonction de votre texture et de vos attentes.
 
-Le point important : les mèches demandent un entretien plus fréquent que le balayage. Comptez une visite toutes les 6-8 semaines pour éviter l'effet « repousse visible ». C'est le compromis : résultat plus marqué, mais suivi plus régulier. Nos coloristes vous expliquent ça dès la consultation pour que vous choisissiez en connaissance de cause.
+Le compromis à connaître : les mèches demandent un passage toutes les 6-8 semaines. La repousse se voit plus vite qu'avec un balayage (3-4 mois). C'est le prix d'un résultat plus marqué. On vous le dit dès la consultation — pas de mauvaise surprise dans 6 semaines.
 
-Salon Tony&Son, rue Bonneels 27 à Saint-Josse-ten-Noode. Accessible depuis Schaerbeek, le quartier européen et la gare de Maelbeek.`,
+Rue Bonneels 27, entre le Parc du Cinquantenaire et le métro Schuman. Accessible depuis Schaerbeek, Etterbeek et Ixelles. Appelez au 02 230 55 37 ou réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
-      { question: "Mèches ou balayage ?", answer: "Les mèches donnent des contrastes plus nets et structurés. Le <a href='/fr/services/balayage-bruxelles/'>balayage</a> est plus fondu et naturel. Les mèches demandent un entretien plus fréquent (6-8 semaines vs 3-4 mois). Nos coloristes vous montrent des exemples des deux." },
-      { question: "Les mèches abîment-elles les cheveux ?", answer: "Toute décoloration sollicite le cheveu. On utilise des produits professionnels et un soin restructurant est appliqué après chaque pose. Si vos cheveux sont trop fragilisés, on vous le dit — on préfère refuser que de risquer la casse." },
-      { question: "Combien de temps dure la pose ?", answer: "Entre 1h30 et 2h30 selon la technique, la longueur et l'épaisseur de vos cheveux." },
-      { question: "Peut-on combiner mèches et <a href='/fr/services/coloration-bruxelles/'>coloration</a> ?", answer: "Oui, c'est même courant. On peut faire des mèches sur une base colorée pour ajouter de la dimension. Nos coloristes planifient les deux ensemble pour un résultat harmonieux." }
+      { question: "Mèches ou balayage : quel rendu choisir ?", answer: "Les mèches donnent des contrastes nets et structurés. Le <a href='/fr/services/balayage-bruxelles/'>balayage</a> est plus fondu et naturel. Côté entretien : mèches toutes les 6-8 semaines, balayage tous les 3-4 mois. Nos coloristes vous montrent des exemples concrets des deux techniques." },
+      { question: "Combien de temps dure une pose de mèches ?", answer: "Entre 1h30 et 2h30 selon la technique, la longueur et l'épaisseur. Si votre agenda est serré côté quartier européen, prévoyez le créneau le plus large." },
+      { question: "Les mèches abîment-elles les cheveux fragiles ?", answer: "Toute décoloration sollicite la fibre. On applique un soin restructurant après chaque pose. Si vos cheveux sont trop fragilisés, on vous le dit — on préfère refuser plutôt que risquer la casse." },
+      { question: "Peut-on faire des mèches sur des cheveux déjà colorés ?", answer: "Oui. On fait régulièrement des mèches sur une base <a href='/fr/services/colorations-capillaires-bruxelles/'>colorée</a> pour ajouter de la dimension. Nos coloristes planifient les deux traitements ensemble." }
     ]
   },
 
@@ -186,21 +244,26 @@ Salon Tony&Son, rue Bonneels 27 à Saint-Josse-ten-Noode. Accessible depuis Scha
   // Volume : MOYEN (4 paragraphes, 3 FAQ)
   // ─────────────────────────────────────────────
   {
-    slug: 'keratine-bruxelles',
+    slug: 'traitement-keratine-bruxelles',
     name: 'Traitements à la kératine',
     category: 'coiffure',
+    titleTag: 'Traitement kératine Bruxelles – Réparation & brillance | Tony&Son',
+    metaDescription: 'Traitement à la kératine à Bruxelles chez Tony&Son. Soin réparateur, anti-frisottis, brillance. Sans formaldéhyde. Saint-Josse-ten-Noode. ☎ 02 230 55 37',
+    h1: 'Traitement kératine à Bruxelles — Tony&Son',
     description: "Soins à la kératine chez Tony&Son, coiffeur à Bruxelles. Réparation, brillance et discipline pour vos cheveux.",
-    longDescription: `Stop. Avant d'aller plus loin : le traitement à la kératine N'EST PAS un lissage. C'est la confusion la plus fréquente qu'on entend dans notre salon à Saint-Josse-ten-Noode, et on comprend pourquoi — les deux utilisent le mot « kératine » et les résultats se ressemblent un peu. Mais ils ne font pas du tout la même chose.
+    crossLinks: [{ slug: 'lissage-cheveux-bruxelles', label: 'lissage de cheveux à Bruxelles' }, { slug: 'colorations-capillaires-bruxelles', label: 'coloration à Bruxelles' }],
+    longDescription: `Traitement kératine à Bruxelles, Saint-Josse-ten-Noode. Stop — ce n'est PAS un lissage. C'est la confusion qu'on entend dix fois par semaine au salon, et on comprend pourquoi : les deux utilisent le mot « kératine ». Mais ils ne font pas la même chose.
 
-Le traitement kératine est un soin. Il reconstitue la protéine naturelle du cheveu, qui s'abîme avec le temps (sèche-cheveux, pollution, <a href="/fr/services/coloration-bruxelles/">colorations</a>, soleil). Résultat : cheveux plus souples, plus brillants, moins de frisottis. Mais ça ne lisse pas. Si vous voulez un vrai lissage, c'est notre <a href="/fr/services/lissage-bruxelles/">service de lissage brésilien</a> qu'il vous faut.
+Le traitement kératine est un soin. Il reconstitue la protéine naturelle du cheveu — celle que le sèche-cheveux, la pollution avenue de Cortenbergh, les <a href="/fr/services/colorations-capillaires-bruxelles/">colorations</a> et le soleil dégradent au fil des mois. Résultat : cheveux plus souples, plus brillants, frisottis réduits. Mais la structure ne change pas. Pour un vrai lissage, c'est notre <a href="/fr/services/lissage-cheveux-bruxelles/">service de lissage brésilien</a> qu'il vous faut.
 
-Le traitement est particulièrement utile après une coloration, un balayage ou des mèches, pour réparer les dommages et prolonger l'éclat de la couleur. Durée au salon : 1h30-2h. L'effet dure 3-4 mois avec un shampooing sans sulfate.
+Particulièrement utile après une coloration, un balayage ou des mèches — le traitement répare les dommages et prolonge l'éclat de la couleur. Comptez 1h30-2h au salon. L'effet dure 3-4 mois avec un shampooing sans sulfate. Nos produits sont conformes aux normes européennes, sans formaldéhyde.
 
-Nos produits sont conformes aux normes européennes, sans formaldéhyde. Salon rue Bonneels 27, près de la gare de Maelbeek.`,
+Rue Bonneels 27, à deux minutes du métro Schuman. Appelez au 02 230 55 37 ou réservez votre créneau en ligne sur <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>. Les clientes du quartier européen prennent souvent le traitement kératine en complément de leur coloration habituelle — c'est le duo qui marche le mieux.`,
     faq: [
-      { question: "C'est quoi la différence avec un <a href='/fr/services/lissage-bruxelles/'>lissage brésilien</a> ?", answer: "Le traitement kératine est un soin de réparation — il nourrit et réduit les frisottis sans modifier la structure. Le lissage brésilien lisse réellement les cheveux. Si vous voulez un résultat lissant, c'est le lissage qu'il vous faut." },
-      { question: "C'est compatible avec des cheveux colorés ?", answer: "Oui, et c'est même recommandé. La kératine aide à réparer les dommages de la <a href='/fr/services/coloration-bruxelles/'>coloration</a> et prolonge l'éclat de votre couleur." },
-      { question: "Combien de temps dure l'effet ?", answer: "3-4 mois avec un shampooing sans sulfate. L'effet s'estompe progressivement — pas de démarcation." }
+      { question: "Quelle différence entre kératine et <a href='/fr/services/lissage-cheveux-bruxelles/'>lissage brésilien</a> ?", answer: "Le traitement kératine est un soin de réparation — il nourrit, réduit les frisottis, mais ne modifie pas la structure du cheveu. Le lissage brésilien lisse réellement. Si vous voulez des cheveux lisses, c'est le lissage. Si vous voulez des cheveux réparés et brillants, c'est la kératine." },
+      { question: "Combien de temps dure l'effet d'un traitement kératine ?", answer: "3-4 mois avec un shampooing sans sulfate. L'effet s'estompe progressivement — pas de ligne de démarcation brutale." },
+      { question: "La kératine est-elle compatible avec des cheveux colorés ?", answer: "Oui, et c'est même recommandé. La kératine répare les dommages de la <a href='/fr/services/colorations-capillaires-bruxelles/'>coloration</a> et prolonge l'éclat de votre couleur. Beaucoup de nos clientes combinent les deux." },
+      { question: "Quel shampooing utiliser après un traitement kératine ?", answer: "Shampooing sans sulfate obligatoire pour prolonger l'effet. On vous recommande des références précises en fin de séance — pas juste « sans sulfate » mais des marques testées par nos coiffeurs." }
     ]
   },
 
@@ -209,25 +272,29 @@ Nos produits sont conformes aux normes européennes, sans formaldéhyde. Salon r
   // Volume : MOYEN (5 paragraphes, 4 FAQ)
   // ─────────────────────────────────────────────
   {
-    slug: 'extensions-bruxelles',
+    slug: 'extensions-cheveux-bruxelles',
     name: 'Extensions de cheveux',
     category: 'coiffure',
     price: 'À partir de 500 €',
+    titleTag: 'Extensions cheveux Bruxelles – Pose experte Remy | Tony&Son',
+    metaDescription: 'Extensions de cheveux naturels à Bruxelles chez Tony&Son. Kératine, micro-anneaux, tape-in, clips. Cheveux Remy. Dès 500 €. ☎ 02 230 55 37',
+    h1: 'Extensions de cheveux à Bruxelles — Tony&Son',
     description: "Extensions de cheveux naturels chez Tony&Son à Bruxelles. Pose experte, cheveux Remy, résultat invisible.",
-    longDescription: `Les extensions, c'est un sujet où il faut être franc. Oui, ça peut abîmer vos cheveux — si c'est mal posé, mal entretenu, ou si la technique n'est pas adaptée à votre situation. Non, ce n'est pas inévitable — chez Tony&Son à Saint-Josse-ten-Noode, on maîtrise autant la pose que la dépose, et c'est la dépose qui fait souvent la différence.
+    crossLinks: [{ slug: 'repousse-capillaire-bruxelles', label: 'repousse capillaire à Bruxelles' }, { slug: 'colorations-capillaires-bruxelles', label: 'coloration à Bruxelles' }],
+    longDescription: `Extensions de cheveux à Bruxelles, Saint-Josse-ten-Noode. « Est-ce que ça abîme ? » C'est la question qu'on lit partout sur les forums — et la première qu'on entend au salon. Réponse courte : ça dépend de qui pose et de qui dépose. Chez Tony&Son, on maîtrise les deux.
 
-Quatre options, quatre situations différentes :
+Quatre techniques, quatre situations. <strong>Kératine (à chaud)</strong> : la plus durable, 3-4 mois. Résultat invisible, idéale pour un port quotidien. <strong>Micro-anneaux (à froid)</strong> : pas de chaleur, même durée, moins agressif. <strong>Tape-in (adhésives)</strong> : pose rapide, repose toutes les 6-8 semaines — le meilleur rapport effort/résultat pour les clientes pressées du quartier Schuman. <strong>Clips</strong> : zéro engagement. Parfait pour un événement au Parc du Cinquantenaire.
 
-<strong>Kératine (à chaud)</strong> — la plus durable, 3-4 mois. Idéale pour un port quotidien. La pose prend du temps mais le résultat est invisible. <strong>Micro-anneaux (à froid)</strong> — pas de chaleur, moins agressif. Même durée. <strong>Tape-in (adhésives)</strong> — pose rapide, repose toutes les 6-8 semaines. Le meilleur rapport effort/résultat. <strong>Clips</strong> — temporaire, zéro engagement. Parfait pour un événement.
+Uniquement des cheveux naturels Remy — cuticules alignées dans le même sens, zéro synthétique. C'est ce qui fait la différence entre des extensions qui s'emmêlent au bout de 3 semaines et celles qui restent souples pendant des mois. Sur un forum belge spécialisé, une professionnelle recommande les tape-in pour les cheveux fins et fragiles. Nos coiffeurs confirment : c'est la technique la moins contraignante pour les textures fines.
 
-On utilise exclusivement des cheveux naturels de grade Remy — les cuticules sont alignées dans le même sens, ce qui évite les nœuds et garantit un aspect naturel. On ne travaille pas avec du synthétique.
+La consultation est obligatoire. On évalue la densité, la santé du cheveu, votre mode de vie. Si vos cheveux sont trop fragilisés, on vous le dit — et on vous oriente vers nos soins de <a href="/fr/services/repousse-capillaire-bruxelles/">repousse capillaire</a> ou un <a href="/fr/services/traitement-keratine-bruxelles/">traitement kératine</a> pour renforcer la base d'abord.
 
-La consultation est indispensable. On évalue la densité de vos cheveux, leur santé, votre mode de vie. Si vos cheveux sont trop fins ou fragilisés pour supporter des extensions, on vous le dit. À partir de 500 € selon la technique et la quantité. Accessible depuis Schaerbeek, Etterbeek et le quartier Schuman.`,
+À partir de 500 €. Rue Bonneels 27, métro Schuman (lignes 1/5). Réservez une consultation au 02 230 55 37 ou en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
-      { question: "Est-ce que ça abîme les cheveux ?", answer: "Ça dépend de la pose ET de la dépose. Chez Tony&Son, on maîtrise les deux. Une extension bien posée et correctement retirée ne laisse aucun dommage. Le risque vient des poses amateurs ou des déposes brutales." },
-      { question: "Quelle technique pour des cheveux fins ?", answer: "Les tape-in ou les micro-anneaux sont les plus adaptés aux cheveux fins — moins de poids, moins de traction. Les extensions à kératine sont possibles aussi, mais avec des mèches plus petites. On évalue au cas par cas." },
-      { question: "Combien de temps ça dure ?", answer: "Kératine : 3-4 mois. Tape-in : 6-8 semaines avant repose. Micro-anneaux : 3-4 mois. Clips : le temps que vous voulez." },
-      { question: "Peut-on les colorer ?", answer: "Les extensions Remy (cheveux naturels) peuvent être colorées en salon. Mais le mieux est de choisir la bonne couleur dès le départ — nos coiffeurs matchent la teinte exacte avec vos cheveux naturels ou avec votre <a href='/fr/services/coloration-bruxelles/'>coloration</a>." }
+      { question: "Les extensions abîment-elles les cheveux ?", answer: "Ça dépend de la pose ET de la dépose. Chez Tony&Son, on maîtrise les deux étapes. Une extension bien posée et correctement retirée ne laisse pas de dommage. Le risque vient des poses amateurs ou des déposes brutales. Certaines clientes portent des extensions chez nous depuis des années sans souci." },
+      { question: "Quel budget prévoir pour des extensions de cheveux ?", answer: "À partir de 500 € selon la technique et la quantité de mèches. Le prix exact est donné après la consultation obligatoire — on évalue vos besoins avant de chiffrer." },
+      { question: "Quelle technique d'extensions pour des cheveux fins ?", answer: "Tape-in ou micro-anneaux : moins de poids, moins de traction. C'est ce que les spécialistes belges recommandent pour les textures fines. Les extensions kératine sont possibles aussi, avec des mèches plus petites. On évalue au cas par cas." },
+      { question: "Combien de temps durent les extensions selon la technique ?", answer: "Kératine : 3-4 mois. Micro-anneaux : 3-4 mois. Tape-in : repose toutes les 6-8 semaines. Clips : le temps que vous voulez. On vous explique le calendrier d'entretien dès la consultation." }
     ]
   },
 
@@ -236,19 +303,24 @@ La consultation est indispensable. On évalue la densité de vos cheveux, leur s
   // Volume : MOYEN-COURT (3 paragraphes, 3 FAQ)
   // ─────────────────────────────────────────────
   {
-    slug: 'permanente-bruxelles',
+    slug: 'permanentes-bruxelles',
     name: 'Permanentes',
     category: 'coiffure',
+    titleTag: 'Permanentes Bruxelles – Boucles & ondulations modernes | Tony&Son',
+    metaDescription: 'Permanentes modernes à Bruxelles chez Tony&Son. Spirale, bodywave, partielle. Formulations douces. Saint-Josse-ten-Noode. ☎ 02 230 55 37',
+    h1: 'Permanentes à Bruxelles — Tony&Son',
     description: "Permanentes modernes chez Tony&Son à Bruxelles. Boucles naturelles, vagues souples ou volume — les années 80 c'est fini.",
-    longDescription: `Votre mère a eu une permanente dans les années 80 et ça l'a traumatisée. On sait. Mais les permanentes de 2024 n'ont strictement rien à voir. Les formulations sont incomparablement plus douces, les résultats sont contrôlés, et on peut obtenir des vagues souples (bodywave) aussi bien que des boucles définies.
+    crossLinks: [{ slug: 'colorations-capillaires-bruxelles', label: 'coloration à Bruxelles' }, { slug: 'brushing-bruxelles', label: 'brushing à Bruxelles' }],
+    longDescription: `Permanente à Bruxelles, Saint-Josse-ten-Noode. Votre mère en a eu une dans les années 80 et ça l'a traumatisée. On sait. Les permanentes de 2025 n'ont rien à voir. Formulations sans ammoniaque, enrichies en protéines de soie — les résultats sont contrôlés, pas subis.
 
-Chez Tony&Son à Saint-Josse-ten-Noode, on propose trois variations. La <strong>spirale</strong> pour des boucles bien définies. Le <strong>bodywave</strong> pour des ondulations naturelles — c'est la plus demandée actuellement. Et la <strong>permanente partielle</strong> : uniquement sur les racines (pour du volume) ou sur les pointes (pour du mouvement). On n'est pas obligé de tout boucler.
+Trois variations chez Tony&Son. La <strong>spirale</strong> pour des boucles définies. Le <strong>bodywave</strong> pour des ondulations naturelles — c'est la plus demandée par nos clientes entre Ixelles et le quartier Schuman. Et la <strong>permanente partielle</strong> : racines uniquement (pour du volume) ou pointes (pour du mouvement). On n'est pas obligé de tout boucler.
 
-Point important : on ne fait pas de permanente sur des cheveux trop abîmés. Si vous avez eu un <a href="/fr/services/lissage-bruxelles/">lissage brésilien</a> récent ou une décoloration importante, nos coiffeurs vous le diront et proposeront une alternative. La permanente dure 2-3h au salon, le résultat tient 3-6 mois. Salon rue Bonneels 27, à côté de la gare de Maelbeek.`,
+On ne fait pas de permanente sur des cheveux trop abîmés. Lissage brésilien récent ? Décoloration intensive ? Nos coiffeurs vous le diront et proposeront une alternative — un <a href="/fr/services/traitement-keratine-bruxelles/">traitement kératine</a> pour renforcer la fibre d'abord, par exemple. Comptez 2-3h au salon. Le résultat tient 3-6 mois. Rue Bonneels 27, métro Schuman (lignes 1/5). Réservez au 02 230 55 37 ou en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
-      { question: "La permanente abîme-t-elle les cheveux ?", answer: "Les formulations modernes sont beaucoup plus douces qu'avant. Mais on évalue toujours l'état de vos cheveux avant. Si c'est trop risqué (coloration récente, <a href='/fr/services/lissage-bruxelles/'>lissage</a>), on vous le dit et on propose une alternative." },
-      { question: "Quel type pour un effet naturel ?", answer: "Le bodywave. Des vagues souples, pas des bouclettes serrées. La permanente partielle sur les pointes donne aussi du mouvement sans tout changer." },
-      { question: "Permanente + coloration, c'est possible ?", answer: "Oui, avec un délai de 2 semaines minimum entre les deux. Sur cheveux très décolorés, la permanente est déconseillée. Nos coiffeurs planifient les soins dans le bon ordre." }
+      { question: "Les permanentes modernes abîment-elles les cheveux ?", answer: "Les formulations actuelles sont incomparablement plus douces qu'avant — sans ammoniaque, enrichies en protéines. On évalue toujours l'état de vos cheveux avant. Si c'est trop risqué (coloration récente, <a href='/fr/services/lissage-cheveux-bruxelles/'>lissage</a>), on vous le dit." },
+      { question: "Quel est le prix et la durée d'une permanente au salon ?", answer: "Comptez 2-3h au salon. Le résultat tient 3-6 mois. Le tarif dépend de la longueur et de la technique — on vous donne le prix exact après consultation." },
+      { question: "Quelle permanente pour un effet vague naturelle ?", answer: "Le bodywave. Des ondulations souples, pas des bouclettes serrées. La permanente partielle sur les pointes donne aussi du mouvement sans tout changer — idéal si vous voulez tester avant de vous lancer sur toute la chevelure." },
+      { question: "Peut-on combiner permanente et coloration ?", answer: "Oui, avec 2 semaines minimum entre les deux traitements. Sur cheveux très décolorés, la permanente est déconseillée. Nos coiffeurs planifient les soins dans le bon ordre." }
     ]
   },
 
@@ -260,24 +332,25 @@ Point important : on ne fait pas de permanente sur des cheveux trop abîmés. Si
     slug: 'taille-barbe-bruxelles',
     name: 'Taille de barbe',
     category: 'barbier',
+    titleTag: 'Taille barbe Bruxelles – Rasage & dégradé précis | Tony&Son',
+    metaDescription: 'Taille de barbe à Bruxelles chez Tony&Son. Rasage traditionnel, dégradé, serviette chaude. Barbier expert à Saint-Josse-ten-Noode. ☎ 02 230 55 37',
+    h1: 'Taille de barbe à Bruxelles — Tony&Son',
     description: "Taille de barbe précise chez Tony&Son, barbier à Bruxelles. Rasage traditionnel, dégradé, serviette chaude. Tous types de barbe.",
-    longDescription: `Sur <a href="https://www.qcunbon.be" target="_blank" rel="noopener">qcunbon.be</a>, un gars a écrit : « J'ai toujours peur avec les coiffeurs, généralement ça ne ressemble jamais à ce que j'avais demandé. » On l'entend souvent, ça. Et c'est exactement pour ça que nos barbiers à Saint-Josse-ten-Noode prennent le temps de discuter avant de toucher quoi que ce soit.
+    crossLinks: [{ slug: 'coupes-enfants-bruxelles', label: 'coupes enfants à Bruxelles' }],
+    longDescription: `Taille de barbe à Bruxelles, Saint-Josse-ten-Noode. Sur <a href="https://www.qcunbon.be" target="_blank" rel="noopener">qcunbon.be</a>, un client a écrit : « J'ai toujours peur avec les coiffeurs, généralement ça ne ressemble jamais à ce que j'avais demandé. » On lit ça souvent. C'est exactement pour ça que nos barbiers commencent par discuter — pas par couper.
 
-Une taille de barbe chez Tony&Son, ce n'est pas un coup de tondeuse en 5 minutes. On commence par regarder la forme de votre visage, la densité de votre pilosité, la direction de pousse. On vous demande ce que vous voulez. Et ensuite seulement, on y va : tondeuse de précision pour le volume, ciseaux pour les finitions, rasoir droit pour les contours. Propre.
+On regarde. La forme de votre visage, la densité de pilosité, la direction de pousse. On vous demande ce que vous voulez. Photo de référence ? Parfait. Idée vague ? On vous propose. Et ensuite seulement : tondeuse de précision pour le volume, ciseaux pour les finitions, rasoir droit pour les contours. Propre.
 
-Le rasage traditionnel au coupe-chou fait partie de nos classiques. Serviette chaude sur le visage pour ouvrir les pores, mousse au blaireau, rasage à la lame, soin après-rasage. C'est un moment. Les habitués reviennent pour ça autant que pour le résultat.
+Le rasage traditionnel au coupe-chou, c'est notre classique. Serviette chaude pour ouvrir les pores, mousse au blaireau, lame, soin après-rasage. Les habitués du quartier européen reviennent pour ce moment autant que pour le résultat. C'est 20 minutes de silence dans une journée de réunions rue de la Loi.
 
-Et le dégradé ? Oui, on le maîtrise. Skin fade, mid fade, high fade, taper — venez avec une photo si vous voulez un truc précis, ou laissez nos barbiers vous proposer ce qui va avec votre tête. Beaucoup de nos clients du quartier Schuman et de Schaerbeek viennent spécifiquement pour le fade.
+Le dégradé américain ? On le maîtrise. Skin fade, mid fade, high fade, taper — sur toutes les textures. Pilosité européenne, maghrébine, afro, asiatique. Un fade sur cheveu crépu ne se fait pas comme sur cheveu lisse, et nos barbiers adaptent leur technique sans qu'on ait besoin de le demander. Les clients de Schaerbeek et du rond-point Schuman viennent spécifiquement pour ça.
 
-On travaille avec toutes les textures. Pilosité européenne, maghrébine, afro, asiatique — chaque texture a ses spécificités et nos barbiers les connaissent. Un dégradé sur cheveu crépu ne se fait pas comme sur cheveu lisse, et nos barbiers adaptent leur technique à chaque client.
-
-Le salon est rue Bonneels 27, à Saint-Josse-ten-Noode. Ouvert du mardi au vendredi 9h-19h, samedi 9h-18h. Rendez-vous recommandé le vendredi et samedi. Réservez via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou au 02 230 55 37.`,
+Rue Bonneels 27, métro Schuman (lignes 1/5), tram 81. Vendredi et samedi, c'est chargé — réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou appelez au 02 230 55 37. Sans rendez-vous accepté en semaine, selon disponibilité.`,
     faq: [
-      { question: "Vous faites le rasage traditionnel au rasoir droit ?", answer: "Oui. Serviette chaude, mousse au blaireau, rasoir droit (coupe-chou), soin après-rasage. Disponible sur rendez-vous." },
-      { question: "Vous maîtrisez le dégradé américain (fade) ?", answer: "Skin fade, mid fade, high fade, taper fade — nos barbiers maîtrisent toutes les techniques. Amenez une photo de référence si vous voulez un résultat précis." },
-      { question: "Tous les types de barbe et de cheveux ?", answer: "Oui. Pilosité européenne, maghrébine, afro, asiatique. Nos barbiers adaptent leur technique à chaque texture — un dégradé sur cheveu crépu ne se fait pas comme sur cheveu lisse." },
-      { question: "Rendez-vous obligatoire ou sans rendez-vous ?", answer: "Rendez-vous recommandé, surtout vendredi et samedi. Réservez via <a href='https://widget.treatwell.be/fr/salon/tony-and-son/' target='_blank' rel='noopener'>Treatwell</a> ou au 02 230 55 37. Sans rendez-vous accepté selon disponibilité." },
-      { question: "C'est quoi l'ambiance ?", answer: "Un salon de quartier avec une vraie histoire — la famille Campisi depuis 1970. Professionnel mais décontracté. On prend le temps avec chaque client. Pas un barbershop de chaîne." }
+      { question: "Proposez-vous le rasage au coupe-chou ?", answer: "Oui. Serviette chaude, mousse au blaireau, rasoir droit, soin après-rasage. C'est notre classique — prévoir 20 minutes. Sur rendez-vous." },
+      { question: "Quel est le tarif d'une taille de barbe avec finitions ?", answer: "Le prix dépend du service (taille simple, rasage traditionnel, combo coupe + barbe). On vous donne le tarif exact avant de commencer. Appelez au 02 230 55 37 pour un devis rapide." },
+      { question: "Maîtrisez-vous le dégradé sur toutes les textures de cheveux ?", answer: "Skin fade, mid fade, high fade, taper — sur pilosité européenne, maghrébine, afro ou asiatique. Amenez une photo de référence si vous voulez un résultat précis. Nos barbiers adaptent la technique à chaque texture." },
+      { question: "Faut-il réserver ou peut-on venir sans rendez-vous ?", answer: "Rendez-vous recommandé, surtout vendredi et samedi. Réservez via <a href='https://widget.treatwell.be/fr/salon/tony-and-son/' target='_blank' rel='noopener'>Treatwell</a> ou au 02 230 55 37. Sans rendez-vous accepté en semaine selon disponibilité." }
     ]
   },
 
@@ -290,15 +363,21 @@ Le salon est rue Bonneels 27, à Saint-Josse-ten-Noode. Ouvert du mardi au vendr
     name: 'Coloration en dégradé',
     category: 'coiffure',
     price: 'À partir de 40 €',
+    titleTag: 'Coloration dégradé Bruxelles – Ombré, sombré & dip-dye | Tony&Son',
+    metaDescription: 'Coloration en dégradé à Bruxelles chez Tony&Son. Ombré, sombré, dip-dye par nos coloristes experts à Saint-Josse-ten-Noode. Dès 40 €. ☎ 02 230 55 37',
+    h1: 'Coloration en dégradé à Bruxelles — Tony&Son',
     description: "Coloration en dégradé chez Tony&Son, coiffeur à Bruxelles. Ombré, sombré ou dip-dye — des nuances harmonieuses.",
-    longDescription: `Ombré, sombré, dip-dye. Trois mots, trois techniques, trois résultats différents. Nos coloristes chez Tony&Son à Saint-Josse-ten-Noode vous expliquent :
+    crossLinks: [{ slug: 'colorations-capillaires-bruxelles', label: 'colorations capillaires' }, { slug: 'balayage-bruxelles', label: 'balayage à Bruxelles' }],
+    longDescription: `Coloration en dégradé à Bruxelles, Saint-Josse-ten-Noode. Trois mots, trois techniques — et nos coloristes chez Tony&Son voient régulièrement des clientes confondre les trois. Petit glossaire rapide.
 
-<strong>Ombré</strong> — transition nette du foncé (racines) au clair (pointes). Effet marqué, très visible. <strong>Sombré</strong> — même principe, mais fondu plus doux. « Soft ombré ». Le plus naturel des trois. <strong>Dip-dye</strong> — démarcation franche, parfois avec des couleurs fantaisie. Plus audacieux. Les trois ont un avantage commun : la repousse fait partie du style. Entretien tous les 3-4 mois seulement, ce qui en fait les techniques les plus économiques pour un changement de tête.
+<strong>Ombré</strong> : transition nette du foncé (racines) au clair (pointes). Effet marqué, très visible. <strong>Sombré</strong> : même principe, fondu plus doux. « Soft ombré ». Le plus naturel des trois. <strong>Dip-dye</strong> : démarcation franche, parfois avec des couleurs fantaisie. Plus audacieux. Le point commun ? La repousse fait partie du style. Entretien tous les 3-4 mois seulement — la technique la plus économique pour un vrai changement de tête entre deux trimestres à la Commission.
 
-À partir de 40 €. On vous montre des exemples avant de commencer pour être sûrs qu'on parle de la même chose. Rue Bonneels 27, Saint-Josse-ten-Noode. Pour des techniques plus classiques, voir aussi nos pages <a href="/fr/services/coloration-bruxelles/">coloration</a>, <a href="/fr/services/balayage-bruxelles/">balayage</a> et <a href="/fr/services/meches-bruxelles/">mèches</a>.`,
+À partir de 40 €. On vous montre des exemples avant de toucher quoi que ce soit — pour être sûrs qu'on parle de la même chose. Rue Bonneels 27, métro Schuman. Appelez au 02 230 55 37 ou réservez sur <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>. Pour des techniques plus classiques : <a href="/fr/services/colorations-capillaires-bruxelles/">coloration complète</a>, <a href="/fr/services/balayage-bruxelles/">balayage</a> ou <a href="/fr/services/meches-bruxelles/">mèches</a>.`,
     faq: [
-      { question: "Ombré ou balayage ?", answer: "L'ombré crée une transition verticale claire du foncé au clair. Le <a href='/fr/services/balayage-bruxelles/'>balayage</a> crée des reflets diffus et naturels dans toute la chevelure. Deux techniques très différentes — nos coloristes vous montrent des exemples." },
-      { question: "C'est facile à entretenir ?", answer: "Oui. La repousse fait partie du style — pas besoin de revenir avant 3-4 mois. C'est l'option la plus low-maintenance de toutes nos colorations." }
+      { question: "Ombré ou balayage : quelle est la différence ?", answer: "L'ombré crée une transition verticale du foncé au clair. Le <a href='/fr/services/balayage-bruxelles/'>balayage</a> crée des reflets diffus dans toute la chevelure. Deux techniques très différentes — nos coloristes vous montrent des exemples concrets." },
+      { question: "Combien coûte une coloration en dégradé ?", answer: "À partir de 40 €, shampooing et brushing inclus. Le tarif final dépend de la longueur et de la technique choisie." },
+      { question: "Quelle technique de dégradé pour un résultat discret et naturel ?", answer: "Le sombré. C'est le fondu le plus doux — la transition est progressive, presque invisible. Idéal si vous voulez changer sans que tout le bureau s'en aperçoive lundi matin." },
+      { question: "Tous les combien faut-il refaire un dégradé de couleur ?", answer: "Tous les 3-4 mois. La repousse fait partie du style — pas besoin de retouche fréquente. C'est l'option la plus tranquille de toutes nos techniques de coloration." }
     ]
   },
 
@@ -309,19 +388,26 @@ Le salon est rue Bonneels 27, à Saint-Josse-ten-Noode. Ouvert du mardi au vendr
   {
     slug: 'epilation-cire-bruxelles',
     name: 'Épilation à la cire',
-    category: 'coiffure',
+    category: 'barbier',
     price: '10 €',
+    titleTag: 'Épilation cire Bruxelles – Visage & sourcils | Tony&Son',
+    metaDescription: 'Épilation à la cire du visage à Bruxelles chez Tony&Son. Sourcils, lèvre, menton. 10 €. Saint-Josse-ten-Noode. ☎ 02 230 55 37',
+    h1: 'Épilation à la cire à Bruxelles — Tony&Son',
     description: "Épilation à la cire du visage chez Tony&Son à Bruxelles. Sourcils, lèvre, menton. 10 €.",
-    longDescription: `Sourcils, lèvre supérieure, menton. Cire tiède, geste rapide, 10 €. Hommes et femmes. Se combine avec une coupe ou un <a href="/fr/services/brushing-bruxelles/">brushing</a> — mentionnez-le à la réservation. Tony&Son, rue Bonneels 27, Saint-Josse-ten-Noode. Tél : 02 230 55 37.`,
+    crossLinks: [{ slug: 'taille-barbe-bruxelles', label: 'taille de barbe à Bruxelles' }],
+    longDescription: `Épilation à la cire à Bruxelles, Saint-Josse-ten-Noode. Sourcils, lèvre, menton — cire tiède, geste rapide, 10 €. Hommes et femmes. Se combine avec une <a href="/fr/services/taille-barbe-bruxelles/">taille de barbe</a> ou un <a href="/fr/services/brushing-bruxelles/">brushing</a> dans la même séance — mentionnez-le à la réservation sur <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou au 02 230 55 37. Rue Bonneels 27, métro Schuman.`,
     faq: [
-      { question: "C'est douloureux ?", answer: "Le geste est rapide et la sensation brève. On utilise de la cire tiède, moins agressive que la cire chaude." },
-      { question: "Combinable avec d'autres services ?", answer: "Oui. Beaucoup de clients ajoutent l'épilation des sourcils à leur <a href='/fr/services/brushing-bruxelles/'>brushing</a> ou leur coupe. Il suffit de le mentionner à la réservation." }
+      { question: "L'épilation à la cire du visage est-elle douloureuse ?", answer: "Le geste est rapide, la sensation brève. On utilise de la cire tiède — moins agressive que la cire chaude." },
+      { question: "Peut-on combiner l'épilation avec d'autres services ?", answer: "Oui. Beaucoup de clients ajoutent l'épilation des sourcils à leur coupe ou leur <a href='/fr/services/taille-barbe-bruxelles/'>taille de barbe</a>. Il suffit de le mentionner à la réservation." }
     ]
   }
 ];
 
 export function getServicesByCategory(category: 'coiffure' | 'barbier') {
-  return services.filter(s => s.category === category);
+  return services.filter(s =>
+    s.category === category ||
+    (s.categoryParents && s.categoryParents.includes(category))
+  );
 }
 
 export function getServiceBySlug(slug: string) {

@@ -12,8 +12,8 @@ export const getStaticPaths: GetStaticPaths = () => {
 
 const { service } = Astro.props;
 const relatedServices = services.filter(s => s.category === service.category && s.slug !== service.slug).slice(0, 3);
-const seoTitle = `${service.name} Bruxelles — Tony&Son ✂ Saint-Josse-ten-Noode`;
-const seoDesc = `${service.description.slice(0, 120).trim()}… ☎ 02 230 55 37`;
+const seoTitle = service.titleTag;
+const seoDesc = service.metaDescription;
 
 const schemaGraph = {
   "@context": "https://schema.org",
@@ -48,7 +48,7 @@ const schemaGraph = {
   <section class="titlebar" style="background-image: url('/images/titlebar-bg.jpg')">
     <div class="titlebar-overlay"></div>
     <div class="container">
-      <h1>{service.name} Bruxelles</h1>
+      <h1>{service.h1}</h1>
       <p class="titlebar-breadcrumb">
         <a href="/fr/">Accueil</a> &rsaquo;
         <a href={`/fr/${service.category}/`}>{service.category === 'coiffure' ? 'Coiffure' : 'Barbier'}</a> &rsaquo;
@@ -64,6 +64,19 @@ const schemaGraph = {
         <div class="service-text">
           {service.price && <p class="service-price">{service.price}</p>}
           {service.longDescription.split('\n\n').map(p => <p set:html={p} />)}
+
+          <!-- Cross-links éditoriaux -->
+          {service.crossLinks && service.crossLinks.length > 0 && (
+            <p class="editorial-links">
+              Voir aussi :
+              {service.crossLinks.map((link, i) => (
+                <>
+                  {i > 0 && ' · '}
+                  <a href={`/fr/services/${link.slug}/`}>{link.label}</a>
+                </>
+              ))}
+            </p>
+          )}
 
           <!-- CTA -->
           <div class="service-cta-box">
@@ -154,6 +167,9 @@ const schemaGraph = {
   .service-grid { display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: start; }
   .service-text p { font-size: 16px; line-height: 1.8; color: var(--color-text); margin-bottom: 1.5rem; }
   .service-price { font-size: 22px; font-weight: 600; color: var(--color-gold); margin-bottom: 2rem !important; text-transform: none; }
+
+  .editorial-links { font-size: 15px; color: var(--color-text-light); margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--color-border); }
+  .editorial-links a { color: var(--color-gold); font-weight: 500; }
 
   .service-cta-box { background: var(--color-cream); padding: 40px; margin-top: 40px; }
   .service-cta-box h3 { font-size: 22px; margin-bottom: 10px; text-transform: none; }

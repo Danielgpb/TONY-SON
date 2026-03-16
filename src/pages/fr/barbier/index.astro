@@ -1,57 +1,79 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import { getServicesByCategory } from '../../../data/services';
 
-const barbierServices = getServicesByCategory('barbier');
-const seoTitle = "Barbier Bruxelles — Tony&Son ✂ Barber Shop Saint-Josse-ten-Noode";
-const seoDesc = "Barbier professionnel à Bruxelles : taille de barbe, rasage de précision. Tony&Son barber shop à Saint-Josse-ten-Noode près du quartier Schuman depuis 1970.";
+const seoTitle = "Barbier Bruxelles – Taille de Barbe & Soins Homme | Tony&Son";
+const seoDesc = "Barbier à Bruxelles : taille de barbe, rasage traditionnel, dégradé, épilation cire, coupes enfants. Tony&Son barber shop à Saint-Josse-ten-Noode depuis 1970.";
+
+const categorySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Barbier",
+  "provider": {
+    "@type": "HairSalon",
+    "name": "Tony&Son",
+    "@id": "https://tonyandson.be/#business",
+    "telephone": "02 230 55 37",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rue Bonneels 27",
+      "addressLocality": "Saint-Josse-ten-Noode",
+      "postalCode": "1210",
+      "addressCountry": "BE"
+    }
+  },
+  "areaServed": "Bruxelles"
+};
 ---
 
 <Layout title={seoTitle} locale="fr" page="barbier" description={seoDesc}>
   <section class="titlebar" style="background-image: url('/images/titlebar-bg.jpg')">
     <div class="titlebar-overlay"></div>
     <div class="container">
-      <h1>Barbier Bruxelles</h1>
-      <p class="titlebar-sub">Tony&Son — Barber shop à Saint-Josse-ten-Noode depuis 1970</p>
+      <h1>Barbier à Bruxelles — Taille de barbe et soins homme chez Tony&Son</h1>
+      <p class="titlebar-sub">Barber shop à Saint-Josse-ten-Noode depuis 1970</p>
     </div>
   </section>
 
   <section class="category-intro">
     <div class="container">
-      <p class="intro-text">Tony&Son, votre <a href="/fr/">barbier à Saint-Josse-ten-Noode</a> près du quartier Schuman à Bruxelles, propose des services de barbier professionnels depuis 1970. Nos barbiers expérimentés maîtrisent l'art de la taille de barbe, du rasage traditionnel et des soins masculins. Facilement accessible depuis Schaerbeek, Etterbeek, le quartier européen et le centre de Bruxelles, notre barber shop est la référence pour les hommes exigeants.</p>
+      <p class="intro-text">Tony&Son, votre <a href="/fr/">barbier à Saint-Josse-ten-Noode</a> près du quartier Schuman à Bruxelles. Nos barbiers expérimentés maîtrisent l'art de la taille de barbe, du rasage traditionnel et des soins masculins depuis 1970. Toutes les textures de pilosité — européenne, maghrébine, afro, asiatique. Accessible depuis Schaerbeek, Etterbeek, le quartier européen et tout Bruxelles.</p>
     </div>
   </section>
 
-  <section class="services-list">
+  <section class="services-editorial">
     <div class="container">
-      {barbierServices.map(service => (
-        <div class="service-block">
-          <div class="service-block-content">
-            <h2>{service.name} à Bruxelles</h2>
-            <p set:html={service.description} />
-            <p set:html={service.longDescription.split('\n\n')[0]} />
-            {service.price && <p class="service-block-price">{service.price}</p>}
-            <p>En savoir plus sur notre service de <a href={`/fr/services/${service.slug}/`}>{service.name.toLowerCase()} à Bruxelles</a> chez Tony&Son.</p>
-          </div>
-          <div class="service-block-photo">
-            <div class="photo-placeholder"><span>📷 {service.name}</span></div>
-          </div>
-        </div>
-      ))}
+
+      <div class="service-editorial-block">
+        <h2>Taille de barbe et rasage traditionnel</h2>
+        <p>Tondeuse de précision, ciseaux pour les finitions, rasoir droit pour les contours. Nos barbiers commencent par analyser la forme de votre visage et la direction de pousse. Rasage au coupe-chou avec serviette chaude disponible. Dégradé américain (skin fade, mid fade, taper) maîtrisé sur toutes les textures. Prenez rendez-vous pour une <a href="/fr/services/taille-barbe-bruxelles/">taille de barbe</a>.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Coupes enfants — patience et douceur</h2>
+        <p>Un moment en douceur pour les garçons qui veulent leur premier dégradé ou une coupe comme papa. Nos barbiers s'adaptent au rythme de l'enfant avec patience et bienveillance. Même tarif filles et garçons, à partir de 25 €. Réservez une <a href="/fr/services/coupes-enfants-bruxelles/">coupe enfant</a> chez Tony&Son.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Épilation à la cire du visage</h2>
+        <p>Sourcils, lèvre supérieure, menton. Cire tiède, geste rapide, 10 €. Se combine avec une taille de barbe ou une coupe dans la même séance — mentionnez-le à la réservation. En savoir plus sur l'<a href="/fr/services/epilation-cire-bruxelles/">épilation à la cire</a>.</p>
+      </div>
+
     </div>
   </section>
 
+  <!-- CTA -->
   <section class="category-cta">
     <div class="container" style="text-align: center;">
       <h2>Prenez rendez-vous chez Tony&Son</h2>
       <p>Barbier à Saint-Josse-ten-Noode, Bruxelles — Ouvert du mardi au samedi</p>
       <div class="cta-buttons">
-        <a href="tel:+3222305537" class="btn">📞 02 230 55 37</a>
+        <a href="tel:+3222305537" class="btn">02 230 55 37</a>
         <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="btn btn-dark">Réserver en ligne</a>
       </div>
     </div>
   </section>
 
+  <!-- Map -->
   <section class="category-map">
     <div class="container">
       <iframe
@@ -60,27 +82,26 @@ const seoDesc = "Barbier professionnel à Bruxelles : taille de barbe, rasage de
         referrerpolicy="no-referrer-when-downgrade" title="Tony&Son Barbier Bruxelles"></iframe>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(categorySchema)} />
 </Layout>
 
 <style>
   .titlebar { position: relative; background-size: cover; background-position: center; padding: 160px 0 60px; text-align: center; }
   .titlebar-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.55); }
-  .titlebar h1 { position: relative; z-index: 2; font-size: 42px; color: var(--color-white); }
+  .titlebar h1 { position: relative; z-index: 2; font-size: 36px; color: var(--color-white); }
   .titlebar-sub { position: relative; z-index: 2; color: var(--color-gold); font-family: var(--font-display); font-style: italic; font-size: 18px; margin-top: 10px; text-transform: none; }
 
   .category-intro { padding: 60px 0 40px; }
   .intro-text { max-width: 900px; margin: 0 auto; font-size: 18px; line-height: 1.8; color: var(--color-text); text-align: center; }
   .intro-text a { color: var(--color-gold); font-weight: 600; }
 
-  .services-list { padding: 40px 0 80px; }
-  .service-block { display: grid; grid-template-columns: 1fr 300px; gap: 40px; align-items: start; padding: 50px 0; border-bottom: 1px solid var(--color-border); }
-  .service-block:last-child { border-bottom: none; }
-  .service-block h2 { font-size: 26px; margin-bottom: 15px; }
-  .service-block p { font-size: 16px; line-height: 1.8; color: var(--color-text); margin-bottom: 10px; }
-  .service-block p a { color: var(--color-gold); font-weight: 500; }
-  .service-block-price { color: var(--color-gold); font-weight: 600; font-size: 18px !important; }
-
-  .photo-placeholder { background: var(--color-cream); border: 2px dashed var(--color-border); display: flex; align-items: center; justify-content: center; min-height: 220px; font-size: 15px; color: var(--color-text-light); }
+  .services-editorial { padding: 40px 0 80px; }
+  .service-editorial-block { padding: 35px 0; border-bottom: 1px solid var(--color-border); }
+  .service-editorial-block:last-child { border-bottom: none; }
+  .service-editorial-block h2 { font-size: 24px; margin-bottom: 15px; }
+  .service-editorial-block p { font-size: 16px; line-height: 1.8; color: var(--color-text); }
+  .service-editorial-block p a { color: var(--color-gold); font-weight: 500; }
 
   .category-cta { padding: 80px 0; background: var(--color-black); }
   .category-cta h2 { color: var(--color-white); margin-bottom: 10px; }
@@ -92,8 +113,7 @@ const seoDesc = "Barbier professionnel à Bruxelles : taille de barbe, rasage de
 
   @media (max-width: 768px) {
     .titlebar { padding: 120px 0 40px; }
-    .titlebar h1 { font-size: 28px; }
-    .service-block { grid-template-columns: 1fr; }
+    .titlebar h1 { font-size: 24px; }
     .cta-buttons { flex-direction: column; align-items: center; }
   }
 </style>
