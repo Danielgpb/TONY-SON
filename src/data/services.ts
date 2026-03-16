@@ -10,6 +10,7 @@ export interface Service {
   description: string;
   longDescription: string;
   crossLinks: { slug: string; label: string }[];
+  images?: string[];
   faq: { question: string; answer: string }[];
 }
 
@@ -60,7 +61,7 @@ Rue Bonneels 27, à deux minutes du métro Schuman (lignes 1 et 5). Réservez vo
     faq: [
       { question: "Pouvez-vous rattraper une coloration ratée dans un autre salon ?", answer: "C'est l'une de nos spécialités. Nos coloristes réalisent un diagnostic gratuit, identifient le problème et proposent un protocole de correction. Appelez au 02 230 55 37 pour en discuter avant de prendre rendez-vous." },
       { question: "Quel est le tarif total d'une coloration, brushing compris ?", answer: "À partir de 40 €, tout inclus : shampooing, soin et brushing de finition. Le prix exact dépend de la technique et de la longueur. On vous confirme le montant avant de commencer — jamais de surprise sur la facture." },
-      { question: "Coloration complète ou <a href='/fr/services/balayage-bruxelles/'>balayage</a> : quelle technique choisir ?", answer: "La coloration couvre l'ensemble de la chevelure ou les racines. Le balayage crée des reflets naturels sans toucher la racine — repousse discrète, entretien tous les 3-4 mois. Si vous hésitez, nos coloristes vous montrent la différence sur des exemples concrets." },
+      { question: "Coloration complète ou balayage : quelle technique choisir ?", answer: "La coloration couvre l'ensemble de la chevelure ou les racines. Le balayage crée des reflets naturels sans toucher la racine — repousse discrète, entretien tous les 3-4 mois. Si vous hésitez, nos coloristes vous montrent la différence sur des exemples concrets." },
       { question: "Tous les combien faut-il refaire sa couleur ?", answer: "Coloration permanente : retouche racines toutes les 4-6 semaines. Ton sur ton : s'estompe en 6-8 semaines. Le balayage tient 3-4 mois — l'option la moins contraignante si votre agenda entre Schuman et la rue de la Loi ne laisse pas beaucoup de marge." }
     ]
   },
@@ -260,7 +261,7 @@ Particulièrement utile après une coloration, un balayage ou des mèches — le
 
 Rue Bonneels 27, à deux minutes du métro Schuman. Appelez au 02 230 55 37 ou réservez votre créneau en ligne sur <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>. Les clientes du quartier européen prennent souvent le traitement kératine en complément de leur coloration habituelle — c'est le duo qui marche le mieux.`,
     faq: [
-      { question: "Quelle différence entre kératine et <a href='/fr/services/lissage-cheveux-bruxelles/'>lissage brésilien</a> ?", answer: "Le traitement kératine est un soin de réparation — il nourrit, réduit les frisottis, mais ne modifie pas la structure du cheveu. Le lissage brésilien lisse réellement. Si vous voulez des cheveux lisses, c'est le lissage. Si vous voulez des cheveux réparés et brillants, c'est la kératine." },
+      { question: "Quelle différence entre kératine et lissage brésilien ?", answer: "Le traitement kératine est un soin de réparation — il nourrit, réduit les frisottis, mais ne modifie pas la structure du cheveu. Le lissage brésilien lisse réellement. Si vous voulez des cheveux lisses, c'est le lissage. Si vous voulez des cheveux réparés et brillants, c'est la kératine." },
       { question: "Combien de temps dure l'effet d'un traitement kératine ?", answer: "3-4 mois avec un shampooing sans sulfate. L'effet s'estompe progressivement — pas de ligne de démarcation brutale." },
       { question: "La kératine est-elle compatible avec des cheveux colorés ?", answer: "Oui, et c'est même recommandé. La kératine répare les dommages de la <a href='/fr/services/colorations-capillaires-bruxelles/'>coloration</a> et prolonge l'éclat de votre couleur. Beaucoup de nos clientes combinent les deux." },
       { question: "Quel shampooing utiliser après un traitement kératine ?", answer: "Shampooing sans sulfate obligatoire pour prolonger l'effet. On vous recommande des références précises en fin de séance — pas juste « sans sulfate » mais des marques testées par nos coiffeurs." }
@@ -332,6 +333,7 @@ On ne fait pas de permanente sur des cheveux trop abîmés. Lissage brésilien r
     slug: 'taille-barbe-bruxelles',
     name: 'Taille de barbe',
     category: 'barbier',
+    images: ['/images/barbier-1.jpg', '/images/barbier-2.jpg'],
     titleTag: 'Taille barbe Bruxelles – Rasage & dégradé précis | Tony&Son',
     metaDescription: 'Taille de barbe à Bruxelles chez Tony&Son. Rasage traditionnel, dégradé, serviette chaude. Barbier expert à Saint-Josse-ten-Noode. ☎ 02 230 55 37',
     h1: 'Taille de barbe à Bruxelles — Tony&Son',
