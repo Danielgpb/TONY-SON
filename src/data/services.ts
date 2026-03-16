@@ -57,7 +57,7 @@ Les tarifs. Coloration complète : à partir de 40 €. Retouche racines, ton su
 
 Pour un résultat plus naturel, on propose aussi le <a href="/fr/services/balayage-bruxelles/">balayage</a> — des reflets peints à main levée qui tiennent 3-4 mois. Les <a href="/fr/services/meches-bruxelles/">mèches</a> donnent des contrastes plus francs. Et pour celles qui veulent zéro chimie, on travaille avec des colorations végétales. Moins de couverture sur les cheveux blancs, mais aucune agression.
 
-Rue Bonneels 27, à deux minutes du métro Schuman (lignes 1 et 5). Réservez votre créneau en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> — les créneaux du mercredi midi partent vite, pause déjeuner des institutions oblige.`,
+Rue Bonneels 27, à deux minutes du métro Schuman (lignes 1 et 5). Retrouvez l'ensemble de nos services sur notre page <a href="/fr/coiffure/">coiffure à Bruxelles</a>. Réservez votre créneau en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> — les créneaux du mercredi midi partent vite, pause déjeuner des institutions oblige.`,
     faq: [
       { question: "Pouvez-vous rattraper une coloration ratée dans un autre salon ?", answer: "C'est l'une de nos spécialités. Nos coloristes réalisent un diagnostic gratuit, identifient le problème et proposent un protocole de correction. Appelez au 02 230 55 37 pour en discuter avant de prendre rendez-vous." },
       { question: "Quel est le tarif total d'une coloration, brushing compris ?", answer: "À partir de 40 €, tout inclus : shampooing, soin et brushing de finition. Le prix exact dépend de la technique et de la longueur. On vous confirme le montant avant de commencer — jamais de surprise sur la facture." },
@@ -86,7 +86,7 @@ La technique : chaque mèche est peinte à main levée, pas au papier aluminium 
 
 Soyons honnêtes : un balayage blond polaire sur base noire, ça ne se fait pas en une séance. Nos coloristes vous le disent avant, pas après. Et on vous annonce le prix total — balayage + toner + brushing — avant de toucher un seul cheveu. French balayage, babylights, balayage miel ou cendré : on maîtrise les variantes. À partir de 35 €, tout compris.
 
-Rue Bonneels 27, entre le Parc du Cinquantenaire et le métro Schuman (lignes 1/5). Réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou au 02 230 55 37. Nos clientes viennent d'Etterbeek, Ixelles, Schaerbeek et de tout le quartier européen.`,
+Rue Bonneels 27, entre le Parc du Cinquantenaire et le métro Schuman (lignes 1/5). Ce service fait partie de notre offre <a href="/fr/coiffure/">coiffure à Bruxelles</a>. Réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou au 02 230 55 37.`,
     faq: [
       { question: "Balayage ou mèches : quelle est la vraie différence ?", answer: "Le balayage est peint à main levée — résultat fondu, repousse discrète, retouche tous les 3-4 mois. Les <a href='/fr/services/meches-bruxelles/'>mèches</a> utilisent du papier alu pour des contrastes plus francs, mais la repousse se voit au bout de 6 semaines. Pour un agenda chargé côté Schuman, le balayage est l'option la plus tranquille." },
       { question: "Combien coûte un balayage, brushing compris ?", answer: "À partir de 35 €, brushing inclus. Le tarif final dépend de la longueur et de la technique. On vous annonce le prix exact avant de commencer — pas de surprise." },
@@ -111,7 +111,7 @@ Rue Bonneels 27, entre le Parc du Cinquantenaire et le métro Schuman (lignes 1/
     crossLinks: [{ slug: 'lissage-cheveux-bruxelles', label: 'lissage de cheveux à Bruxelles' }, { slug: 'colorations-capillaires-bruxelles', label: 'coloration à Bruxelles' }],
     longDescription: `Brushing à Bruxelles, Saint-Josse-ten-Noode. Entre votre réunion de 12h à la Commission et le déjeuner au Square Ambiorix, il reste 45 minutes. C'est pile ce qu'il faut.
 
-Lisse, volume ou wavy — shampooing et soin protecteur thermique inclus, à partir de 30 €. Tenue : 2-4 jours selon la texture et la météo bruxelloise. Nos coiffeurs vous filent deux-trois astuces concrètes — taie en satin, spray fixant, pas d'attache le premier soir — pour que ça tienne jusqu'au vendredi. Combinable avec une <a href="/fr/services/colorations-capillaires-bruxelles/">coloration</a> ou un <a href="/fr/services/lissage-cheveux-bruxelles/">lissage</a> dans la même séance. Réservez en ligne sur <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou au 02 230 55 37. Rue Bonneels 27, à deux pas du métro Schuman.`,
+Lisse, volume ou wavy — shampooing et soin protecteur thermique inclus, à partir de 30 €. Tenue : 2-4 jours selon la texture et la météo bruxelloise. Nos coiffeurs vous filent deux-trois astuces concrètes — taie en satin, spray fixant, pas d'attache le premier soir — pour que ça tienne jusqu'au vendredi. Combinable avec une <a href="/fr/services/colorations-capillaires-bruxelles/">coloration</a> ou un <a href="/fr/services/lissage-cheveux-bruxelles/">lissage</a> dans la même séance. Ce service fait partie de notre offre <a href="/fr/coiffure/">coiffure à Bruxelles</a>. Réservez en ligne sur <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou au 02 230 55 37. Rue Bonneels 27, à deux pas du métro Schuman.`,
     faq: [
       { question: "Le shampooing est-il compris dans le tarif du brushing ?", answer: "Oui. Shampooing, soin et brushing — tout est compris dans le prix affiché. Pas de supplément." },
       { question: "Combien de temps tient un brushing professionnel ?", answer: "Entre 2 et 4 jours. Pour un événement, venez le matin même ou la veille. On vous donne les astuces pour prolonger la tenue." },
@@ -142,7 +142,7 @@ Trois options, trois résultats différents. <strong>Le lissage brésilien à la
 
 Sur les cheveux très frisés ou crépus, soyons clairs : le brésilien réduit énormément le volume et facilite le coiffage, mais le résultat n'est pas toujours « raide comme un fil ». Nos coiffeurs vous montrent des avant/après sur des textures similaires. Pas de fausses promesses.
 
-Après le traitement : shampooing sans sulfate obligatoire, pas d'attache ni de lavage pendant 48-72h. On vous remet les instructions par écrit. Rue Bonneels 27, à côté du métro Schuman (lignes 1/5). Accessible depuis Etterbeek, Ixelles, Schaerbeek et le quartier européen. Appelez au 02 230 55 37 ou réservez via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Après le traitement : shampooing sans sulfate obligatoire, pas d'attache ni de lavage pendant 48-72h. On vous remet les instructions par écrit. Rue Bonneels 27, à côté du métro Schuman (lignes 1/5). Accessible depuis Etterbeek, Ixelles, Schaerbeek et le quartier européen. Ce service fait partie de notre offre <a href="/fr/coiffure/">coiffure à Bruxelles</a>. Appelez au 02 230 55 37 ou réservez via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Vos produits de lissage contiennent-ils du formol ?", answer: "Nos produits respectent la réglementation européenne (max 0,2 % comme conservateur). Distributeurs officiels uniquement. On vous montre la fiche technique du produit avant de l'appliquer — la transparence n'est pas négociable chez Tony&Son." },
       { question: "Quel budget prévoir pour un lissage brésilien ?", answer: "À partir de 150 € pour le lissage brésilien, tout compris. Le tarif exact dépend de la longueur et de l'épaisseur. On vous donne le prix avant de commencer." },
@@ -159,6 +159,7 @@ Après le traitement : shampooing sans sulfate obligatoire, pas d'attache ni de 
     slug: 'repousse-capillaire-bruxelles',
     name: 'Repousse capillaire',
     category: 'coiffure',
+    price: 'Sur devis',
     titleTag: 'Repousse capillaire Bruxelles – Soins anti-chute & stimulation | Tony&Son',
     metaDescription: 'Soins repousse capillaire à Bruxelles chez Tony&Son. Traitements anti-chute, stimulation de la pousse. Saint-Josse-ten-Noode depuis 1970. ☎ 02 230 55 37',
     h1: 'Repousse capillaire à Bruxelles — Tony&Son',
@@ -175,7 +176,7 @@ Nos traitements : soins topiques professionnels, massages du cuir chevelu pour s
 
 Le premier rendez-vous est un diagnostic. Pas de vente, pas de pression. Si votre situation nécessite un suivi médical, on vous le dit — on préfère vous orienter que vous vendre un soin inadapté. Nos clients viennent du quartier Schuman, de Schaerbeek, d'Etterbeek et du Parc du Cinquantenaire pour ce suivi honnête.
 
-Rue Bonneels 27, métro Schuman (lignes 1/5). Appelez au 02 230 55 37 ou réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Ce service fait partie de notre offre <a href="/fr/coiffure/">coiffure à Bruxelles</a>. Rue Bonneels 27, métro Schuman (lignes 1/5). Appelez au 02 230 55 37 ou réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Quels soins anti-chute proposez-vous au salon ?", answer: "Soins topiques professionnels, massages stimulants du cuir chevelu et protocoles de renforcement capillaire. Chaque traitement est adapté après un diagnostic complet de votre situation." },
       { question: "Combien de séances pour voir des résultats concrets ?", answer: "Les premiers résultats sont visibles après 4-6 séances, espacées de 2-3 semaines. Le protocole complet dure 3-6 mois selon la cause. On vous donne un calendrier réaliste dès le premier rendez-vous." },
@@ -203,7 +204,7 @@ Rue Bonneels 27, métro Schuman (lignes 1/5). Appelez au 02 230 55 37 ou réserv
 
 Si le petit pleure, on attend. Genoux de maman ? Pas de problème. Coupe en deux fois parce qu'il craque au bout de 5 minutes ? On s'adapte. Le résultat compte, mais le moment aussi. Les familles du quartier Schuman, d'Etterbeek et de Schaerbeek reviennent pour ça : un salon où l'enfant repart content, et les parents avec la vidéo prise en douce.
 
-Garçons et filles, même tarif : à partir de 25 €. Dégradé, carré, frange, brosse — nos coiffeurs maîtrisent tout. Le mercredi et samedi, c'est chargé (pause des écoles + week-end). Réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou au 02 230 55 37. Rue Bonneels 27, à côté du Parc du Cinquantenaire.`,
+Garçons et filles, même tarif : à partir de 25 €. Dégradé, carré, frange, brosse — nos coiffeurs maîtrisent tout. Le mercredi et samedi, c'est chargé (pause des écoles + week-end). Ce service fait partie de notre offre <a href="/fr/coiffure/">coiffure</a> et <a href="/fr/barbier/">barbier à Bruxelles</a>. Réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou au 02 230 55 37. Rue Bonneels 27, à côté du Parc du Cinquantenaire.`,
     faq: [
       { question: "Comment gérez-vous un enfant qui a peur du coiffeur ?", answer: "On y est habitués depuis 1970. Nos coiffeurs s'adaptent au rythme de l'enfant : pause si besoin, genoux d'un parent, pas de pression. L'objectif : qu'il reparte avec un bon souvenir, pas un traumatisme." },
       { question: "Quel est le prix d'une coupe enfant, filles et garçons confondus ?", answer: "25 € quel que soit le sexe. Le tarif augmente uniquement pour une coupe complexe (dégradé élaboré, occasion spéciale). Pas de surprise." },
@@ -220,6 +221,7 @@ Garçons et filles, même tarif : à partir de 25 €. Dégradé, carré, frange
     slug: 'meches-bruxelles',
     name: 'Mèches',
     category: 'coiffure',
+    price: 'Sur devis',
     titleTag: 'Mèches Bruxelles – Reflets structurés & précis | Tony&Son',
     metaDescription: 'Mèches à Bruxelles chez Tony&Son, salon à Saint-Josse-ten-Noode. Mèches aluminium, bonnet ou main levée. Coloristes experts depuis 1970. ☎ 02 230 55 37',
     h1: 'Mèches à Bruxelles — Tony&Son',
@@ -231,7 +233,7 @@ Trois techniques, trois rendus. L'aluminium donne un résultat régulier et net 
 
 Le compromis à connaître : les mèches demandent un passage toutes les 6-8 semaines. La repousse se voit plus vite qu'avec un balayage (3-4 mois). C'est le prix d'un résultat plus marqué. On vous le dit dès la consultation — pas de mauvaise surprise dans 6 semaines.
 
-Rue Bonneels 27, entre le Parc du Cinquantenaire et le métro Schuman. Accessible depuis Schaerbeek, Etterbeek et Ixelles. Appelez au 02 230 55 37 ou réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Rue Bonneels 27, entre le Parc du Cinquantenaire et le métro Schuman. Accessible depuis Schaerbeek, Etterbeek et Ixelles. Ce service fait partie de notre offre <a href="/fr/coiffure/">coiffure à Bruxelles</a>. Appelez au 02 230 55 37 ou réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Mèches ou balayage : quel rendu choisir ?", answer: "Les mèches donnent des contrastes nets et structurés. Le <a href='/fr/services/balayage-bruxelles/'>balayage</a> est plus fondu et naturel. Côté entretien : mèches toutes les 6-8 semaines, balayage tous les 3-4 mois. Nos coloristes vous montrent des exemples concrets des deux techniques." },
       { question: "Combien de temps dure une pose de mèches ?", answer: "Entre 1h30 et 2h30 selon la technique, la longueur et l'épaisseur. Si votre agenda est serré côté quartier européen, prévoyez le créneau le plus large." },
@@ -248,6 +250,7 @@ Rue Bonneels 27, entre le Parc du Cinquantenaire et le métro Schuman. Accessibl
     slug: 'traitement-keratine-bruxelles',
     name: 'Traitements à la kératine',
     category: 'coiffure',
+    price: 'Sur devis',
     titleTag: 'Traitement kératine Bruxelles – Réparation & brillance | Tony&Son',
     metaDescription: 'Traitement à la kératine à Bruxelles chez Tony&Son. Soin réparateur, anti-frisottis, brillance. Sans formaldéhyde. Saint-Josse-ten-Noode. ☎ 02 230 55 37',
     h1: 'Traitement kératine à Bruxelles — Tony&Son',
@@ -259,7 +262,7 @@ Le traitement kératine est un soin. Il reconstitue la protéine naturelle du ch
 
 Particulièrement utile après une coloration, un balayage ou des mèches — le traitement répare les dommages et prolonge l'éclat de la couleur. Comptez 1h30-2h au salon. L'effet dure 3-4 mois avec un shampooing sans sulfate. Nos produits sont conformes aux normes européennes, sans formaldéhyde.
 
-Rue Bonneels 27, à deux minutes du métro Schuman. Appelez au 02 230 55 37 ou réservez votre créneau en ligne sur <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>. Les clientes du quartier européen prennent souvent le traitement kératine en complément de leur coloration habituelle — c'est le duo qui marche le mieux.`,
+Rue Bonneels 27, à deux minutes du métro Schuman. Appelez au 02 230 55 37 ou réservez votre créneau en ligne sur <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>. Les clientes du quartier européen prennent souvent le traitement kératine en complément de leur coloration habituelle — c'est le duo qui marche le mieux. Ce service fait partie de notre offre <a href="/fr/coiffure/">coiffure à Bruxelles</a>.`,
     faq: [
       { question: "Quelle différence entre kératine et lissage brésilien ?", answer: "Le traitement kératine est un soin de réparation — il nourrit, réduit les frisottis, mais ne modifie pas la structure du cheveu. Le lissage brésilien lisse réellement. Si vous voulez des cheveux lisses, c'est le lissage. Si vous voulez des cheveux réparés et brillants, c'est la kératine." },
       { question: "Combien de temps dure l'effet d'un traitement kératine ?", answer: "3-4 mois avec un shampooing sans sulfate. L'effet s'estompe progressivement — pas de ligne de démarcation brutale." },
@@ -290,7 +293,7 @@ Uniquement des cheveux naturels Remy — cuticules alignées dans le même sens,
 
 La consultation est obligatoire. On évalue la densité, la santé du cheveu, votre mode de vie. Si vos cheveux sont trop fragilisés, on vous le dit — et on vous oriente vers nos soins de <a href="/fr/services/repousse-capillaire-bruxelles/">repousse capillaire</a> ou un <a href="/fr/services/traitement-keratine-bruxelles/">traitement kératine</a> pour renforcer la base d'abord.
 
-À partir de 500 €. Rue Bonneels 27, métro Schuman (lignes 1/5). Réservez une consultation au 02 230 55 37 ou en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+À partir de 500 €. Ce service fait partie de notre offre <a href="/fr/coiffure/">coiffure à Bruxelles</a>. Rue Bonneels 27, métro Schuman (lignes 1/5). Réservez une consultation au 02 230 55 37 ou en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Les extensions abîment-elles les cheveux ?", answer: "Ça dépend de la pose ET de la dépose. Chez Tony&Son, on maîtrise les deux étapes. Une extension bien posée et correctement retirée ne laisse pas de dommage. Le risque vient des poses amateurs ou des déposes brutales. Certaines clientes portent des extensions chez nous depuis des années sans souci." },
       { question: "Quel budget prévoir pour des extensions de cheveux ?", answer: "À partir de 500 € selon la technique et la quantité de mèches. Le prix exact est donné après la consultation obligatoire — on évalue vos besoins avant de chiffrer." },
@@ -307,6 +310,7 @@ La consultation est obligatoire. On évalue la densité, la santé du cheveu, vo
     slug: 'permanentes-bruxelles',
     name: 'Permanentes',
     category: 'coiffure',
+    price: 'Sur devis',
     titleTag: 'Permanentes Bruxelles – Boucles & ondulations modernes | Tony&Son',
     metaDescription: 'Permanentes modernes à Bruxelles chez Tony&Son. Spirale, bodywave, partielle. Formulations douces. Saint-Josse-ten-Noode. ☎ 02 230 55 37',
     h1: 'Permanentes à Bruxelles — Tony&Son',
@@ -316,7 +320,7 @@ La consultation est obligatoire. On évalue la densité, la santé du cheveu, vo
 
 Trois variations chez Tony&Son. La <strong>spirale</strong> pour des boucles définies. Le <strong>bodywave</strong> pour des ondulations naturelles — c'est la plus demandée par nos clientes entre Ixelles et le quartier Schuman. Et la <strong>permanente partielle</strong> : racines uniquement (pour du volume) ou pointes (pour du mouvement). On n'est pas obligé de tout boucler.
 
-On ne fait pas de permanente sur des cheveux trop abîmés. Lissage brésilien récent ? Décoloration intensive ? Nos coiffeurs vous le diront et proposeront une alternative — un <a href="/fr/services/traitement-keratine-bruxelles/">traitement kératine</a> pour renforcer la fibre d'abord, par exemple. Comptez 2-3h au salon. Le résultat tient 3-6 mois. Rue Bonneels 27, métro Schuman (lignes 1/5). Réservez au 02 230 55 37 ou en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+On ne fait pas de permanente sur des cheveux trop abîmés. Lissage brésilien récent ? Décoloration intensive ? Nos coiffeurs vous le diront et proposeront une alternative — un <a href="/fr/services/traitement-keratine-bruxelles/">traitement kératine</a> pour renforcer la fibre d'abord, par exemple. Comptez 2-3h au salon. Le résultat tient 3-6 mois. Rue Bonneels 27, métro Schuman (lignes 1/5). Ce service fait partie de notre offre <a href="/fr/coiffure/">coiffure à Bruxelles</a>. Réservez au 02 230 55 37 ou en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Les permanentes modernes abîment-elles les cheveux ?", answer: "Les formulations actuelles sont incomparablement plus douces qu'avant — sans ammoniaque, enrichies en protéines. On évalue toujours l'état de vos cheveux avant. Si c'est trop risqué (coloration récente, <a href='/fr/services/lissage-cheveux-bruxelles/'>lissage</a>), on vous le dit." },
       { question: "Quel est le prix et la durée d'une permanente au salon ?", answer: "Comptez 2-3h au salon. Le résultat tient 3-6 mois. Le tarif dépend de la longueur et de la technique — on vous donne le prix exact après consultation." },
@@ -333,6 +337,7 @@ On ne fait pas de permanente sur des cheveux trop abîmés. Lissage brésilien r
     slug: 'taille-barbe-bruxelles',
     name: 'Taille de barbe',
     category: 'barbier',
+    price: 'Sur devis',
     images: ['/images/barbier-1.jpg', '/images/barbier-2.jpg'],
     titleTag: 'Taille barbe Bruxelles – Rasage & dégradé précis | Tony&Son',
     metaDescription: 'Taille de barbe à Bruxelles chez Tony&Son. Rasage traditionnel, dégradé, serviette chaude. Barbier expert à Saint-Josse-ten-Noode. ☎ 02 230 55 37',
@@ -347,7 +352,7 @@ Le rasage traditionnel au coupe-chou, c'est notre classique. Serviette chaude po
 
 Le dégradé américain ? On le maîtrise. Skin fade, mid fade, high fade, taper — sur toutes les textures. Pilosité européenne, maghrébine, afro, asiatique. Un fade sur cheveu crépu ne se fait pas comme sur cheveu lisse, et nos barbiers adaptent leur technique sans qu'on ait besoin de le demander. Les clients de Schaerbeek et du rond-point Schuman viennent spécifiquement pour ça.
 
-Rue Bonneels 27, métro Schuman (lignes 1/5), tram 81. Vendredi et samedi, c'est chargé — réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou appelez au 02 230 55 37. Sans rendez-vous accepté en semaine, selon disponibilité.`,
+Ce service fait partie de notre offre <a href="/fr/barbier/">barbier à Bruxelles</a>. Rue Bonneels 27, métro Schuman (lignes 1/5), tram 81. Vendredi et samedi, c'est chargé — réservez en ligne via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou appelez au 02 230 55 37. Sans rendez-vous accepté en semaine, selon disponibilité.`,
     faq: [
       { question: "Proposez-vous le rasage au coupe-chou ?", answer: "Oui. Serviette chaude, mousse au blaireau, rasoir droit, soin après-rasage. C'est notre classique — prévoir 20 minutes. Sur rendez-vous." },
       { question: "Quel est le tarif d'une taille de barbe avec finitions ?", answer: "Le prix dépend du service (taille simple, rasage traditionnel, combo coupe + barbe). On vous donne le tarif exact avant de commencer. Appelez au 02 230 55 37 pour un devis rapide." },
@@ -374,7 +379,7 @@ Rue Bonneels 27, métro Schuman (lignes 1/5), tram 81. Vendredi et samedi, c'est
 
 <strong>Ombré</strong> : transition nette du foncé (racines) au clair (pointes). Effet marqué, très visible. <strong>Sombré</strong> : même principe, fondu plus doux. « Soft ombré ». Le plus naturel des trois. <strong>Dip-dye</strong> : démarcation franche, parfois avec des couleurs fantaisie. Plus audacieux. Le point commun ? La repousse fait partie du style. Entretien tous les 3-4 mois seulement — la technique la plus économique pour un vrai changement de tête entre deux trimestres à la Commission.
 
-À partir de 40 €. On vous montre des exemples avant de toucher quoi que ce soit — pour être sûrs qu'on parle de la même chose. Rue Bonneels 27, métro Schuman. Appelez au 02 230 55 37 ou réservez sur <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>. Pour des techniques plus classiques : <a href="/fr/services/colorations-capillaires-bruxelles/">coloration complète</a>, <a href="/fr/services/balayage-bruxelles/">balayage</a> ou <a href="/fr/services/meches-bruxelles/">mèches</a>.`,
+À partir de 40 €. On vous montre des exemples avant de toucher quoi que ce soit — pour être sûrs qu'on parle de la même chose. Rue Bonneels 27, métro Schuman. Ce service fait partie de notre offre <a href="/fr/coiffure/">coiffure à Bruxelles</a>. Appelez au 02 230 55 37 ou réservez sur <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>. Pour des techniques plus classiques : <a href="/fr/services/colorations-capillaires-bruxelles/">coloration complète</a>, <a href="/fr/services/balayage-bruxelles/">balayage</a> ou <a href="/fr/services/meches-bruxelles/">mèches</a>.`,
     faq: [
       { question: "Ombré ou balayage : quelle est la différence ?", answer: "L'ombré crée une transition verticale du foncé au clair. Le <a href='/fr/services/balayage-bruxelles/'>balayage</a> crée des reflets diffus dans toute la chevelure. Deux techniques très différentes — nos coloristes vous montrent des exemples concrets." },
       { question: "Combien coûte une coloration en dégradé ?", answer: "À partir de 40 €, shampooing et brushing inclus. Le tarif final dépend de la longueur et de la technique choisie." },
@@ -397,7 +402,7 @@ Rue Bonneels 27, métro Schuman (lignes 1/5), tram 81. Vendredi et samedi, c'est
     h1: 'Épilation à la cire à Bruxelles — Tony&Son',
     description: "Épilation à la cire du visage chez Tony&Son à Bruxelles. Sourcils, lèvre, menton. 10 €.",
     crossLinks: [{ slug: 'taille-barbe-bruxelles', label: 'taille de barbe à Bruxelles' }],
-    longDescription: `Épilation à la cire à Bruxelles, Saint-Josse-ten-Noode. Sourcils, lèvre, menton — cire tiède, geste rapide, 10 €. Hommes et femmes. Se combine avec une <a href="/fr/services/taille-barbe-bruxelles/">taille de barbe</a> ou un <a href="/fr/services/brushing-bruxelles/">brushing</a> dans la même séance — mentionnez-le à la réservation sur <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou au 02 230 55 37. Rue Bonneels 27, métro Schuman.`,
+    longDescription: `Épilation à la cire à Bruxelles, Saint-Josse-ten-Noode. Sourcils, lèvre, menton — cire tiède, geste rapide, 10 €. Hommes et femmes. Se combine avec une <a href="/fr/services/taille-barbe-bruxelles/">taille de barbe</a> ou un <a href="/fr/services/brushing-bruxelles/">brushing</a> dans la même séance — mentionnez-le à la réservation sur <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou au 02 230 55 37. Ce service fait partie de notre offre <a href="/fr/barbier/">barbier à Bruxelles</a>. Rue Bonneels 27, métro Schuman.`,
     faq: [
       { question: "L'épilation à la cire du visage est-elle douloureuse ?", answer: "Le geste est rapide, la sensation brève. On utilise de la cire tiède — moins agressive que la cire chaude." },
       { question: "Peut-on combiner l'épilation avec d'autres services ?", answer: "Oui. Beaucoup de clients ajoutent l'épilation des sourcils à leur coupe ou leur <a href='/fr/services/taille-barbe-bruxelles/'>taille de barbe</a>. Il suffit de le mentionner à la réservation." }
