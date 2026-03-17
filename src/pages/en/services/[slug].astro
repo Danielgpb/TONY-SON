@@ -1,0 +1,228 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { servicesEn } from '../../../data/services-en';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths: GetStaticPaths = () => {
+  return servicesEn.map(service => ({
+    params: { slug: service.slug },
+    props: { service }
+  }));
+};
+
+const { service } = Astro.props;
+const relatedServices = servicesEn.filter(s => s.category === service.category && s.slug !== service.slug).slice(0, 3);
+const seoTitle = service.titleTag;
+const seoDesc = service.metaDescription;
+
+const categoryPath = service.category === 'coiffure' ? 'hairdresser' : 'barber';
+const categoryLabel = service.category === 'coiffure' ? 'Hairdresser' : 'Barber';
+
+const schemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": service.name,
+      "provider": { "@type": "HairSalon", "name": "Tony&Son", "@id": "https://tonyandson.be/#business" },
+      "areaServed": [
+        { "@type": "City", "name": "Brussels" },
+        { "@type": "City", "name": "Saint-Josse-ten-Noode" },
+        { "@type": "City", "name": "Schaerbeek" },
+        { "@type": "City", "name": "Etterbeek" }
+      ],
+      "description": service.description,
+      ...(service.price ? { "offers": { "@type": "Offer", "price": service.price.replace(/[^0-9]/g, ''), "priceCurrency": "EUR" } } : {})
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": service.faq.map(f => ({
+        "@type": "Question",
+        "name": f.question,
+        "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+      }))
+    }
+  ]
+};
+---
+
+<Layout title={seoTitle} locale="en" page="service" description={seoDesc}>
+  <!-- Titlebar -->
+  <section class="titlebar" style="background-image: url('/images/titlebar-bg.jpg')">
+    <div class="titlebar-overlay"></div>
+    <div class="container">
+      <h1>{service.h1}</h1>
+      <p class="titlebar-breadcrumb">
+        <a href="/en/">Home</a> &rsaquo;
+        <a href={`/en/${categoryPath}/`}>{categoryLabel}</a> &rsaquo;
+        {service.name}
+      </p>
+    </div>
+  </section>
+
+  <!-- Service Content -->
+  <section class="service-content">
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-text">
+          {service.price && <p class="service-price">{service.price}</p>}
+          {service.longDescription.split('\n\n').map(p => <p set:html={p} />)}
+
+          <!-- Editorial cross-links -->
+          {service.crossLinks && service.crossLinks.length > 0 && (
+            <p class="editorial-links">
+              See also:
+              {service.crossLinks.map((link, i) => (
+                <>
+                  {i > 0 && ' · '}
+                  <a href={`/en/services/${link.slug}/`}>{link.label}</a>
+                </>
+              ))}
+            </p>
+          )}
+
+          <!-- CTA -->
+          <div class="service-cta-box">
+            <h3>Book your {service.name.toLowerCase()}</h3>
+            <p>Call us or book online for an appointment at Tony&Son in Saint-Josse-ten-Noode.</p>
+            <div class="service-cta-buttons">
+              <a href="tel:+3222305537" class="btn">02 230 55 37</a>
+              <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="btn btn-dark">Book online</a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="service-sidebar">
+          {service.images && service.images.length > 0 ? (
+            service.images.map((img, i) => (
+              <img src={img} alt={`${service.name} at Tony&Son Brussels${i > 0 ? ` — photo ${i + 1}` : ''}`} class="sidebar-photo" loading="lazy" />
+            ))
+          ) : (
+            <>
+              <div class="photo-placeholder">
+                <span>Photo {service.name}</span>
+              </div>
+              <div class="photo-placeholder">
+                <span>Before / After</span>
+              </div>
+            </>
+          )}
+
+          <!-- NAP -->
+          <div class="sidebar-nap">
+            <h4>Tony&Son ✂</h4>
+            <p>Rue Bonneels 27<br/>1210 Saint-Josse-ten-Noode<br/>Belgium</p>
+            <p class="nap-phone"><a href="tel:+3222305537">02 230 55 37</a></p>
+            <p class="nap-hours"><strong>Tue - Fri:</strong> 9:00 - 19:00<br/><strong>Saturday:</strong> 9:00 - 18:00<br/><strong>Sun - Mon:</strong> Closed</p>
+          </div>
+
+          <!-- Related Services -->
+          <div class="sidebar-related">
+            <h4>Other services</h4>
+            {relatedServices.map(rs => (
+              <a href={`/en/services/${rs.slug}/`} class="related-link">{rs.name}</a>
+            ))}
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Frequently asked questions — {service.name}</h2>
+      <div class="faq-list">
+        {service.faq.map(f => (
+          <details class="faq-item" open>
+            <summary set:html={f.question} />
+            <p set:html={f.answer} />
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Salon photo -->
+  <section class="service-gallery">
+    <div class="container">
+      <h2>Our salon in Saint-Josse-ten-Noode</h2>
+      <div class="gallery-grid">
+        <img src="/images/salon-interieur.jpg" alt="Inside Tony&Son hair salon, Saint-Josse-ten-Noode, Brussels" loading="lazy" width="1200" height="800" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Maps -->
+  <section class="service-map">
+    <div class="container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.5!2d4.3779093!3d50.8489674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c3618601861f%3A0x573e8530643fa9d3!2sTony%26Son+%E2%9C%82!5e0!3m2!1sen!2sbe!4v1710000000000"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" title="Tony&Son Saint-Josse-ten-Noode"></iframe>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify(schemaGraph)} />
+</Layout>
+
+<style>
+  .titlebar { position: relative; background-size: cover; background-position: center; padding: 160px 0 60px; text-align: center; }
+  .titlebar-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.55); }
+  .titlebar h1 { position: relative; z-index: 2; font-size: 38px; color: var(--color-white); }
+  .titlebar-breadcrumb { position: relative; z-index: 2; color: var(--color-text-light); font-size: 14px; margin-top: 15px; text-transform: none; }
+  .titlebar-breadcrumb a { color: var(--color-gold); }
+
+  .service-content { padding: 80px 0; }
+  .service-grid { display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: start; }
+  .service-text p { font-size: 16px; line-height: 1.8; color: var(--color-text); margin-bottom: 1.5rem; }
+  .service-price { font-size: 22px; font-weight: 600; color: var(--color-gold); margin-bottom: 2rem !important; text-transform: none; }
+
+  .editorial-links { font-size: 15px; color: var(--color-text-light); margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--color-border); }
+  .editorial-links a { color: var(--color-gold); font-weight: 500; }
+
+  .service-cta-box { background: var(--color-cream); padding: 40px; margin-top: 40px; }
+  .service-cta-box h3 { font-size: 22px; margin-bottom: 10px; text-transform: none; }
+  .service-cta-box p { font-size: 15px; color: var(--color-text); margin-bottom: 20px; }
+  .service-cta-buttons { display: flex; gap: 15px; flex-wrap: wrap; }
+  .service-cta-buttons .btn { font-size: 14px; padding: 14px 28px; }
+
+  .service-sidebar { display: flex; flex-direction: column; gap: 30px; }
+  .sidebar-photo { width: 100%; height: 250px; object-fit: cover; display: block; }
+  .photo-placeholder { background: var(--color-cream); border: 2px dashed var(--color-border); display: flex; align-items: center; justify-content: center; min-height: 250px; font-size: 16px; color: var(--color-text-light); }
+
+  .sidebar-nap { background: var(--color-black); padding: 30px; color: var(--color-white); }
+  .sidebar-nap h4 { font-size: 18px; margin-bottom: 15px; color: var(--color-gold); text-transform: none; }
+  .sidebar-nap p { font-size: 14px; line-height: 1.7; color: var(--color-text-light); margin-bottom: 10px; }
+  .nap-phone a { color: var(--color-gold); font-size: 18px; font-weight: 600; }
+  .nap-hours { font-size: 13px !important; }
+
+  .sidebar-related { background: var(--color-cream); padding: 30px; }
+  .sidebar-related h4 { font-size: 16px; margin-bottom: 15px; }
+  .related-link { display: block; padding: 10px 0; border-bottom: 1px solid var(--color-border); font-size: 15px; color: var(--color-text); transition: var(--transition); }
+  .related-link:hover { color: var(--color-gold); padding-left: 5px; }
+
+  .faq-section { padding: 80px 0; background: var(--color-cream); }
+  .faq-section h2 { text-align: center; margin-bottom: 50px; font-size: 28px; }
+  .faq-list { max-width: 800px; margin: 0 auto; }
+  .faq-item { border-bottom: 1px solid var(--color-border); padding: 20px 0; }
+  .faq-item summary { font-size: 17px; font-weight: 600; cursor: pointer; color: var(--color-heading); list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq-item summary::after { content: '+'; font-size: 24px; color: var(--color-gold); }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item p { margin-top: 15px; font-size: 15px; line-height: 1.8; color: var(--color-text); }
+
+  .service-gallery { padding: 60px 0; }
+  .service-gallery h2 { text-align: center; margin-bottom: 40px; font-size: 24px; }
+  .gallery-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+  .gallery-grid img { width: 100%; height: 600px; object-fit: cover; object-position: center 60%; display: block; }
+
+  .service-map { padding: 0 0 80px; }
+  .service-map iframe { display: block; }
+
+  @media (max-width: 768px) {
+    .titlebar { padding: 120px 0 40px; }
+    .titlebar h1 { font-size: 26px; }
+    .service-grid { grid-template-columns: 1fr; gap: 40px; }
+    .service-cta-buttons { flex-direction: column; }
+  }
+</style>

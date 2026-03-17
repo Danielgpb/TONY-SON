@@ -7,14 +7,68 @@ import VisitSection from '../../components/VisitSection.astro';
 import MapSection from '../../components/MapSection.astro';
 import Gallery from '../../components/Gallery.astro';
 import BrandLogos from '../../components/BrandLogos.astro';
+import ReviewsBadge from '../../components/ReviewsBadge.astro';
+
+const seoTitle = "Hair Salon Brussels – Cuts, Colouring & Barber | Tony&Son";
+const seoDesc = "Hair salon in Brussels since 1970. Cuts, colouring, balayage, straightening and barber near the Schuman quarter. Book at Tony&Son.";
 ---
 
-<Layout title="Home" locale="en" page="home" transparentHeader={true}>
+<Layout title={seoTitle} locale="en" page="home" transparentHeader={true} description={seoDesc}>
   <HeroSlider locale="en" />
   <AboutSection locale="en" />
   <Services locale="en" />
+
+  <!-- SEO Editorial Section -->
+  <section class="seo-content">
+    <div class="container">
+      <div class="seo-intro">
+        <p><strong>Hair salon in Brussels, Saint-Josse-ten-Noode.</strong> Women, men, children and families — book online at Tony&Son.</p>
+        <p>From the Schuman roundabout to Schaerbeek, Tony&Son clients come back for one simple reason: a salon that listens, advises honestly, and delivers what it promises. The Campisi family opened this salon in 1970. Tony first, then his son Salvatore, trained at Toni&Guy in London. Three generations of expertise serving Brussels' diversity — because in this neighbourhood, between the European institutions and Avenue de Cortenbergh, every hair texture is represented.</p>
+        <p>Rue Bonneels 27, two minutes from Metro Schuman (lines 1 and 5) and Maelbeek station. Tony&Son is the go-to hair salon for residents of Saint-Josse-ten-Noode, Schaerbeek, Etterbeek, Ixelles and Woluwe-Saint-Lambert. Open Tuesday to Friday 9am–7pm, Saturday 9am–6pm. Wednesday lunchtime slots fill up in 20 minutes — EU institution lunch breaks.</p>
+        <p>What sets us apart? We don't sell you a service you don't need. If a colour risks ageing badly on your natural base, we tell you upfront. If your hair is too damaged for extensions, we recommend a keratin treatment first. That honesty is what clients from Cinquantenaire Park and Rue de la Loi have valued for three generations. Service in French and English.</p>
+      </div>
+
+      <div class="seo-grid">
+        <div class="seo-block">
+          <h2>Hairdresser for women and men in Brussels</h2>
+          <p>Custom colouring, luminous balayage, structured highlights, volume blowouts, Brazilian straightening or keratin, hair extensions, modern perms and kids haircuts — our <a href="/en/hairdresser/">hair salon in Saint-Josse-ten-Noode</a> covers the full range of hair services. Every appointment starts with an honest assessment: we tell you what's achievable and what isn't, before touching a single strand.</p>
+          <p>Colour correction from other salons is one of our specialities — on Belgian forums, it's the most common reason people call. Our colourists, some with us for over eight years, have fixed dozens of cases. For expats in the European Quarter: service in English, online booking via Treatwell, appointments kept on time.</p>
+          <a href="/en/hairdresser/" class="seo-link">All hairdresser services &rarr;</a>
+        </div>
+        <div class="seo-block">
+          <h2>Barber in Brussels</h2>
+          <p>Precise beard trims, traditional straight-razor shaving with hot towels, American fades (skin fade, mid fade, taper) — our <a href="/en/barber/">barber shop in Saint-Josse-ten-Noode</a> welcomes all hair textures. European, North African, Afro, Asian — our barbers adapt their technique to each client without needing to be asked.</p>
+          <p>Regulars from Schaerbeek and the Schuman roundabout come for the expert touch and the atmosphere of a neighbourhood salon with real character. Not a chain barbershop — a family salon where they know your name by the second visit. Facial waxing and kids haircuts complete our men's offering.</p>
+          <a href="/en/barber/" class="seo-link">All barber services &rarr;</a>
+        </div>
+      </div>
+
+      <div class="seo-cta">
+        <p>Book an appointment at <a href="tel:+3222305537"><strong>02 230 55 37</strong></a> or <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener"><strong>book online via Treatwell</strong></a>. Our prices are displayed, shampoo and blowout included — the quoted price is the final price.</p>
+      </div>
+    </div>
+  </section>
+
+  <ReviewsBadge locale="en" />
   <VisitSection locale="en" />
   <MapSection locale="en" />
   <Gallery locale="en" />
   <BrandLogos locale="en" />
 </Layout>
+
+<style>
+  .seo-content { padding: 80px 0; background: var(--color-cream); }
+  .seo-intro { max-width: 900px; margin: 0 auto 50px; text-align: center; }
+  .seo-intro p { font-size: 17px; line-height: 1.8; color: var(--color-text); margin-bottom: 20px; }
+  .seo-intro p:first-child { font-size: 20px; line-height: 1.6; }
+  .seo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+  .seo-block h2 { font-size: 28px; margin-bottom: 20px; }
+  .seo-block p { font-size: 16px; line-height: 1.8; color: var(--color-text); margin-bottom: 20px; }
+  .seo-block p a { color: var(--color-gold); font-weight: 600; }
+  .seo-link { font-family: var(--font-accent); font-size: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-gold); transition: var(--transition); }
+  .seo-link:hover { color: var(--color-heading); }
+  .seo-cta { text-align: center; margin-top: 50px; padding-top: 40px; border-top: 1px solid var(--color-border); }
+  .seo-cta p { font-size: 18px; color: var(--color-text); }
+  .seo-cta a { color: var(--color-gold); }
+  @media (max-width: 768px) { .seo-grid { grid-template-columns: 1fr; gap: 40px; } }
+</style>
