@@ -1,8 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import { getEnServicesByCategory } from '../../../data/services-en';
 
-const coiffureServices = getEnServicesByCategory('coiffure');
 const seoTitle = "Hairdresser Brussels – Tony&Son Salon | Colouring, Care & Cuts";
 const seoDesc = "Hair salon in Brussels: colouring, balayage, highlights, blowouts, straightening, keratin, extensions, perms, kids haircuts. Tony&Son since 1970.";
 
@@ -44,12 +42,62 @@ const categorySchema = {
 
   <section class="services-editorial">
     <div class="container">
-      {coiffureServices.map(service => (
-        <div class="service-editorial-block">
-          <h2>{service.name}</h2>
-          <p set:html={service.description + ` <a href="/en/services/${service.slug}/">${service.name}</a>.`} />
-        </div>
-      ))}
+
+      <div class="service-editorial-block">
+        <h2>Custom hair colouring</h2>
+        <p>Our <a href="/en/services/hair-coloring-brussels/">hair colouring service</a> covers the full spectrum: full colour, root touch-ups, tone-on-tone and plant-based options. We always start with an honest assessment — and colour correction from other salons is one of our specialities. From €40.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Balayage and natural highlights</h2>
+        <p>For a sun-kissed effect, our <a href="/en/services/balayage-brussels/">freehand balayage</a> creates reflections that age well — discreet regrowth, touch-up every 3-4 months only. French balayage, babylights, honey or ash. From €35.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Structured highlights</h2>
+        <p>More precise than balayage, our <a href="/en/services/highlights-brussels/">highlights</a> offer bold contrasts — foil for a regular result, cap for fine reflections, or freehand for a freer finish. Maintenance every 6-8 weeks.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Gradient colouring</h2>
+        <p>Ombré, sombré or dip-dye: our <a href="/en/services/ombre-hair-color-brussels/">gradient colouring</a> plays on three intensities. The common thread? Regrowth is part of the style — touch-up every 3-4 months, the most economical technique. From €40.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Express or event blowout</h2>
+        <p>Sleek, volume or wavy — our <a href="/en/services/blowout-brussels/">professional blowout</a> includes shampoo and heat protectant. 30-45 minutes for a result that lasts 2-4 days. From €30.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Brazilian straightening, tanin and botox</h2>
+        <p>Our <a href="/en/services/hair-straightening-brussels/">straightening service</a> offers three options for three different needs. EU-compliant products — we show you the data sheet before touching your hair. From €150.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Keratin treatment — repair, not straightening</h2>
+        <p>Our <a href="/en/services/keratin-treatment-brussels/">keratin treatment</a> is a deep repair that rebuilds the hair's natural protein, reduces frizz and restores shine. Ideal after colouring or balayage. Effect lasts 3-4 months.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Natural hair extensions</h2>
+        <p>Keratin, micro-rings, tape-in or clips — our <a href="/en/services/hair-extensions-brussels/">Remy hair extensions</a> suit four different situations. Consultation is essential: we assess density and hair health before any application. From €500.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Modern perms</h2>
+        <p>Spiral, body wave or partial — our <a href="/en/services/perm-brussels/">modern perms</a> are nothing like the 80s. Gentle formulas, controlled results. Body wave for soft undulations is our most requested variation. Result lasts 3-6 months.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Hair regrowth treatments</h2>
+        <p>Our <a href="/en/services/hair-regrowth-brussels/">hair regrowth treatments</a> combine anti-hair-loss care, scalp stimulation and strengthening protocols. Every treatment starts with a full assessment to identify the cause. Realistic solutions, no false promises.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Kids haircuts — patience guaranteed</h2>
+        <p>Our stylists adapt to the child's pace — breaks if needed, parent's lap, no pressure. Boys and girls, same price for a <a href="/en/services/kids-haircut-brussels/">kids haircut</a>. From €25.</p>
+      </div>
+
     </div>
   </section>
 

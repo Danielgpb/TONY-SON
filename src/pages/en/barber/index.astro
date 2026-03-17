@@ -1,8 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import { getEnServicesByCategory } from '../../../data/services-en';
 
-const barbierServices = getEnServicesByCategory('barbier');
 const seoTitle = "Barber Brussels – Beard Trim & Men's Grooming | Tony&Son";
 const seoDesc = "Barber in Brussels: beard trim, traditional shaving, fades, waxing, kids haircuts. Tony&Son barber shop in Saint-Josse-ten-Noode since 1970.";
 
@@ -47,12 +45,27 @@ const categorySchema = {
 
   <section class="services-editorial">
     <div class="container">
-      {barbierServices.map(service => (
-        <div class="service-editorial-block">
-          <h2>{service.name}</h2>
-          <p set:html={service.description + ` <a href="/en/services/${service.slug}/">${service.name}</a>.`} />
-        </div>
-      ))}
+
+      <div class="service-editorial-block">
+        <h2>Beard trim and traditional shaving</h2>
+        <p>Our <a href="/en/services/beard-trim-brussels/">beard trim</a> always starts with a conversation — face shape, growth pattern, what you want. Precision clippers, scissors for finishing, straight razor for the edges. Traditional cutthroat shaving with hot towel available. American fades (skin fade, mid fade, taper) mastered on all textures.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Kids haircuts — patience and care</h2>
+        <p>For boys who want their first fade or a cut like dad's, our <a href="/en/services/kids-haircut-brussels/">kids haircut</a> is done gently. Our barbers adapt to the child's pace with patience and kindness. Same price for boys and girls, from €25.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Facial waxing</h2>
+        <p>Eyebrows, upper lip, chin — our <a href="/en/services/facial-waxing-brussels/">facial waxing</a> is a quick, warm-wax gesture at €10. Can be combined with a beard trim or haircut in the same session, just mention it when booking.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Men's hair colouring</h2>
+        <p>To cover first grey hairs or refresh a dull shade, our <a href="/en/services/hair-coloring-brussels/">hair colouring</a> adapts to men's hair texture — discreet tone-on-tone or full colour. From €40.</p>
+      </div>
+
     </div>
   </section>
 
