@@ -1,0 +1,97 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+
+const seoTitle = "Barbier Brussel – Baardtrimmen & Mannenverzorging | Tony&Son";
+const seoDesc = "Barbier in Brussel: baardtrimmen, traditioneel scheren, fades, ontharing, kinderkapsels. Tony&Son barbershop in Sint-Joost-ten-Node sinds 1970.";
+
+const categorySchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Barbier",
+  "provider": { "@type": "HairSalon", "name": "Tony&Son", "@id": "https://tonyandson.be/#business", "telephone": "02 230 55 37", "address": { "@type": "PostalAddress", "streetAddress": "Rue Bonneels 27", "addressLocality": "Sint-Joost-ten-Node", "postalCode": "1210", "addressCountry": "BE" } },
+  "areaServed": "Brussel"
+};
+---
+
+<Layout title={seoTitle} locale="nl" page="barbier" description={seoDesc}>
+  <section class="titlebar" style="background-image: url('/images/titlebar-bg.jpg')">
+    <div class="titlebar-overlay"></div>
+    <div class="container">
+      <h1>Barbier in Brussel — Baardtrimmen en mannenverzorging bij Tony&Son</h1>
+      <p class="titlebar-sub">Barbershop in Sint-Joost-ten-Node sinds 1970</p>
+    </div>
+  </section>
+
+  <section class="category-intro">
+    <div class="container">
+      <div class="intro-grid">
+        <p class="intro-text">Tony&Son, uw <a href="/nl/">barbier in Sint-Joost-ten-Node</a> nabij de Schumanwijk in Brussel. Onze ervaren barbiers beheersen de kunst van baardtrimmen, traditioneel scheren en mannenverzorging sinds 1970. Alle haartexturen — Europees, Maghrebijns, Afro, Aziatisch. Bereikbaar vanuit Schaarbeek, Etterbeek, de Europese wijk en heel Brussel.</p>
+        <img src="/images/barbier-1.jpg" alt="Barbier Tony&Son Brussel — baardtrimmen en scheren" class="intro-img" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <section class="services-editorial">
+    <div class="container">
+      <div class="service-editorial-block">
+        <h2>Baardtrimmen en traditioneel scheren</h2>
+        <p>Onze <a href="/nl/services/baardtrimmen-brussel/">baardtrimbeurt</a> begint altijd met een gesprek — gezichtsvorm, groeipatroon, wat u wilt. Precisietrimmer, schaar voor afwerking, open scheermes voor de contouren. Traditioneel scheren met hete handdoek beschikbaar. Amerikaanse fades op alle texturen.</p>
+      </div>
+      <div class="service-editorial-block">
+        <h2>Kinderkapsels — geduld en zorg</h2>
+        <p>Voor jongens die hun eerste fade willen of een kapsel zoals papa, wordt ons <a href="/nl/services/kinderkapsels-brussel/">kinderkapsel</a> met zachtheid gedaan. Zelfde prijs jongens en meisjes, vanaf 25 €.</p>
+      </div>
+      <div class="service-editorial-block">
+        <h2>Gezichtsontharing met was</h2>
+        <p>Wenkbrauwen, bovenlip, kin — onze <a href="/nl/services/gezichtsontharing-brussel/">gezichtsontharing</a> is een snelle techniek voor 10 €. Combineerbaar met een baardtrimbeurt in dezelfde sessie.</p>
+      </div>
+      <div class="service-editorial-block">
+        <h2>Haarkleuring voor mannen</h2>
+        <p>Om eerste grijze haren te bedekken of een doffe kleur op te frissen, passen onze <a href="/nl/services/haarkleuring-brussel/">haarkleuringen</a> zich aan de mannelijke haartextuur aan. Vanaf 40 €.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="category-cta">
+    <div class="container" style="text-align: center;">
+      <h2>Maak een afspraak bij Tony&Son</h2>
+      <p>Barbier in Sint-Joost-ten-Node, Brussel — Open dinsdag tot zaterdag</p>
+      <div class="cta-buttons">
+        <a href="tel:+3222305537" class="btn">02 230 55 37</a>
+        <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="btn btn-dark">Online boeken</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="category-map">
+    <div class="container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2518.5!2d4.3779093!3d50.8489674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c3618601861f%3A0x573e8530643fa9d3!2sTony%26Son+%E2%9C%82!5e0!3m2!1snl!2sbe!4v1710000000000" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Tony&Son Barbier Brussel"></iframe>
+    </div>
+  </section>
+  <script type="application/ld+json" set:html={JSON.stringify(categorySchema)} />
+</Layout>
+
+<style>
+  .titlebar { position: relative; background-size: cover; background-position: center; padding: 160px 0 60px; text-align: center; }
+  .titlebar-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.55); }
+  .titlebar h1 { position: relative; z-index: 2; font-size: 36px; color: var(--color-white); }
+  .titlebar-sub { position: relative; z-index: 2; color: var(--color-gold); font-family: var(--font-display); font-style: italic; font-size: 18px; margin-top: 10px; text-transform: none; }
+  .category-intro { padding: 60px 0 40px; }
+  .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+  .intro-text { font-size: 18px; line-height: 1.8; color: var(--color-text); }
+  .intro-text a { color: var(--color-gold); font-weight: 600; }
+  .intro-img { width: 100%; height: 350px; object-fit: cover; border-radius: 8px; }
+  .services-editorial { padding: 40px 0 80px; }
+  .service-editorial-block { padding: 35px 0; border-bottom: 1px solid var(--color-border); }
+  .service-editorial-block:last-child { border-bottom: none; }
+  .service-editorial-block h2 { font-size: 24px; margin-bottom: 15px; }
+  .service-editorial-block p { font-size: 16px; line-height: 1.8; color: var(--color-text); }
+  .service-editorial-block p a { color: var(--color-gold); font-weight: 500; }
+  .category-cta { padding: 80px 0; background: var(--color-black); }
+  .category-cta h2 { color: var(--color-white); margin-bottom: 10px; }
+  .category-cta p { color: var(--color-text-light); font-size: 16px; margin-bottom: 30px; text-transform: none; }
+  .cta-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+  .category-map { padding: 0; }
+  .category-map iframe { display: block; }
+  @media (max-width: 768px) { .titlebar { padding: 120px 0 40px; } .titlebar h1 { font-size: 24px; } .intro-grid { grid-template-columns: 1fr; } .intro-img { height: 250px; } .cta-buttons { flex-direction: column; align-items: center; } }
+</style>

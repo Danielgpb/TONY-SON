@@ -21,7 +21,7 @@ const { locale, currentPage = '', transparent = false } = Astro.props;
       <a href={`/${locale}/`} class:list={['nav-link', { active: currentPage === 'home' }]}>
         {locale === 'nl' ? 'Startpagina' : locale === 'en' ? 'Home' : "Page d'accueil"}
       </a>
-      <a href={locale === 'en' ? '/en/hairdresser/' : `/${locale}/coiffure/`} class:list={['nav-link', { active: currentPage === 'coiffure' }]}>
+      <a href={locale === 'en' ? '/en/hairdresser/' : locale === 'nl' ? '/nl/kapsalon/' : '/fr/coiffure/'} class:list={['nav-link', { active: currentPage === 'coiffure' }]}>
         {locale === 'nl' ? 'Kapsalon' : locale === 'en' ? 'Hairdresser' : 'Coiffure'}
       </a>
       <a href={locale === 'en' ? '/en/barber/' : `/${locale}/barbier/`} class:list={['nav-link', { active: currentPage === 'barbier' }]}>

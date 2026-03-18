@@ -7,14 +7,64 @@ import VisitSection from '../../components/VisitSection.astro';
 import MapSection from '../../components/MapSection.astro';
 import Gallery from '../../components/Gallery.astro';
 import BrandLogos from '../../components/BrandLogos.astro';
+import ReviewsBadge from '../../components/ReviewsBadge.astro';
+
+const seoTitle = "Kapsalon Brussel – Knippen, Kleuren & Barbier | Tony&Son";
+const seoDesc = "Kapsalon in Brussel sinds 1970. Knippen, kleuren, balayage, stijlen en barbier nabij de Schumanwijk. Boek bij Tony&Son.";
 ---
 
-<Layout title="Startpagina" locale="nl" page="home" transparentHeader={true}>
+<Layout title={seoTitle} locale="nl" page="home" transparentHeader={true} description={seoDesc}>
   <HeroSlider locale="nl" />
   <AboutSection locale="nl" />
   <Services locale="nl" />
+
+  <section class="seo-content">
+    <div class="container">
+      <div class="seo-intro">
+        <p><strong>Kapsalon in Brussel, Sint-Joost-ten-Node.</strong> Vrouwen, mannen, kinderen en gezinnen — boek online bij Tony&Son.</p>
+        <p>Van de Schumanrotonde tot Schaarbeek, klanten van Tony&Son komen terug om één simpele reden: een salon die luistert, eerlijk adviseert en levert wat beloofd is. De familie Campisi opende dit salon in 1970. Eerst Tony, daarna zijn zoon Salvatore, opgeleid bij Toni&Guy in Londen. Drie generaties vakmanschap ten dienste van de Brusselse diversiteit — want in deze buurt, tussen de Europese instellingen en de Kortenberglaan, is elke haartextuur vertegenwoordigd.</p>
+        <p>Rue Bonneels 27, op twee minuten van metro Schuman (lijnen 1 en 5). Tony&Son is het referentiekapsalon voor inwoners van Sint-Joost-ten-Node, Schaarbeek, Etterbeek, Elsene en Sint-Lambrechts-Woluwe. Open dinsdag tot vrijdag 9u-19u, zaterdag 9u-18u.</p>
+      </div>
+
+      <div class="seo-grid">
+        <div class="seo-block">
+          <h2>Kapsalon voor vrouwen en mannen in Brussel</h2>
+          <p>Kleuringen op maat, lichtgevende balayage, gestructureerde highlights, volume föhn, Braziliaans stijlen of keratine, haarextensions, moderne permanenten en kinderkapsels — ons <a href="/nl/kapsalon/">kapsalon in Sint-Joost-ten-Node</a> dekt het volledige aanbod haardiensten. Elke afspraak begint met een eerlijke beoordeling: we vertellen u wat haalbaar is en wat niet.</p>
+          <a href="/nl/kapsalon/" class="seo-link">Alle kapsalondiensten &rarr;</a>
+        </div>
+        <div class="seo-block">
+          <h2>Barbier in Brussel</h2>
+          <p>Precies baardtrimmen, traditioneel scheren met open scheermes en hete handdoek, Amerikaanse fades (skin fade, mid fade, taper) — onze <a href="/nl/barbier/">barbershop in Sint-Joost-ten-Node</a> verwelkomt alle haartexturen. Gezichtsontharing en kinderkapsels completeren ons mannenaanbod.</p>
+          <a href="/nl/barbier/" class="seo-link">Alle barbierdiensten &rarr;</a>
+        </div>
+      </div>
+
+      <div class="seo-cta">
+        <p>Maak een afspraak op <a href="tel:+3222305537"><strong>02 230 55 37</strong></a> of <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener"><strong>boek online via Treatwell</strong></a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <ReviewsBadge locale="nl" />
   <VisitSection locale="nl" />
   <MapSection locale="nl" />
   <Gallery locale="nl" />
   <BrandLogos locale="nl" />
 </Layout>
+
+<style>
+  .seo-content { padding: 80px 0; background: var(--color-cream); }
+  .seo-intro { max-width: 900px; margin: 0 auto 50px; text-align: center; }
+  .seo-intro p { font-size: 17px; line-height: 1.8; color: var(--color-text); margin-bottom: 20px; }
+  .seo-intro p:first-child { font-size: 20px; line-height: 1.6; }
+  .seo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+  .seo-block h2 { font-size: 28px; margin-bottom: 20px; }
+  .seo-block p { font-size: 16px; line-height: 1.8; color: var(--color-text); margin-bottom: 20px; }
+  .seo-block p a { color: var(--color-gold); font-weight: 600; }
+  .seo-link { font-family: var(--font-accent); font-size: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-gold); transition: var(--transition); }
+  .seo-link:hover { color: var(--color-heading); }
+  .seo-cta { text-align: center; margin-top: 50px; padding-top: 40px; border-top: 1px solid var(--color-border); }
+  .seo-cta p { font-size: 18px; color: var(--color-text); }
+  .seo-cta a { color: var(--color-gold); }
+  @media (max-width: 768px) { .seo-grid { grid-template-columns: 1fr; gap: 40px; } }
+</style>
