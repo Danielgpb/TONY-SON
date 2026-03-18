@@ -86,7 +86,7 @@ ul { list-style: none; }
   font-size: 20px;
   font-weight: 600;
   font-style: italic;
-  color: var(--color-gold);
+  color: var(--color-gold-text);
   text-transform: none;
   letter-spacing: 0;
   margin-bottom: 15px;

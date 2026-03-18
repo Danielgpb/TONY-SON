@@ -7,7 +7,7 @@ const col1Title = locale === 'nl' ? 'Afspraak maken' : locale === 'en' ? 'Book a
 const col2Title = locale === 'nl' ? 'Openingstijden' : locale === 'en' ? 'Opening hours' : "Horaire d'ouverture";
 const tueFri = locale === 'nl' ? 'Dinsdag - Vrijdag' : locale === 'en' ? 'Tuesday - Friday' : 'Mardi - Vendredi';
 const sat = locale === 'nl' ? 'Zaterdag' : locale === 'en' ? 'Saturday' : 'Samedi';
-const sunMon = locale === 'nl' ? 'Dimanche - Lundi' : locale === 'en' ? 'Sunday - Monday' : 'Dimanche - Lundi';
+const sunMon = locale === 'nl' ? 'Zondag - Maandag' : locale === 'en' ? 'Sunday - Monday' : 'Dimanche - Lundi';
 const closed = locale === 'nl' ? 'Gesloten' : locale === 'en' ? 'Closed' : 'Fermé';
 const taglineText = locale === 'nl' ? "Tony&Son De elegantie en stijl, doorgegeven van generatie op generatie." : locale === 'en' ? "Tony&Son Elegance and style, passed down from generation to generation." : "Tony&Son L'élégance et le style, transmis de génération en génération.";
 ---
@@ -16,9 +16,9 @@ const taglineText = locale === 'nl' ? "Tony&Son De elegantie en stijl, doorgegev
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <h4>{col1Title}</h4>
+        <div class="footer-heading">{col1Title}</div>
         <p class="footer-address">Rue Bonneels 27, 1210 Saint-Josse-ten-Noode, Belgique</p>
-        <h3 class="footer-phone">+32 2 230 55 37</h3>
+        <div class="footer-phone">+32 2 230 55 37</div>
         <p><a href="mailto:infotonyson@gmail.com" class="footer-email">infotonyson@gmail.com</a></p>
         <div class="footer-social">
           <a href="https://www.facebook.com/tonysoncoiffure/" target="_blank" rel="noopener" aria-label="Facebook">
@@ -40,7 +40,7 @@ const taglineText = locale === 'nl' ? "Tony&Son De elegantie en stijl, doorgegev
       </div>
 
       <div class="footer-col">
-        <h4>{col2Title}</h4>
+        <div class="footer-heading">{col2Title}</div>
         <p class="footer-hours">{tueFri}: 09:00 - 19:00</p>
         <p class="footer-hours">{sat}: 09:00 - 18:00</p>
         <p class="footer-hours">{sunMon}: {closed}</p>
@@ -71,7 +71,7 @@ const taglineText = locale === 'nl' ? "Tony&Son De elegantie en stijl, doorgegev
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
   }
-  .footer-col h4 {
+  .footer-heading {
     font-family: var(--font-accent);
     font-size: 18px;
     font-weight: 600;

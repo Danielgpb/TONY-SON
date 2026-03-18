@@ -12,11 +12,13 @@ interface Props {
   transparentHeader?: boolean;
   description?: string;
   canonical?: string;
+  ogImage?: string;
 }
 
-const { title, locale, page = '', transparentHeader = false, description, canonical } = Astro.props;
+const { title, locale, page = '', transparentHeader = false, description, canonical, ogImage } = Astro.props;
 
 const siteUrl = 'https://tonyandson.be';
+const ogImageUrl = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/images/hero-bg.jpg`;
 const defaultDescriptions: Record<string, string> = {
   fr: "Tony&Son — Salon de coiffure à Saint-Josse-ten-Noode, Bruxelles depuis 1970. Coupes homme & femme, rasage de précision, soins capillaires. Proche gare de Maelbeek, Schaerbeek, Bruxelles-centre.",
   en: "Tony&Son — Hair salon in Saint-Josse-ten-Noode, Brussels since 1970. Men's & women's cuts, precision shaving, hair care. Near Maelbeek station, Schaerbeek, Brussels center.",
@@ -40,7 +42,7 @@ const jsonLd = {
       "telephone": "+32 2 230 55 37",
       "email": "infotonyson@gmail.com",
       "foundingDate": "1970",
-      "description": defaultDescriptions.fr,
+      "description": defaultDescriptions[locale],
       "image": `${siteUrl}/images/hero-bg.jpg`,
       "logo": `${siteUrl}/images/logo.png`,
       "priceRange": "€€",
@@ -94,7 +96,35 @@ const jsonLd = {
         { "@type": "City", "name": "Woluwe-Saint-Lambert" },
         { "@type": "City", "name": "Ixelles" }
       ],
-      "makesOffer": [
+      "makesOffer": locale === 'en' ? [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hair Coloring" }, "priceSpecification": { "@type": "PriceSpecification", "price": "40", "priceCurrency": "EUR", "minPrice": "40" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Balayage" }, "priceSpecification": { "@type": "PriceSpecification", "price": "35", "priceCurrency": "EUR", "minPrice": "35" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Blowout" }, "priceSpecification": { "@type": "PriceSpecification", "price": "30", "priceCurrency": "EUR", "minPrice": "30" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facial Waxing" }, "priceSpecification": { "@type": "PriceSpecification", "price": "10", "priceCurrency": "EUR" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hair Extensions" }, "priceSpecification": { "@type": "PriceSpecification", "price": "500", "priceCurrency": "EUR", "minPrice": "500" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Highlights" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Keratin Treatment" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kids Haircut" }, "priceSpecification": { "@type": "PriceSpecification", "price": "25", "priceCurrency": "EUR", "minPrice": "25" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ombré Hair Color" }, "priceSpecification": { "@type": "PriceSpecification", "price": "40", "priceCurrency": "EUR", "minPrice": "40" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Perm" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hair Straightening" }, "priceSpecification": { "@type": "PriceSpecification", "price": "150", "priceCurrency": "EUR", "minPrice": "150" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Beard Trim" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Hair Regrowth" } }
+      ] : locale === 'nl' ? [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Haarkleuring" }, "priceSpecification": { "@type": "PriceSpecification", "price": "40", "priceCurrency": "EUR", "minPrice": "40" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Balayage" }, "priceSpecification": { "@type": "PriceSpecification", "price": "35", "priceCurrency": "EUR", "minPrice": "35" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Föhn" }, "priceSpecification": { "@type": "PriceSpecification", "price": "30", "priceCurrency": "EUR", "minPrice": "30" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gezichtsontharing" }, "priceSpecification": { "@type": "PriceSpecification", "price": "10", "priceCurrency": "EUR" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Haarextensions" }, "priceSpecification": { "@type": "PriceSpecification", "price": "500", "priceCurrency": "EUR", "minPrice": "500" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Highlights" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Keratinebehandeling" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kinderkapsels" }, "priceSpecification": { "@type": "PriceSpecification", "price": "25", "priceCurrency": "EUR", "minPrice": "25" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ombré kleuring" }, "priceSpecification": { "@type": "PriceSpecification", "price": "40", "priceCurrency": "EUR", "minPrice": "40" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Permanent" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Haar stijlen" }, "priceSpecification": { "@type": "PriceSpecification", "price": "150", "priceCurrency": "EUR", "minPrice": "150" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Baardtrimmen" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Haar hergroei" } }
+      ] : [
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Colorations capillaires" }, "priceSpecification": { "@type": "PriceSpecification", "price": "40", "priceCurrency": "EUR", "minPrice": "40" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Balayage" }, "priceSpecification": { "@type": "PriceSpecification", "price": "35", "priceCurrency": "EUR", "minPrice": "35" } },
         { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Brushing" }, "priceSpecification": { "@type": "PriceSpecification", "price": "30", "priceCurrency": "EUR", "minPrice": "30" } },
@@ -144,7 +174,7 @@ const jsonLd = {
   <meta property="og:description" content={metaDesc} />
   <meta property="og:type" content="website" />
   <meta property="og:url" content={canonicalUrl} />
-  <meta property="og:image" content={`${siteUrl}/images/hero-bg.jpg`} />
+  <meta property="og:image" content={ogImageUrl} />
   <meta property="og:locale" content={locale === 'fr' ? 'fr_BE' : locale === 'nl' ? 'nl_BE' : 'en_GB'} />
   <meta property="og:site_name" content="Tony&Son" />
 
@@ -152,7 +182,7 @@ const jsonLd = {
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content={title} />
   <meta name="twitter:description" content={metaDesc} />
-  <meta name="twitter:image" content={`${siteUrl}/images/hero-bg.jpg`} />
+  <meta name="twitter:image" content={ogImageUrl} />
 
   <!-- Preconnect for Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
