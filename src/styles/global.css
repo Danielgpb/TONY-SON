@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
 @import './variables.css';
 
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 12px 24px;
+  z-index: 9999;
+  font-size: 14px;
+}
+.skip-link:focus {
+  top: 0;
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;

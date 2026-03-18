@@ -17,7 +17,7 @@ const { locale, currentPage = '', transparent = false } = Astro.props;
       <img src="/images/logo.png" alt="Tony&Son" />
     </a>
 
-    <nav class="nav" id="main-nav">
+    <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
       <a href={`/${locale}/`} class:list={['nav-link', { active: currentPage === 'home' }]}>
         {locale === 'nl' ? 'Startpagina' : locale === 'en' ? 'Home' : "Page d'accueil"}
       </a>

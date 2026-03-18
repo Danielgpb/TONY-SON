@@ -4,18 +4,22 @@ interface Props { locale: Locale; }
 const { locale } = Astro.props;
 
 const images = [
-  '/images/IMG_9729.jpg', '/images/IMG_9725.jpg',
-  '/images/IMG_6355.jpg', '/images/IMG_6358.jpg',
-  '/images/IMG_6356.jpg', '/images/IMG_6359.jpg',
-  '/images/IMG_9724.jpg', '/images/IMG_9726.jpg',
+  { src: '/images/IMG_9729.jpg', alt: 'Coupe homme au salon Tony&Son Bruxelles' },
+  { src: '/images/IMG_9725.jpg', alt: 'Coloration balayage réalisée chez Tony&Son' },
+  { src: '/images/IMG_6355.jpg', alt: 'Intérieur du salon de coiffure Tony&Son Saint-Josse-ten-Noode' },
+  { src: '/images/IMG_6358.jpg', alt: 'Taille de barbe par un barbier chez Tony&Son' },
+  { src: '/images/IMG_6356.jpg', alt: 'Poste de travail coiffeur au salon Tony&Son Bruxelles' },
+  { src: '/images/IMG_6359.jpg', alt: 'Ambiance salon de coiffure Tony&Son' },
+  { src: '/images/IMG_9724.jpg', alt: 'Brushing professionnel chez Tony&Son Bruxelles' },
+  { src: '/images/IMG_9726.jpg', alt: 'Résultat coiffure au salon Tony&Son Saint-Josse' },
 ];
 ---
 
 <section class="gallery-section">
   <div class="gallery-grid">
-    {images.map((src) => (
+    {images.map((img) => (
       <div class="gallery-item">
-        <img src={src} alt="Tony&Son" loading="lazy" />
+        <img src={img.src} alt={img.alt} loading="lazy" />
         <div class="gallery-overlay">
           <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="1.5">
             <rect x="2" y="2" width="20" height="20" rx="5"/>
