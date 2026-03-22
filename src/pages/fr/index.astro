@@ -7,7 +7,7 @@ import VisitSection from '../../components/VisitSection.astro';
 import MapSection from '../../components/MapSection.astro';
 import Gallery from '../../components/Gallery.astro';
 import BrandLogos from '../../components/BrandLogos.astro';
-import ReviewsBadge from '../../components/ReviewsBadge.astro';
+import GoogleReviews from '../../components/GoogleReviews.astro';
 
 const seoTitle = "Salon de Coiffure Bruxelles – Coupe, Couleur & Barbier | Tony&Son";
 const seoDesc = "Salon de coiffure à Bruxelles depuis 1970. Coupes, colorations, balayage, lissage et barbier près du quartier Schuman. Réservez chez Tony&Son.";
@@ -15,6 +15,7 @@ const seoDesc = "Salon de coiffure à Bruxelles depuis 1970. Coupes, colorations
 
 <Layout title={seoTitle} locale="fr" page="home" transparentHeader={true} description={seoDesc}>
   <HeroSlider locale="fr" />
+  <GoogleReviews locale="fr" />
   <AboutSection locale="fr" />
   <Services locale="fr" />
 
@@ -49,7 +50,6 @@ const seoDesc = "Salon de coiffure à Bruxelles depuis 1970. Coupes, colorations
     </div>
   </section>
 
-  <ReviewsBadge locale="fr" />
   <VisitSection locale="fr" />
   <MapSection locale="fr" />
   <Gallery locale="fr" />

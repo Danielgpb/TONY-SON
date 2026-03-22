@@ -7,7 +7,7 @@ import VisitSection from '../../components/VisitSection.astro';
 import MapSection from '../../components/MapSection.astro';
 import Gallery from '../../components/Gallery.astro';
 import BrandLogos from '../../components/BrandLogos.astro';
-import ReviewsBadge from '../../components/ReviewsBadge.astro';
+import GoogleReviews from '../../components/GoogleReviews.astro';
 
 const seoTitle = "Kapsalon Brussel – Knippen, Kleuren & Barbier | Tony&Son";
 const seoDesc = "Kapsalon in Brussel sinds 1970. Knippen, kleuren, balayage, stijlen en barbier nabij de Schumanwijk. Boek bij Tony&Son.";
@@ -15,6 +15,7 @@ const seoDesc = "Kapsalon in Brussel sinds 1970. Knippen, kleuren, balayage, sti
 
 <Layout title={seoTitle} locale="nl" page="home" transparentHeader={true} description={seoDesc}>
   <HeroSlider locale="nl" />
+  <GoogleReviews locale="nl" />
   <AboutSection locale="nl" />
   <Services locale="nl" />
 
@@ -45,7 +46,6 @@ const seoDesc = "Kapsalon in Brussel sinds 1970. Knippen, kleuren, balayage, sti
     </div>
   </section>
 
-  <ReviewsBadge locale="nl" />
   <VisitSection locale="nl" />
   <MapSection locale="nl" />
   <Gallery locale="nl" />
