@@ -495,7 +495,7 @@ From 25 €, all included. Price varies by complexity (simple cut, elaborate fad
     category: 'barbier',
     categoryParents: ['coiffure', 'barbier'],
     price: '15 €',
-    images: ['/images/epilation-1.jpg'],
+    images: ['/images/teinture-sourcils-1.jpg'],
     titleTag: 'Eyebrow Tinting Brussels – Natural Colour & Shaping | Tony&Son',
     metaDescription: 'Eyebrow tinting in Brussels at Tony&Son. Natural colour, fuller-looking brows. 15 €. Saint-Josse-ten-Noode. Phone 02 230 55 37',
     h1: 'Eyebrow Tinting in Brussels — Tony&Son',

@@ -446,7 +446,7 @@ On commence par regarder et par écouter. Photo de référence ? Parfait. Idée 
     category: 'barbier',
     categoryParents: ['coiffure', 'barbier'],
     price: '15 €',
-    images: ['/images/epilation-1.jpg'],
+    images: ['/images/teinture-sourcils-1.jpg'],
     titleTag: 'Teinture Sourcils Bruxelles – Coloration & Restructuration | Tony&Son',
     metaDescription: 'Teinture de sourcils à Bruxelles chez Tony&Son. Coloration naturelle, restructuration du regard. 15 €. Saint-Josse-ten-Noode. ☎ 02 230 55 37',
     h1: 'Teinture de sourcils à Bruxelles — Tony&Son',

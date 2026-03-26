@@ -424,7 +424,7 @@ Vanaf 40 €. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalo
     category: 'barbier',
     categoryParents: ['coiffure', 'barbier'],
     price: '15 €',
-    images: ['/images/epilation-1.jpg'],
+    images: ['/images/teinture-sourcils-1.jpg'],
     titleTag: 'Wenkbrauwkleuring Brussel – Natuurlijke kleur & vorm | Tony&Son',
     metaDescription: 'Wenkbrauwkleuring in Brussel bij Tony&Son. Natuurlijke kleur, vollere wenkbrauwen. 15 €. Sint-Joost-ten-Node. ☎ 02 230 55 37',
     h1: 'Wenkbrauwkleuring in Brussel — Tony&Son',
