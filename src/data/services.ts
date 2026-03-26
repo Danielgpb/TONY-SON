@@ -437,6 +437,34 @@ On commence par regarder et par écouter. Photo de référence ? Parfait. Idée 
   },
 
   // ─────────────────────────────────────────────
+  // TEINTURE SOURCILS — Ton : factuel, précis
+  // Volume : COURT (2 paragraphes, 3 FAQ)
+  // ─────────────────────────────────────────────
+  {
+    slug: 'teinture-sourcils-bruxelles',
+    name: 'Teinture de sourcils',
+    category: 'barbier',
+    categoryParents: ['coiffure', 'barbier'],
+    price: '15 €',
+    images: ['/images/epilation-1.jpg'],
+    titleTag: 'Teinture Sourcils Bruxelles – Coloration & Restructuration | Tony&Son',
+    metaDescription: 'Teinture de sourcils à Bruxelles chez Tony&Son. Coloration naturelle, restructuration du regard. 15 €. Saint-Josse-ten-Noode. ☎ 02 230 55 37',
+    h1: 'Teinture de sourcils à Bruxelles — Tony&Son',
+    description: "Teinture de sourcils professionnelle chez Tony&Son à Bruxelles. Coloration naturelle pour un regard structuré. 15 €.",
+    crossLinks: [{ slug: 'epilation-cire-bruxelles', label: 'épilation à la cire' }, { slug: 'colorations-capillaires-bruxelles', label: 'coloration capillaire' }],
+    longDescription: `Teinture de sourcils à Bruxelles, Saint-Josse-ten-Noode. Des sourcils trop clairs, clairsemés ou irréguliers changent complètement l'équilibre du visage. La teinture comble les trous visuellement, intensifie la couleur et restructure le regard — sans maquillage quotidien. Résultat : 3 à 5 semaines. Hommes et femmes.
+
+<h2>Comment se passe une teinture de sourcils chez Tony&Son ?</h2>
+
+On choisit la teinte ensemble — jamais trop foncée, toujours en harmonie avec votre couleur de cheveux et votre carnation. Application précise, temps de pose de quelques minutes, résultat immédiat. Se combine parfaitement avec une <a href="/fr/services/epilation-cire-bruxelles/">épilation à la cire</a> pour un résultat net en une seule séance. 15 €. Rue Bonneels 27, métro Schuman. Réservez au 02 230 55 37 ou via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+    faq: [
+      { question: "Combien de temps dure une teinture de sourcils ?", answer: "Le résultat tient 3 à 5 semaines selon votre type de peau et la fréquence de nettoyage du visage. La séance elle-même dure 15-20 minutes." },
+      { question: "La teinture de sourcils est-elle adaptée aux hommes ?", answer: "Oui. De plus en plus d'hommes optent pour une teinture sourcils — notamment pour couvrir des poils blancs ou densifier des sourcils clairsemés. Le résultat est naturel et discret." },
+      { question: "Peut-on combiner teinture et épilation des sourcils ?", answer: "C'est ce qu'on recommande. On épile d'abord pour restructurer la forme, puis on teint — résultat complet en une seule séance." }
+    ]
+  },
+
+  // ─────────────────────────────────────────────
   // ÉPILATION — Ton : ultra-factuel
   // Volume : TRÈS COURT (1 paragraphe, 2 FAQ)
   // ─────────────────────────────────────────────

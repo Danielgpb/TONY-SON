@@ -27,6 +27,7 @@ export const slugMap: Record<string, { fr: string; en: string; nl: string }> = {
   'coupes-enfants-bruxelles': { fr: '/fr/services/coupes-enfants-bruxelles/', en: '/en/services/kids-haircut-brussels/', nl: '/nl/services/kinderkapsels-brussel/' },
   'taille-barbe-bruxelles': { fr: '/fr/services/taille-barbe-bruxelles/', en: '/en/services/beard-trim-brussels/', nl: '/nl/services/baardtrimmen-brussel/' },
   'coupe-homme-bruxelles': { fr: '/fr/services/coupe-homme-bruxelles/', en: '/en/services/mens-haircut-brussels/', nl: '/nl/services/herenkapsel-brussel/' },
+  'teinture-sourcils-bruxelles': { fr: '/fr/services/teinture-sourcils-bruxelles/', en: '/en/services/eyebrow-tinting-brussels/', nl: '/nl/services/wenkbrauwkleuring-brussel/' },
   'epilation-cire-bruxelles': { fr: '/fr/services/epilation-cire-bruxelles/', en: '/en/services/facial-waxing-brussels/', nl: '/nl/services/gezichtsontharing-brussel/' },
 };
 

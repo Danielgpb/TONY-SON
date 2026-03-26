@@ -486,6 +486,34 @@ From 25 €, all included. Price varies by complexity (simple cut, elaborate fad
   },
 
   // ─────────────────────────────────────────────
+  // EYEBROW TINTING — Tone: factual, precise
+  // Volume: SHORT (~150 words, 3 FAQ)
+  // ─────────────────────────────────────────────
+  {
+    slug: 'eyebrow-tinting-brussels',
+    name: 'Eyebrow Tinting',
+    category: 'barbier',
+    categoryParents: ['coiffure', 'barbier'],
+    price: '15 €',
+    images: ['/images/epilation-1.jpg'],
+    titleTag: 'Eyebrow Tinting Brussels – Natural Colour & Shaping | Tony&Son',
+    metaDescription: 'Eyebrow tinting in Brussels at Tony&Son. Natural colour, fuller-looking brows. 15 €. Saint-Josse-ten-Noode. Phone 02 230 55 37',
+    h1: 'Eyebrow Tinting in Brussels — Tony&Son',
+    description: "Professional eyebrow tinting at Tony&Son in Brussels. Natural colour for a structured look. 15 €.",
+    crossLinks: [{ slug: 'facial-waxing-brussels', label: 'facial waxing' }, { slug: 'hair-coloring-brussels', label: 'hair coloring' }],
+    longDescription: `Eyebrow tinting in Brussels, Saint-Josse-ten-Noode. Brows that are too light, sparse or uneven completely change the balance of the face. Tinting fills in gaps visually, intensifies colour and restructures the look — no daily makeup needed. Result lasts 3 to 5 weeks. Men and women. Service in French and English.
+
+<h2>How does eyebrow tinting work at Tony&Son?</h2>
+
+We choose the shade together — never too dark, always in harmony with your hair colour and complexion. Precise application, a few minutes of processing time, immediate result. Pairs perfectly with <a href="/en/services/facial-waxing-brussels/">facial waxing</a> for a complete result in one session. 15 €. Rue Bonneels 27, Metro Schuman. Book at 02 230 55 37 or via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+    faq: [
+      { question: "How long does eyebrow tinting last?", answer: "The result holds 3 to 5 weeks depending on skin type and cleansing routine. The session itself takes 15-20 minutes." },
+      { question: "Is eyebrow tinting suitable for men?", answer: "Yes. More and more men opt for brow tinting — especially to cover grey hairs or fill in sparse brows. The result is natural and subtle." },
+      { question: "Can I combine tinting and waxing?", answer: "That's what we recommend. We wax first to reshape, then tint — complete result in a single session." }
+    ]
+  },
+
+  // ─────────────────────────────────────────────
   // FACIAL WAXING — Tone: ultra-factual
   // Volume: VERY SHORT (~80 words, 2 FAQ)
   // ─────────────────────────────────────────────

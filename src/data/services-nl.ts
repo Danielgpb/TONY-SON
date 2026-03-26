@@ -414,6 +414,34 @@ Vanaf 40 €. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalo
     ]
   },
 
+  // ─────────────────────────────────────────────
+  // WENKBRAUWKLEURING — Toon: feitelijk, precies
+  // Volume: KORT (~150 woorden, 3 FAQ)
+  // ─────────────────────────────────────────────
+  {
+    slug: 'wenkbrauwkleuring-brussel',
+    name: 'Wenkbrauwkleuring',
+    category: 'barbier',
+    categoryParents: ['coiffure', 'barbier'],
+    price: '15 €',
+    images: ['/images/epilation-1.jpg'],
+    titleTag: 'Wenkbrauwkleuring Brussel – Natuurlijke kleur & vorm | Tony&Son',
+    metaDescription: 'Wenkbrauwkleuring in Brussel bij Tony&Son. Natuurlijke kleur, vollere wenkbrauwen. 15 €. Sint-Joost-ten-Node. ☎ 02 230 55 37',
+    h1: 'Wenkbrauwkleuring in Brussel — Tony&Son',
+    description: "Professionele wenkbrauwkleuring bij Tony&Son in Brussel. Natuurlijke kleur voor een gestructureerde blik. 15 €.",
+    crossLinks: [{ slug: 'gezichtsontharing-brussel', label: 'gezichtsontharing' }, { slug: 'haarkleuring-brussel', label: 'haarkleuring' }],
+    longDescription: `Wenkbrauwkleuring in Brussel, Sint-Joost-ten-Node. Wenkbrauwen die te licht, dun of onregelmatig zijn veranderen het hele gezicht. Kleuring vult gaten visueel op, intensiveert de kleur en herstructureert de blik — zonder dagelijkse make-up. Resultaat houdt 3 tot 5 weken. Mannen en vrouwen.
+
+<h2>Hoe werkt wenkbrauwkleuring bij Tony&Son?</h2>
+
+We kiezen samen de tint — nooit te donker, altijd in harmonie met uw haarkleur en teint. Precieze aanbrenging, enkele minuten inwerktijd, direct resultaat. Combineert perfect met <a href="/nl/services/gezichtsontharing-brussel/">gezichtsontharing</a> voor een compleet resultaat in één sessie. 15 €. Rue Bonneels 27, metro Schuman. Boek op 02 230 55 37 of via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+    faq: [
+      { question: "Hoe lang houdt wenkbrauwkleuring aan?", answer: "Het resultaat houdt 3 tot 5 weken, afhankelijk van huidtype en reinigingsroutine. De sessie duurt 15-20 minuten." },
+      { question: "Is wenkbrauwkleuring geschikt voor mannen?", answer: "Ja. Steeds meer mannen kiezen voor wenkbrauwkleuring — vooral om grijze haartjes te bedekken of dunne wenkbrauwen voller te maken." },
+      { question: "Kan ik kleuring en ontharing combineren?", answer: "Dat raden we aan. Eerst ontharen voor de vorm, dan kleuren — compleet resultaat in één sessie." }
+    ]
+  },
+
   {
     slug: 'gezichtsontharing-brussel',
     name: 'Gezichtsontharing',
