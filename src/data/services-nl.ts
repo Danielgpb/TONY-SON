@@ -349,6 +349,43 @@ Prijs afhankelijk van de dienst. Deze dienst maakt deel uit van ons <a href="/nl
     ]
   },
 
+  // ─────────────────────────────────────────────
+  // HERENKAPSEL — Toon: mannelijk, direct, vertrouwen
+  // Volume: LANG (~450 woorden, 4 FAQ)
+  // ─────────────────────────────────────────────
+  {
+    slug: 'herenkapsel-brussel',
+    name: 'Herenkapsel',
+    category: 'barbier',
+    categoryParents: ['coiffure', 'barbier'],
+    price: 'Vanaf 25 €',
+    images: ['/images/barbier-1.jpg', '/images/barbier-2.jpg'],
+    titleTag: 'Herenkapsel Brussel – Fade, Klassiek & Trending | Tony&Son',
+    metaDescription: 'Herenkapsel in Brussel bij Tony&Son, salon in Sint-Joost-ten-Node sinds 1970. Fade, klassiek, trending stijlen. Vanaf 25 €. ☎ 02 230 55 37',
+    h1: 'Herenkapsel in Brussel — Tony&Son',
+    description: "Herenkapsel op maat bij Tony&Son, kapsalon en barbier in Brussel. Fade, klassiek, trending — alle haartexturen sinds 1970.",
+    crossLinks: [{ slug: 'baardtrimmen-brussel', label: 'baardtrimmen in Brussel' }, { slug: 'haarkleuring-brussel', label: 'haarkleuring in Brussel' }, { slug: 'kinderkapsels-brussel', label: 'kinderkapsels in Brussel' }],
+    longDescription: `Herenkapsel in Brussel, Sint-Joost-ten-Node — bij Tony&Son is het herenkapsel ons DNA sinds 1970. Tony Campisi begon hiermee. Drie generaties later zetten zijn zoon Salvatore — opgeleid bij Toni&Guy in Londen — en het team de traditie voort met dezelfde standaard: een kapsel dat past bij uw gezicht, uw stijl en uw dagelijks leven.
+
+<h2>Waarom kiezen voor Tony&Son voor een herenkapsel in Brussel?</h2>
+
+We knippen niet elke man hetzelfde. Een Amerikaanse fade (skin fade, mid fade, taper) op kroeshaar wordt anders gedaan dan op steil haar. Een klassieke schaarknipbeurt op fijn haar vraagt een andere techniek dan een getextureerde coupe op dik haar. Onze kappers passen zich aan elke textuur aan — Europees, Maghrebijns, Afro, Aziatisch — zonder dat het gevraagd hoeft te worden. Dat is wat stamgasten uit Schaarbeek, de Schumanrotonde en Etterbeek terugbrengt.
+
+<h2>Hoe werkt een herenkapsel bij Tony&Son?</h2>
+
+We beginnen met kijken en luisteren. Referentiefoto? Geweldig. Vaag idee? We stellen voor. We vertellen wat werkt bij uw gezichtsvorm en wat niet zal houden tussen twee knipbeurten. Dan knippen we. Precisietrimmer voor fades, schaar voor structuur, scheermes voor contouren. Shampoo en styling inbegrepen.
+
+<h2>Tarieven herenkapsel in Brussel</h2>
+
+Vanaf 25 €, alles inbegrepen. Prijs varieert per complexiteit (eenvoudige coupe, uitgebreide fade, knipbeurt + <a href="/nl/services/baardtrimmen-brussel/">baard</a> combo). Deze dienst maakt deel uit van ons <a href="/nl/barbier/">barbier in Brussel</a> en <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman (lijnen 1/5). Boek op <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> of bel 02 230 55 37.`,
+    faq: [
+      { question: "Wat kost een herenkapsel bij Tony&Son?", answer: "Vanaf 25 €, shampoo en styling inbegrepen. Prijs afhankelijk van complexiteit: klassieke coupe, uitgebreide fade of knipbeurt + baard combo." },
+      { question: "Beheersen jullie fades op alle haartexturen?", answer: "Ja. Skin fade, mid fade, high fade, taper — op Europees, Maghrebijns, Afro of Aziatisch haar. Breng een referentiefoto mee voor een specifiek resultaat." },
+      { question: "Moet ik reserveren of kan ik zonder afspraak?", answer: "Reservering aanbevolen, vooral vrijdag en zaterdag. Boek via <a href='https://widget.treatwell.be/fr/salon/tony-and-son/' target='_blank' rel='noopener'>Treatwell</a> of bel 02 230 55 37." },
+      { question: "Kan ik knipbeurt en baardtrimmen combineren?", answer: "Ja, het is onze populairste combo. Vermeld het bij reservering. Zie onze pagina <a href='/nl/services/baardtrimmen-brussel/'>baardtrimmen</a> voor details." }
+    ]
+  },
+
   {
     slug: 'ombre-kleuring-brussel',
     name: 'Ombré kleuring',

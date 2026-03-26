@@ -400,6 +400,43 @@ Ce service fait partie de notre offre <a href="/fr/barbier/">barbier à Bruxelle
   },
 
   // ─────────────────────────────────────────────
+  // COUPE HOMME — Ton : masculin, direct, confiance
+  // Volume : LONG (5 paragraphes, 4 FAQ)
+  // ─────────────────────────────────────────────
+  {
+    slug: 'coupe-homme-bruxelles',
+    name: 'Coupe homme',
+    category: 'barbier',
+    categoryParents: ['coiffure', 'barbier'],
+    price: 'À partir de 25 €',
+    images: ['/images/barbier-1.jpg', '/images/barbier-2.jpg'],
+    titleTag: 'Coupe Homme Bruxelles – Dégradé, Classique & Tendance | Tony&Son',
+    metaDescription: 'Coupe homme à Bruxelles chez Tony&Son, salon à Saint-Josse-ten-Noode depuis 1970. Dégradé, classique, tendance. Dès 25 €. ☎ 02 230 55 37',
+    h1: 'Coupe homme à Bruxelles — Tony&Son',
+    description: "Coupe homme sur mesure chez Tony&Son, coiffeur et barbier à Bruxelles. Dégradé, classique, tendance — toutes les textures de cheveux depuis 1970.",
+    crossLinks: [{ slug: 'taille-barbe-bruxelles', label: 'taille de barbe à Bruxelles' }, { slug: 'colorations-capillaires-bruxelles', label: 'coloration à Bruxelles' }, { slug: 'coupes-enfants-bruxelles', label: 'coupes enfants à Bruxelles' }],
+    longDescription: `Coupe homme à Bruxelles, Saint-Josse-ten-Noode — chez Tony&Son, la coupe homme est notre ADN depuis 1970. Tony Campisi a commencé par là. Trois générations plus tard, son fils Salvatore — formé chez Toni&Guy à Londres — et l'équipe perpétuent le geste avec la même exigence : une coupe qui correspond à votre visage, votre style et votre quotidien.
+
+<h2>Pourquoi choisir Tony&Son pour une coupe homme à Bruxelles ?</h2>
+
+On ne coupe pas tous les hommes de la même façon. Un dégradé américain (skin fade, mid fade, taper) sur cheveux crépus ne se fait pas comme sur cheveux lisses. Un classique ciseaux sur cheveux fins demande une technique différente d'une coupe texturée sur cheveux épais. Nos coiffeurs adaptent leur geste à chaque texture — européenne, maghrébine, afro, asiatique — sans qu'on ait besoin de le préciser. C'est ce qui fait revenir les habitués de Schaerbeek, du rond-point Schuman et d'Etterbeek.
+
+<h2>Comment se passe une coupe homme chez Tony&Son ?</h2>
+
+On commence par regarder et par écouter. Photo de référence ? Parfait. Idée vague ? On propose. On vous dit ce qui fonctionne avec votre forme de visage et ce qui risque de ne pas tenir entre deux coupes. Puis on coupe. Tondeuse de précision pour les dégradés, ciseaux pour la structure, rasoir pour les contours. Shampooing et coiffage inclus — le prix annoncé est le prix final, conformément aux <a href="https://economie.fgov.be/fr/themes/ventes/pratiques-du-marche-et/indication-des-prix" target="_blank" rel="noopener">directives du SPF Économie</a>.
+
+<h2>Tarifs coupe homme à Bruxelles</h2>
+
+À partir de 25 €, tout compris. Le tarif varie selon la complexité (coupe simple, dégradé élaboré, combo coupe + <a href="/fr/services/taille-barbe-bruxelles/">barbe</a>). Ce service fait partie de notre offre <a href="/fr/barbier/">barbier à Bruxelles</a> et <a href="/fr/coiffure/">coiffure à Bruxelles</a>. Rue Bonneels 27, à deux minutes du métro Schuman (lignes 1 et 5). Réservez sur <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> ou appelez au 02 230 55 37. Les vendredis et samedis se remplissent vite — anticipez.`,
+    faq: [
+      { question: "Quel est le prix d'une coupe homme chez Tony&Son ?", answer: "À partir de 25 €, shampooing et coiffage inclus. Le tarif dépend de la complexité : coupe classique, dégradé élaboré ou combo coupe + barbe. On vous confirme le prix avant de commencer." },
+      { question: "Faites-vous les dégradés américains (fade) sur toutes les textures ?", answer: "Oui. Skin fade, mid fade, high fade, taper — sur cheveux européens, maghrébins, afro ou asiatiques. Nos coiffeurs adaptent la technique à chaque texture. Apportez une photo de référence si vous avez un résultat précis en tête." },
+      { question: "Faut-il prendre rendez-vous ou peut-on venir sans ?", answer: "Le rendez-vous est recommandé, surtout le vendredi et le samedi. Réservez via <a href='https://widget.treatwell.be/fr/salon/tony-and-son/' target='_blank' rel='noopener'>Treatwell</a> ou appelez au 02 230 55 37. Les sans rendez-vous sont acceptés en semaine, selon disponibilité." },
+      { question: "Peut-on combiner coupe homme et taille de barbe ?", answer: "Oui, c'est le combo le plus demandé. Mentionnez-le à la réservation pour qu'on prévoie le temps nécessaire. Notre page <a href='/fr/services/taille-barbe-bruxelles/'>taille de barbe</a> détaille le service." }
+    ]
+  },
+
+  // ─────────────────────────────────────────────
   // ÉPILATION — Ton : ultra-factuel
   // Volume : TRÈS COURT (1 paragraphe, 2 FAQ)
   // ─────────────────────────────────────────────

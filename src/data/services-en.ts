@@ -449,6 +449,43 @@ Price depends on the service (simple trim, traditional shave, haircut + beard co
   },
 
   // ─────────────────────────────────────────────
+  // MEN'S HAIRCUT — Tone: masculine, direct, confidence
+  // Volume: LONG (~450 words, 4 FAQ)
+  // ─────────────────────────────────────────────
+  {
+    slug: 'mens-haircut-brussels',
+    name: "Men's Haircut",
+    category: 'barbier',
+    categoryParents: ['coiffure', 'barbier'],
+    price: 'From 25 €',
+    images: ['/images/barbier-1.jpg', '/images/barbier-2.jpg'],
+    titleTag: "Men's Haircut Brussels – Fade, Classic & Trending | Tony&Son",
+    metaDescription: "Men's haircut in Brussels at Tony&Son, salon in Saint-Josse-ten-Noode since 1970. Fade, classic, trending styles. From 25 €. Phone 02 230 55 37",
+    h1: "Men's Haircut in Brussels — Tony&Son",
+    description: "Custom men's haircut at Tony&Son, hairdresser and barber in Brussels. Fade, classic, trending — all hair textures since 1970.",
+    crossLinks: [{ slug: 'beard-trim-brussels', label: 'beard trim in Brussels' }, { slug: 'hair-coloring-brussels', label: 'hair coloring in Brussels' }, { slug: 'kids-haircut-brussels', label: 'kids haircut in Brussels' }],
+    longDescription: `Men's haircut in Brussels, Saint-Josse-ten-Noode — at Tony&Son, the men's cut has been our DNA since 1970. Tony Campisi started with that. Three generations later, his son Salvatore — trained at Toni&Guy in London — and the team carry on the tradition with the same standard: a cut that matches your face, your style and your daily life. Service in French and English.
+
+<h2>Why choose Tony&Son for a men's haircut in Brussels?</h2>
+
+We don't cut every man the same way. An American fade (skin fade, mid fade, taper) on coily hair is not done the same as on straight hair. A classic scissor cut on fine hair requires a different technique than a textured cut on thick hair. Our stylists adapt to every texture — European, North African, Afro, Asian — without needing to be asked. That's what brings regulars back from Schaerbeek, the Schuman roundabout and Etterbeek.
+
+<h2>How does a men's haircut work at Tony&Son?</h2>
+
+We start by looking and listening. Reference photo? Great. Vague idea? We suggest. We tell you what works with your face shape and what won't hold up between cuts. Then we cut. Precision clippers for fades, scissors for structure, razor for outlines. Shampoo and styling included — the quoted price is the final price.
+
+<h2>Men's haircut pricing in Brussels</h2>
+
+From 25 €, all included. Price varies by complexity (simple cut, elaborate fade, cut + <a href="/en/services/beard-trim-brussels/">beard</a> combo). This service is part of our <a href="/en/barber/">barber in Brussels</a> and <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, two minutes from Metro Schuman (lines 1/5). Book on <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> or call 02 230 55 37. Fridays and Saturdays fill up fast — book ahead.`,
+    faq: [
+      { question: "What is the price of a men's haircut at Tony&Son?", answer: "From 25 €, shampoo and styling included. Price depends on complexity: classic cut, elaborate fade, or cut + beard combo. We confirm the price before starting." },
+      { question: "Do you do American fades on all hair textures?", answer: "Yes. Skin fade, mid fade, high fade, taper — on European, North African, Afro or Asian hair. Our stylists adapt the technique to each texture. Bring a reference photo if you have a specific result in mind." },
+      { question: "Do I need to book or can I walk in?", answer: "Booking is recommended, especially on Fridays and Saturdays. Reserve via <a href='https://widget.treatwell.be/fr/salon/tony-and-son/' target='_blank' rel='noopener'>Treatwell</a> or call 02 230 55 37. Walk-ins accepted on weekdays, subject to availability." },
+      { question: "Can I combine a haircut with a beard trim?", answer: "Yes, it's our most popular combo. Mention it when booking so we can allocate the right time. See our <a href='/en/services/beard-trim-brussels/'>beard trim</a> page for details." }
+    ]
+  },
+
+  // ─────────────────────────────────────────────
   // FACIAL WAXING — Tone: ultra-factual
   // Volume: VERY SHORT (~80 words, 2 FAQ)
   // ─────────────────────────────────────────────
