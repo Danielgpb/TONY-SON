@@ -6,7 +6,18 @@ export default defineConfig({
   site: 'https://tonyandson.be',
   output: 'static',
   trailingSlash: 'always',
-  integrations: [sitemap()],
+  integrations: [
+    sitemap({
+      i18n: {
+        defaultLocale: 'fr',
+        locales: {
+          fr: 'fr-BE',
+          en: 'en',
+          nl: 'nl-BE',
+        },
+      },
+    }),
+  ],
   redirects: {
     '/': '/fr/',
 

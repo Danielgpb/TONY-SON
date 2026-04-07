@@ -1,0 +1,2 @@
+# Redirect racine vers la version française (301 permanent)
+/ /fr/ 301!
