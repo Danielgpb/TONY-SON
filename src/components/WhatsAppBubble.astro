@@ -1,0 +1,1058 @@
+---
+import type { Locale } from '../i18n';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+
+const phone = '32486557697'; // +32 486 55 76 97
+
+const labels = {
+  fr: {
+    name: 'Tony&Son',
+    status: 'Répond habituellement sous 1h',
+    greeting: 'Coucou, c\'est Tony&Son 👋',
+    hook: 'Bienvenue dans notre salon à Bruxelles ✨ On sera ravis de s\'occuper de vous !',
+    intro: 'Dites-moi tout — je vous aide à prendre rendez-vous en 30 secondes 💇‍♀️',
+    who: 'Alors, ce rendez-vous c\'est pour qui ? 😊',
+    service: 'Parfait 🙌 Et qu\'est-ce qui vous ferait plaisir ?',
+    when: 'Excellent choix ✨ Vous aimeriez passer quand ?',
+    confirm: 'Génial ! 🎉 Votre message est prêt — cliquez juste en dessous pour nous l\'envoyer, on revient vers vous au plus vite 💨',
+    cta: 'Continuer sur WhatsApp',
+    back: 'Recommencer',
+    aria: 'Contactez-nous sur WhatsApp',
+    prefillTemplate: 'Bonjour Tony&Son 👋\n\nJ\'aimerais prendre rendez-vous :\n• Pour : {person}\n• Service : {service}\n• Quand : {when}\n\nMerci !',
+    persons: [
+      { id: 'femme', label: 'Femme', emoji: '👩' },
+      { id: 'homme', label: 'Homme', emoji: '👨' },
+      { id: 'enfant', label: 'Enfant', emoji: '👶' },
+    ],
+    services: {
+      femme: ['Coupe', 'Coloration', 'Balayage', 'Mèches', 'Brushing', 'Lissage / Kératine', 'Extensions', 'Permanente', 'Autre'],
+      homme: ['Coupe homme', 'Taille de barbe', 'Rasage', 'Dégradé', 'Coloration', 'Autre'],
+      enfant: ['Coupe enfant', 'Autre'],
+    },
+    whens: [
+      { label: "Aujourd'hui", emoji: '⚡' },
+      { label: 'Demain', emoji: '☀️' },
+      { label: 'Cette semaine', emoji: '📅' },
+      { label: 'La semaine prochaine', emoji: '📆' },
+      { label: 'Plus tard', emoji: '🗓️' },
+    ],
+    teaserTitle: 'Coucou 👋',
+    teaserText: 'Envie d\'une nouvelle coupe ?',
+  },
+  en: {
+    name: 'Tony&Son',
+    status: 'Usually replies within 1h',
+    greeting: 'Hi, it\'s Tony&Son 👋',
+    hook: 'Welcome to our salon in Brussels ✨ We\'d love to take care of you!',
+    intro: 'Tell me everything — I\'ll help you book in 30 seconds 💇',
+    who: 'So, who is this appointment for? 😊',
+    service: 'Got it 🙌 And what would you like?',
+    when: 'Great choice ✨ When would you like to come?',
+    confirm: 'Awesome! 🎉 Your message is ready — just click below to send it, we\'ll get back to you asap 💨',
+    cta: 'Continue on WhatsApp',
+    back: 'Start over',
+    aria: 'Contact us on WhatsApp',
+    prefillTemplate: 'Hi Tony&Son 👋\n\nI\'d like to book an appointment:\n• For: {person}\n• Service: {service}\n• When: {when}\n\nThanks!',
+    persons: [
+      { id: 'femme', label: 'Woman', emoji: '👩' },
+      { id: 'homme', label: 'Man', emoji: '👨' },
+      { id: 'enfant', label: 'Kid', emoji: '👶' },
+    ],
+    services: {
+      femme: ['Haircut', 'Hair coloring', 'Balayage', 'Highlights', 'Blowout', 'Straightening / Keratin', 'Extensions', 'Perm', 'Other'],
+      homme: ['Men\'s haircut', 'Beard trim', 'Shave', 'Fade', 'Hair coloring', 'Other'],
+      enfant: ['Kids\' haircut', 'Other'],
+    },
+    whens: [
+      { label: 'Today', emoji: '⚡' },
+      { label: 'Tomorrow', emoji: '☀️' },
+      { label: 'This week', emoji: '📅' },
+      { label: 'Next week', emoji: '📆' },
+      { label: 'Later', emoji: '🗓️' },
+    ],
+    teaserTitle: 'Hi there 👋',
+    teaserText: 'Fancy a fresh new cut?',
+  },
+  nl: {
+    name: 'Tony&Son',
+    status: 'Reageert meestal binnen 1u',
+    greeting: 'Hallo, het is Tony&Son 👋',
+    hook: 'Welkom in onze kapsalon in Brussel ✨ We zorgen graag voor u!',
+    intro: 'Vertel me alles — ik help u in 30 seconden te boeken 💇',
+    who: 'Dus, voor wie is deze afspraak? 😊',
+    service: 'Genoteerd 🙌 En wat zou u willen?',
+    when: 'Uitstekende keuze ✨ Wanneer wilt u langskomen?',
+    confirm: 'Geweldig! 🎉 Uw bericht is klaar — klik hieronder om het te versturen, we reageren zo snel mogelijk 💨',
+    cta: 'Doorgaan op WhatsApp',
+    back: 'Opnieuw beginnen',
+    aria: 'Neem contact op via WhatsApp',
+    prefillTemplate: 'Hallo Tony&Son 👋\n\nIk zou graag een afspraak maken:\n• Voor: {person}\n• Dienst: {service}\n• Wanneer: {when}\n\nBedankt!',
+    persons: [
+      { id: 'femme', label: 'Vrouw', emoji: '👩' },
+      { id: 'homme', label: 'Man', emoji: '👨' },
+      { id: 'enfant', label: 'Kind', emoji: '👶' },
+    ],
+    services: {
+      femme: ['Knipbeurt', 'Haarkleuring', 'Balayage', 'Highlights', 'Föhnen', 'Stijlen / Keratine', 'Extensions', 'Permanent', 'Anders'],
+      homme: ['Herenknipbeurt', 'Baardtrim', 'Scheren', 'Fade', 'Haarkleuring', 'Anders'],
+      enfant: ['Kinderkapsel', 'Anders'],
+    },
+    whens: [
+      { label: 'Vandaag', emoji: '⚡' },
+      { label: 'Morgen', emoji: '☀️' },
+      { label: 'Deze week', emoji: '📅' },
+      { label: 'Volgende week', emoji: '📆' },
+      { label: 'Later', emoji: '🗓️' },
+    ],
+    teaserTitle: 'Hallo 👋',
+    teaserText: 'Zin in een nieuwe coupe?',
+  },
+}[locale];
+---
+
+<div class="wa-wrap" id="wa-wrap" data-state="closed">
+  <!-- Mini fenêtre -->
+  <div class="wa-chat" id="wa-chat" role="dialog" aria-label={labels.aria}>
+    <!-- Header -->
+    <header class="wa-head">
+      <div class="wa-head-left">
+        <div class="wa-avatar">
+          <img src="/images/logo.jpeg" alt="Tony&Son" width="44" height="44" />
+          <span class="wa-online-dot"></span>
+        </div>
+        <div class="wa-head-info">
+          <h3 class="wa-head-name">{labels.name}</h3>
+          <p class="wa-head-status">{labels.status}</p>
+        </div>
+      </div>
+      <button type="button" class="wa-close" id="wa-close" aria-label="Fermer">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </header>
+
+    <!-- Body : messages -->
+    <div class="wa-body" id="wa-body">
+      <div class="wa-date">
+        <span>{locale === 'nl' ? 'VANDAAG' : locale === 'en' ? 'TODAY' : "AUJOURD'HUI"}</span>
+      </div>
+      <div class="wa-bubble wa-bubble-bot">
+        <span class="wa-text"><b>{labels.greeting}</b><br/>{labels.hook}</span>
+        <span class="wa-time" data-time></span>
+      </div>
+    </div>
+
+    <!-- Quick reply zone (vide au démarrage, rempli après l'intro) -->
+    <div class="wa-quick" id="wa-quick"></div>
+  </div>
+
+  <!-- Teaser mobile (petite bulle d'attention) -->
+  <div class="wa-teaser" id="wa-teaser" role="button" tabindex="0">
+    <button type="button" class="wa-teaser-close" id="wa-teaser-close" aria-label="Fermer">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="wa-teaser-content">
+      <strong>{labels.teaserTitle}</strong>
+      <span>{labels.teaserText}</span>
+    </div>
+  </div>
+
+  <!-- Bouton flottant -->
+  <button type="button" class="wa-fab" id="wa-fab" aria-label={labels.aria}>
+    <span class="wa-fab-pulse"></span>
+    <svg class="wa-fab-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="wa-fab-badge" id="wa-fab-badge">1</span>
+  </button>
+</div>
+
+<style is:global>
+  .wa-wrap {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9998;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+
+  /* ════════ TEASER MOBILE ════════ */
+  .wa-teaser {
+    position: absolute;
+    bottom: 70px;
+    right: 4px;
+    max-width: 220px;
+    background: #fff;
+    border-radius: 14px;
+    padding: 11px 34px 11px 14px;
+    box-shadow:
+      0 10px 28px rgba(0,0,0,0.18),
+      0 3px 8px rgba(0,0,0,0.08),
+      0 0 0 1px rgba(0,0,0,0.03);
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.9);
+    transform-origin: bottom right;
+    transition: transform 0.4s cubic-bezier(.2,.9,.3,1.2), opacity 0.3s, visibility 0.3s;
+    display: none;
+    z-index: 1;
+  }
+  .wa-teaser::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 28px;
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    transform: rotate(45deg);
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.04);
+  }
+  .wa-teaser.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+    animation: wa-teaser-wiggle 2.8s 0.8s infinite;
+  }
+  .wa-teaser-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .wa-teaser strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #075E54;
+    line-height: 1.2;
+  }
+  .wa-teaser span {
+    display: block;
+    font-size: 13px;
+    color: #111b21;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+  .wa-teaser-close {
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #f0f2f5;
+    border: none;
+    color: #667781;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    transition: background 0.2s;
+  }
+  .wa-teaser-close:hover { background: #e5e8eb; }
+
+  @keyframes wa-teaser-wiggle {
+    0%, 88%, 100% { transform: translateY(0) rotate(0); }
+    90% { transform: translateY(-2px) rotate(-1deg); }
+    94% { transform: translateY(-2px) rotate(1deg); }
+    97% { transform: translateY(-1px) rotate(-0.5deg); }
+  }
+
+  /* ════════ BOUTON FLOTTANT ════════ */
+  .wa-fab {
+    position: relative;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: #25D366;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s cubic-bezier(.2,.9,.3,1.3);
+    animation: wa-bounce-in 0.7s 0.4s both, wa-glow 3s 2s infinite;
+    z-index: 2;
+  }
+  .wa-fab:hover { transform: scale(1.1); }
+  .wa-fab:active { transform: scale(0.95); }
+
+  .wa-fab-icon {
+    width: 32px;
+    height: 32px;
+    color: #fff;
+    position: relative;
+    z-index: 2;
+  }
+  .wa-fab-pulse {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid #25D366;
+    opacity: 0;
+    animation: wa-ring 2.5s 2.5s ease-out infinite;
+    pointer-events: none;
+  }
+  .wa-fab-badge {
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    min-width: 22px;
+    height: 22px;
+    padding: 0 6px;
+    border-radius: 11px;
+    background: #ff3b30;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff;
+    animation: wa-badge-in 0.5s 1s both, wa-badge-jiggle 2.5s 3s infinite;
+    z-index: 3;
+    box-shadow: 0 2px 6px rgba(255, 59, 48, 0.45);
+  }
+
+  /* ════════ FENÊTRE CHAT ════════ */
+  .wa-chat {
+    position: absolute;
+    bottom: 82px;
+    right: 0;
+    width: 340px;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow:
+      0 20px 50px rgba(0,0,0,0.22),
+      0 4px 12px rgba(0,0,0,0.08),
+      0 0 0 1px rgba(0,0,0,0.04);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(20px) scale(0.9);
+    transform-origin: bottom right;
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      transform 0.4s cubic-bezier(.2,.9,.3,1.15),
+      opacity 0.3s ease,
+      visibility 0.3s ease;
+  }
+  .wa-wrap[data-state="open"] .wa-chat {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  .wa-wrap[data-state="open"] .wa-fab-badge { display: none; }
+
+  /* ─── Header ─── */
+  .wa-head {
+    background: linear-gradient(120deg, #075E54 0%, #128C7E 100%);
+    padding: 14px 14px 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .wa-head-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+  .wa-avatar {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #fff;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.15);
+  }
+  .wa-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .wa-online-dot {
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    width: 11px;
+    height: 11px;
+    background: #4ade80;
+    border: 2px solid #075E54;
+    border-radius: 50%;
+    box-shadow: 0 0 6px rgba(74, 222, 128, 0.6);
+  }
+  .wa-head-info { min-width: 0; }
+  .wa-head-name {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #fff;
+  }
+  .wa-head-status {
+    margin: 3px 0 0;
+    font-size: 12px;
+    color: rgba(255,255,255,0.82);
+    line-height: 1;
+    font-weight: 400;
+  }
+  .wa-close {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s;
+    padding: 0;
+  }
+  .wa-close:hover { background: rgba(255,255,255,0.22); }
+
+  /* ─── Body ─── */
+  .wa-body {
+    flex: 1;
+    background-color: #E4DDD4;
+    background-image:
+      url("data:image/svg+xml,%3Csvg width='120' height='120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h120v120H0z' fill='%23e4ddd4'/%3E%3Cg fill='%23cfc6bb' fill-opacity='.35'%3E%3Ccircle cx='30' cy='30' r='1.5'/%3E%3Ccircle cx='70' cy='20' r='1'/%3E%3Ccircle cx='90' cy='50' r='1.2'/%3E%3Ccircle cx='20' cy='80' r='1'/%3E%3Ccircle cx='60' cy='90' r='1.3'/%3E%3Ccircle cx='100' cy='100' r='1'/%3E%3C/g%3E%3C/svg%3E");
+    padding: 14px 12px 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-height: 140px;
+    max-height: 260px;
+    scroll-behavior: smooth;
+  }
+  .wa-body::-webkit-scrollbar { width: 5px; }
+  .wa-body::-webkit-scrollbar-track { background: transparent; }
+  .wa-body::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.18); border-radius: 3px; }
+
+  .wa-date {
+    text-align: center;
+    margin: 2px 0 4px;
+  }
+  .wa-date span {
+    display: inline-block;
+    background: rgba(225, 245, 254, 0.92);
+    color: #5a7a8a;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  }
+
+  /* ─── Bulles ─── */
+  .wa-bubble {
+    max-width: 82%;
+    padding: 7px 10px 8px 11px;
+    position: relative;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.13);
+    animation: wa-bubble-in 0.35s both;
+    word-wrap: break-word;
+    font-size: 14px;
+    line-height: 1.38;
+    color: #111b21;
+    display: flex;
+    flex-direction: column;
+  }
+  .wa-bubble-bot {
+    background: #ffffff;
+    align-self: flex-start;
+    border-radius: 0 8px 8px 8px;
+    margin-left: 7px;
+  }
+  .wa-bubble-bot::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -7px;
+    width: 8px;
+    height: 13px;
+    background: #ffffff;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+  }
+  .wa-bubble-user {
+    background: #D9FDD3;
+    align-self: flex-end;
+    border-radius: 8px 0 8px 8px;
+    margin-right: 7px;
+  }
+  .wa-bubble-user::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -7px;
+    width: 8px;
+    height: 13px;
+    background: #D9FDD3;
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+  }
+
+  .wa-text {
+    display: block;
+    margin: 0;
+  }
+  .wa-text b { font-weight: 600; }
+  .wa-time {
+    display: block;
+    font-size: 10.5px;
+    color: #667781;
+    line-height: 1;
+    margin-top: 4px;
+    align-self: flex-end;
+    white-space: nowrap;
+  }
+
+  /* Typing indicator */
+  .wa-typing {
+    align-self: flex-start;
+    background: #fff;
+    padding: 12px 14px;
+    border-radius: 0 8px 8px 8px;
+    display: inline-flex;
+    gap: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.13);
+    animation: wa-bubble-in 0.3s both;
+  }
+  .wa-typing::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -7px;
+    width: 7px;
+    height: 12px;
+    background: #fff;
+    clip-path: polygon(100% 0, 0 0, 100% 100%);
+  }
+  .wa-typing span {
+    width: 6px;
+    height: 6px;
+    background: #9aa0a6;
+    border-radius: 50%;
+    animation: wa-typing-dot 1.2s infinite ease-in-out;
+  }
+  .wa-typing span:nth-child(2) { animation-delay: 0.15s; }
+  .wa-typing span:nth-child(3) { animation-delay: 0.3s; }
+
+  /* ─── Quick reply zone (footer) ─── */
+  .wa-quick {
+    background: #fff;
+    padding: 12px 14px 14px;
+    border-top: 1px solid #f0f2f5;
+    flex-shrink: 0;
+  }
+  .wa-quick-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: #8696a0;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin: 0 0 10px;
+    text-align: center;
+  }
+  .wa-pills {
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .wa-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 9px 14px;
+    background: #f0f2f5;
+    color: #111b21;
+    border: 1.5px solid transparent;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    font-family: inherit;
+    white-space: nowrap;
+  }
+  .wa-pill:hover {
+    background: #25D366;
+    color: #fff;
+    border-color: #25D366;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(37, 211, 102, 0.35);
+  }
+  .wa-pill:active { transform: translateY(0); }
+  .wa-pill-emoji { font-size: 16px; line-height: 1; }
+
+  /* Services : plus compact */
+  .wa-quick.is-services .wa-pill {
+    font-size: 12px;
+    padding: 8px 11px;
+    flex: 0 0 auto;
+  }
+
+  /* CTA final */
+  .wa-cta-final {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 13px 16px;
+    background: #25D366;
+    color: #fff !important;
+    border-radius: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  }
+  .wa-cta-final:hover {
+    background: #1fb957;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45);
+  }
+  .wa-cta-final:active { transform: translateY(0); }
+  .wa-cta-final svg { flex-shrink: 0; }
+
+  .wa-back {
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    color: #667781;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 10px 0 2px;
+    margin-top: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: color 0.2s;
+    text-align: center;
+  }
+  .wa-back:hover { color: #075E54; text-decoration: underline; }
+
+  /* ════════ ANIMATIONS ════════ */
+  @keyframes wa-bounce-in {
+    0%   { transform: scale(0) rotate(-20deg); opacity: 0; }
+    60%  { transform: scale(1.15) rotate(6deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0); opacity: 1; }
+  }
+  @keyframes wa-glow {
+    0%, 100% { box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0,0,0,0.15); }
+    50%      { box-shadow: 0 8px 28px rgba(37, 211, 102, 0.7), 0 2px 10px rgba(0,0,0,0.22); }
+  }
+  @keyframes wa-ring {
+    0%   { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.6); opacity: 0; }
+  }
+  @keyframes wa-badge-in {
+    0%   { transform: scale(0); }
+    60%  { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
+  @keyframes wa-badge-jiggle {
+    0%, 92%, 100% { transform: rotate(0); }
+    94%  { transform: rotate(-10deg); }
+    96%  { transform: rotate(10deg); }
+    98%  { transform: rotate(-5deg); }
+  }
+  @keyframes wa-bubble-in {
+    from { opacity: 0; transform: translateY(8px) scale(0.96); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  @keyframes wa-typing-dot {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+    30%           { transform: translateY(-5px); opacity: 1; }
+  }
+
+  /* ════════ MOBILE ════════ */
+  @media (max-width: 768px) {
+    .wa-teaser { display: block; }
+
+    .wa-wrap {
+      bottom: 14px;
+      right: 14px;
+    }
+    .wa-fab {
+      width: 52px;
+      height: 52px;
+    }
+    .wa-fab-icon {
+      width: 26px;
+      height: 26px;
+    }
+    .wa-fab-badge {
+      min-width: 18px;
+      height: 18px;
+      font-size: 10px;
+      top: -1px;
+      right: -1px;
+      border-width: 1.5px;
+    }
+    .wa-chat {
+      width: calc(100vw - 28px);
+      max-width: 300px;
+      bottom: 68px;
+      border-radius: 12px;
+    }
+    .wa-head {
+      padding: 11px 11px 11px 13px;
+    }
+    .wa-avatar { width: 38px; height: 38px; }
+    .wa-head-name { font-size: 14px; }
+    .wa-head-status { font-size: 11px; }
+    .wa-body {
+      padding: 12px 10px 14px;
+      min-height: 120px;
+      max-height: 240px;
+      gap: 7px;
+    }
+    .wa-bubble { font-size: 13px; }
+    .wa-quick { padding: 11px 12px 12px; }
+    .wa-quick-label { font-size: 10px; margin-bottom: 8px; }
+    .wa-pill { font-size: 12px; padding: 8px 11px; }
+    .wa-quick.is-services .wa-pill { font-size: 11px; padding: 7px 10px; }
+    .wa-cta-final { font-size: 13px; padding: 12px 14px; }
+    .wa-back { font-size: 11px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .wa-fab, .wa-fab-pulse, .wa-fab-badge,
+    .wa-bubble, .wa-typing span { animation: none !important; }
+  }
+</style>
+
+<script is:inline define:vars={{ phone, labels }}>
+  (function () {
+    const STORAGE_KEY = 'tonyson_wa_closed';
+    const STORAGE_TEASER = 'tonyson_wa_teaser_closed';
+    const AUTO_OPEN_DELAY = 3000;
+    const TEASER_DELAY = 2200;
+    const DESKTOP_MIN_WIDTH = 769;
+
+    const wrap = document.getElementById('wa-wrap');
+    const fab = document.getElementById('wa-fab');
+    const closeBtn = document.getElementById('wa-close');
+    const body = document.getElementById('wa-body');
+    const quick = document.getElementById('wa-quick');
+    const teaser = document.getElementById('wa-teaser');
+    const teaserClose = document.getElementById('wa-teaser-close');
+    if (!wrap || !fab || !closeBtn || !body || !quick) return;
+
+    const state = { person: null, service: null, when: null, introShown: false };
+
+    // ─── Helpers ───
+    const nowTime = () => {
+      const d = new Date();
+      return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+    };
+    body.querySelectorAll('[data-time]').forEach((el) => { el.textContent = nowTime(); });
+
+    const scrollBottom = () => { body.scrollTop = body.scrollHeight; };
+
+    const addBotMsg = (text) => {
+      const div = document.createElement('div');
+      div.className = 'wa-bubble wa-bubble-bot';
+      div.innerHTML = '<span class="wa-text">' + text + '</span><span class="wa-time">' + nowTime() + '</span>';
+      body.appendChild(div);
+      scrollBottom();
+    };
+    const addUserMsg = (text, emoji) => {
+      const div = document.createElement('div');
+      div.className = 'wa-bubble wa-bubble-user';
+      const content = emoji ? emoji + ' ' + text : text;
+      div.innerHTML = '<span class="wa-text">' + content + '</span><span class="wa-time">' + nowTime() + '</span>';
+      body.appendChild(div);
+      scrollBottom();
+    };
+    const showTyping = () => {
+      const t = document.createElement('div');
+      t.className = 'wa-typing wa-bubble';
+      t.id = 'wa-typing';
+      t.innerHTML = '<span></span><span></span><span></span>';
+      body.appendChild(t);
+      scrollBottom();
+    };
+    const hideTyping = () => {
+      const t = document.getElementById('wa-typing');
+      if (t) t.remove();
+    };
+
+    // ─── Views (footer content) ───
+    const findPerson = (id) => labels.persons.find((p) => p.id === id);
+
+    const viewPerson = () => {
+      quick.classList.remove('is-services');
+      let html = '<div class="wa-pills">';
+      labels.persons.forEach((p) => {
+        html += '<button type="button" class="wa-pill" data-person="' + p.id + '">';
+        html += '<span class="wa-pill-emoji">' + p.emoji + '</span><span>' + p.label + '</span>';
+        html += '</button>';
+      });
+      html += '</div>';
+      quick.innerHTML = html;
+      bindPersonBtns();
+    };
+
+    const viewServices = (personId) => {
+      const list = labels.services[personId];
+      quick.classList.add('is-services');
+      let html = '<div class="wa-pills">';
+      list.forEach((s, i) => {
+        html += '<button type="button" class="wa-pill" data-service-idx="' + i + '">' + s + '</button>';
+      });
+      html += '</div>';
+      html += '<button type="button" class="wa-back" data-back>↺ ' + labels.back + '</button>';
+      quick.innerHTML = html;
+      bindServiceBtns(list);
+    };
+
+    const viewWhen = () => {
+      quick.classList.remove('is-services');
+      let html = '<div class="wa-pills">';
+      labels.whens.forEach((w, i) => {
+        html += '<button type="button" class="wa-pill" data-when-idx="' + i + '">';
+        html += '<span class="wa-pill-emoji">' + w.emoji + '</span><span>' + w.label + '</span>';
+        html += '</button>';
+      });
+      html += '</div>';
+      html += '<button type="button" class="wa-back" data-back>↺ ' + labels.back + '</button>';
+      quick.innerHTML = html;
+      bindWhenBtns();
+    };
+
+    const viewFinal = () => {
+      quick.classList.remove('is-services');
+      const person = findPerson(state.person);
+      const msg = labels.prefillTemplate
+        .replace('{person}', person.label)
+        .replace('{service}', state.service)
+        .replace('{when}', state.when);
+      const url = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(msg);
+
+      let html = '<a href="' + url + '" target="_blank" rel="noopener" class="wa-cta-final">';
+      html += '<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>';
+      html += labels.cta + '</a>';
+      html += '<button type="button" class="wa-back" data-back>↺ ' + labels.back + '</button>';
+      quick.innerHTML = html;
+      quick.querySelector('[data-back]').addEventListener('click', (e) => { e.stopPropagation(); reset(); });
+
+      // Track la conversion quand l'utilisateur clique sur "Continuer sur WhatsApp"
+      const finalCta = quick.querySelector('.wa-cta-final');
+      if (finalCta) {
+        finalCta.addEventListener('click', () => {
+          trackEvent('whatsapp_conversion', {
+            event_category: 'conversion',
+            person: state.person,
+            service: state.service,
+            timing: state.when
+          });
+        });
+      }
+    };
+
+    // ─── Bindings ───
+    const bindPersonBtns = () => {
+      quick.querySelectorAll('[data-person]').forEach((b) => {
+        b.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const id = b.getAttribute('data-person');
+          state.person = id;
+          const p = findPerson(id);
+          addUserMsg(p.label, p.emoji);
+          quick.innerHTML = '';
+          showTyping();
+          setTimeout(() => {
+            hideTyping();
+            addBotMsg(labels.service);
+            viewServices(id);
+          }, 800);
+        });
+      });
+    };
+
+    const bindServiceBtns = (list) => {
+      quick.querySelectorAll('[data-service-idx]').forEach((b) => {
+        b.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const idx = parseInt(b.getAttribute('data-service-idx'), 10);
+          const service = list[idx];
+          state.service = service;
+          addUserMsg(service);
+          quick.innerHTML = '';
+          showTyping();
+          setTimeout(() => {
+            hideTyping();
+            addBotMsg(labels.when);
+            viewWhen();
+          }, 800);
+        });
+      });
+      const back = quick.querySelector('[data-back]');
+      if (back) back.addEventListener('click', (e) => { e.stopPropagation(); reset(); });
+    };
+
+    const bindWhenBtns = () => {
+      quick.querySelectorAll('[data-when-idx]').forEach((b) => {
+        b.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const idx = parseInt(b.getAttribute('data-when-idx'), 10);
+          const when = labels.whens[idx];
+          state.when = when.label;
+          addUserMsg(when.label, when.emoji);
+          quick.innerHTML = '';
+          showTyping();
+          setTimeout(() => {
+            hideTyping();
+            addBotMsg(labels.confirm);
+            viewFinal();
+          }, 800);
+        });
+      });
+      const back = quick.querySelector('[data-back]');
+      if (back) back.addEventListener('click', (e) => { e.stopPropagation(); reset(); });
+    };
+
+    const reset = () => {
+      // Tout supprimer sauf le greeting (premier bubble) + date
+      const toRemove = body.querySelectorAll('.wa-bubble:not(:first-of-type), .wa-typing');
+      toRemove.forEach((el) => el.remove());
+      state.person = null;
+      state.service = null;
+      state.when = null;
+      // Simuler un nouveau "typing" puis re-poser la question
+      quick.innerHTML = '';
+      setTimeout(() => {
+        showTyping();
+        setTimeout(() => {
+          hideTyping();
+          addBotMsg(labels.who);
+          viewPerson();
+        }, 900);
+      }, 300);
+    };
+
+    // ─── Open/close ───
+    const isClosed = () => {
+      try { return sessionStorage.getItem(STORAGE_KEY) === '1'; } catch { return false; }
+    };
+    const markClosed = () => {
+      try { sessionStorage.setItem(STORAGE_KEY, '1'); } catch {}
+    };
+    const showIntroSequence = () => {
+      if (state.introShown) return;
+      state.introShown = true;
+      // Après un petit délai, afficher un typing
+      setTimeout(() => {
+        showTyping();
+        setTimeout(() => {
+          hideTyping();
+          addBotMsg(labels.intro);
+          // Puis le 2ème message "who" + pills
+          setTimeout(() => {
+            showTyping();
+            setTimeout(() => {
+              hideTyping();
+              addBotMsg(labels.who);
+              viewPerson();
+            }, 1000);
+          }, 500);
+        }, 1100);
+      }, 600);
+    };
+
+    const hideTeaser = () => {
+      if (teaser) teaser.classList.remove('show');
+    };
+    const isTeaserClosed = () => {
+      try { return sessionStorage.getItem(STORAGE_TEASER) === '1'; } catch { return false; }
+    };
+    const markTeaserClosed = () => {
+      try { sessionStorage.setItem(STORAGE_TEASER, '1'); } catch {}
+    };
+
+    const trackEvent = (name, params) => {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', name, params || {});
+      }
+    };
+
+    const open = (source) => {
+      const wasOpen = wrap.getAttribute('data-state') === 'open';
+      wrap.setAttribute('data-state', 'open');
+      hideTeaser();
+      if (!wasOpen && source === 'manual') {
+        trackEvent('whatsapp_bubble_open', { event_category: 'engagement', source: source });
+      }
+      showIntroSequence();
+    };
+    const close = () => {
+      wrap.setAttribute('data-state', 'closed');
+      markClosed();
+    };
+
+    fab.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (wrap.getAttribute('data-state') === 'open') close();
+      else open('manual');
+    });
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      close();
+    });
+    document.addEventListener('click', (e) => {
+      if (wrap.getAttribute('data-state') !== 'open') return;
+      if (!wrap.contains(e.target)) close();
+    });
+
+    // Teaser click → ouvre le chat complet (= action manuelle)
+    if (teaser) {
+      teaser.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (e.target.closest('.wa-teaser-close')) return;
+        open('manual');
+      });
+    }
+    if (teaserClose) {
+      teaserClose.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hideTeaser();
+        markTeaserClosed();
+      });
+    }
+
+    // ─── Auto-behavior selon device ───
+    const isMobile = window.innerWidth < DESKTOP_MIN_WIDTH;
+
+    if (isMobile) {
+      // Mobile : affiche le teaser après 2.2s (pas d'ouverture auto du chat plein)
+      if (!isClosed() && !isTeaserClosed()) {
+        setTimeout(() => {
+          if (!isClosed() && !isTeaserClosed() && wrap.getAttribute('data-state') !== 'open') {
+            teaser.classList.add('show');
+          }
+        }, TEASER_DELAY);
+      }
+    } else {
+      // Desktop : ouverture auto du chat complet après 3s (pas de tracking)
+      if (!isClosed()) {
+        setTimeout(() => { if (!isClosed()) open('auto'); }, AUTO_OPEN_DELAY);
+      }
+    }
+  })();
+</script>
