@@ -15,9 +15,9 @@ const currentPath = pathname || Astro.url?.pathname || `/${locale}/`;
 const alternateUrls = getAlternateUrls(currentPath);
 
 const languages = [
-  { code: 'fr' as Locale, label: 'FR', href: alternateUrls.fr },
-  { code: 'en' as Locale, label: 'EN', href: alternateUrls.en },
-  { code: 'nl' as Locale, label: 'NL', href: alternateUrls.nl },
+  { code: 'fr' as Locale, label: 'FR', href: alternateUrls.fr, hreflang: 'fr-BE' },
+  { code: 'en' as Locale, label: 'EN', href: alternateUrls.en, hreflang: 'en' },
+  { code: 'nl' as Locale, label: 'NL', href: alternateUrls.nl, hreflang: 'nl-BE' },
 ];
 ---
 
@@ -28,7 +28,7 @@ const languages = [
       <a
         href={lang.href}
         class:list={['lang-link', { active: locale === lang.code }]}
-        hreflang={lang.code}
+        hreflang={lang.hreflang}
       >
         {lang.label}
       </a>

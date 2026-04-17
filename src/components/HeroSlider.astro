@@ -13,7 +13,17 @@ const cta = locale === 'nl' ? 'Boek nu' : locale === 'en' ? 'Book now' : 'Réser
 ---
 
 <section class="hero">
-  <div class="hero-bg" style="background-image: url('/images/hero-bg.jpg')"></div>
+  <img
+    src="/images/hero-bg.webp"
+    alt=""
+    aria-hidden="true"
+    class="hero-bg"
+    width="2048"
+    height="1365"
+    fetchpriority="high"
+    loading="eager"
+    decoding="async"
+  />
   <div class="hero-overlay"></div>
   <div class="hero-box">
     <p class="hero-tagline">{tagline}</p>
@@ -34,8 +44,10 @@ const cta = locale === 'nl' ? 'Boek nu' : locale === 'en' ? 'Book now' : 'Réser
   .hero-bg {
     position: absolute;
     inset: 0;
-    background-size: cover;
-    background-position: center center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
     transform: scale(1);
     animation: heroZoom 20s ease-in-out infinite alternate;
   }

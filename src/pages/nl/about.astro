@@ -61,6 +61,41 @@ import Layout from '../../layouts/Layout.astro';
       <div class="hours-cta-right" style="background-image: url('/images/photo-11.jpeg')"></div>
     </div>
   </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://tonyandson.be/#tony-campisi",
+        "name": "Tony Campisi",
+        "jobTitle": "Oprichter",
+        "nationality": "IT",
+        "worksFor": { "@id": "https://tonyandson.be/#business" },
+        "foundingDate": "1970"
+      },
+      {
+        "@type": "Person",
+        "@id": "https://tonyandson.be/#salvatore-campisi",
+        "name": "Salvatore Campisi",
+        "jobTitle": "Haarkleurspecialist, Directeur",
+        "parent": { "@id": "https://tonyandson.be/#tony-campisi" },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Toni&Guy",
+          "address": "London, United Kingdom"
+        },
+        "worksFor": { "@id": "https://tonyandson.be/#business" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tonyandson.be/nl/" },
+          { "@type": "ListItem", "position": 2, "name": "Over ons", "item": "https://tonyandson.be/nl/about/" }
+        ]
+      }
+    ]
+  })} />
 </Layout>
 
 <style>
