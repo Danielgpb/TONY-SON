@@ -38,7 +38,7 @@
   "testimonials": {
     "sectionTitle": "Wat onze klanten zeggen",
     "rating": "4.6/5 op Google",
-    "reviewCount": "360 beoordelingen"
+    "reviewCount": "370 beoordelingen"
   },
   "brands": {
     "sectionTitle": "Onze Partnermerken"
@@ -51,6 +51,8 @@
     "hours": "Openingstijden",
     "tueFri": "Dinsdag - Vrijdag",
     "sat": "Zaterdag",
+    "sun": "Zondag",
+    "mon": "Maandag",
     "sunMon": "Zondag - Maandag",
     "closed": "Gesloten",
     "formName": "Naam",

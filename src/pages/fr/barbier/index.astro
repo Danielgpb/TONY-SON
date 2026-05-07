@@ -8,20 +8,14 @@ const categorySchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Barbier",
-  "provider": {
-    "@type": "HairSalon",
-    "name": "Tony&Son",
-    "@id": "https://tonyandson.be/#business",
-    "telephone": "02 230 55 37",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rue Bonneels 27",
-      "addressLocality": "Saint-Josse-ten-Noode",
-      "postalCode": "1210",
-      "addressCountry": "BE"
-    }
-  },
-  "areaServed": "Bruxelles"
+  "serviceType": "Barber",
+  "provider": { "@id": "https://tonyandson.be/#business" },
+  "areaServed": [
+    { "@type": "City", "name": "Saint-Josse-ten-Noode" },
+    { "@type": "City", "name": "Schaerbeek" },
+    { "@type": "City", "name": "Bruxelles" }
+  ],
+  "url": "https://tonyandson.be/fr/barbier/"
 };
 ---
 
@@ -37,7 +31,7 @@ const categorySchema = {
   <section class="category-intro">
     <div class="container">
       <div class="intro-grid">
-        <p class="intro-text">Tony&Son, votre <a href="/fr/">barbier à Saint-Josse-ten-Noode</a> près du quartier Schuman à Bruxelles. Nos barbiers expérimentés maîtrisent l'art de la taille de barbe, du rasage traditionnel et des soins masculins depuis 1970. Toutes les textures de pilosité — européenne, maghrébine, afro, asiatique. Accessible depuis Schaerbeek, Etterbeek, le quartier européen et tout Bruxelles.</p>
+        <p class="intro-text">Tony&Son, votre barbier à Saint-Josse-ten-Noode près du quartier Schuman à Bruxelles. Nos barbiers expérimentés maîtrisent l'art de la <a href="/fr/services/taille-barbe-bruxelles/">taille de barbe</a>, du rasage traditionnel et des soins masculins depuis 1970. Toutes les textures de pilosité — européenne, maghrébine, afro, asiatique. Accessible depuis Schaerbeek, Etterbeek, le quartier européen et tout Bruxelles.</p>
         <img src="/images/barbier-1.jpg" alt="Barbier Tony&Son à Bruxelles — taille de barbe et rasage" class="intro-img" width="1200" height="1600" loading="lazy" />
       </div>
     </div>

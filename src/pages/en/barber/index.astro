@@ -8,20 +8,14 @@ const categorySchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Barber",
-  "provider": {
-    "@type": "HairSalon",
-    "name": "Tony&Son",
-    "@id": "https://tonyandson.be/#business",
-    "telephone": "02 230 55 37",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rue Bonneels 27",
-      "addressLocality": "Saint-Josse-ten-Noode",
-      "postalCode": "1210",
-      "addressCountry": "BE"
-    }
-  },
-  "areaServed": "Brussels"
+  "serviceType": "Barber",
+  "provider": { "@id": "https://tonyandson.be/#business" },
+  "areaServed": [
+    { "@type": "City", "name": "Saint-Josse-ten-Noode" },
+    { "@type": "City", "name": "Schaerbeek" },
+    { "@type": "City", "name": "Brussels" }
+  ],
+  "url": "https://tonyandson.be/en/barber/"
 };
 ---
 
@@ -37,7 +31,7 @@ const categorySchema = {
   <section class="category-intro">
     <div class="container">
       <div class="intro-grid">
-        <p class="intro-text">Tony&Son, your <a href="/en/">barber in Saint-Josse-ten-Noode</a> near the Schuman quarter in Brussels. Our experienced barbers have mastered the art of beard trimming, traditional shaving and men's grooming since 1970. All hair textures — European, North African, Afro, Asian. Service in French and English. Accessible from Schaerbeek, Etterbeek, the European quarter and all of Brussels.</p>
+        <p class="intro-text">Tony&Son, your barber in Saint-Josse-ten-Noode near the Schuman quarter in Brussels. Our experienced barbers have mastered the art of <a href="/en/services/beard-trim-brussels/">beard trimming</a>, traditional shaving and men's grooming since 1970. All hair textures — European, North African, Afro, Asian. Service in French and English. Accessible from Schaerbeek, Etterbeek, the European quarter and all of Brussels.</p>
         <img src="/images/barbier-1.jpg" alt="Barber Tony&Son Brussels — beard trim and shaving" class="intro-img" loading="lazy" />
       </div>
     </div>
@@ -66,6 +60,47 @@ const categorySchema = {
         <p>To cover first grey hairs or refresh a dull shade, our <a href="/en/services/hair-coloring-brussels/">hair colouring</a> adapts to men's hair texture — discreet tone-on-tone or full colour. From €40.</p>
       </div>
 
+      <div class="service-editorial-block">
+        <h2>Men's haircut — not just a clipper run</h2>
+        <p>Let's be honest: finding a <a href="/en/services/mens-haircut-brussels/">good men's haircut in Brussels</a> isn't always easy. Plenty of guys end up at a barber who runs the clippers for ten minutes, hands you the mirror and says "there you go". With us, the haircut starts with a conversation. We look at the shape of your head, the thickness of your hair, and most importantly: what you actually want. A high or low fade, a soft transition, length on top or not — we don't assume, we ask.</p>
+        <p>And for the Schuman regulars who drop in between noon and two: yes, we can deliver a clean cut in 25 minutes. But if you want to take your time, that works too. From €25, shampoo included.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEO Editorial — natural tone -->
+  <section class="seo-content">
+    <div class="container">
+      <div class="seo-intro">
+        <h2>Finding a good barber in Brussels — the real problem</h2>
+        <p>If you've ever typed "good barber Brussels" on Google or Reddit, you know it's a topic that comes up over and over. Forums are full of guys reporting they walked out of a barber shop with an asymmetric fade or a beard contour that doesn't even follow the jawline. The worst part? When you've paid €30 or €40 and the result looks nothing like the photo you brought.</p>
+        <p>We're not going to promise we're the best barbers in Belgium — that's for you to judge. What we can tell you is that we've been here since 1970, our barbers work on every hair texture (European, North African, Afro, Asian), and if something isn't right, you say so before you leave. We'd rather redo a contour than let you walk out with something you don't love.</p>
+      </div>
+
+      <div class="seo-grid">
+        <div class="seo-block">
+          <h3>The fade question</h3>
+          <p>The fade is probably the most-requested cut in Brussels right now. Skin fade, mid fade, taper — there's a real difference between the three, and not every barber masters all three on every texture. A skin fade on fine hair isn't the same technique as on tightly coiled hair. With us, the barber adjusts the clipper and the gesture to what's under his fingers, not to a YouTube tutorial.</p>
+          <p>Free tip: if your barber starts a fade without asking where you want the transition to begin, switch barbers. Seriously.</p>
+        </div>
+        <div class="seo-block">
+          <h3>Beards and ingrown hairs — nobody talks about it</h3>
+          <p>Another topic we see often on forums: ingrown hairs after a shave. It's a real issue, especially on sensitive skin and curly or coiled hair. The main cause? Too close a shave with a dirty or wrongly-angled blade, which cuts the hair below the skin surface.</p>
+          <p>At Tony&Son we use a fresh disposable blade for every client — not negotiable. And if your skin reacts badly to a classic shave, we say so up front: we'll opt for a very-short clipper finish rather than the cutthroat. The goal is for you to be happy two weeks later, not just when you leave the chair.</p>
+        </div>
+      </div>
+
+      <div class="seo-grid">
+        <div class="seo-block">
+          <h3>Don't speak French? No stress</h3>
+          <p>Brussels is a mix. In the Schuman quarter, you have expats from 27 countries working at the Commission. In Schaerbeek, families from Turkey, Morocco, Congo. At Tony&Son we speak French, English, Italian and Spanish. And honestly, for a haircut, a photo on your phone speaks louder than a thousand words in any language.</p>
+        </div>
+        <div class="seo-block">
+          <h3>By appointment or walk-in?</h3>
+          <p>We work by appointment via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> — that way you know exactly when you're coming and you don't sit on a chair for 45 minutes. But if you walk past the salon on Rue Bonneels and there's a free slot, we won't turn you away. Wednesday lunchtimes are busiest (EU-institution lunch break), so book ahead if that's your slot.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -108,6 +143,16 @@ const categorySchema = {
   .service-editorial-block h2 { font-size: 24px; margin-bottom: 15px; }
   .service-editorial-block p { font-size: 16px; line-height: 1.8; color: var(--color-text); }
   .service-editorial-block p a { color: var(--color-gold); font-weight: 500; }
+  .seo-content { padding: 80px 0; background: var(--color-cream); }
+  .seo-intro { max-width: 900px; margin: 0 auto 50px; }
+  .seo-intro h2 { font-size: 28px; margin-bottom: 25px; text-align: center; }
+  .seo-intro p { font-size: 17px; line-height: 1.8; color: var(--color-text); margin-bottom: 20px; }
+  .seo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 40px; }
+  .seo-block h3 { font-size: 20px; margin-bottom: 15px; }
+  .seo-block p { font-size: 16px; line-height: 1.8; color: var(--color-text); margin-bottom: 15px; }
+  .seo-block a { color: var(--color-gold); font-weight: 600; }
+  @media (max-width: 768px) { .seo-grid { grid-template-columns: 1fr; gap: 40px; } }
+
   .category-cta { padding: 80px 0; background: var(--color-black); }
   .category-cta h2 { color: var(--color-white); margin-bottom: 10px; }
   .category-cta p { color: var(--color-text-light); font-size: 16px; margin-bottom: 30px; text-transform: none; }

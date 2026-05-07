@@ -13,7 +13,8 @@ const rightTitle = locale === 'nl' ? 'Openingstijden' : locale === 'en' ? 'Openi
 const address = "Rue Bonneels 27, 1210 Saint-Josse-ten-Noode";
 const tueFri = locale === 'nl' ? 'Dinsdag - Vrijdag' : locale === 'en' ? 'Tuesday - Friday' : 'Mardi - Vendredi';
 const sat = locale === 'nl' ? 'Zaterdag' : locale === 'en' ? 'Saturday' : 'Samedi';
-const sunMon = locale === 'nl' ? 'Zondag - Maandag' : locale === 'en' ? 'Sunday - Monday' : 'Dimanche - Lundi';
+const sun = locale === 'nl' ? 'Zondag' : locale === 'en' ? 'Sunday' : 'Dimanche';
+const mon = locale === 'nl' ? 'Maandag' : locale === 'en' ? 'Monday' : 'Lundi';
 const closed = locale === 'nl' ? 'Gesloten' : locale === 'en' ? 'Closed' : 'Fermé';
 const bookCta = locale === 'nl' ? 'Boek uw bezoek' : locale === 'en' ? 'Book your visit' : 'Réservez votre visite';
 ---
@@ -41,7 +42,8 @@ const bookCta = locale === 'nl' ? 'Boek uw bezoek' : locale === 'en' ? 'Book you
         <div class="visit-hours">
           <p class="hours-line">{tueFri} — 09:00 - 19:00</p>
           <p class="hours-line">{sat} — 09:00 - 19:00</p>
-          <p class="hours-line">{sunMon} — {closed}</p>
+          <p class="hours-line">{sun} — 10:00 - 18:00</p>
+          <p class="hours-line">{mon} — {closed}</p>
         </div>
         <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="btn btn-white" style="margin-top:50px;">{bookCta}</a>
       </div>

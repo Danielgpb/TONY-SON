@@ -49,7 +49,7 @@ const schemaGraph = {
       "mainEntity": service.faq.map(f => ({
         "@type": "Question",
         "name": f.question,
-        "acceptedAnswer": { "@type": "Answer", "text": f.answer }
+        "acceptedAnswer": { "@type": "Answer", "text": f.answer.replace(/<[^>]+>/g, '') }
       }))
     }
   ]

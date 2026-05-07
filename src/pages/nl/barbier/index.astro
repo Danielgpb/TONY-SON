@@ -8,8 +8,14 @@ const categorySchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Barbier",
-  "provider": { "@type": "HairSalon", "name": "Tony&Son", "@id": "https://tonyandson.be/#business", "telephone": "02 230 55 37", "address": { "@type": "PostalAddress", "streetAddress": "Rue Bonneels 27", "addressLocality": "Sint-Joost-ten-Node", "postalCode": "1210", "addressCountry": "BE" } },
-  "areaServed": "Brussel"
+  "serviceType": "Barber",
+  "provider": { "@id": "https://tonyandson.be/#business" },
+  "areaServed": [
+    { "@type": "City", "name": "Sint-Joost-ten-Node" },
+    { "@type": "City", "name": "Schaarbeek" },
+    { "@type": "City", "name": "Brussel" }
+  ],
+  "url": "https://tonyandson.be/nl/barbier/"
 };
 ---
 
@@ -25,7 +31,7 @@ const categorySchema = {
   <section class="category-intro">
     <div class="container">
       <div class="intro-grid">
-        <p class="intro-text">Tony&Son, uw <a href="/nl/">barbier in Sint-Joost-ten-Node</a> nabij de Schumanwijk in Brussel. Onze ervaren barbiers beheersen de kunst van baardtrimmen, traditioneel scheren en mannenverzorging sinds 1970. Alle haartexturen — Europees, Maghrebijns, Afro, Aziatisch. Bereikbaar vanuit Schaarbeek, Etterbeek, de Europese wijk en heel Brussel.</p>
+        <p class="intro-text">Tony&Son, uw barbier in Sint-Joost-ten-Node nabij de Schumanwijk in Brussel. Onze ervaren barbiers beheersen de kunst van <a href="/nl/services/baardtrimmen-brussel/">baardtrimmen</a>, traditioneel scheren en mannenverzorging sinds 1970. Alle haartexturen — Europees, Maghrebijns, Afro, Aziatisch. Bereikbaar vanuit Schaarbeek, Etterbeek, de Europese wijk en heel Brussel.</p>
         <img src="/images/barbier-1.jpg" alt="Barbier Tony&Son Brussel — baardtrimmen en scheren" class="intro-img" loading="lazy" />
       </div>
     </div>
@@ -47,7 +53,48 @@ const categorySchema = {
       </div>
       <div class="service-editorial-block">
         <h2>Haarkleuring voor mannen</h2>
-        <p>Om eerste grijze haren te bedekken of een doffe kleur op te frissen, passen onze <a href="/nl/services/haarkleuring-brussel/">haarkleuringen</a> zich aan de mannelijke haartextuur aan. Vanaf 40 €.</p>
+        <p>Om eerste grijze haren te bedekken of een doffe kleur op te frissen, passen onze <a href="/nl/services/haarkleuring-brussel/">haarkleuringen</a> zich aan de mannelijke haartextuur aan — discrete toon-op-toon of volledige kleuring. Vanaf 40 €.</p>
+      </div>
+
+      <div class="service-editorial-block">
+        <h2>Herenkapsel — niet zomaar een tondeusebeurt</h2>
+        <p>Eerlijk gezegd: een goede <a href="/nl/services/herenkapsel-brussel/">herenkapper in Brussel vinden</a> is niet altijd makkelijk. Veel mannen belanden bij een barbier die in 10 minuten met de tondeuse over hun hoofd gaat, een spiegel laat zien en zegt "klaar". Bij ons begint het kapsel met een gesprek. We kijken naar de vorm van uw schedel, de dikte van uw haar, en vooral: wat u écht wilt. Een hoge of lage fade, een zachte overgang, lengte op de bovenkant houden of niet — we veronderstellen niets, we vragen het.</p>
+        <p>En voor de vaste klanten van de Schumanwijk die tussen twaalf en twee langskomen: ja, we kunnen een nette coupe doen in 25 minuten. Maar als u de tijd wilt nemen, kan dat ook. Vanaf 25 €, shampoo inbegrepen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO Editorial — natuurlijke toon -->
+  <section class="seo-content">
+    <div class="container">
+      <div class="seo-intro">
+        <h2>Een goede barbier in Brussel vinden — het echte probleem</h2>
+        <p>Als u ooit "goede barbier Brussel" op Google of Reddit heeft getypt, weet u dat het een onderwerp is dat steeds terugkomt. De forums staan vol met mannen die vertellen hoe ze met een asymmetrische fade of een baardcontour die niet eens de kaaklijn volgt uit een barbershop kwamen. Het ergste? Wanneer u 30 of 40 euro betaalt en het resultaat in niets lijkt op de foto die u had laten zien.</p>
+        <p>We gaan u niet beloven dat we de beste barbiers van België zijn — dat is aan u om te beoordelen. Wat we wel kunnen zeggen is dat we hier sinds 1970 zijn, dat onze barbiers werken op alle haartexturen (Europees, Maghrebijns, Afro, Aziatisch), en dat als iets u niet bevalt, u het zegt voor u vertrekt. We doen liever een contour over dan u te laten weggaan met iets dat niet past.</p>
+      </div>
+
+      <div class="seo-grid">
+        <div class="seo-block">
+          <h3>De fade-vraag</h3>
+          <p>De fade is waarschijnlijk de meest gevraagde coupe in Brussel op dit moment. Skin fade, mid fade, taper — er is een echt verschil tussen de drie, en niet alle barbiers beheersen ze op alle texturen. Een skin fade op fijn haar is niet dezelfde techniek als op kroezelig haar. Bij ons past de barbier zijn tondeuse en zijn gebaar aan wat hij onder zijn vingers heeft, niet aan een YouTube-tutorial.</p>
+          <p>Klein gratis advies: als uw barbier een fade begint zonder u te vragen waar de overgang moet beginnen, verander van barbier. Echt waar.</p>
+        </div>
+        <div class="seo-block">
+          <h3>Baard en ingegroeide haren — daar praat niemand over</h3>
+          <p>Een ander onderwerp dat we vaak op forums zien: ingegroeide haren na een scheerbeurt. Het is een echt probleem, vooral bij gevoelige huid en gekruld of kroezelig haar. De hoofdoorzaak? Te strak scheren met een vuil of slecht georiënteerd mes, dat het haar onder de huidoppervlakte afsnijdt.</p>
+          <p>Bij Tony&Son gebruiken we voor elke klant een nieuw wegwerpmesje — daar wordt niet over onderhandeld. En als uw huid slecht reageert op klassiek scheren, zeggen we het eerlijk: we kiezen voor een zeer korte tondeuse-afwerking in plaats van het open scheermes. Het doel is dat u twee weken later tevreden bent, niet alleen op het moment dat u de stoel verlaat.</p>
+        </div>
+      </div>
+
+      <div class="seo-grid">
+        <div class="seo-block">
+          <h3>Spreekt u geen Nederlands? No stress</h3>
+          <p>Brussel is een mengeling. In de Schumanwijk werken expats uit 27 landen voor de Commissie. In Schaarbeek wonen Turkse, Marokkaanse, Congolese gezinnen. Bij Tony&Son spreken we Nederlands, Frans, Engels, Italiaans en Spaans. En eerlijk: voor een kapsel zegt een foto op uw telefoon meer dan duizend woorden in welke taal dan ook.</p>
+        </div>
+        <div class="seo-block">
+          <h3>Met of zonder afspraak?</h3>
+          <p>We werken op afspraak via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> — zo weet u precies wanneer u langskomt en wacht u niet 45 minuten op een stoel. Maar als u langs de salon op de Bonneelsstraat loopt en er is een vrij moment, weigeren we u niet. Woensdagmiddag is het drukst (lunchpauze van de Europese instellingen), dus reserveer op tijd als u dat moment wilt.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -87,6 +134,16 @@ const categorySchema = {
   .service-editorial-block h2 { font-size: 24px; margin-bottom: 15px; }
   .service-editorial-block p { font-size: 16px; line-height: 1.8; color: var(--color-text); }
   .service-editorial-block p a { color: var(--color-gold); font-weight: 500; }
+  .seo-content { padding: 80px 0; background: var(--color-cream); }
+  .seo-intro { max-width: 900px; margin: 0 auto 50px; }
+  .seo-intro h2 { font-size: 28px; margin-bottom: 25px; text-align: center; }
+  .seo-intro p { font-size: 17px; line-height: 1.8; color: var(--color-text); margin-bottom: 20px; }
+  .seo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-bottom: 40px; }
+  .seo-block h3 { font-size: 20px; margin-bottom: 15px; }
+  .seo-block p { font-size: 16px; line-height: 1.8; color: var(--color-text); margin-bottom: 15px; }
+  .seo-block a { color: var(--color-gold); font-weight: 600; }
+  @media (max-width: 768px) { .seo-grid { grid-template-columns: 1fr; gap: 40px; } }
+
   .category-cta { padding: 80px 0; background: var(--color-black); }
   .category-cta h2 { color: var(--color-white); margin-bottom: 10px; }
   .category-cta p { color: var(--color-text-light); font-size: 16px; margin-bottom: 30px; text-transform: none; }

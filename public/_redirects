@@ -1,2 +1,13 @@
-# Redirect racine vers la version française (301 permanent)
+# Redirection racine avec détection de la langue du navigateur
+# Netlify reads Accept-Language and dispatches accordingly. Default = FR.
+/ /nl/ 301! Language=nl
+/ /en/ 301! Language=en
 / /fr/ 301!
+
+# Alias common sitemap path
+/sitemap.xml /sitemap-index.xml 301
+
+# Force-collapse the rare 3-hop case for the legacy www host on the root URL.
+# (HTTP→HTTPS upgrade remains; the www→apex+language hop is handled by Netlify's
+# domain alias. This rule is a belt-and-braces defensive entry.)
+https://www.tonyandson.be/ https://tonyandson.be/fr/ 301!

@@ -38,7 +38,7 @@
   "testimonials": {
     "sectionTitle": "Ce que disent nos clients",
     "rating": "4.6/5 sur Google",
-    "reviewCount": "360 avis"
+    "reviewCount": "370 avis"
   },
   "brands": {
     "sectionTitle": "Nos Marques Partenaires"
@@ -51,6 +51,8 @@
     "hours": "Horaires d'ouverture",
     "tueFri": "Mardi - Vendredi",
     "sat": "Samedi",
+    "sun": "Dimanche",
+    "mon": "Lundi",
     "sunMon": "Dimanche - Lundi",
     "closed": "Fermé",
     "formName": "Nom",
