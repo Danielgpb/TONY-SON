@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /wp-admin/
+Disallow: /wp-login.php
 
 Sitemap: https://tonyandson.be/sitemap-index.xml
