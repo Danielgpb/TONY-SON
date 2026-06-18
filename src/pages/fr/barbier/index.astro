@@ -1,8 +1,19 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { getServicesByCategory } from '../../../data/services';
 
 const seoTitle = "Barbier Bruxelles – Taille de Barbe & Soins Homme | Tony&Son";
 const seoDesc = "Barbier à Bruxelles : taille de barbe, rasage traditionnel, dégradé, épilation cire, coupes enfants. Tony&Son barber shop quartier Schuman depuis 1970.";
+
+const offerCatalog = {
+  "@type": "OfferCatalog",
+  "name": "Barbier à Bruxelles — Tony&Son",
+  "itemListElement": getServicesByCategory('barbier').map(s => ({
+    "@type": "Offer",
+    "itemOffered": { "@type": "Service", "name": s.name, "url": `https://tonyandson.be/fr/services/${s.slug}/` },
+    ...(s.price && /\d/.test(s.price) ? { "price": s.price.replace(/[^0-9]/g, ''), "priceCurrency": "EUR" } : {})
+  }))
+};
 
 const categorySchema = {
   "@context": "https://schema.org",
@@ -15,7 +26,8 @@ const categorySchema = {
     { "@type": "City", "name": "Schaerbeek" },
     { "@type": "City", "name": "Bruxelles" }
   ],
-  "url": "https://tonyandson.be/fr/barbier/"
+  "url": "https://tonyandson.be/fr/barbier/",
+  "hasOfferCatalog": offerCatalog
 };
 ---
 

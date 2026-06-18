@@ -1,8 +1,19 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { getServicesByCategory } from '../../../data/services';
 
 const seoTitle = "Coiffure Bruxelles – Salon Tony&Son | Soins & Coupes";
 const seoDesc = "Salon de coiffure à Bruxelles : colorations, balayage, mèches, brushing, lissage, kératine, extensions, permanentes, coupes enfants. Tony&Son depuis 1970.";
+
+const offerCatalog = {
+  "@type": "OfferCatalog",
+  "name": "Coiffure à Bruxelles — Tony&Son",
+  "itemListElement": getServicesByCategory('coiffure').map(s => ({
+    "@type": "Offer",
+    "itemOffered": { "@type": "Service", "name": s.name, "url": `https://tonyandson.be/fr/services/${s.slug}/` },
+    ...(s.price && /\d/.test(s.price) ? { "price": s.price.replace(/[^0-9]/g, ''), "priceCurrency": "EUR" } : {})
+  }))
+};
 
 const categorySchema = {
   "@context": "https://schema.org",
@@ -21,7 +32,8 @@ const categorySchema = {
       "addressCountry": "BE"
     }
   },
-  "areaServed": "Bruxelles"
+  "areaServed": "Bruxelles",
+  "hasOfferCatalog": offerCatalog
 };
 ---
 

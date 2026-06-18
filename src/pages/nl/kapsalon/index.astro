@@ -1,15 +1,27 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { getNlServicesByCategory } from '../../../data/services-nl';
 
 const seoTitle = "Kapsalon Brussel – Kleuringen & Verzorging | Tony&Son";
 const seoDesc = "Kapsalon in Brussel: kleuringen, balayage, highlights, föhn, stijlen, keratine, extensions, permanenten, kinderkapsels. Tony&Son sinds 1970.";
+
+const offerCatalog = {
+  "@type": "OfferCatalog",
+  "name": "Kapsalon in Brussel — Tony&Son",
+  "itemListElement": getNlServicesByCategory('coiffure').map(s => ({
+    "@type": "Offer",
+    "itemOffered": { "@type": "Service", "name": s.name, "url": `https://tonyandson.be/nl/services/${s.slug}/` },
+    ...(s.price && /\d/.test(s.price) ? { "price": s.price.replace(/[^0-9]/g, ''), "priceCurrency": "EUR" } : {})
+  }))
+};
 
 const categorySchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": "Kapsalon",
   "provider": { "@type": "HairSalon", "name": "Tony&Son", "@id": "https://tonyandson.be/#business", "telephone": "02 230 55 37", "address": { "@type": "PostalAddress", "streetAddress": "Rue Bonneels 27", "addressLocality": "Sint-Joost-ten-Node", "postalCode": "1210", "addressCountry": "BE" } },
-  "areaServed": "Brussel"
+  "areaServed": "Brussel",
+  "hasOfferCatalog": offerCatalog
 };
 ---
 

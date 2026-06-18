@@ -1,8 +1,19 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { getEnServicesByCategory } from '../../../data/services-en';
 
 const seoTitle = "Hairdresser Brussels – Tony&Son | Colour, Care & Cuts";
 const seoDesc = "Hair salon in Brussels: colouring, balayage, highlights, blowouts, straightening, keratin, extensions, perms, kids haircuts. Tony&Son since 1970.";
+
+const offerCatalog = {
+  "@type": "OfferCatalog",
+  "name": "Hairdresser in Brussels — Tony&Son",
+  "itemListElement": getEnServicesByCategory('coiffure').map(s => ({
+    "@type": "Offer",
+    "itemOffered": { "@type": "Service", "name": s.name, "url": `https://tonyandson.be/en/services/${s.slug}/` },
+    ...(s.price && /\d/.test(s.price) ? { "price": s.price.replace(/[^0-9]/g, ''), "priceCurrency": "EUR" } : {})
+  }))
+};
 
 const categorySchema = {
   "@context": "https://schema.org",
@@ -21,7 +32,8 @@ const categorySchema = {
       "addressCountry": "BE"
     }
   },
-  "areaServed": "Brussels"
+  "areaServed": "Brussels",
+  "hasOfferCatalog": offerCatalog
 };
 ---
 

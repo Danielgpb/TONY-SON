@@ -1,8 +1,19 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import { getNlServicesByCategory } from '../../../data/services-nl';
 
 const seoTitle = "Barbier Brussel – Baardtrimmen & Mannenverzorging | Tony&Son";
 const seoDesc = "Barbier in Brussel: baardtrimmen, traditioneel scheren, fades, ontharing, kinderkapsels. Tony&Son barbershop in de Schuman wijk sinds 1970.";
+
+const offerCatalog = {
+  "@type": "OfferCatalog",
+  "name": "Barbier in Brussel — Tony&Son",
+  "itemListElement": getNlServicesByCategory('barbier').map(s => ({
+    "@type": "Offer",
+    "itemOffered": { "@type": "Service", "name": s.name, "url": `https://tonyandson.be/nl/services/${s.slug}/` },
+    ...(s.price && /\d/.test(s.price) ? { "price": s.price.replace(/[^0-9]/g, ''), "priceCurrency": "EUR" } : {})
+  }))
+};
 
 const categorySchema = {
   "@context": "https://schema.org",
@@ -15,7 +26,8 @@ const categorySchema = {
     { "@type": "City", "name": "Schaarbeek" },
     { "@type": "City", "name": "Brussel" }
   ],
-  "url": "https://tonyandson.be/nl/barbier/"
+  "url": "https://tonyandson.be/nl/barbier/",
+  "hasOfferCatalog": offerCatalog
 };
 ---
 

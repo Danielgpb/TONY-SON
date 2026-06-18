@@ -39,7 +39,7 @@ const schemaGraph = {
         { "@type": "City", "name": "Etterbeek" }
       ],
       "description": service.description,
-      ...(service.price ? { "offers": { "@type": "Offer", "price": service.price.replace(/[^0-9]/g, ''), "priceCurrency": "EUR" } } : {})
+      ...(service.price && /\d/.test(service.price) ? { "offers": { "@type": "Offer", "price": service.price.replace(/[^0-9]/g, ''), "priceCurrency": "EUR" } } : {})
     },
     {
       "@type": "FAQPage",
