@@ -44,6 +44,7 @@ const jsonLd = {
       "email": "infotonyson@gmail.com",
       "vatID": "BE0717769217",
       "foundingDate": "1970",
+      "founder": { "@id": `${siteUrl}/#tony-campisi` },
       "description": defaultDescriptions[locale],
       "slogan": locale === 'en' ? "Tony&Son — The best hair salon in Brussels since 1970" : locale === 'nl' ? "Tony&Son — De beste kapsalon in Brussel sinds 1970" : "Tony&Son — Le meilleur salon de coiffure à Bruxelles depuis 1970",
       "knowsAbout": ["coiffure", "salon de coiffure", "barbier", "balayage", "coloration", "lissage", "extensions cheveux", "kératine", "coupe homme", "coupe femme", "coupe enfant"],
@@ -57,8 +58,8 @@ const jsonLd = {
       "logo": {
         "@type": "ImageObject",
         "url": `${siteUrl}/images/logo.png`,
-        "width": 1170,
-        "height": 2532
+        "width": 111,
+        "height": 240
       },
       "priceRange": "€€",
       "currenciesAccepted": "EUR",
@@ -79,7 +80,7 @@ const jsonLd = {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.6",
-        "reviewCount": "407",
+        "reviewCount": "459",
         "bestRating": "5",
         "worstRating": "1"
       },
@@ -101,6 +102,12 @@ const jsonLd = {
           "dayOfWeek": "Sunday",
           "opens": "10:00",
           "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Monday",
+          "opens": "00:00",
+          "closes": "00:00"
         }
       ],
       "hasMap": "https://www.google.com/maps?cid=6286608572742609363",
@@ -109,7 +116,7 @@ const jsonLd = {
         "https://www.facebook.com/tonysoncoiffure/",
         "https://www.instagram.com/tonysonhairstylist/",
         "https://www.tiktok.com/@tonysonhairdresser",
-        "https://widget.treatwell.be/fr/salon/tony-and-son/"
+        "https://widget.treatwell.be/fr/salon/tony-son/"
       ],
       "areaServed": [
         { "@type": "City", "name": "Saint-Josse-ten-Noode" },
@@ -220,7 +227,14 @@ const jsonLd = {
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" /></noscript>
 
   {page === 'home' && (
-    <link rel="preload" as="image" href="/images/hero-bg.webp" fetchpriority="high" />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/hero-bg.webp"
+      imagesrcset="/images/hero-bg-828.webp 828w, /images/hero-bg-1280.webp 1280w, /images/hero-bg.webp 2048w"
+      imagesizes="100vw"
+      fetchpriority="high"
+    />
   )}
 
   <!-- Favicon -->

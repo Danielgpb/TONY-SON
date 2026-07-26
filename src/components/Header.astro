@@ -14,7 +14,7 @@ const { locale, currentPage = '', transparent = false } = Astro.props;
 <header class:list={['header', { transparent }]} id="site-header">
   <div class="header-inner container">
     <a href={`/${locale}/`} class="logo">
-      <img src="/images/logo.png" alt="Tony&Son — Salon de coiffure Bruxelles" width="1170" height="2532" />
+      <img src="/images/logo.png" alt="Tony&Son — Salon de coiffure Bruxelles" width="111" height="240" />
     </a>
 
     <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
@@ -37,7 +37,7 @@ const { locale, currentPage = '', transparent = false } = Astro.props;
 
     <div class="header-right">
       <LanguageSwitcher locale={locale} currentPage={currentPage} />
-      <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="header-cta">
+      <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener" class="header-cta">
         {locale === 'nl' ? 'BOEK NU' : locale === 'en' ? 'BOOK NOW' : 'RÉSERVEZ MAINTENANT'}
       </a>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
@@ -78,7 +78,7 @@ const { locale, currentPage = '', transparent = false } = Astro.props;
     <p>{locale === 'nl' ? 'Zaterdag' : locale === 'en' ? 'Saturday' : 'Samedi'} / 09:00 - 19:00</p>
     <p>{locale === 'nl' ? 'Zondag' : locale === 'en' ? 'Sunday' : 'Dimanche'} / 10:00 - 18:00</p>
     <p>{locale === 'nl' ? 'Maandag' : locale === 'en' ? 'Monday' : 'Lundi'} / {locale === 'nl' ? 'Gesloten' : locale === 'en' ? 'Closed' : 'Fermé'}</p>
-    <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="side-cta-btn">
+    <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener" class="side-cta-btn">
       {locale === 'nl' ? 'BOEK UW BEZOEK' : locale === 'en' ? 'BOOK YOUR VISIT' : 'RÉSERVEZ VOTRE VISITE'}
     </a>
   </div>

@@ -49,7 +49,7 @@ We always start by looking. Your natural base, texture, previous treatments. We 
 
 Full color: from 40 €. Root touch-ups, tone-on-tone, plant-based color — the price depends on the technique and length. In line with <a href="https://economie.fgov.be/fr/themes/ventes/pratiques-du-marche-et/indication-des-prix" target="_blank" rel="noopener">Belgian pricing regulations</a>, everything is included: shampoo, treatment and finishing blowout. Zero hidden charges.
 
-This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, two minutes from Metro Schuman (lines 1 and 5). Book your slot online via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> — Wednesday lunchtime slots go fast, thanks to the EU institutions' lunch break.`,
+This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, two minutes from Metro Schuman (lines 1 and 5). Book your slot online via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a> — Wednesday lunchtime slots go fast, thanks to the EU institutions' lunch break.`,
     faq: [
       { question: "Can you fix a bad color job done at another salon?", answer: "It is one of our specialties. Our colorists perform a free diagnosis, identify the issue and propose a correction plan. Call 02 230 55 37 to discuss before booking an appointment." },
       { question: "What is the total price for a color, including blowout?", answer: "From 40 €, all inclusive: shampoo, treatment and finishing blowout. The exact price depends on technique and length. We confirm the amount before starting — no surprises on the bill." },
@@ -85,7 +85,7 @@ Platinum balayage on a dark base does not happen in a single session. Our colori
 
 <h2>Balayage pricing in Brussels</h2>
 
-From 35 €, everything included. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, between Cinquantenaire Park and Metro Schuman (lines 1/5). Book online via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> or call 02 230 55 37.`,
+From 35 €, everything included. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, between Cinquantenaire Park and Metro Schuman (lines 1/5). Book online via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a> or call 02 230 55 37.`,
     faq: [
       { question: "Balayage or highlights — what is the real difference?", answer: "Balayage is painted freehand — blended result, subtle regrowth, touch-up every 3-4 months. <a href='/en/services/highlights-brussels/'>Highlights</a> use foil for sharper contrasts, but regrowth shows within 6 weeks. For a busy schedule near Schuman, balayage is the lower-maintenance option." },
       { question: "How much does a balayage cost, blowout included?", answer: "From 35 €, blowout included. The final price depends on length and technique. We quote the exact price before starting — no surprises." },
@@ -121,7 +121,7 @@ The trade-off to know about: highlights need a visit every 6-8 weeks. Regrowth s
 
 <h2>Highlights pricing in Brussels</h2>
 
-Price depends on technique, length and thickness — we give you the exact figure at the consultation. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, between Cinquantenaire Park and Metro Schuman. Call 02 230 55 37 or book online via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Price depends on technique, length and thickness — we give you the exact figure at the consultation. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, between Cinquantenaire Park and Metro Schuman. Call 02 230 55 37 or book online via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Highlights or balayage — which look should I go for?", answer: "Highlights give clean, structured contrasts. <a href='/en/services/balayage-brussels/'>Balayage</a> is softer and more blended. Maintenance: highlights every 6-8 weeks, balayage every 3-4 months. Our colorists show you real examples of both techniques." },
       { question: "How long does a highlight session take?", answer: "Between 1h30 and 2h30 depending on technique, length and thickness. If your schedule is tight around the European Quarter, book the widest slot available." },
@@ -153,7 +153,7 @@ Price depends on technique, length and thickness — we give you the exact figur
 
 <h2>Ombré coloring pricing in Brussels</h2>
 
-From 40 €. We show you examples before touching anything — to make sure we are on the same page. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, Metro Schuman. Call 02 230 55 37 or book on <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>. For more classic techniques: <a href="/en/services/hair-coloring-brussels/">full color</a>, <a href="/en/services/balayage-brussels/">balayage</a> or <a href="/en/services/highlights-brussels/">highlights</a>.`,
+From 40 €. We show you examples before touching anything — to make sure we are on the same page. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, Metro Schuman. Call 02 230 55 37 or book on <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>. For more classic techniques: <a href="/en/services/hair-coloring-brussels/">full color</a>, <a href="/en/services/balayage-brussels/">balayage</a> or <a href="/en/services/highlights-brussels/">highlights</a>.`,
     faq: [
       { question: "Ombré or balayage — what is the difference?", answer: "Ombré creates a vertical transition from dark to light. <a href='/en/services/balayage-brussels/'>Balayage</a> creates diffused highlights throughout the hair. Two very different techniques — our colorists show you real examples to help you decide." },
       { question: "How much does an ombré color cost?", answer: "From 40 €, shampoo and blowout included. The final price depends on length and the technique chosen." },
@@ -185,7 +185,7 @@ Sleek, volume or wavy — shampoo and heat-protection treatment included. Hold: 
 
 <h2>Blowout pricing in Brussels</h2>
 
-From 30 €, everything included. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Book online on <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> or call 02 230 55 37. Rue Bonneels 27, steps from Metro Schuman.`,
+From 30 €, everything included. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Book online on <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a> or call 02 230 55 37. Rue Bonneels 27, steps from Metro Schuman.`,
     faq: [
       { question: "Is the shampoo included in the blowout price?", answer: "Yes. Shampoo, treatment and blowout — everything is included in the listed price. No surcharge." },
       { question: "How long does a professional blowout last?", answer: "Between 2 and 4 days. For an event, come in the morning of or the day before. We give you tips to extend the hold." },
@@ -223,7 +223,7 @@ On very curly or coily hair: the Brazilian treatment dramatically reduces volume
 
 <h2>Hair straightening pricing in Brussels</h2>
 
-Brazilian keratin: from 150 €. Tannin and botox: on consultation. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, next to Metro Schuman (lines 1/5). Call 02 230 55 37 or book via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Brazilian keratin: from 150 €. Tannin and botox: on consultation. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, next to Metro Schuman (lines 1/5). Call 02 230 55 37 or book via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Do your straightening products contain formaldehyde?", answer: "Our products comply with European regulations (max 0.2% as a preservative). Official distributors only. We show you the product data sheet before applying anything — transparency is non-negotiable at Tony&Son." },
       { question: "What should I budget for a Brazilian straightening?", answer: "From 150 € for a Brazilian straightening, all included. The exact price depends on length and thickness. We give you the price before starting." },
@@ -259,7 +259,7 @@ Especially useful after a color, balayage or highlights — the treatment repair
 
 <h2>Keratin treatment pricing in Brussels</h2>
 
-Price on consultation — depends on length and hair condition. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, two minutes from Metro Schuman. Call 02 230 55 37 or book on <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Price on consultation — depends on length and hair condition. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, two minutes from Metro Schuman. Call 02 230 55 37 or book on <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "What is the difference between keratin and Brazilian straightening?", answer: "A keratin treatment is a repair service — it nourishes, reduces frizz, but does not change the hair structure. Brazilian straightening genuinely straightens. If you want straight hair, go with the straightening. If you want repaired, shiny hair, go with keratin." },
       { question: "How long does a keratin treatment last?", answer: "3-4 months with a sulfate-free shampoo. The effect fades gradually — no harsh line of demarcation." },
@@ -295,7 +295,7 @@ Four techniques, four situations. <strong>Keratin (hot fusion)</strong>: longest
 
 <h2>Hair extensions pricing in Brussels</h2>
 
-From 500 €, depending on technique and quantity. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, Metro Schuman (lines 1/5). Book a consultation at 02 230 55 37 or online via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+From 500 €, depending on technique and quantity. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, Metro Schuman (lines 1/5). Book a consultation at 02 230 55 37 or online via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Do hair extensions cause damage?", answer: "It depends on the application AND the removal. At Tony&Son, we handle both steps with precision. Well-applied and properly removed extensions leave no damage. The risk comes from amateur applications or rough removals. Some of our clients have worn extensions with us for years without any issue." },
       { question: "What should I budget for hair extensions?", answer: "From 500 € depending on technique and number of strands. The exact price is given after the required consultation — we assess your needs before quoting." },
@@ -331,7 +331,7 @@ We do not perm hair that is too damaged. Recent Brazilian straightening? Intensi
 
 <h2>Perm pricing in Brussels</h2>
 
-Price on consultation — depends on length and technique. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, Metro Schuman (lines 1/5). Book at 02 230 55 37 or online via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Price on consultation — depends on length and technique. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, Metro Schuman (lines 1/5). Book at 02 230 55 37 or online via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Do modern perms damage hair?", answer: "Today's formulas are incomparably gentler than before — ammonia-free, enriched with proteins. We always assess your hair condition first. If the risk is too high (recent color, <a href='/en/services/hair-straightening-brussels/'>straightening</a>), we tell you." },
       { question: "What is the price and duration of a perm?", answer: "Allow 2-3 hours at the salon. The result lasts 3-6 months. The price depends on length and technique — we give you the exact price after a consultation." },
@@ -370,7 +370,7 @@ Professional topical products, scalp massages to stimulate microcirculation, str
 
 <h2>Hair regrowth pricing in Brussels</h2>
 
-Price on consultation — depends on the protocol. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, Metro Schuman (lines 1/5). Call 02 230 55 37 or book online via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Price on consultation — depends on the protocol. This service is part of our <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, Metro Schuman (lines 1/5). Call 02 230 55 37 or book online via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "What anti-hair loss treatments do you offer at the salon?", answer: "Professional topical products, stimulating scalp massages and hair strengthening protocols. Each treatment is tailored after a full assessment of your situation." },
       { question: "How many sessions before I see real results?", answer: "Initial results are visible after 4-6 sessions, spaced 2-3 weeks apart. The full protocol runs 3-6 months depending on the cause. We give you a realistic timeline from the first appointment." },
@@ -403,7 +403,7 @@ If the child cries, we wait. Mum's lap? No problem. Cut done in two parts becaus
 
 <h2>Kids haircut pricing in Brussels</h2>
 
-Boys and girls, same price: from 25 €. Fade, bob, fringe, buzz cut — our stylists handle all of it. Wednesdays and Saturdays get busy (school half-day + weekend). This service is part of our <a href="/en/hairdresser/">hairdresser</a> and <a href="/en/barber/">barber in Brussels</a> offering. Book online via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> or call 02 230 55 37. Rue Bonneels 27, next to Cinquantenaire Park.`,
+Boys and girls, same price: from 25 €. Fade, bob, fringe, buzz cut — our stylists handle all of it. Wednesdays and Saturdays get busy (school half-day + weekend). This service is part of our <a href="/en/hairdresser/">hairdresser</a> and <a href="/en/barber/">barber in Brussels</a> offering. Book online via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a> or call 02 230 55 37. Rue Bonneels 27, next to Cinquantenaire Park.`,
     faq: [
       { question: "How do you handle a child who is afraid of the hairdresser?", answer: "We have been doing this since 1970. Our stylists adapt to the child's pace: breaks if needed, sitting on a parent's lap, zero pressure. The goal: they leave with a good memory, not a bad one." },
       { question: "What is the price of a kids haircut, boys and girls?", answer: "25 € regardless of gender. The price only goes up for a complex cut (elaborate fade, special occasion). No surprises." },
@@ -439,12 +439,12 @@ The traditional cutthroat razor shave is our signature. Hot towel to open the po
 
 <h2>Beard trim pricing in Brussels</h2>
 
-Price depends on the service (simple trim, traditional shave, haircut + beard combo). This service is part of our <a href="/en/barber/">barber in Brussels</a> offering. Rue Bonneels 27, Metro Schuman (lines 1/5), tram 81. Fridays and Saturdays are busy — book online via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> or call 02 230 55 37. Walk-ins accepted on weekdays, subject to availability.`,
+Price depends on the service (simple trim, traditional shave, haircut + beard combo). This service is part of our <a href="/en/barber/">barber in Brussels</a> offering. Rue Bonneels 27, Metro Schuman (lines 1/5), tram 81. Fridays and Saturdays are busy — book online via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a> or call 02 230 55 37. Walk-ins accepted on weekdays, subject to availability.`,
     faq: [
       { question: "Do you offer a traditional cutthroat razor shave?", answer: "Yes. Hot towel, lather with a badger brush, straight razor, aftershave care. It is our signature — allow 20 minutes. By appointment." },
       { question: "What is the price of a beard trim with finishing?", answer: "The price depends on the service (simple trim, traditional shave, haircut + beard combo). We give you the exact price before starting. Call 02 230 55 37 for a quick quote." },
       { question: "Can you do fades on all hair textures?", answer: "Skin fade, mid fade, high fade, taper — on European, North African, Afro or Asian hair. Bring a reference photo if you want a specific result. Our barbers adapt the technique to each texture." },
-      { question: "Do I need to book or can I walk in?", answer: "Booking is recommended, especially on Fridays and Saturdays. Reserve via <a href='https://widget.treatwell.be/fr/salon/tony-and-son/' target='_blank' rel='noopener'>Treatwell</a> or call 02 230 55 37. Walk-ins are accepted on weekdays, subject to availability." }
+      { question: "Do I need to book or can I walk in?", answer: "Booking is recommended, especially on Fridays and Saturdays. Reserve via <a href='https://widget.treatwell.be/fr/salon/tony-son/' target='_blank' rel='noopener'>Treatwell</a> or call 02 230 55 37. Walk-ins are accepted on weekdays, subject to availability." }
     ]
   },
 
@@ -476,11 +476,11 @@ We start by looking and listening. Reference photo? Great. Vague idea? We sugges
 
 <h2>Men's haircut pricing in Brussels</h2>
 
-From 25 €, all included. Price varies by complexity (simple cut, elaborate fade, cut + <a href="/en/services/beard-trim-brussels/">beard</a> combo). This service is part of our <a href="/en/barber/">barber in Brussels</a> and <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, two minutes from Metro Schuman (lines 1/5). Book on <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> or call 02 230 55 37. Fridays and Saturdays fill up fast — book ahead.`,
+From 25 €, all included. Price varies by complexity (simple cut, elaborate fade, cut + <a href="/en/services/beard-trim-brussels/">beard</a> combo). This service is part of our <a href="/en/barber/">barber in Brussels</a> and <a href="/en/hairdresser/">hairdresser in Brussels</a> offering. Rue Bonneels 27, two minutes from Metro Schuman (lines 1/5). Book on <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a> or call 02 230 55 37. Fridays and Saturdays fill up fast — book ahead.`,
     faq: [
       { question: "What is the price of a men's haircut at Tony&Son?", answer: "From 25 €, shampoo and styling included. Price depends on complexity: classic cut, elaborate fade, or cut + beard combo. We confirm the price before starting." },
       { question: "Do you do American fades on all hair textures?", answer: "Yes. Skin fade, mid fade, high fade, taper — on European, North African, Afro or Asian hair. Our stylists adapt the technique to each texture. Bring a reference photo if you have a specific result in mind." },
-      { question: "Do I need to book or can I walk in?", answer: "Booking is recommended, especially on Fridays and Saturdays. Reserve via <a href='https://widget.treatwell.be/fr/salon/tony-and-son/' target='_blank' rel='noopener'>Treatwell</a> or call 02 230 55 37. Walk-ins accepted on weekdays, subject to availability." },
+      { question: "Do I need to book or can I walk in?", answer: "Booking is recommended, especially on Fridays and Saturdays. Reserve via <a href='https://widget.treatwell.be/fr/salon/tony-son/' target='_blank' rel='noopener'>Treatwell</a> or call 02 230 55 37. Walk-ins accepted on weekdays, subject to availability." },
       { question: "Can I combine a haircut with a beard trim?", answer: "Yes, it's our most popular combo. Mention it when booking so we can allocate the right time. See our <a href='/en/services/beard-trim-brussels/'>beard trim</a> page for details." }
     ]
   },
@@ -505,7 +505,7 @@ From 25 €, all included. Price varies by complexity (simple cut, elaborate fad
 
 <h2>How does eyebrow tinting work at Tony&Son?</h2>
 
-We choose the shade together — never too dark, always in harmony with your hair colour and complexion. Precise application, a few minutes of processing time, immediate result. Pairs perfectly with <a href="/en/services/facial-waxing-brussels/">facial waxing</a> for a complete result in one session. 15 €. Rue Bonneels 27, Metro Schuman. Book at 02 230 55 37 or via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+We choose the shade together — never too dark, always in harmony with your hair colour and complexion. Precise application, a few minutes of processing time, immediate result. Pairs perfectly with <a href="/en/services/facial-waxing-brussels/">facial waxing</a> for a complete result in one session. 15 €. Rue Bonneels 27, Metro Schuman. Book at 02 230 55 37 or via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "How long does eyebrow tinting last?", answer: "The result holds 3 to 5 weeks depending on skin type and cleansing routine. The session itself takes 15-20 minutes." },
       { question: "Is eyebrow tinting suitable for men?", answer: "Yes. More and more men opt for brow tinting — especially to cover grey hairs or fill in sparse brows. The result is natural and subtle." },
@@ -532,7 +532,7 @@ We choose the shade together — never too dark, always in harmony with your hai
 
 <h2>Facial waxing pricing in Brussels</h2>
 
-10 € per zone. Can be combined with a <a href="/en/services/beard-trim-brussels/">beard trim</a> or a <a href="/en/services/blowout-brussels/">blowout</a> in the same session — mention it when booking on <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> or at 02 230 55 37. This service is part of our <a href="/en/barber/">barber in Brussels</a> offering. Rue Bonneels 27, Metro Schuman.`,
+10 € per zone. Can be combined with a <a href="/en/services/beard-trim-brussels/">beard trim</a> or a <a href="/en/services/blowout-brussels/">blowout</a> in the same session — mention it when booking on <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a> or at 02 230 55 37. This service is part of our <a href="/en/barber/">barber in Brussels</a> offering. Rue Bonneels 27, Metro Schuman.`,
     faq: [
       { question: "Is facial waxing painful?", answer: "The technique is quick and the sensation brief. We use warm wax — less aggressive than hot wax." },
       { question: "Can I combine waxing with other services?", answer: "Yes. Many clients add eyebrow waxing to their haircut or <a href='/en/services/beard-trim-brussels/'>beard trim</a>. Just mention it when booking." }

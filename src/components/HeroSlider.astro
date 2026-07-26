@@ -15,6 +15,8 @@ const cta = locale === 'nl' ? 'Boek nu' : locale === 'en' ? 'Book now' : 'Réser
 <section class="hero">
   <img
     src="/images/hero-bg.webp"
+    srcset="/images/hero-bg-828.webp 828w, /images/hero-bg-1280.webp 1280w, /images/hero-bg.webp 2048w"
+    sizes="100vw"
     alt=""
     aria-hidden="true"
     class="hero-bg"
@@ -28,7 +30,7 @@ const cta = locale === 'nl' ? 'Boek nu' : locale === 'en' ? 'Book now' : 'Réser
   <div class="hero-box">
     <p class="hero-tagline">{tagline}</p>
     <h1 class="hero-title">{heading}</h1>
-    <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener" class="hero-cta">{cta}</a>
+    <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener" class="hero-cta">{cta}</a>
   </div>
 </section>
 

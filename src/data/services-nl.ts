@@ -25,7 +25,7 @@ We beginnen altijd met kijken. Uw natuurlijke basis, textuur, eerdere behandelin
 
 <h2>Tarieven haarkleuring in Brussel</h2>
 
-Volledige kleuring: vanaf 40 €. Uitgroei bijwerken, ton-sur-ton, plantaardig — de prijs hangt af van techniek en lengte. Alles inbegrepen: shampoo, verzorging en afwerking. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, op twee minuten van metro Schuman (lijnen 1 en 5). Boek online via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Volledige kleuring: vanaf 40 €. Uitgroei bijwerken, ton-sur-ton, plantaardig — de prijs hangt af van techniek en lengte. Alles inbegrepen: shampoo, verzorging en afwerking. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, op twee minuten van metro Schuman (lijnen 1 en 5). Boek online via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Kunt u een mislukte kleuring van een andere salon herstellen?", answer: "Het is een van onze specialiteiten. Onze coloristen voeren een gratis diagnose uit, identificeren het probleem en stellen een correctieplan voor. Bel 02 230 55 37 om te bespreken." },
       { question: "Wat is de totale prijs, föhn inbegrepen?", answer: "Vanaf 40 €, alles inbegrepen: shampoo, verzorging en föhn. We bevestigen het exacte bedrag voordat we beginnen." },
@@ -57,7 +57,7 @@ Platina balayage op een donkere basis lukt niet in één sessie. Onze coloristen
 
 <h2>Tarieven balayage in Brussel</h2>
 
-Vanaf 35 €, alles inbegrepen. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, tussen het Jubelpark en metro Schuman (lijnen 1/5). Boek online via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> of bel 02 230 55 37.`,
+Vanaf 35 €, alles inbegrepen. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, tussen het Jubelpark en metro Schuman (lijnen 1/5). Boek online via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a> of bel 02 230 55 37.`,
     faq: [
       { question: "Balayage of highlights — wat is het verschil?", answer: "Balayage wordt met de hand geschilderd — zacht resultaat, bijwerken om de 3-4 maanden. <a href='/nl/services/highlights-brussel/'>Highlights</a> gebruiken folie voor scherpere contrasten, maar uitgroei is zichtbaar na 6 weken." },
       { question: "Hoeveel kost een balayage, föhn inbegrepen?", answer: "Vanaf 35 €, föhn inbegrepen. De uiteindelijke prijs hangt af van lengte en techniek." },
@@ -85,7 +85,7 @@ Glad, volume of wavy — shampoo en hittebescherming inbegrepen. Houdbaarheid: 2
 
 <h2>Tarieven föhn in Brussel</h2>
 
-Vanaf 30 €, alles inbegrepen. Combineerbaar met een <a href="/nl/services/haarkleuring-brussel/">kleuring</a> in dezelfde sessie. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Boek online op <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> of bel 02 230 55 37. Rue Bonneels 27, naast metro Schuman.`,
+Vanaf 30 €, alles inbegrepen. Combineerbaar met een <a href="/nl/services/haarkleuring-brussel/">kleuring</a> in dezelfde sessie. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Boek online op <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a> of bel 02 230 55 37. Rue Bonneels 27, naast metro Schuman.`,
     faq: [
       { question: "Is de shampoo inbegrepen in de prijs?", answer: "Ja. Shampoo, verzorging en föhn — alles inbegrepen." },
       { question: "Hoe lang houdt een professionele föhn?", answer: "Tussen 2 en 4 dagen. Voor een evenement, kom de ochtend zelf of de dag ervoor." },
@@ -119,7 +119,7 @@ Op zeer krullend haar: de Braziliaanse behandeling vermindert volume en vergemak
 
 <h2>Tarieven haarstijling in Brussel</h2>
 
-Braziliaans keratine: vanaf 150 €. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, naast metro Schuman (lijnen 1/5). Bel 02 230 55 37 of boek via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Braziliaans keratine: vanaf 150 €. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, naast metro Schuman (lijnen 1/5). Bel 02 230 55 37 of boek via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Bevatten uw stijlproducten formaldehyde?", answer: "Onze producten voldoen aan de Europese regelgeving (max 0,2% als conserveermiddel). Officiële distributeurs. We tonen u het productblad — transparantie is niet onderhandelbaar." },
       { question: "Wat moet ik budgetteren voor een Braziliaanse stijlbehandeling?", answer: "Vanaf 150 €, alles inbegrepen. De exacte prijs hangt af van lengte en dikte." },
@@ -151,7 +151,7 @@ Professionele topische producten, hoofdhuidmassages om de microcirculatie te sti
 
 <h2>Tarieven haar hergroei in Brussel</h2>
 
-Prijs op consultatie. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman (lijnen 1/5). Bel 02 230 55 37 of boek online via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Prijs op consultatie. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman (lijnen 1/5). Bel 02 230 55 37 of boek online via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Welke anti-haaruitval behandelingen biedt u aan?", answer: "Professionele topische producten, stimulerende hoofdhuidmassages en versterkingsprotocollen. Elke behandeling wordt aangepast na een volledige beoordeling." },
       { question: "Hoeveel sessies voordat ik resultaten zie?", answer: "Eerste resultaten zichtbaar na 4-6 sessies, met 2-3 weken tussenruimte. Het volledige protocol duurt 3-6 maanden." },
@@ -180,7 +180,7 @@ Als het kind huilt, wachten we. Op mama's schoot? Geen probleem. Knipbeurt in tw
 
 <h2>Tarieven kinderkapsels in Brussel</h2>
 
-Jongens en meisjes, zelfde prijs: vanaf 25 €. Fade, bob, pony, borstelsnit — onze stylisten beheersen alles. Woensdag en zaterdag zijn druk. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon</a> en <a href="/nl/barbier/">barbier in Brussel</a> aanbod. Boek online via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> of bel 02 230 55 37. Rue Bonneels 27, naast het Jubelpark.`,
+Jongens en meisjes, zelfde prijs: vanaf 25 €. Fade, bob, pony, borstelsnit — onze stylisten beheersen alles. Woensdag en zaterdag zijn druk. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon</a> en <a href="/nl/barbier/">barbier in Brussel</a> aanbod. Boek online via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a> of bel 02 230 55 37. Rue Bonneels 27, naast het Jubelpark.`,
     faq: [
       { question: "Hoe gaan jullie om met een kind dat bang is voor de kapper?", answer: "We doen dit al sinds 1970. Onze stylisten passen zich aan het tempo van het kind aan: pauzes indien nodig, op schoot van een ouder, geen druk." },
       { question: "Is de prijs hetzelfde voor jongens en meisjes?", answer: "25 € ongeacht geslacht. De prijs stijgt alleen bij een complex kapsel." },
@@ -212,7 +212,7 @@ Het compromis: highlights vereisen een bezoek om de 6-8 weken. Uitgroei toont sn
 
 <h2>Tarieven highlights in Brussel</h2>
 
-Prijs afhankelijk van techniek, lengte en dikte. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman. Bel 02 230 55 37 of boek online via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Prijs afhankelijk van techniek, lengte en dikte. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman. Bel 02 230 55 37 of boek online via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Highlights of balayage — welk resultaat kiezen?", answer: "Highlights geven scherpe, gestructureerde contrasten. <a href='/nl/services/balayage-brussel/'>Balayage</a> is zachter en natuurlijker. Onderhoud: highlights om de 6-8 weken, balayage om de 3-4 maanden." },
       { question: "Hoe lang duurt een highlights sessie?", answer: "Tussen 1u30 en 2u30 afhankelijk van techniek, lengte en dikte." },
@@ -244,7 +244,7 @@ Bijzonder nuttig na een kleuring, balayage of highlights. Reken op 1u30-2u in de
 
 <h2>Tarieven keratinebehandeling in Brussel</h2>
 
-Prijs op consultatie. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman. Bel 02 230 55 37 of boek op <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Prijs op consultatie. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman. Bel 02 230 55 37 of boek op <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Wat is het verschil tussen keratine en Braziliaans stijlen?", answer: "Keratinebehandeling is een verzorging — het voedt en vermindert pluis maar verandert de haarstructuur niet. Braziliaans stijlen stijlt daadwerkelijk." },
       { question: "Hoe lang duurt het effect van een keratinebehandeling?", answer: "3-4 maanden met een sulfaatvrije shampoo. Het effect vervaagt geleidelijk." },
@@ -276,7 +276,7 @@ Vier technieken. <strong>Keratine (warm)</strong>: langstdurend, 3-4 maanden. <s
 
 <h2>Tarieven haarextensions in Brussel</h2>
 
-Vanaf 500 €. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman (lijnen 1/5). Boek een consultatie op 02 230 55 37 of via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Vanaf 500 €. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman (lijnen 1/5). Boek een consultatie op 02 230 55 37 of via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Beschadigen extensions het haar?", answer: "Het hangt af van de plaatsing EN de verwijdering. Bij Tony&Son beheersen we beide stappen. Goed geplaatste en correct verwijderde extensions laten geen schade achter." },
       { question: "Wat moet ik budgetteren voor haarextensions?", answer: "Vanaf 500 € afhankelijk van techniek en hoeveelheid. De exacte prijs wordt gegeven na de verplichte consultatie." },
@@ -308,7 +308,7 @@ We doen geen permanent op te beschadigd haar. Recent Braziliaans stijlen? Intens
 
 <h2>Tarieven permanent in Brussel</h2>
 
-Prijs op consultatie. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman (lijnen 1/5). Boek op 02 230 55 37 of via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Prijs op consultatie. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman (lijnen 1/5). Boek op 02 230 55 37 of via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Beschadigen moderne permanenten het haar?", answer: "De huidige formules zijn onvergelijkbaar zachter — ammoniakvrij, verrijkt met proteïnen. We beoordelen altijd eerst de haartoestand." },
       { question: "Wat is de prijs en duur van een permanent?", answer: "Reken op 2-3 uur in de salon. Resultaat houdt 3-6 maanden. Prijs afhankelijk van lengte en techniek." },
@@ -340,12 +340,12 @@ Het traditionele open scheermes is ons visitekaartje. Hete handdoek, scheerschui
 
 <h2>Tarieven baardtrimmen in Brussel</h2>
 
-Prijs afhankelijk van de dienst. Deze dienst maakt deel uit van ons <a href="/nl/barbier/">barbier in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman (lijnen 1/5), tram 81. Boek online via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> of bel 02 230 55 37.`,
+Prijs afhankelijk van de dienst. Deze dienst maakt deel uit van ons <a href="/nl/barbier/">barbier in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman (lijnen 1/5), tram 81. Boek online via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a> of bel 02 230 55 37.`,
     faq: [
       { question: "Biedt u traditioneel scheren met open scheermes aan?", answer: "Ja. Hete handdoek, scheerschuim met kwast, open scheermes, aftershave. Reken op 20 minuten. Op afspraak." },
       { question: "Wat is de prijs van een baardtrimbeurt met afwerking?", answer: "Prijs afhankelijk van dienst (eenvoudige trim, traditioneel scheren, knipbeurt + baard combo). Bel 02 230 55 37 voor een snelle offerte." },
       { question: "Beheersen uw barbiers fades op alle haartexturen?", answer: "Skin fade, mid fade, high fade, taper — op Europees, Maghrebijns, Afro of Aziatisch haar. Breng een referentiefoto mee." },
-      { question: "Moet ik reserveren of kan ik zonder afspraak komen?", answer: "Reservering aanbevolen, vooral vrijdag en zaterdag. Boek via <a href='https://widget.treatwell.be/fr/salon/tony-and-son/' target='_blank' rel='noopener'>Treatwell</a> of bel 02 230 55 37." }
+      { question: "Moet ik reserveren of kan ik zonder afspraak komen?", answer: "Reservering aanbevolen, vooral vrijdag en zaterdag. Boek via <a href='https://widget.treatwell.be/fr/salon/tony-son/' target='_blank' rel='noopener'>Treatwell</a> of bel 02 230 55 37." }
     ]
   },
 
@@ -377,11 +377,11 @@ We beginnen met kijken en luisteren. Referentiefoto? Geweldig. Vaag idee? We ste
 
 <h2>Tarieven herenkapsel in Brussel</h2>
 
-Vanaf 25 €, alles inbegrepen. Prijs varieert per complexiteit (eenvoudige coupe, uitgebreide fade, knipbeurt + <a href="/nl/services/baardtrimmen-brussel/">baard</a> combo). Deze dienst maakt deel uit van ons <a href="/nl/barbier/">barbier in Brussel</a> en <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman (lijnen 1/5). Boek op <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> of bel 02 230 55 37.`,
+Vanaf 25 €, alles inbegrepen. Prijs varieert per complexiteit (eenvoudige coupe, uitgebreide fade, knipbeurt + <a href="/nl/services/baardtrimmen-brussel/">baard</a> combo). Deze dienst maakt deel uit van ons <a href="/nl/barbier/">barbier in Brussel</a> en <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman (lijnen 1/5). Boek op <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a> of bel 02 230 55 37.`,
     faq: [
       { question: "Wat kost een herenkapsel bij Tony&Son?", answer: "Vanaf 25 €, shampoo en styling inbegrepen. Prijs afhankelijk van complexiteit: klassieke coupe, uitgebreide fade of knipbeurt + baard combo." },
       { question: "Beheersen jullie fades op alle haartexturen?", answer: "Ja. Skin fade, mid fade, high fade, taper — op Europees, Maghrebijns, Afro of Aziatisch haar. Breng een referentiefoto mee voor een specifiek resultaat." },
-      { question: "Moet ik reserveren of kan ik zonder afspraak?", answer: "Reservering aanbevolen, vooral vrijdag en zaterdag. Boek via <a href='https://widget.treatwell.be/fr/salon/tony-and-son/' target='_blank' rel='noopener'>Treatwell</a> of bel 02 230 55 37." },
+      { question: "Moet ik reserveren of kan ik zonder afspraak?", answer: "Reservering aanbevolen, vooral vrijdag en zaterdag. Boek via <a href='https://widget.treatwell.be/fr/salon/tony-son/' target='_blank' rel='noopener'>Treatwell</a> of bel 02 230 55 37." },
       { question: "Kan ik knipbeurt en baardtrimmen combineren?", answer: "Ja, het is onze populairste combo. Vermeld het bij reservering. Zie onze pagina <a href='/nl/services/baardtrimmen-brussel/'>baardtrimmen</a> voor details." }
     ]
   },
@@ -405,7 +405,7 @@ Vanaf 25 €, alles inbegrepen. Prijs varieert per complexiteit (eenvoudige coup
 
 <h2>Tarieven ombré kleuring in Brussel</h2>
 
-Vanaf 40 €. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman. Bel 02 230 55 37 of boek op <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+Vanaf 40 €. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalon in Brussel</a> aanbod. Rue Bonneels 27, metro Schuman. Bel 02 230 55 37 of boek op <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Ombré of balayage — wat is het verschil?", answer: "Ombré creëert een verticale overgang van donker naar licht. <a href='/nl/services/balayage-brussel/'>Balayage</a> creëert verspreide highlights door het hele haar." },
       { question: "Hoeveel kost een ombré kleuring?", answer: "Vanaf 40 €, shampoo en föhn inbegrepen." },
@@ -434,7 +434,7 @@ Vanaf 40 €. Deze dienst maakt deel uit van ons <a href="/nl/kapsalon/">kapsalo
 
 <h2>Hoe werkt wenkbrauwkleuring bij Tony&Son?</h2>
 
-We kiezen samen de tint — nooit te donker, altijd in harmonie met uw haarkleur en teint. Precieze aanbrenging, enkele minuten inwerktijd, direct resultaat. Combineert perfect met <a href="/nl/services/gezichtsontharing-brussel/">gezichtsontharing</a> voor een compleet resultaat in één sessie. 15 €. Rue Bonneels 27, metro Schuman. Boek op 02 230 55 37 of via <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a>.`,
+We kiezen samen de tint — nooit te donker, altijd in harmonie met uw haarkleur en teint. Precieze aanbrenging, enkele minuten inwerktijd, direct resultaat. Combineert perfect met <a href="/nl/services/gezichtsontharing-brussel/">gezichtsontharing</a> voor een compleet resultaat in één sessie. 15 €. Rue Bonneels 27, metro Schuman. Boek op 02 230 55 37 of via <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a>.`,
     faq: [
       { question: "Hoe lang houdt wenkbrauwkleuring aan?", answer: "Het resultaat houdt 3 tot 5 weken, afhankelijk van huidtype en reinigingsroutine. De sessie duurt 15-20 minuten." },
       { question: "Is wenkbrauwkleuring geschikt voor mannen?", answer: "Ja. Steeds meer mannen kiezen voor wenkbrauwkleuring — vooral om grijze haartjes te bedekken of dunne wenkbrauwen voller te maken." },
@@ -457,7 +457,7 @@ We kiezen samen de tint — nooit te donker, altijd in harmonie met uw haarkleur
 
 <h2>Tarieven gezichtsontharing in Brussel</h2>
 
-10 € per zone. Combineerbaar met een <a href="/nl/services/baardtrimmen-brussel/">baardtrimbeurt</a> of een <a href="/nl/services/fohn-brussel/">föhn</a> in dezelfde sessie. Deze dienst maakt deel uit van ons <a href="/nl/barbier/">barbier in Brussel</a> aanbod. Boek op <a href="https://widget.treatwell.be/fr/salon/tony-and-son/" target="_blank" rel="noopener">Treatwell</a> of bel 02 230 55 37. Rue Bonneels 27, metro Schuman.`,
+10 € per zone. Combineerbaar met een <a href="/nl/services/baardtrimmen-brussel/">baardtrimbeurt</a> of een <a href="/nl/services/fohn-brussel/">föhn</a> in dezelfde sessie. Deze dienst maakt deel uit van ons <a href="/nl/barbier/">barbier in Brussel</a> aanbod. Boek op <a href="https://widget.treatwell.be/fr/salon/tony-son/" target="_blank" rel="noopener">Treatwell</a> of bel 02 230 55 37. Rue Bonneels 27, metro Schuman.`,
     faq: [
       { question: "Is gezichtsontharing pijnlijk?", answer: "De techniek is snel en de sensatie kort. We gebruiken warme was — zachter dan hete was." },
       { question: "Kan ontharing gecombineerd worden met andere diensten?", answer: "Ja. Veel klanten voegen wenkbrauwontharing toe aan hun knipbeurt of <a href='/nl/services/baardtrimmen-brussel/'>baardtrimbeurt</a>." }
