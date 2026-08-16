@@ -1,0 +1,143 @@
+---
+// FAQ visible + schema FAQPage pour les pages hub (coiffure/barbier) et les homepages.
+// Pattern identique aux 45 pages services (details/summary + JSON-LD).
+import type { Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+  variant: 'coiffure' | 'barbier' | 'home';
+}
+
+const { locale, variant } = Astro.props;
+
+type QA = { q: string; a: string };
+
+const content: Record<string, Record<string, { title: string; faq: QA[] }>> = {
+  coiffure: {
+    fr: {
+      title: 'Questions fréquentes — Coiffure à Bruxelles',
+      faq: [
+        { q: 'Faut-il réserver pour une coupe chez Tony&Son ?', a: 'La réservation en ligne via Treatwell est recommandée, surtout le samedi. Vous pouvez aussi appeler directement le 02 230 55 37 ou passer sans rendez-vous selon les disponibilités du jour.' },
+        { q: 'Quels sont les prix chez Tony&Son ?', a: 'Coupe homme dès 25 €, coupe enfant dès 25 €, brushing dès 30 €, coloration dès 40 €, balayage dès 35 €. Le tarif exact est confirmé avant le début de la prestation, shampooing et brushing inclus — sans surprise en caisse.' },
+        { q: 'Où se trouve le salon et est-il accessible en transports en commun ?', a: 'Le salon est situé Rue Bonneels 27 à Saint-Josse-ten-Noode (1210 Bruxelles), à quelques minutes à pied de la gare de Maelbeek et du métro Schuman (lignes 1 et 5) — facilement accessible depuis Schaerbeek, Etterbeek et le centre de Bruxelles.' },
+        { q: 'Le salon est-il ouvert le dimanche ?', a: 'Oui, Tony&Son est ouvert le dimanche de 10h à 18h. Le salon est fermé le lundi. Du mardi au samedi, les horaires sont 9h-19h.' },
+      ],
+    },
+    en: {
+      title: 'Frequently asked questions — Hairdresser in Brussels',
+      faq: [
+        { q: 'Do I need to book for a haircut at Tony&Son?', a: 'Online booking via Treatwell is recommended, especially on Saturdays. You can also call 02 230 55 37 directly or walk in, depending on same-day availability.' },
+        { q: 'What are the prices at Tony&Son?', a: "Men's haircut from €25, kids' haircut from €25, blowout from €30, coloring from €40, balayage from €35. The exact price is confirmed before the service starts, shampoo and blow-dry included — no surprises at checkout." },
+        { q: 'Where is the salon and is it easy to reach by public transport?', a: 'The salon is at Rue Bonneels 27 in Saint-Josse-ten-Noode (1210 Brussels), a few minutes on foot from Maelbeek station and Schuman metro (lines 1 and 5) — easy to reach from Schaerbeek, Etterbeek and the city centre.' },
+        { q: 'Is the salon open on Sundays?', a: 'Yes, Tony&Son is open on Sundays from 10am to 6pm. The salon is closed on Mondays. Tuesday to Saturday, opening hours are 9am-7pm.' },
+      ],
+    },
+    nl: {
+      title: 'Veelgestelde vragen — Kapper in Brussel',
+      faq: [
+        { q: 'Moet ik reserveren voor een knipbeurt bij Tony&Son?', a: 'Online reserveren via Treatwell is aanbevolen, zeker op zaterdag. U kunt ook rechtstreeks bellen naar 02 230 55 37 of binnenlopen, afhankelijk van de beschikbaarheid van de dag.' },
+        { q: 'Wat zijn de prijzen bij Tony&Son?', a: 'Herenkapsel vanaf €25, kinderkapsel vanaf €25, brushing vanaf €30, kleuring vanaf €40, balayage vanaf €35. De exacte prijs wordt bevestigd vóór de behandeling begint, shampoo en brushing inbegrepen — geen verrassingen aan de kassa.' },
+        { q: 'Waar bevindt het salon zich en is het bereikbaar met het openbaar vervoer?', a: 'Het salon ligt in de Bonneelsstraat 27 in Sint-Joost-ten-Node (1210 Brussel), op enkele minuten wandelen van station Maalbeek en metro Schuman (lijnen 1 en 5) — vlot bereikbaar vanuit Schaarbeek, Etterbeek en het centrum van Brussel.' },
+        { q: 'Is het salon open op zondag?', a: 'Ja, Tony&Son is open op zondag van 10u tot 18u. Het salon is gesloten op maandag. Van dinsdag tot zaterdag zijn de openingsuren 9u-19u.' },
+      ],
+    },
+  },
+  barbier: {
+    fr: {
+      title: 'Questions fréquentes — Barbier à Bruxelles',
+      faq: [
+        { q: 'Faites-vous la taille de barbe sans rendez-vous ?', a: 'Oui, selon les disponibilités du jour. Pour être sûr de votre créneau, réservez en ligne via Treatwell ou appelez le 02 230 55 37 — recommandé le samedi et le mercredi midi.' },
+        { q: 'Combien coûte une coupe homme ou un dégradé chez Tony&Son ?', a: 'Coupe homme dès 25 €, dégradé américain (skin fade, mid fade, taper) inclus. Taille de barbe et rasage traditionnel au coupe-chou avec serviette chaude sur demande. Le prix exact est confirmé avant la prestation.' },
+        { q: 'Travaillez-vous toutes les textures de cheveux et de barbe ?', a: 'Oui — européenne, maghrébine, afro, asiatique. Nos barbiers adaptent leur technique à chaque texture sans qu’on ait besoin de le demander. C’est le quotidien du salon depuis 1970 dans ce quartier multiculturel.' },
+        { q: 'Le barbier est-il ouvert le dimanche ?', a: 'Oui, Tony&Son est ouvert le dimanche de 10h à 18h — pratique pour la mise au propre avant la semaine. Fermé le lundi ; mardi-samedi 9h-19h.' },
+      ],
+    },
+    en: {
+      title: 'Frequently asked questions — Barber in Brussels',
+      faq: [
+        { q: 'Do you take walk-ins for a beard trim?', a: 'Yes, depending on same-day availability. To be sure of your slot, book online via Treatwell or call 02 230 55 37 — recommended on Saturdays and Wednesday lunchtime.' },
+        { q: "How much is a men's haircut or fade at Tony&Son?", a: "Men's haircut from €25, American fade (skin fade, mid fade, taper) included. Beard trim and traditional straight-razor shave with hot towel on request. The exact price is confirmed before the service." },
+        { q: 'Do you work with all hair and beard textures?', a: 'Yes — European, North African, Afro, Asian. Our barbers adapt their technique to every texture without you having to ask. That has been daily life at the salon since 1970 in this multicultural neighbourhood.' },
+        { q: 'Is the barber open on Sundays?', a: 'Yes, Tony&Son is open on Sundays from 10am to 6pm — handy for a clean-up before the week. Closed Mondays; Tuesday-Saturday 9am-7pm.' },
+      ],
+    },
+    nl: {
+      title: 'Veelgestelde vragen — Barbier in Brussel',
+      faq: [
+        { q: 'Kan ik zonder afspraak langskomen voor het trimmen van mijn baard?', a: 'Ja, afhankelijk van de beschikbaarheid van de dag. Om zeker te zijn van uw moment, reserveer online via Treatwell of bel 02 230 55 37 — aanbevolen op zaterdag en woensdagmiddag.' },
+        { q: 'Hoeveel kost een herenkapsel of fade bij Tony&Son?', a: 'Herenkapsel vanaf €25, Amerikaanse fade (skin fade, mid fade, taper) inbegrepen. Baard trimmen en traditioneel scheren met open mes en warme handdoek op aanvraag. De exacte prijs wordt vóór de behandeling bevestigd.' },
+        { q: 'Werken jullie met alle haar- en baardtexturen?', a: 'Ja — Europees, Noord-Afrikaans, Afro, Aziatisch. Onze barbiers passen hun techniek aan elke textuur aan zonder dat u het hoeft te vragen. Dat is sinds 1970 dagelijkse kost in deze multiculturele buurt.' },
+        { q: 'Is de barbier open op zondag?', a: 'Ja, Tony&Son is open op zondag van 10u tot 18u — handig voor een opfrisbeurt vóór de week. Maandag gesloten; dinsdag-zaterdag 9u-19u.' },
+      ],
+    },
+  },
+  home: {
+    fr: {
+      title: 'Questions fréquentes',
+      faq: [
+        { q: 'Quels sont les horaires de Tony&Son ?', a: 'Mardi à samedi de 9h à 19h, dimanche de 10h à 18h, fermé le lundi. Le mercredi midi est le créneau le plus demandé — pensez à réserver.' },
+        { q: 'Comment prendre rendez-vous ?', a: 'En ligne via Treatwell (créneaux en temps réel), par téléphone au 02 230 55 37, ou sans rendez-vous selon les disponibilités du jour.' },
+        { q: 'Quels services propose le salon ?', a: 'Coiffure femme, homme et enfant : coupe dès 25 €, brushing dès 30 €, coloration dès 40 €, balayage dès 35 €, lissage brésilien dès 150 €, extensions, kératine. Côté barbier : dégradé américain, taille de barbe, rasage traditionnel.' },
+        { q: 'Où se trouve le salon ?', a: 'Rue Bonneels 27, 1210 Saint-Josse-ten-Noode — à 2 minutes à pied du métro Schuman (lignes 1 et 5) et de la gare de Maelbeek. Accès facile depuis Schaerbeek, Etterbeek, le quartier européen et le centre de Bruxelles.' },
+      ],
+    },
+    en: {
+      title: 'Frequently asked questions',
+      faq: [
+        { q: 'What are Tony&Son’s opening hours?', a: 'Tuesday to Saturday 9am-7pm, Sunday 10am-6pm, closed on Mondays. Wednesday lunchtime is the busiest slot — booking ahead is a good idea.' },
+        { q: 'How do I book an appointment?', a: 'Online via Treatwell (real-time slots), by phone at 02 230 55 37, or walk in depending on same-day availability.' },
+        { q: 'What services does the salon offer?', a: "Hairdressing for women, men and children: haircut from €25, blowout from €30, coloring from €40, balayage from €35, Brazilian straightening from €150, extensions, keratin. On the barber side: American fades, beard trims, traditional shaves." },
+        { q: 'Where is the salon located?', a: 'Rue Bonneels 27, 1210 Saint-Josse-ten-Noode — a 2-minute walk from Schuman metro (lines 1 and 5) and Maelbeek station. Easy to reach from Schaerbeek, Etterbeek, the European quarter and central Brussels.' },
+      ],
+    },
+    nl: {
+      title: 'Veelgestelde vragen',
+      faq: [
+        { q: 'Wat zijn de openingsuren van Tony&Son?', a: 'Dinsdag tot zaterdag 9u-19u, zondag 10u-18u, maandag gesloten. Woensdagmiddag is het drukste moment — reserveren is aangeraden.' },
+        { q: 'Hoe maak ik een afspraak?', a: 'Online via Treatwell (realtime beschikbaarheid), telefonisch op 02 230 55 37, of gewoon binnenlopen afhankelijk van de beschikbaarheid van de dag.' },
+        { q: 'Welke diensten biedt het salon aan?', a: 'Kapsels voor vrouwen, mannen en kinderen: knippen vanaf €25, brushing vanaf €30, kleuring vanaf €40, balayage vanaf €35, Braziliaanse stijling vanaf €150, extensions, keratine. Barbier: Amerikaanse fades, baard trimmen, traditioneel scheren.' },
+        { q: 'Waar bevindt het salon zich?', a: 'Bonneelsstraat 27, 1210 Sint-Joost-ten-Node — op 2 minuten wandelen van metro Schuman (lijnen 1 en 5) en station Maalbeek. Vlot bereikbaar vanuit Schaarbeek, Etterbeek, de Europese wijk en het centrum van Brussel.' },
+      ],
+    },
+  },
+};
+
+const t = content[variant][locale] ?? content[variant].fr;
+
+const faqSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: t.faq.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+});
+---
+
+<section class="faq-section">
+  <div class="container">
+    <h2>{t.title}</h2>
+    <div class="faq-list">
+      {t.faq.map((f) => (
+        <details class="faq-item" open>
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={faqSchema} is:inline />
+
+<style>
+  .faq-section { padding: 80px 0; background: var(--color-cream); }
+  .faq-section h2 { text-align: center; margin-bottom: 50px; font-size: 28px; }
+  .faq-list { max-width: 800px; margin: 0 auto; }
+  .faq-item { border-bottom: 1px solid var(--color-border); padding: 20px 0; }
+  .faq-item summary { font-size: 17px; font-weight: 600; cursor: pointer; color: var(--color-heading); list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq-item summary::after { content: '+'; font-size: 24px; color: var(--color-gold); }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item p { margin-top: 15px; font-size: 15px; line-height: 1.8; color: var(--color-text); }
+</style>

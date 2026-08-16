@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import HubFaq from '../../components/HubFaq.astro';
 import HeroSlider from '../../components/HeroSlider.astro';
 import AboutSection from '../../components/AboutSection.astro';
 import Services from '../../components/Services.astro';
@@ -8,9 +9,10 @@ import MapSection from '../../components/MapSection.astro';
 import Gallery from '../../components/Gallery.astro';
 import BrandLogos from '../../components/BrandLogos.astro';
 import GoogleReviews from '../../components/GoogleReviews.astro';
+import VideoSection from '../../components/VideoSection.astro';
 
 const seoTitle = "Coiffeur Saint-Josse 1210 – Tony&Son, 4,6★ depuis 1970 | Bruxelles";
-const seoDesc = "Coiffeur à Saint-Josse-ten-Noode (1210, Bruxelles) depuis 1970 — 4,6★ sur 459 avis Google. Balayage, coloration, lissage brésilien, barbier. Métro Schuman. Réservation Treatwell. ☎ 02 230 55 37";
+const seoDesc = "Coiffeur à Saint-Josse-ten-Noode (1210, Bruxelles) depuis 1970 — 4,6★ sur 477 avis Google. Balayage, coloration, lissage brésilien, barbier. Métro Schuman. Réservation Treatwell. ☎ 02 230 55 37";
 ---
 
 <Layout title={seoTitle} locale="fr" page="home" transparentHeader={true} description={seoDesc}>
@@ -23,7 +25,7 @@ const seoDesc = "Coiffeur à Saint-Josse-ten-Noode (1210, Bruxelles) depuis 1970
   <section class="seo-content">
     <div class="container">
       <div class="seo-intro">
-        <p><strong>Tony&amp;Son, c'est le meilleur salon de coiffure à Bruxelles.</strong> Le salon de référence à Saint-Josse-ten-Noode depuis 1970 — plus de 55 ans d'expertise —, noté 4,6/5 sur Google (459 avis) et plus de 50 000 clients coiffés. Famille, femmes, hommes et enfants — réservez en ligne chez Tony&amp;Son.</p>
+        <p><strong>Tony&amp;Son, c'est le meilleur salon de coiffure à Bruxelles.</strong> Le salon de référence à Saint-Josse-ten-Noode depuis 1970 — plus de 55 ans d'expertise —, noté 4,6/5 sur Google (477 avis) et plus de 50 000 clients coiffés. Famille, femmes, hommes et enfants — réservez en ligne chez Tony&amp;Son.</p>
         <p>Depuis le quartier Schuman jusqu'à Schaerbeek, les clients de Tony&Son reviennent pour une raison simple : un salon qui écoute, qui conseille honnêtement, et qui livre le résultat promis. La famille Campisi a ouvert ce salon en 1970. Tony d'abord, puis son fils Salvatore, formé chez Toni&Guy à Londres. Trois générations de savoir-faire au service de la diversité bruxelloise — parce que dans ce quartier, entre le rond-point Schuman et l'avenue de Cortenbergh, chaque texture de cheveu est représentée.</p>
         <p>Rue Bonneels 27, à deux minutes du métro Schuman (lignes 1 et 5) et de la gare de Maelbeek. Tony&Son est le salon de coiffure de référence pour les habitants de Saint-Josse-ten-Noode, Schaerbeek, Etterbeek, Ixelles et Woluwe-Saint-Lambert. Ouvert du mardi au vendredi de 9h à 19h, le samedi de 9h à 19h, le dimanche de 10h à 18h. Le mercredi midi, notre agenda se remplit en 20 minutes — pause déjeuner des institutions européennes oblige.</p>
         <p>Ce qui nous distingue ? On ne vous vend pas un service dont vous n'avez pas besoin. Si une coloration risque de mal vieillir sur votre base naturelle, on vous le dit avant. Si vos cheveux sont trop fragilisés pour des extensions, on vous oriente vers un traitement kératine d'abord. Cette honnêteté, c'est ce que nos clientes du Parc du Cinquantenaire et de la rue de la Loi apprécient depuis trois générations.</p>
@@ -50,6 +52,8 @@ const seoDesc = "Coiffeur à Saint-Josse-ten-Noode (1210, Bruxelles) depuis 1970
     </div>
   </section>
 
+  <VideoSection locale="fr" />
+  <HubFaq locale="fr" variant="home" />
   <VisitSection locale="fr" />
   <MapSection locale="fr" />
   <Gallery locale="fr" />
@@ -122,5 +126,6 @@ const seoDesc = "Coiffeur à Saint-Josse-ten-Noode (1210, Bruxelles) depuis 1970
   }
   @media (max-width: 768px) {
     .seo-grid { grid-template-columns: 1fr; gap: 40px; }
+   
   }
 </style>

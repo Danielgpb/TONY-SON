@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import HubFaq from '../../../components/HubFaq.astro';
 import { getEnServicesByCategory } from '../../../data/services-en';
 
 const seoTitle = "Hairdresser Brussels – Tony&Son | Colour, Care & Cuts";
@@ -25,8 +26,8 @@ const categorySchema = {
 };
 ---
 
-<Layout title={seoTitle} locale="en" page="coiffure" description={seoDesc}>
-  <section class="titlebar" style="background-image: url('/images/titlebar-bg.jpg')">
+<Layout title={seoTitle} locale="en" page="coiffure" description={seoDesc} preloadImage="/images/titlebar-bg.webp">
+  <section class="titlebar" style="background-image: url('/images/titlebar-bg.webp')">
     <div class="titlebar-overlay"></div>
     <div class="container">
       <h1>Hairdresser in Brussels — Women, Men & Children at Tony&Son</h1>
@@ -100,6 +101,8 @@ const categorySchema = {
 
     </div>
   </section>
+
+  <HubFaq locale="en" variant="coiffure" />
 
   <section class="category-cta">
     <div class="container" style="text-align: center;">

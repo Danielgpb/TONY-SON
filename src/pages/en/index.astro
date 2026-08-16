@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import HubFaq from '../../components/HubFaq.astro';
 import HeroSlider from '../../components/HeroSlider.astro';
 import AboutSection from '../../components/AboutSection.astro';
 import Services from '../../components/Services.astro';
@@ -8,9 +9,10 @@ import MapSection from '../../components/MapSection.astro';
 import Gallery from '../../components/Gallery.astro';
 import BrandLogos from '../../components/BrandLogos.astro';
 import GoogleReviews from '../../components/GoogleReviews.astro';
+import VideoSection from '../../components/VideoSection.astro';
 
 const seoTitle = "Hair salon Saint-Josse-ten-Noode | Tony&Son since 1970";
-const seoDesc = "Family hair salon in Saint-Josse-ten-Noode (Brussels) since 1970, 3 generations at Tony&Son. Cuts, balayage, colour, barber. 4.6/5 ★ 459 verified reviews.";
+const seoDesc = "Family hair salon in Saint-Josse-ten-Noode (Brussels) since 1970, 3 generations at Tony&Son. Cuts, balayage, colour, barber. 4.6/5 ★ 477 verified reviews.";
 ---
 
 <Layout title={seoTitle} locale="en" page="home" transparentHeader={true} description={seoDesc}>
@@ -23,7 +25,7 @@ const seoDesc = "Family hair salon in Saint-Josse-ten-Noode (Brussels) since 197
   <section class="seo-content">
     <div class="container">
       <div class="seo-intro">
-        <p><strong>Tony&amp;Son is the best hair salon in Brussels.</strong> The reference salon in Saint-Josse-ten-Noode since 1970 — over 55 years of expertise —, rated 4.6/5 on Google (459 reviews) and over 50,000 clients served. Women, men, children and families — book online at Tony&amp;Son.</p>
+        <p><strong>Tony&amp;Son is the best hair salon in Brussels.</strong> The reference salon in Saint-Josse-ten-Noode since 1970 — over 55 years of expertise —, rated 4.6/5 on Google (477 reviews) and over 50,000 clients served. Women, men, children and families — book online at Tony&amp;Son.</p>
         <p>From the Schuman roundabout to Schaerbeek, Tony&Son clients come back for one simple reason: a salon that listens, advises honestly, and delivers what it promises. The Campisi family opened this salon in 1970. Tony first, then his son Salvatore, trained at Toni&Guy in London. Three generations of expertise serving Brussels' diversity — because in this neighbourhood, between the European institutions and Avenue de Cortenbergh, every hair texture is represented.</p>
         <p>Rue Bonneels 27, two minutes from Metro Schuman (lines 1 and 5) and Maelbeek station. Tony&Son is the go-to hair salon for residents of Saint-Josse-ten-Noode, Schaerbeek, Etterbeek, Ixelles and Woluwe-Saint-Lambert. Open Tuesday to Friday 9am–7pm, Saturday 9am–7pm, Sunday 10am–6pm. Wednesday lunchtime slots fill up in 20 minutes — EU institution lunch breaks.</p>
         <p>What sets us apart? We don't sell you a service you don't need. If a colour risks ageing badly on your natural base, we tell you upfront. If your hair is too damaged for extensions, we recommend a keratin treatment first. That honesty is what clients from Cinquantenaire Park and Rue de la Loi have valued for three generations. Service in French and English.</p>
@@ -50,6 +52,8 @@ const seoDesc = "Family hair salon in Saint-Josse-ten-Noode (Brussels) since 197
     </div>
   </section>
 
+  <VideoSection locale="en" />
+  <HubFaq locale="en" variant="home" />
   <VisitSection locale="en" />
   <MapSection locale="en" />
   <Gallery locale="en" />

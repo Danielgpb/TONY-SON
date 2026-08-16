@@ -14,9 +14,10 @@ interface Props {
   description?: string;
   canonical?: string;
   ogImage?: string;
+  preloadImage?: string;
 }
 
-const { title, locale, page = '', transparentHeader = false, description, canonical, ogImage } = Astro.props;
+const { title, locale, page = '', transparentHeader = false, description, canonical, ogImage, preloadImage } = Astro.props;
 
 const siteUrl = 'https://tonyandson.be';
 const ogImageUrl = ogImage ? `${siteUrl}${ogImage}` : `${siteUrl}/images/hero-bg.jpg`;
@@ -80,7 +81,7 @@ const jsonLd = {
       "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.6",
-        "reviewCount": "459",
+        "reviewCount": "477",
         "bestRating": "5",
         "worstRating": "1"
       },
@@ -116,6 +117,7 @@ const jsonLd = {
         "https://www.facebook.com/tonysoncoiffure/",
         "https://www.instagram.com/tonysonhairstylist/",
         "https://www.tiktok.com/@tonysonhairdresser",
+        "https://www.youtube.com/@TonySon-u7r",
         "https://widget.treatwell.be/fr/salon/tony-son/"
       ],
       "areaServed": [
@@ -183,6 +185,13 @@ const jsonLd = {
       "name": "Tony&Son",
       "publisher": { "@id": `${siteUrl}/#business` },
       "inLanguage": ["fr-BE", "en-BE", "nl-BE"]
+    },
+    {
+      "@type": "Person",
+      "@id": `${siteUrl}/#tony-campisi`,
+      "name": "Tony Campisi",
+      "jobTitle": locale === 'en' ? "Founder & Master Hairdresser" : locale === 'nl' ? "Oprichter & meesterkapper" : "Fondateur & maître coiffeur",
+      "worksFor": { "@id": `${siteUrl}/#business` }
     }
   ]
 };
@@ -236,6 +245,7 @@ const jsonLd = {
       fetchpriority="high"
     />
   )}
+  {preloadImage && <link rel="preload" as="image" href={preloadImage} fetchpriority="high" />}
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon.ico" sizes="32x32" />

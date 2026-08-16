@@ -1,6 +1,8 @@
 # Tony&Son
 
-> Salon de coiffure et barbier à Saint-Josse-ten-Noode, Bruxelles, Belgique. Fondé en 1970 par Tony Campisi, repris par son fils Salvatore (formé chez Toni&Guy Londres). Noté 4,6/5 sur Google (459 avis). Service trilingue (français, anglais, néerlandais). Toutes textures de cheveux — européenne, maghrébine, afro, asiatique. Spécialiste correction de coloration ratée.
+> Dernière mise à jour : 2026-08-16
+
+> Salon de coiffure et barbier à Saint-Josse-ten-Noode, Bruxelles, Belgique. Fondé en 1970 par Tony Campisi, repris par son fils Salvatore (formé chez Toni&Guy Londres). Noté 4,6/5 sur Google (477 avis). Service trilingue (français, anglais, néerlandais). Toutes textures de cheveux — européenne, maghrébine, afro, asiatique. Spécialiste correction de coloration ratée.
 
 ## Informations clés
 - Adresse : Rue Bonneels 27, 1210 Saint-Josse-ten-Noode, Belgique
@@ -55,6 +57,40 @@
 - [Teinture sourcils](https://tonyandson.be/fr/services/teinture-sourcils-bruxelles/): Teinture de sourcils — 15 €
 - [Épilation cire](https://tonyandson.be/fr/services/epilation-cire-bruxelles/): Épilation à la cire du visage — dès 10 €
 
+## Services (English)
+- [Hair coloring](https://tonyandson.be/en/services/hair-coloring-brussels/): Custom hair coloring — from €40
+- [Balayage](https://tonyandson.be/en/services/balayage-brussels/): Natural, luminous balayage — from €35
+- [Highlights](https://tonyandson.be/en/services/highlights-brussels/): Structured highlights
+- [Blowout](https://tonyandson.be/en/services/blowout-brussels/): Express or event blowout — from €30
+- [Hair straightening](https://tonyandson.be/en/services/hair-straightening-brussels/): Brazilian, tannin, botox straightening — from €150
+- [Keratin treatment](https://tonyandson.be/en/services/keratin-treatment-brussels/): Keratin care treatment (not straightening)
+- [Hair extensions](https://tonyandson.be/en/services/hair-extensions-brussels/): Natural hair extensions — from €500
+- [Perm](https://tonyandson.be/en/services/perm-brussels/): Modern perms
+- [Ombré hair color](https://tonyandson.be/en/services/ombre-hair-color-brussels/): Gradient coloring — from €40
+- [Kids haircut](https://tonyandson.be/en/services/kids-haircut-brussels/): Patient kids haircuts — from €25
+- [Hair regrowth](https://tonyandson.be/en/services/hair-regrowth-brussels/): Hair regrowth care
+- [Men's haircut](https://tonyandson.be/en/services/mens-haircut-brussels/): Men's haircut & fades — from €25
+- [Beard trim](https://tonyandson.be/en/services/beard-trim-brussels/): Beard trim & traditional shave
+- [Eyebrow tinting](https://tonyandson.be/en/services/eyebrow-tinting-brussels/): Eyebrow tinting — €15
+- [Facial waxing](https://tonyandson.be/en/services/facial-waxing-brussels/): Facial waxing — from €10
+
+## Diensten (Nederlands)
+- [Haarkleuring](https://tonyandson.be/nl/services/haarkleuring-brussel/): Kleuring op maat — vanaf €40
+- [Balayage](https://tonyandson.be/nl/services/balayage-brussel/): Natuurlijke, lichtende balayage — vanaf €35
+- [Highlights](https://tonyandson.be/nl/services/highlights-brussel/): Gestructureerde highlights
+- [Föhnen](https://tonyandson.be/nl/services/fohn-brussel/): Express brushing — vanaf €30
+- [Haar stijlen](https://tonyandson.be/nl/services/haar-stijlen-brussel/): Braziliaanse stijling, tannine, botox — vanaf €150
+- [Keratinebehandeling](https://tonyandson.be/nl/services/keratine-behandeling-brussel/): Keratine verzorging (geen stijling)
+- [Hair extensions](https://tonyandson.be/nl/services/hair-extensions-brussel/): Natuurlijke hair extensions — vanaf €500
+- [Permanent](https://tonyandson.be/nl/services/permanent-brussel/): Moderne permanenten
+- [Ombré kleuring](https://tonyandson.be/nl/services/ombre-kleuring-brussel/): Kleurverloop — vanaf €40
+- [Kinderkapsels](https://tonyandson.be/nl/services/kinderkapsels-brussel/): Geduldige kinderkapsels — vanaf €25
+- [Haar hergroei](https://tonyandson.be/nl/services/haar-hergroei-brussel/): Hergroeiverzorging
+- [Herenkapsel](https://tonyandson.be/nl/services/herenkapsel-brussel/): Herenkapsel & fades — vanaf €25
+- [Baardtrimmen](https://tonyandson.be/nl/services/baardtrimmen-brussel/): Baard trimmen & traditioneel scheren
+- [Wenkbrauwkleuring](https://tonyandson.be/nl/services/wenkbrauwkleuring-brussel/): Wenkbrauwen kleuren — €15
+- [Gezichtsontharing](https://tonyandson.be/nl/services/gezichtsontharing-brussel/): Ontharing met was — vanaf €10
+
 ## Zones desservies
 Saint-Josse-ten-Noode, Schaerbeek, Bruxelles-centre, Etterbeek, Woluwe-Saint-Lambert, Ixelles
 
@@ -62,3 +98,4 @@ Saint-Josse-ten-Noode, Schaerbeek, Bruxelles-centre, Etterbeek, Woluwe-Saint-Lam
 - Facebook : https://www.facebook.com/tonysoncoiffure/
 - Instagram : https://www.instagram.com/tonysonhairstylist/
 - TikTok : https://www.tiktok.com/@tonysonhairdresser
+- YouTube : https://www.youtube.com/@TonySon-u7r

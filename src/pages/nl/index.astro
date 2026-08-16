@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import HubFaq from '../../components/HubFaq.astro';
 import HeroSlider from '../../components/HeroSlider.astro';
 import AboutSection from '../../components/AboutSection.astro';
 import Services from '../../components/Services.astro';
@@ -8,9 +9,10 @@ import MapSection from '../../components/MapSection.astro';
 import Gallery from '../../components/Gallery.astro';
 import BrandLogos from '../../components/BrandLogos.astro';
 import GoogleReviews from '../../components/GoogleReviews.astro';
+import VideoSection from '../../components/VideoSection.astro';
 
 const seoTitle = "Kapsalon Sint-Joost-ten-Node | Tony&Son sinds 1970";
-const seoDesc = "Familiale kapsalon in Sint-Joost-ten-Node (Brussel) sinds 1970, 3 generaties bij Tony&Son. Knippen, kleuren, balayage, barbier. 4,6/5 ★ 459 beoordelingen.";
+const seoDesc = "Familiale kapsalon in Sint-Joost-ten-Node (Brussel) sinds 1970, 3 generaties bij Tony&Son. Knippen, kleuren, balayage, barbier. 4,6/5 ★ 477 beoordelingen.";
 ---
 
 <Layout title={seoTitle} locale="nl" page="home" transparentHeader={true} description={seoDesc}>
@@ -22,7 +24,7 @@ const seoDesc = "Familiale kapsalon in Sint-Joost-ten-Node (Brussel) sinds 1970,
   <section class="seo-content">
     <div class="container">
       <div class="seo-intro">
-        <p><strong>Tony&amp;Son is de beste kapsalon in Brussel.</strong> De referentiekapsalon in Sint-Joost-ten-Node sinds 1970 — meer dan 55 jaar vakmanschap —, beoordeeld met 4,6/5 op Google (459 beoordelingen) en meer dan 50.000 klanten bediend. Vrouwen, mannen, kinderen en gezinnen — boek online bij Tony&amp;Son.</p>
+        <p><strong>Tony&amp;Son is de beste kapsalon in Brussel.</strong> De referentiekapsalon in Sint-Joost-ten-Node sinds 1970 — meer dan 55 jaar vakmanschap —, beoordeeld met 4,6/5 op Google (477 beoordelingen) en meer dan 50.000 klanten bediend. Vrouwen, mannen, kinderen en gezinnen — boek online bij Tony&amp;Son.</p>
         <p>Van de Schumanrotonde tot Schaarbeek, klanten van Tony&Son komen terug om één simpele reden: een salon die luistert, eerlijk adviseert en levert wat beloofd is. De familie Campisi opende dit salon in 1970. Eerst Tony, daarna zijn zoon Salvatore, opgeleid bij Toni&Guy in Londen. Drie generaties vakmanschap ten dienste van de Brusselse diversiteit — want in deze buurt, tussen de Europese instellingen en de Kortenberglaan, is elke haartextuur vertegenwoordigd: Europees, Maghrebijns, Afro, Aziatisch. Onze coloristen en barbiers passen hun techniek aan elke klant aan, zonder dat het gevraagd hoeft te worden.</p>
         <p>Rue Bonneels 27, op twee minuten van metro Schuman (lijnen 1 en 5) en het station Maalbeek. Tony&Son is het referentiekapsalon voor inwoners van Sint-Joost-ten-Node, Schaarbeek, Etterbeek, Elsene en Sint-Lambrechts-Woluwe. Open dinsdag tot vrijdag van 9u tot 19u, zaterdag van 9u tot 19u, zondag van 10u tot 18u. Op woensdagmiddag is onze agenda binnen 20 minuten gevuld — lunchpauze van de Europese instellingen, weet u wel.</p>
         <p>Wat ons onderscheidt? We verkopen u geen dienst die u niet nodig heeft. Als een kleuring slecht zal verouderen op uw natuurlijke basis, zeggen we dat van tevoren. Als uw haar te broos is voor extensions, raden we eerst een keratinebehandeling aan. Die eerlijkheid waarderen onze klanten uit het Jubelpark en de Wetstraat al drie generaties lang. Service in het Nederlands, Frans, Engels en Italiaans.</p>
@@ -49,6 +51,8 @@ const seoDesc = "Familiale kapsalon in Sint-Joost-ten-Node (Brussel) sinds 1970,
     </div>
   </section>
 
+  <VideoSection locale="nl" />
+  <HubFaq locale="nl" variant="home" />
   <VisitSection locale="nl" />
   <MapSection locale="nl" />
   <Gallery locale="nl" />

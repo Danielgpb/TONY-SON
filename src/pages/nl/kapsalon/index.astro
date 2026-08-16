@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import HubFaq from '../../../components/HubFaq.astro';
 import { getNlServicesByCategory } from '../../../data/services-nl';
 
 const seoTitle = "Kapsalon Brussel – Kleuringen & Verzorging | Tony&Son";
@@ -25,8 +26,8 @@ const categorySchema = {
 };
 ---
 
-<Layout title={seoTitle} locale="nl" page="coiffure" description={seoDesc}>
-  <section class="titlebar" style="background-image: url('/images/titlebar-bg.jpg')">
+<Layout title={seoTitle} locale="nl" page="coiffure" description={seoDesc} preloadImage="/images/titlebar-bg.webp">
+  <section class="titlebar" style="background-image: url('/images/titlebar-bg.webp')">
     <div class="titlebar-overlay"></div>
     <div class="container">
       <h1>Kapsalon in Brussel — Vrouwen, mannen & kinderen bij Tony&Son</h1>
@@ -88,6 +89,8 @@ const categorySchema = {
       </div>
     </div>
   </section>
+
+  <HubFaq locale="nl" variant="coiffure" />
 
   <section class="category-cta">
     <div class="container" style="text-align: center;">

@@ -2,6 +2,9 @@
 import Layout from '../../../layouts/Layout.astro';
 import { services, getServicesByCategory } from '../../../data/services';
 import type { GetStaticPaths } from 'astro';
+import imageDims from '../../../data/image-dims.json';
+
+const imgDims = (p: string) => (imageDims as Record<string, { w: number; h: number }>)[p] ?? { w: 1200, h: 800 };
 
 export const getStaticPaths: GetStaticPaths = () => {
   return services.map(service => ({
@@ -53,9 +56,9 @@ const schemaGraph = {
 };
 ---
 
-<Layout title={seoTitle} locale="fr" page="service" description={seoDesc} ogImage={service.images && service.images.length > 0 ? service.images[0] : undefined}>
+<Layout title={seoTitle} locale="fr" page="service" description={seoDesc} ogImage={service.images && service.images.length > 0 ? service.images[0] : undefined} preloadImage="/images/titlebar-bg.webp">
   <!-- Titlebar -->
-  <section class="titlebar" style="background-image: url('/images/titlebar-bg.jpg')">
+  <section class="titlebar" style="background-image: url('/images/titlebar-bg.webp')">
     <div class="titlebar-overlay"></div>
     <div class="container">
       <h1>{service.h1}</h1>
@@ -102,7 +105,7 @@ const schemaGraph = {
         <aside class="service-sidebar">
           {service.images && service.images.length > 0 ? (
             service.images.map((img, i) => (
-              <img src={img} alt={`${service.name} chez Tony&Son à Bruxelles${i > 0 ? ` — photo ${i + 1}` : ''}`} class="sidebar-photo" loading="lazy" />
+              <img src={img} alt={`${service.name} chez Tony&Son à Bruxelles${i > 0 ? ` — photo ${i + 1}` : ''}`} class="sidebar-photo" loading="lazy" decoding="async" width={imgDims(img).w} height={imgDims(img).h} />
             ))
           ) : (
             <>

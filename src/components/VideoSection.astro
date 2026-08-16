@@ -1,0 +1,111 @@
+---
+import YouTubeShort from './YouTubeShort.astro';
+import type { Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const i18n = {
+  fr: {
+    label: 'Le salon en vidéo',
+    heading: 'Balayage & brushing, en direct du salon',
+    text: 'Un aperçu du travail de nos coloristes, filmé rue Bonneels. Suivez Tony&Son sur YouTube pour les avant/après et les coulisses du salon.',
+    cta: 'Voir la chaîne YouTube',
+  },
+  en: {
+    label: 'The salon on video',
+    heading: 'Balayage & blowout, live from the salon',
+    text: 'A glimpse of our colorists at work, filmed at Rue Bonneels. Follow Tony&Son on YouTube for before/afters and behind-the-scenes.',
+    cta: 'Visit our YouTube channel',
+  },
+  nl: {
+    label: 'Het salon in beeld',
+    heading: 'Balayage & brushing, live vanuit het salon',
+    text: 'Een blik op het werk van onze kleurspecialisten, gefilmd in de Bonneelsstraat. Volg Tony&Son op YouTube voor voor/na-resultaten en een kijkje achter de schermen.',
+    cta: 'Bekijk ons YouTube-kanaal',
+  },
+} as const;
+
+const t = i18n[locale as keyof typeof i18n] ?? i18n.fr;
+---
+
+<section class="video-section" id="salon-video">
+  <div class="container video-section__inner">
+    <div class="video-section__text">
+      <span class="video-section__label">{t.label}</span>
+      <h2>{t.heading}</h2>
+      <p>{t.text}</p>
+      <a
+        class="video-section__cta"
+        href="https://www.youtube.com/@TonySon-u7r"
+        target="_blank"
+        rel="noopener"
+      >
+        {t.cta} &rarr;
+      </a>
+    </div>
+    <YouTubeShort locale={locale as 'fr' | 'en' | 'nl'} />
+  </div>
+</section>
+
+<style>
+  .video-section {
+    padding: 90px 0;
+    background: #fff;
+  }
+  .video-section__inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+  }
+  .video-section__text {
+    max-width: 420px;
+  }
+  .video-section__label {
+    font-family: var(--font-accent);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-gold-text);
+  }
+  .video-section__text h2 {
+    font-size: 32px;
+    margin: 14px 0 18px;
+  }
+  .video-section__text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-bottom: 24px;
+  }
+  .video-section__cta {
+    font-family: var(--font-accent);
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-gold-text);
+  }
+  .video-section :global(.yt-short) {
+    max-width: 260px;
+    flex-shrink: 0;
+  }
+  @media (max-width: 768px) {
+    .video-section {
+      padding: 60px 0;
+    }
+    .video-section__inner {
+      flex-direction: column;
+      gap: 40px;
+      text-align: center;
+    }
+    .video-section :global(.yt-short) {
+      max-width: 220px;
+    }
+  }
+</style>
