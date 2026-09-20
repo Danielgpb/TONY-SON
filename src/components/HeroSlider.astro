@@ -121,17 +121,29 @@ const cta = locale === 'nl' ? 'Boek nu' : locale === 'en' ? 'Book now' : 'Réser
     .hero-title { font-size: 45px; line-height: 60px; }
   }
   @media (max-width: 768px) {
-    .hero { min-height: auto; height: 75vh; }
-    .hero-bg { background-position: center top; background-size: 120% auto; background-repeat: no-repeat; }
-    .hero-box {
-      padding: 30px 25px;
-      max-width: 100%;
-      right: 0;
-      position: relative;
-      margin-top: auto;
-      bottom: auto;
+    /* Le bloc de texte reste superposé à l'image (comme sur desktop) au lieu de
+       passer dans le flux : en flux, son fond noir opaque rognait l'image par le
+       bas et il n'en restait qu'un tiers visible. Le dégradé garde le texte
+       lisible tout en laissant voir la photo derrière. */
+    .hero {
+      min-height: auto;
+      height: 78vh;
+      height: 78svh;
     }
-    .hero { display: flex; flex-direction: column; }
+    .hero-box {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: 100%;
+      padding: 70px 22px 34px;
+      background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.92) 0%,
+        rgba(0, 0, 0, 0.82) 45%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
     .hero-title { font-size: 28px; line-height: 36px; margin-bottom: 20px; }
     .hero-tagline { font-size: 16px; margin-bottom: 15px; }
     .hero-cta { padding: 16px 32px; font-size: 14px; }

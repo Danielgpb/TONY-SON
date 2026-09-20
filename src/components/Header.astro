@@ -9,6 +9,32 @@ interface Props {
 }
 
 const { locale, currentPage = '', transparent = false } = Astro.props;
+
+// Source unique des liens : consommée par la nav desktop ET le menu du panneau mobile,
+// pour qu'elles ne puissent plus diverger (le panneau n'en avait aucun).
+const navLinks = [
+  {
+    href: `/${locale}/`,
+    page: 'home',
+    label: locale === 'nl' ? 'Startpagina' : locale === 'en' ? 'Home' : "Page d'accueil",
+  },
+  {
+    href: locale === 'en' ? '/en/hairdresser/' : locale === 'nl' ? '/nl/kapsalon/' : '/fr/coiffure/',
+    page: 'coiffure',
+    label: locale === 'nl' ? 'Kapsalon' : locale === 'en' ? 'Hairdresser' : 'Coiffure',
+  },
+  {
+    href: locale === 'en' ? '/en/barber/' : `/${locale}/barbier/`,
+    page: 'barbier',
+    label: locale === 'en' ? 'Barber' : 'Barbier',
+  },
+  {
+    href: `/${locale}/about/`,
+    page: 'about',
+    label: locale === 'nl' ? 'Over ons' : locale === 'en' ? 'About Us' : 'A propos de nous',
+  },
+  { href: `/${locale}/contact/`, page: 'contact', label: 'Contact' },
+];
 ---
 
 <header class:list={['header', { transparent }]} id="site-header">
@@ -18,21 +44,9 @@ const { locale, currentPage = '', transparent = false } = Astro.props;
     </a>
 
     <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
-      <a href={`/${locale}/`} class:list={['nav-link', { active: currentPage === 'home' }]}>
-        {locale === 'nl' ? 'Startpagina' : locale === 'en' ? 'Home' : "Page d'accueil"}
-      </a>
-      <a href={locale === 'en' ? '/en/hairdresser/' : locale === 'nl' ? '/nl/kapsalon/' : '/fr/coiffure/'} class:list={['nav-link', { active: currentPage === 'coiffure' }]}>
-        {locale === 'nl' ? 'Kapsalon' : locale === 'en' ? 'Hairdresser' : 'Coiffure'}
-      </a>
-      <a href={locale === 'en' ? '/en/barber/' : `/${locale}/barbier/`} class:list={['nav-link', { active: currentPage === 'barbier' }]}>
-        {locale === 'nl' ? 'Barbier' : locale === 'en' ? 'Barber' : 'Barbier'}
-      </a>
-      <a href={`/${locale}/about/`} class:list={['nav-link', { active: currentPage === 'about' }]}>
-        {locale === 'nl' ? 'Over ons' : locale === 'en' ? 'About Us' : 'A propos de nous'}
-      </a>
-      <a href={`/${locale}/contact/`} class:list={['nav-link', { active: currentPage === 'contact' }]}>
-        Contact
-      </a>
+      {navLinks.map((l) => (
+        <a href={l.href} class:list={['nav-link', { active: currentPage === l.page }]}>{l.label}</a>
+      ))}
     </nav>
 
     <div class="header-right">
@@ -51,6 +65,11 @@ const { locale, currentPage = '', transparent = false } = Astro.props;
 <div class="side-panel" id="side-panel">
   <button class="side-close" id="side-close">&times;</button>
   <div class="side-content">
+    <nav class="side-nav" aria-label="Menu mobile">
+      {navLinks.map((l) => (
+        <a href={l.href} class:list={['side-nav-link', { active: currentPage === l.page }]}>{l.label}</a>
+      ))}
+    </nav>
     <div class="side-heading" style="color: black; font-size: 18px; font-weight: 600; text-transform: uppercase; margin-bottom: 15px;">{locale === 'nl' ? 'Afspraak maken' : locale === 'en' ? 'Book an appointment' : 'Prendre rendez-vous'}</div>
     <p class="side-address">Rue Bonneels 27, 1210 Saint-Josse-ten-Noode, Belgique</p>
     <div style="color: var(--color-gold); text-transform: none; font-size: 26px; font-weight: 600; margin: 5px 0;">+32 2 230 55 37</div>
@@ -184,16 +203,45 @@ const { locale, currentPage = '', transparent = false } = Astro.props;
   .side-panel {
     position: fixed;
     top: 0;
-    right: -420px;
-    width: 400px;
+    right: 0;
+    width: min(400px, 86vw);
     height: 100vh;
+    height: 100dvh;
     background: var(--color-white);
     z-index: 2000;
-    transition: right 0.4s cubic-bezier(0.25, 0.05, 0.1, 0.94);
-    padding: 50px 35px;
+    transform: translateX(100%);
+    transition: transform 0.4s cubic-bezier(0.25, 0.05, 0.1, 0.94);
+    padding: 50px 30px;
     overflow-y: auto;
+    overscroll-behavior: contain;
   }
-  .side-panel.open { right: 0; }
+  .side-panel.open { transform: translateX(0); }
+
+  /* Menu de navigation du panneau : sur mobile c'est le seul accès aux pages,
+     la nav du header étant masquée sous 992px. */
+  .side-nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(209, 176, 150, 0.35);
+  }
+  .side-nav-link {
+    font-family: var(--font-accent);
+    font-size: 17px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--color-heading);
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+    text-decoration: none;
+  }
+  .side-nav-link:last-child { border-bottom: none; }
+  .side-nav-link:hover,
+  .side-nav-link.active { color: var(--color-gold); }
+  @media (min-width: 993px) {
+    .side-nav { display: none; }
+  }
   .side-close {
     position: absolute;
     top: 15px;
