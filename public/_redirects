@@ -51,6 +51,10 @@
 /                                                                      /en/                                             301!  Language=en
 /                                                                      /fr/                                             301!
 
+# Logos partenaires renommés (noms descriptifs, insensibles aux bloqueurs)
+/images/brand-1.png                                                    /images/logo-kerastase.png                       301
+/images/brand-2.png                                                    /images/logo-loreal-professionnel.png            301
+
 # Alias commun du sitemap
 /sitemap.xml                                                           /sitemap-index.xml                               301
 

@@ -3,49 +3,83 @@
 // l'iframe youtube-nocookie n'est injectée qu'au clic (zéro JS YouTube au chargement).
 interface Props {
   locale: 'fr' | 'en' | 'nl';
+  video?: 'balayage' | 'enseigne';
 }
 
-const { locale } = Astro.props;
+const { locale, video = 'balayage' } = Astro.props;
 
-const VIDEO_ID = 'xB8mCNwOyAw';
-const THUMB = '/images/video-balayage-short.webp';
-const UPLOAD_DATE = '2026-08-16T04:10:38-07:00';
+const VIDEOS = {
+  balayage: {
+    id: 'xB8mCNwOyAw',
+    thumb: '/images/video-balayage-short.webp',
+    uploadDate: '2026-08-16T04:10:38-07:00',
+    i18n: {
+      fr: {
+        title: 'Balayage & brushing en salon — Coiffeur à Saint-Josse, Bruxelles | Tony&Son',
+        description:
+          'Balayage et brushing réalisés en salon chez Tony&Son, coiffeur à Saint-Josse-ten-Noode (Bruxelles), rue Bonneels 27, à deux pas du métro Schuman.',
+        play: 'Lire la vidéo : balayage & brushing en salon',
+        caption: 'Balayage & brushing en salon — en vidéo',
+      },
+      en: {
+        title: 'Balayage & blowout in the salon — Hairdresser in Saint-Josse, Brussels | Tony&Son',
+        description:
+          'Balayage and blowout performed at Tony&Son, hairdresser in Saint-Josse-ten-Noode (Brussels), Rue Bonneels 27, steps from Schuman metro.',
+        play: 'Play video: balayage & blowout in the salon',
+        caption: 'Balayage & blowout in the salon — on video',
+      },
+      nl: {
+        title: 'Balayage & brushing in het salon — Kapper in Sint-Joost, Brussel | Tony&Son',
+        description:
+          'Balayage en brushing uitgevoerd bij Tony&Son, kapper in Sint-Joost-ten-Node (Brussel), Bonneelsstraat 27, vlak bij metro Schuman.',
+        play: 'Video afspelen: balayage & brushing in het salon',
+        caption: 'Balayage & brushing in het salon — op video',
+      },
+    },
+  },
+  enseigne: {
+    id: '9N5CNW2pSN0',
+    thumb: '/images/video-enseigne-short.webp',
+    uploadDate: '2026-09-17T04:18:51-07:00',
+    i18n: {
+      fr: {
+        title:
+          "L'histoire derrière notre enseigne — Tony&Son, coiffeur à Saint-Josse depuis 1970",
+        description:
+          "L'histoire de l'enseigne Tony&Son, salon de coiffure familial fondé en 1970 par Tony Campisi et repris par son fils Salvatore, rue Bonneels 27 à Saint-Josse-ten-Noode (Bruxelles).",
+        play: "Lire la vidéo : l'histoire derrière l'enseigne Tony&Son",
+        caption: "L'histoire derrière notre enseigne — en vidéo",
+      },
+      en: {
+        title: 'The story behind our sign — Tony&Son, hairdresser in Saint-Josse since 1970',
+        description:
+          'The story of the Tony&Son sign, a family hair salon founded in 1970 by Tony Campisi and taken over by his son Salvatore, Rue Bonneels 27 in Saint-Josse-ten-Noode (Brussels).',
+        play: 'Play video: the story behind the Tony&Son sign',
+        caption: 'The story behind our sign — on video',
+      },
+      nl: {
+        title: 'Het verhaal achter ons uithangbord — Tony&Son, kapper in Sint-Joost sinds 1970',
+        description:
+          'Het verhaal achter het uithangbord van Tony&Son, een familiekapsalon opgericht in 1970 door Tony Campisi en overgenomen door zijn zoon Salvatore, Bonneelsstraat 27 in Sint-Joost-ten-Node (Brussel).',
+        play: 'Video afspelen: het verhaal achter het uithangbord van Tony&Son',
+        caption: 'Het verhaal achter ons uithangbord — op video',
+      },
+    },
+  },
+} as const;
 
-const i18n = {
-  fr: {
-    title: 'Balayage & brushing en salon — Coiffeur à Saint-Josse, Bruxelles | Tony&Son',
-    description:
-      'Balayage et brushing réalisés en salon chez Tony&Son, coiffeur à Saint-Josse-ten-Noode (Bruxelles), rue Bonneels 27, à deux pas du métro Schuman.',
-    play: 'Lire la vidéo : balayage & brushing en salon',
-    caption: 'Balayage & brushing en salon — en vidéo',
-  },
-  en: {
-    title: 'Balayage & blowout in the salon — Hairdresser in Saint-Josse, Brussels | Tony&Son',
-    description:
-      'Balayage and blowout performed at Tony&Son, hairdresser in Saint-Josse-ten-Noode (Brussels), Rue Bonneels 27, steps from Schuman metro.',
-    play: 'Play video: balayage & blowout in the salon',
-    caption: 'Balayage & blowout in the salon — on video',
-  },
-  nl: {
-    title: 'Balayage & brushing in het salon — Kapper in Sint-Joost, Brussel | Tony&Son',
-    description:
-      'Balayage en brushing uitgevoerd bij Tony&Son, kapper in Sint-Joost-ten-Node (Brussel), Bonneelsstraat 27, vlak bij metro Schuman.',
-    play: 'Video afspelen: balayage & brushing in het salon',
-    caption: 'Balayage & brushing in het salon — op video',
-  },
-};
-
-const t = i18n[locale];
+const v = VIDEOS[video];
+const t = v.i18n[locale] ?? v.i18n.fr;
 
 const videoSchema = JSON.stringify({
   '@context': 'https://schema.org',
   '@type': 'VideoObject',
   name: t.title,
   description: t.description,
-  thumbnailUrl: `https://tonyandson.be${THUMB}`,
-  uploadDate: UPLOAD_DATE,
-  embedUrl: `https://www.youtube-nocookie.com/embed/${VIDEO_ID}`,
-  contentUrl: `https://www.youtube.com/shorts/${VIDEO_ID}`,
+  thumbnailUrl: `https://tonyandson.be${v.thumb}`,
+  uploadDate: v.uploadDate,
+  embedUrl: `https://www.youtube-nocookie.com/embed/${v.id}`,
+  contentUrl: `https://www.youtube.com/shorts/${v.id}`,
   publisher: { '@id': 'https://tonyandson.be/#business' },
 });
 ---
@@ -54,11 +88,11 @@ const videoSchema = JSON.stringify({
   <button
     type="button"
     class="yt-short__facade"
-    data-video-id={VIDEO_ID}
+    data-video-id={v.id}
     data-video-title={t.title}
     aria-label={t.play}
   >
-    <img src={THUMB} alt={t.caption} width="480" height="854" loading="lazy" decoding="async" />
+    <img src={v.thumb} alt={t.caption} width="480" height="854" loading="lazy" decoding="async" />
     <span class="yt-short__play" aria-hidden="true">
       <svg viewBox="0 0 68 48" width="52" height="37">
         <path

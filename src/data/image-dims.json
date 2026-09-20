@@ -111,14 +111,6 @@
     "h": 1600,
     "w": 1200
   },
-  "/images/brand-1.png": {
-    "h": 154,
-    "w": 500
-  },
-  "/images/brand-2.png": {
-    "h": 101,
-    "w": 348
-  },
   "/images/brushing-1.jpg": {
     "h": 1024,
     "w": 1536
@@ -322,5 +314,13 @@
   "/images/video-balayage-short.webp": {
     "h": 854,
     "w": 480
+  },
+  "/images/logo-kerastase.png": {
+    "h": 154,
+    "w": 500
+  },
+  "/images/logo-loreal-professionnel.png": {
+    "h": 101,
+    "w": 348
   }
 }

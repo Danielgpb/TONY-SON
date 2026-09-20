@@ -20,7 +20,10 @@ const reviews = [
   { name: "Giacomo Mallaci", initial: "G", color: "#455A64", date: "6 sem.", text: "Très bon coiffeur, voir l'un des meilleurs sur Bruxelles. Patron et personnel au top je recommande!" },
 ];
 
-const googleMapsUrl = "https://search.google.com/local/reviews?placeid=ChIJH4YBhhjDw0cR05o_ZDBl-Vc";
+// Lien court officiel de la fiche (encode le cid 6286608572742609363) : ouvre le formulaire d'avis.
+const writeReviewUrl = "https://g.page/r/CdOpP2QwhT5XEBM/review";
+// Lecture des avis : lien Maps par cid, stable et indépendant du libellé de la fiche.
+const readReviewsUrl = "https://www.google.com/maps?cid=6286608572742609363";
 ---
 
 <section class="google-reviews">
@@ -39,11 +42,11 @@ const googleMapsUrl = "https://search.google.com/local/reviews?placeid=ChIJH4YBh
           <div class="gr-rating">
             <span class="gr-score">4,6</span>
             <span class="gr-stars">★★★★<span class="gr-star-half">★</span></span>
-            <span class="gr-count">477 avis</span>
+            <span class="gr-count">531 avis</span>
           </div>
         </div>
       </div>
-      <a href={googleMapsUrl} target="_blank" rel="noopener" class="gr-write-btn">Écrire un avis</a>
+      <a href={writeReviewUrl} target="_blank" rel="noopener" class="gr-write-btn">Écrire un avis</a>
     </div>
 
     <!-- Carousel -->
@@ -65,7 +68,7 @@ const googleMapsUrl = "https://search.google.com/local/reviews?placeid=ChIJH4YBh
 
     <!-- Footer link -->
     <div class="gr-footer">
-      <a href={googleMapsUrl} target="_blank" rel="noopener">Voir tous les avis sur Google &rarr;</a>
+      <a href={readReviewsUrl} target="_blank" rel="noopener">Voir tous les avis sur Google &rarr;</a>
     </div>
   </div>
 </section>
