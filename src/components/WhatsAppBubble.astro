@@ -238,8 +238,8 @@ const labels = {
     position: absolute;
     top: 5px;
     right: 6px;
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background: #f0f2f5;
     border: none;
@@ -1037,7 +1037,8 @@ const labels = {
     }
 
     // ─── Auto-behavior selon device ───
-    const isMobile = window.innerWidth < DESKTOP_MIN_WIDTH;
+    // matchMedia ne force pas de recalcul de mise en page, contrairement à innerWidth (125 ms de reflow mesurés).
+    const isMobile = window.matchMedia(`(max-width: ${DESKTOP_MIN_WIDTH - 1}px)`).matches;
 
     if (isMobile) {
       // Mobile : affiche le teaser après 2.2s (pas d'ouverture auto du chat plein)

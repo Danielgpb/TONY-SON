@@ -4,6 +4,8 @@
   --color-gold: #D1B096;
   --color-gold-alt: #CBB19A;
   --color-gold-text: #9A7B5B;
+  /* Doré foncé pour le texte courant sur fond clair : 5,9:1 sur blanc, 5,3:1 sur crème (AA). */
+  --color-gold-dark: #7D5F41;
   --color-black: #000000;
   --color-black-alt: #000001;
   --color-white: #FFFFFF;

@@ -41,7 +41,7 @@ const readReviewsUrl = "https://www.google.com/maps?cid=6286608572742609363";
           <div class="gr-title">Avis Google</div>
           <div class="gr-rating">
             <span class="gr-score">4,6</span>
-            <span class="gr-stars">★★★★<span class="gr-star-half">★</span></span>
+            <span class="gr-stars" aria-hidden="true">★★★★<span class="gr-star-half">★</span></span>
             <span class="gr-count">531 avis</span>
           </div>
         </div>
@@ -54,13 +54,13 @@ const readReviewsUrl = "https://www.google.com/maps?cid=6286608572742609363";
       {reviews.map(r => (
         <div class="gr-card">
           <div class="gr-card-header">
-            <div class="gr-avatar" style={`background:${r.color}`}>{r.initial}</div>
+            <div class="gr-avatar" aria-hidden="true" style={`background:${r.color}`}>{r.initial}</div>
             <div>
               <div class="gr-name">{r.name}</div>
               <div class="gr-date">{r.date}</div>
             </div>
           </div>
-          <div class="gr-card-stars">★★★★★</div>
+          <div class="gr-card-stars" aria-hidden="true">★★★★★</div>
           <p class="gr-text">{r.text}</p>
         </div>
       ))}
@@ -124,7 +124,7 @@ const readReviewsUrl = "https://www.google.com/maps?cid=6286608572742609363";
   }
   .gr-count {
     font-size: 13px;
-    color: var(--color-text-light);
+    color: var(--color-text);
   }
   .gr-write-btn {
     font-family: var(--font-accent);
@@ -221,7 +221,7 @@ const readReviewsUrl = "https://www.google.com/maps?cid=6286608572742609363";
     font-family: var(--font-accent);
     font-size: 14px;
     font-weight: 600;
-    color: var(--color-gold-text);
+    color: var(--color-gold-dark);
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: var(--transition);

@@ -1,5 +1,10 @@
 @import './variables.css';
 
+/* Polices auto-hébergées (latin) : retire fonts.googleapis.com du chemin critique. Jost est une police variable. */
+@font-face { font-family: 'Jost'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('/fonts/jost-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Playfair Display'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/playfair-display-600-latin.woff2') format('woff2'); }
+@font-face { font-family: 'Playfair Display'; font-style: italic; font-weight: 600; font-display: swap; src: url('/fonts/playfair-display-600italic-latin.woff2') format('woff2'); }
+
 .skip-link {
   position: absolute;
   top: -100%;
@@ -85,7 +90,8 @@ ul { list-style: none; }
   font-size: 20px;
   font-weight: 600;
   font-style: italic;
-  color: var(--color-gold-text);
+  color: var(--color-gold-dark);
+  line-height: 1.45;
   text-transform: none;
   letter-spacing: 0;
   margin-bottom: 15px;

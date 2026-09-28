@@ -22,10 +22,10 @@ const bookCta = locale === 'nl' ? 'Boek uw bezoek' : locale === 'en' ? 'Book you
 <section class="visit-section">
   <div class="visit-grid">
     <!-- Left: Book Visit -->
-    <div class="visit-left" style="background-image: url('/images/photo-15.jpeg')">
+    <div class="visit-left">
       <div class="visit-left-overlay"></div>
       <div class="visit-left-content">
-        <h5 class="tagline" style="color: var(--color-heading);">{leftTagline}</h5>
+        <p class="tagline" style="color: var(--color-white);">{leftTagline}</p>
         <h2 class="visit-left-title">{leftTitle}</h2>
         <p class="visit-left-address">{address}</p>
         <p class="visit-left-phone">+32 2 230 55 37</p>
@@ -37,7 +37,7 @@ const bookCta = locale === 'nl' ? 'Boek uw bezoek' : locale === 'en' ? 'Book you
     <!-- Right: Opening Hours -->
     <div class="visit-right">
       <div class="visit-right-content">
-        <h5 class="tagline" style="color: var(--color-gold);">{rightTagline}</h5>
+        <p class="tagline" style="color: var(--color-gold);">{rightTagline}</p>
         <h2 class="visit-right-title">{rightTitle}</h2>
         <div class="visit-hours">
           <p class="hours-line">{tueFri} — 09:00 - 19:00</p>
@@ -64,16 +64,21 @@ const bookCta = locale === 'nl' ? 'Boek uw bezoek' : locale === 'en' ? 'Book you
   /* Left Column */
   .visit-left {
     position: relative;
+    background-image: url('/images/visit-800.webp');
     background-size: cover;
     background-position: center;
     padding: 80px;
     display: flex;
     align-items: center;
   }
+  @media (min-resolution: 2dppx) {
+    .visit-left { background-image: url('/images/visit-1200.webp'); }
+  }
   .visit-left-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(209, 176, 150, 0.88);
+    /* Voile foncé : le texte blanc était à 2:1 sur l'ancien voile doré clair. */
+    background: rgba(125, 95, 65, 0.9);
   }
   .visit-left-content {
     position: relative;

@@ -40,7 +40,7 @@ const navLinks = [
 <header class:list={['header', { transparent }]} id="site-header">
   <div class="header-inner container">
     <a href={`/${locale}/`} class="logo">
-      <img src="/images/logo.png" alt="Tony&Son — Salon de coiffure Bruxelles" width="111" height="240" />
+      <img src="/images/logo-header.png" alt="Tony&Son — Salon de coiffure Bruxelles" width="68" height="147" />
     </a>
 
     <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
@@ -72,8 +72,8 @@ const navLinks = [
     </nav>
     <div class="side-heading" style="color: black; font-size: 18px; font-weight: 600; text-transform: uppercase; margin-bottom: 15px;">{locale === 'nl' ? 'Afspraak maken' : locale === 'en' ? 'Book an appointment' : 'Prendre rendez-vous'}</div>
     <p class="side-address">Rue Bonneels 27, 1210 Saint-Josse-ten-Noode, Belgique</p>
-    <div style="color: var(--color-gold); text-transform: none; font-size: 26px; font-weight: 600; margin: 5px 0;">+32 2 230 55 37</div>
-    <p><a href="mailto:infotonyson@gmail.com" style="color: var(--color-gold);">infotonyson@gmail.com</a></p>
+    <div style="color: var(--color-gold-text); text-transform: none; font-size: 26px; font-weight: 600; margin: 5px 0;">+32 2 230 55 37</div>
+    <p><a href="mailto:infotonyson@gmail.com" style="color: var(--color-gold-dark);">infotonyson@gmail.com</a></p>
     <div class="side-social">
       <a href="https://www.facebook.com/tonysoncoiffure/" target="_blank" rel="noopener" aria-label="Facebook">
         <span style="color: #D1B096; font-size: 24px; margin-right: 15px;">
@@ -128,6 +128,12 @@ const navLinks = [
     justify-content: space-between;
     width: 100%;
     padding-left: 45px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    min-width: 44px;
+    min-height: 44px;
   }
   .logo img {
     height: 42px;
@@ -238,7 +244,10 @@ const navLinks = [
   }
   .side-nav-link:last-child { border-bottom: none; }
   .side-nav-link:hover,
-  .side-nav-link.active { color: var(--color-gold); }
+  .side-nav-link.active { color: var(--color-gold-dark); }
+  /* Sur header blanc (pages non transparentes ou scrollé) le doré clair fait 2:1 : on fonce. */
+  .header:not(.transparent) :global(.lang-link.active),
+  .header.scrolled :global(.lang-link.active) { color: var(--color-gold-dark); }
   @media (min-width: 993px) {
     .side-nav { display: none; }
   }
@@ -249,6 +258,11 @@ const navLinks = [
     background: none;
     border: none;
     font-size: 32px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     color: var(--color-heading);
     line-height: 1;
@@ -281,7 +295,7 @@ const navLinks = [
     display: inline-block;
     margin-top: 2rem;
     background: var(--color-gold-alt, #CBB19A);
-    color: var(--color-white);
+    color: var(--color-heading);
     padding: 10px 20px;
     border-radius: 5px;
     font-family: var(--font-accent);

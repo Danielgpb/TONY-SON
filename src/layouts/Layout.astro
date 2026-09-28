@@ -229,11 +229,8 @@ const jsonLd = {
   <meta name="twitter:description" content={metaDesc} />
   <meta name="twitter:image" content={ogImageUrl} />
 
-  <!-- Preconnect + non-blocking Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" onload="this.rel='stylesheet'" />
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" /></noscript>
+  <!-- Police principale auto-hébergée (H1/LCP). Playfair non préchargée : usage secondaire. -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="/fonts/jost-latin.woff2" />
 
   {page === 'home' && (
     <link
@@ -263,8 +260,7 @@ const jsonLd = {
   <!-- JSON-LD Schema -->
   <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JD2CBDJGRT"></script>
+  <!-- Google Analytics 4 — chargé hors du chemin critique (inactivité ou 1re interaction) -->
   <script is:inline>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -273,6 +269,17 @@ const jsonLd = {
       anonymize_ip: true,
       cookie_flags: 'SameSite=None;Secure'
     });
+    (function () {
+      var done = false;
+      function load() {
+        if (done) return; done = true;
+        var s = document.createElement('script'); s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-JD2CBDJGRT';
+        document.head.appendChild(s);
+      }
+      ['pointerdown', 'keydown', 'touchstart', 'scroll'].forEach(function (e) { addEventListener(e, load, { passive: true, once: true }); });
+      if ('requestIdleCallback' in window) requestIdleCallback(load, { timeout: 4000 }); else setTimeout(load, 3000);
+    })();
   </script>
 </head>
 <body>

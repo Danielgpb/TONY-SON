@@ -16,21 +16,21 @@ import BrandLogos from '../../components/BrandLogos.astro';
       <div class="contact-bar-item">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         <div>
-          <h4>Telefoon</h4>
+          <h2>Telefoon</h2>
           <a href="tel:+3222305537">+32 2 230 55 37</a>
         </div>
       </div>
       <div class="contact-bar-item">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         <div>
-          <h4>Email</h4>
+          <h2>Email</h2>
           <a href="mailto:infotonyson@gmail.com">infotonyson@gmail.com</a>
         </div>
       </div>
       <div class="contact-bar-item">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         <div>
-          <h4>Openingstijden</h4>
+          <h2>Openingstijden</h2>
           <p>Din - Vrij: 9:00 - 19:00</p>
           <p>Zat: 9:00 - 19:00</p>
           <p>Zon - Maa: Gesloten</p>
@@ -39,7 +39,7 @@ import BrandLogos from '../../components/BrandLogos.astro';
       <div class="contact-bar-item">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
         <div>
-          <h4>Adres</h4>
+          <h2>Adres</h2>
           <a href="https://maps.google.com/?q=Rue+Bonneels+27+1210+Saint-Josse-ten-Noode" target="_blank" rel="noopener">Rue Bonneels 27, 1210 Sint-Joost-ten-Node, België</a>
         </div>
       </div>
@@ -112,7 +112,7 @@ import BrandLogos from '../../components/BrandLogos.astro';
     color: var(--color-gold);
     margin-top: 2px;
   }
-  .contact-bar-item h4 {
+  .contact-bar-item h2 {
     font-family: var(--font-accent);
     font-size: 14px;
     font-weight: 600;
@@ -185,7 +185,7 @@ import BrandLogos from '../../components/BrandLogos.astro';
     margin-bottom: 1rem;
   }
   .contact-map-text .cta-text {
-    color: var(--color-gold);
+    color: var(--color-gold-dark);
     font-weight: 600;
     font-style: italic;
   }
@@ -200,4 +200,5 @@ import BrandLogos from '../../components/BrandLogos.astro';
   @media (max-width: 480px) {
     .contact-bar-grid { grid-template-columns: 1fr; }
   }
+  .contact-bar-item a { display: inline-flex; align-items: center; min-height: 44px; }
 </style>

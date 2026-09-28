@@ -23,6 +23,8 @@ export default defineConfig({
   site: SITE,
   output: 'static',
   trailingSlash: 'always',
+  // CSS inlinée dans le HTML : supprime 2 requêtes bloquantes (1 010 ms sur 4G lente).
+  build: { inlineStylesheets: 'always' },
   integrations: [
     sitemap({
       i18n: {
